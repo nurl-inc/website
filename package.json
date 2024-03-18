@@ -14,7 +14,7 @@
     "@astrojs/netlify": "^5.1.2",
     "@astrojs/partytown": "^2.0.2",
     "@astrojs/sitemap": "^3.1.1",
-    "@astrojs/solid-js": "^3.0.2",
+    "@astrojs/solid-js": "^4.0.1",
     "@netlify/edge-functions": "^2.3.1",
     "astro": "^4.0.3",
     "astro-icon": "^0.8.2",
