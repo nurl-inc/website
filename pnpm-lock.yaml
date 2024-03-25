@@ -12,8 +12,8 @@ dependencies:
     specifier: ^0.9.2
     version: 0.9.2(astro@4.0.3)(react@18.2.0)
   '@astrojs/netlify':
-    specifier: ^5.1.2
-    version: 5.1.2(astro@4.0.3)
+    specifier: ^5.2.0
+    version: 5.2.0(astro@4.0.3)
   '@astrojs/partytown':
     specifier: ^2.0.2
     version: 2.0.2
@@ -188,8 +188,8 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/netlify@5.1.2(astro@4.0.3):
-    resolution: {integrity: sha512-capy8kLSgv4qryZ7rski+Qt1EnDs/l+VCzhGBtYuUbuShGhadPRRTQmxgIlUfWpblEd3vHtmkJDg3mxxyFsEqg==}
+  /@astrojs/netlify@5.2.0(astro@4.0.3):
+    resolution: {integrity: sha512-NFg3AdUToV7kbY5w2yHZY5UskqfsmIo9i0zIzQ2GgUcTwjyZCekZ89DLtKCJ1jFVle+QXJGsJAS61EYyptBDBQ==}
     peerDependencies:
       astro: ^4.2.0
     dependencies:
