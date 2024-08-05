@@ -27,7 +27,7 @@
   "devDependencies": {
     "@react-email/render": "^0.0.15",
     "@types/gtag.js": "^0.0.20",
-    "autoprefixer": "^10.4.19",
+    "autoprefixer": "^10.4.20",
     "cssnano": "^7.0.1",
     "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.14.1"
