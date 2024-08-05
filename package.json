@@ -12,7 +12,7 @@
     "@astrojs/check": "^0.9.1",
     "@astrojs/markdoc": "^0.11.0",
     "@astrojs/netlify": "^5.2.0",
-    "@astrojs/partytown": "^2.0.4",
+    "@astrojs/partytown": "^2.1.1",
     "@astrojs/sitemap": "^3.1.6",
     "@astrojs/solid-js": "^4.1.0",
     "@netlify/edge-functions": "^2.10.0",
