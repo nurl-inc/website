@@ -21,7 +21,7 @@
     "astro-icon": "^0.8.2",
     "resend": "^3.5.0",
     "sharp": "^0.33.4",
-    "solid-js": "^1.8.16",
+    "solid-js": "^1.8.19",
     "typescript": "^5.4.5"
   },
   "devDependencies": {
