@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" style="-webkit-print-color-adjust:exact" viewBox="0 0 100 100"><defs><clipPath id="a" class="frame-clip-def frame-clip"><rect width="100" height="100" rx="0" ry="0"/></clipPath></defs><g clip-path="url(#a)"><g class="fills"><rect width="100" height="100" class="frame-background" rx="0" ry="0"/></g><g xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" class="frame-children" style="fill:#000"><g style="fill:#000"><path d="M80.981 27.804 55.337 12.997c-2.357-1.362-6.211-1.362-8.569 0L21.125 27.804c-2.358 1.361-4.286 4.701-4.286 7.42v29.611c0 2.722 1.928 6.059 4.286 7.42l25.643 14.807c2.358 1.362 6.212 1.362 8.569 0l25.644-14.807c2.357-1.361 4.286-4.701 4.286-7.42V35.227c-.003-2.722-1.929-6.062-4.286-7.423Zm-34.963 1.803L31.466 54.971c-.474.744-.876.784-1.245.741-.846-.1-.989-.867-.989-.867L22.4 35.088c-.512-1.819 1.208-2.258 1.208-2.258l21.052-4.691s.843-.136 1.285.213c.266.205.418.627.073 1.255Zm2.998-7.484-11.809 2.633s-.867.262-.966-.236c-.1-.498.597-.846.597-.846l11.657-6.64s1.876-.87 2.025.919l.229 2.036c0-.004.096 1.679-1.733 2.134Z" class="fills"/></g></g></g>
+<style>
+    path { fill: #00f; }
+    @media (prefers-color-scheme: dark) {
+        path { fill: #ffed00; }
+    }
+</style>
+</svg>

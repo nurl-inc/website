@@ -1,0 +1,29 @@
+{
+  "name": "@nurl-inc/website",
+  "type": "module",
+  "scripts": {
+    "dev": "vinxi dev",
+    "build": "vinxi build",
+    "start": "vinxi start",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "@solidjs/meta": "^0.29.4",
+    "@solidjs/router": "^0.15.1",
+    "@solidjs/start": "^1.0.10",
+    "solid-js": "^1.9.2",
+    "vinxi": "^0.4.3"
+  },
+  "devDependencies": {
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "prettier": "3.3.3"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  },
+  "packageManager": "pnpm@9.13.2",
+  "engines": {
+    "node": ">=18"
+  }
+}
