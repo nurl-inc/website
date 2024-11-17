@@ -1,4 +1,6 @@
 import type { RouteSectionProps } from '@solidjs/router';
+import { VStack } from 'styled-system/jsx';
+import { css } from 'styled-system/css';
 import Head from '~/components/shared/head';
 import type { Metadata } from '~/types';
 
@@ -33,8 +35,18 @@ export default function Home(props: RouteSectionProps<RouteData>) {
     <main role="main">
       <Head {...props.data.metadata} />
 
-      <h1>Home</h1>
-      <p class="ubuntu-regular">This is a test of the Ubuntu font.</p>
+      <VStack h="100dvh" justify="center">
+        <h1
+          class={css({
+            textStyle: 'heading-md',
+          })}
+        >
+          Home
+        </h1>
+        <p class={css({ textStyle: 'body-md' })}>
+          This is a test of the Saira font.
+        </p>
+      </VStack>
     </main>
   );
 }
