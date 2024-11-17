@@ -1,19 +1,28 @@
 {
+  "include": ["src"],
+  "exclude": ["node_modules"],
+
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "bundler",
+
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "jsx": "preserve",
     "jsxImportSource": "solid-js",
     "allowJs": true,
+
     "strict": true,
+
     "noEmit": true,
     "types": ["vinxi/types/client"],
     "isolatedModules": true,
+    "skipLibCheck": true,
+
     "paths": {
-      "~/*": ["./src/*"]
+      "~/*": ["./src/*"],
+      "styled-system/*": ["./styled-system/*"]
     }
   }
 }

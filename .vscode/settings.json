@@ -1,7 +1,7 @@
 {
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "cSpell.words": ["vinxi"],
+  "cSpell.words": ["Fontface", "fontsource", "saira", "slnt", "vinxi", "wdth"],
   "prettier.configPath": ".prettierrc",
   "prettier.useEditorConfig": false
 }

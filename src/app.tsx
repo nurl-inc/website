@@ -3,6 +3,10 @@ import { Router } from '@solidjs/router';
 import { FileRoutes } from '@solidjs/start/router';
 import { MetaProvider } from '@solidjs/meta';
 
+import '@fontsource-variable/montserrat';
+import '@fontsource-variable/saira';
+import './main.css';
+
 /**
  * The root component for the app.
  */
