@@ -34,6 +34,7 @@ export default function Home(props: RouteSectionProps<RouteData>) {
       <Head {...props.data.metadata} />
 
       <h1>Home</h1>
+      <p class="ubuntu-regular">This is a test of the Ubuntu font.</p>
     </main>
   );
 }
