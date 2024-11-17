@@ -1,13 +1,8 @@
 import { Meta, Title } from '@solidjs/meta';
 import metadata from './meta.json';
+import type { Metadata } from '~/types';
 
-interface HeadProps {
-  title: string;
-  description: string;
-  keywords?: string;
-  image?: string;
-}
-
+type HeadProps = Metadata;
 /**
  * Head component for using dynamic meta tags for the app.
  * For static meta tags, see entry-server.tsx.

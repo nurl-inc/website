@@ -1,3 +1,9 @@
-import { defineConfig } from "@solidjs/start/config";
+import { defineConfig } from '@solidjs/start/config';
 
-export default defineConfig({});
+export default defineConfig({
+  server: {
+    prerender: {
+      crawlLinks: true,
+    },
+  },
+});
