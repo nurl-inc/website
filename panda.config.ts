@@ -2,6 +2,9 @@ import { defineConfig } from '@pandacss/dev';
 import { globalVars } from './system/globalVars';
 import { tokens } from './system/tokens';
 import { textStyles } from './system/textStyles';
+import { semanticTokens } from './system/semantic-tokens';
+import { recipes } from './system/recipes';
+import { keyframes } from './system/keyframes';
 
 export default defineConfig({
   preflight: true,
@@ -13,6 +16,9 @@ export default defineConfig({
     extend: {
       textStyles,
       tokens,
+      semanticTokens,
+      recipes,
+      keyframes,
     },
   },
 

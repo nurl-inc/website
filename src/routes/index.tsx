@@ -1,8 +1,9 @@
 import type { RouteSectionProps } from '@solidjs/router';
-import { VStack } from 'styled-system/jsx';
+import { Box, HStack, VStack } from 'styled-system/jsx';
 import { css } from 'styled-system/css';
 import Head from '~/components/shared/head';
 import type { Metadata } from '~/types';
+import { Button } from '~/components/ui/button';
 
 /**
  * This module is the main entry point for the home page.
@@ -35,17 +36,40 @@ export default function Home(props: RouteSectionProps<RouteData>) {
     <main role="main">
       <Head {...props.data.metadata} />
 
-      <VStack h="100dvh" justify="center">
+      <HStack
+        justify="center"
+        bgColor="info.surface.initial"
+        color="info.text.initial"
+        py="2"
+        textStyle="body-md"
+        w="100%"
+      >
+        This is a banner of information
+      </HStack>
+
+      <VStack
+        bgColor="page.surface.initial"
+        h="calc(100dvh - 40px)"
+        px="4"
+        justify="center"
+      >
         <h1
           class={css({
+            color: 'page.text.alt',
             textStyle: 'heading-md',
           })}
         >
           Home
         </h1>
-        <p class={css({ textStyle: 'body-md' })}>
+        <p
+          class={css({
+            color: 'page.text.initial',
+            textStyle: 'body-md',
+          })}
+        >
           This is a test of the Saira font.
         </p>
+        <Button>Click me</Button>
       </VStack>
     </main>
   );
