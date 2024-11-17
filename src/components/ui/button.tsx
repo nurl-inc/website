@@ -5,9 +5,5 @@ type ButtonProps = ButtonVariantProps & JSX.IntrinsicElements['button'];
 
 export function Button(props: ButtonProps) {
   const { palette, ...nativeProps } = props;
-  return (
-    <button class={button({ palette })} {...nativeProps}>
-      {props.children}
-    </button>
-  );
+  return <button class={button({ palette })} {...nativeProps} />;
 }

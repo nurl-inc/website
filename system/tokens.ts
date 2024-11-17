@@ -61,7 +61,18 @@ const zIndex = {
   },
 };
 
+const gradients = {
+  primary: {
+    value:
+      'linear-gradient(170deg, rgba(25,9,6,1) 0%, rgba(4,16,16,1) 50%, rgba(2,37,39,1) 100%)',
+  },
+  tertiary: {
+    value: 'linear-gradient(to right, #0DE7F2, #0DF2B1)',
+  },
+};
+
 export const tokens = {
   fonts,
+  gradients,
   zIndex,
 };

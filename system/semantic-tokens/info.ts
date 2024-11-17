@@ -3,10 +3,10 @@ export const info = {
     initial: {
       value: '#0288D5',
     },
-    text: {
-      initial: {
-        value: '#0288D520',
-      },
+  },
+  text: {
+    initial: {
+      value: '#03070a',
     },
   },
 };

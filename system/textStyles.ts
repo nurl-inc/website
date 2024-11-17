@@ -42,6 +42,7 @@ export const textStyles = defineTextStyles({
     value: {
       ...headingStyles,
       fontSize: '5xl',
+      lineHeight: '1',
     },
   },
   'heading-sm': {

@@ -1,9 +1,9 @@
 import type { RouteSectionProps } from '@solidjs/router';
-import { Box, HStack, VStack } from 'styled-system/jsx';
+import { Box, VStack } from 'styled-system/jsx';
 import { css } from 'styled-system/css';
 import Head from '~/components/shared/head';
 import type { Metadata } from '~/types';
-import { Button } from '~/components/ui/button';
+import { Banner } from '~/components/ui/banner';
 
 /**
  * This module is the main entry point for the home page.
@@ -36,40 +36,41 @@ export default function Home(props: RouteSectionProps<RouteData>) {
     <main role="main">
       <Head {...props.data.metadata} />
 
-      <HStack
-        justify="center"
-        bgColor="info.surface.initial"
-        color="info.text.initial"
-        py="2"
-        textStyle="body-md"
-        w="100%"
-      >
-        This is a banner of information
-      </HStack>
+      <Banner>Launching Beta Early 2025</Banner>
 
       <VStack
-        bgColor="page.surface.initial"
+        bgGradient="primary"
+        gap="4"
         h="calc(100dvh - 40px)"
+        position="relative"
         px="4"
         justify="center"
       >
-        <h1
-          class={css({
-            color: 'page.text.alt',
-            textStyle: 'heading-md',
-          })}
-        >
-          Home
-        </h1>
-        <p
-          class={css({
-            color: 'page.text.initial',
-            textStyle: 'body-md',
-          })}
-        >
-          This is a test of the Saira font.
-        </p>
-        <Button>Click me</Button>
+        <Box alignSelf="flex-start" w="5rem">
+          <img src="/logos/nurl.svg" alt="Nurl Logo" />
+        </Box>
+
+        <header>
+          <h1
+            class={css({
+              color: 'page.text.alt',
+              mb: 4,
+              textGradient: 'tertiary',
+              textStyle: 'heading-md',
+            })}
+          >
+            Where Tabletop Legends Are Made
+          </h1>
+          <p
+            class={css({
+              color: 'page.text.initial',
+              textStyle: 'body-xl',
+            })}
+          >
+            Enhance your games with automation that feels like magic, create new
+            worlds with tools that feel sacred.
+          </p>
+        </header>
       </VStack>
     </main>
   );

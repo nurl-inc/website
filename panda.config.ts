@@ -5,6 +5,8 @@ import { textStyles } from './system/textStyles';
 import { semanticTokens } from './system/semantic-tokens';
 import { recipes } from './system/recipes';
 import { keyframes } from './system/keyframes';
+import { conditions } from './system/conditions';
+import { globalCss } from './system/globalCss';
 
 export default defineConfig({
   preflight: true,
@@ -22,6 +24,9 @@ export default defineConfig({
     },
   },
 
+  conditions,
+
+  globalCss,
   globalVars,
   globalFontface: {
     Montserrat: {

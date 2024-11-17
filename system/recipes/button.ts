@@ -22,14 +22,18 @@ export const button = defineRecipe({
     transitionProperty: 'background-color',
     transitionTimingFunction: 'ease-in-out',
     transitionDuration: '150ms',
-
-    position: 'relative',
-    overflow: 'hidden',
-    isolation: 'isolate',
     w: {
       base: 'full',
       md: 'auto',
     },
+    _disabled: {
+      cursor: 'not-allowed',
+      opacity: 0.5,
+    },
+
+    position: 'relative',
+    overflow: 'hidden',
+    isolation: 'isolate',
     _hover: {
       _before: {
         animationName: 'gradient',
