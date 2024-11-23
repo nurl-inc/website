@@ -16,7 +16,7 @@ export default function Hero() {
       minH="96dvh"
       pb={{
         base: '10',
-        md: '32rem',
+        md: '23rem',
       }}
       position="relative"
     >
@@ -29,7 +29,7 @@ export default function Hero() {
         md={{
           position: 'absolute',
           left: 0,
-          top: '20%',
+          top: '23%',
         }}
       >
         <h1

@@ -1,50 +1,51 @@
-import { css } from 'styled-system/css';
-import { VStack, Box } from 'styled-system/jsx';
-import { vstack } from 'styled-system/patterns/vstack';
-import { Button } from '~/components/ui/button';
+import { createMemo } from 'solid-js';
+import { Box } from 'styled-system/jsx';
+import { Tabs, TabContent, Button } from '~/components/ui';
+import TabContentProduct from './tab-content-product';
 
 export default function GetStarted() {
+  const tabs = createMemo(() => [
+    { id: 'players', label: 'For Players' },
+    { id: 'publishers', label: 'For Publishers' },
+  ]);
+
   return (
     <Box
       id="get-started"
-      paddingBlock="11"
-      paddingInline="8"
       w="full"
       md={{
-        py: '20',
+        py: 20,
       }}
     >
-      <VStack
-        alignItems="flex-start"
-        bgColor="page.surface.initial"
-        border="4px solid"
-        borderColor="page.border.initial"
-        gap="10"
-        justify="flex-start"
-        pb="12"
-        pt="4"
-        px="4"
-        rounded="md"
-      >
-        <p class={css({ mb: 4, textStyle: 'body-sm' })}>For Players</p>
+      <Tabs defaultValue="players" tabs={tabs()}>
+        <TabContent value="players">
+          <TabContentProduct
+            heading="nurl play"
+            description="Automate the complex. Keep the magic."
+            spotlight={[
+              'Video game-like automation',
+              'Physical play enhancement',
+              'Seamless group tools',
+            ]}
+          >
+            <Button>Join the Waitlist</Button>
+          </TabContentProduct>
+        </TabContent>
 
-        <div>
-          <p class={css({ textStyle: 'heading-sm' })}>NURL PLAY</p>
-          <p class={css({ mb: 10 })}>Automate the complex. Keep the magic.</p>
-        </div>
-
-        <ul
-          class={vstack({
-            alignItems: 'flex-start',
-          })}
-        >
-          <li>Video game-like automation</li>
-          <li>Physical play enhancement</li>
-          <li>Seamless group tools</li>
-        </ul>
-
-        <Button>Join the Waitlist</Button>
-      </VStack>
+        <TabContent value="publishers">
+          <TabContentProduct
+            heading="nurl sanctum"
+            description="Where game worlds are born."
+            spotlight={[
+              'Visual system mapping',
+              'Intuitive world building',
+              'Streamlined publishing',
+            ]}
+          >
+            <Button>Start Creating</Button>
+          </TabContentProduct>
+        </TabContent>
+      </Tabs>
     </Box>
   );
 }

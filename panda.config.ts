@@ -3,7 +3,7 @@ import { globalVars } from './system/globalVars';
 import { tokens } from './system/tokens';
 import { textStyles } from './system/textStyles';
 import { semanticTokens } from './system/semantic-tokens';
-import { recipes } from './system/recipes';
+import { recipes, slotRecipes } from './system/recipes';
 import { keyframes } from './system/keyframes';
 import { conditions } from './system/conditions';
 import { globalCss } from './system/globalCss';
@@ -20,6 +20,7 @@ export default defineConfig({
       tokens,
       semanticTokens,
       recipes,
+      slotRecipes,
       keyframes,
     },
   },
