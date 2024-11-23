@@ -1,0 +1,22 @@
+[
+  {
+    "label": "Home",
+    "href": "/"
+  },
+  {
+    "label": "Play",
+    "href": "/play"
+  },
+  {
+    "label": "Sanctum",
+    "href": "/sanctum"
+  },
+  {
+    "label": "Blog",
+    "href": "/blog"
+  },
+  {
+    "label": "Contact",
+    "href": "/contact"
+  }
+]

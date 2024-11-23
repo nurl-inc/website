@@ -16,17 +16,5 @@ export const globalCss = defineGlobalStyles({
 
   body: {
     fontSize: '1rem',
-    _scrollbar: {
-      width: '0.5em',
-    },
-    _scrollbarTrack: {
-      backgroundColor: 'page.surface.200',
-      outline: 'none',
-    },
-    _scrollbarThumb: {
-      backgroundColor: 'page.border.100',
-      borderRadius: '5px',
-      outline: 'none',
-    },
   },
 });

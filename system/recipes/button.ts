@@ -6,8 +6,6 @@ export const button = defineRecipe({
 
   base: {
     alignItems: 'center',
-    bgColor: 'colorPalette.bg.initial',
-    color: 'colorPalette.text.initial',
     cursor: 'pointer',
     display: 'inline-flex',
     fontStyle: 'oblique',
@@ -60,9 +58,20 @@ export const button = defineRecipe({
         colorPalette: 'secondaryAction',
       },
     },
+    usage: {
+      filled: {
+        bgColor: 'colorPalette.bg.initial',
+        color: 'colorPalette.text.initial',
+      },
+      ghost: {
+        bgColor: 'transparent',
+        color: 'colorPalette.text.initial',
+      },
+    },
   },
 
   defaultVariants: {
     palette: 'primary',
+    usage: 'filled',
   },
 });

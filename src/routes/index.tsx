@@ -1,11 +1,13 @@
 import type { RouteSectionProps } from '@solidjs/router';
-import { Box, VStack } from 'styled-system/jsx';
-import { css } from 'styled-system/css';
 import Head from '~/components/shared/head';
 import type { Metadata } from '~/types';
 import { Banner } from '~/components/ui/banner';
-import { Button } from '~/components/ui/button';
+import Hero from './components/hero';
+import { css } from 'styled-system/css';
 import { vstack } from 'styled-system/patterns/vstack';
+import { Button } from '~/components/ui/button';
+import { Box, VStack } from 'styled-system/jsx';
+import Nav from '~/components/shared/nav';
 
 /**
  * This module is the main entry point for the home page.
@@ -35,46 +37,15 @@ interface RouteData {
 
 export default function Home(props: RouteSectionProps<RouteData>) {
   return (
-    <main role="main">
+    <>
       <Head {...props.data.metadata} />
+      <Nav />
 
-      <Banner>Launching Beta - Early 2025</Banner>
+      <main role="main">
+        <Hero />
+      </main>
 
-      <VStack
-        bgGradient="primary"
-        gap="4"
-        minH="calc(100dvh - 40px)"
-        position="relative"
-        px="4"
-        py="10"
-        justify="center"
-      >
-        <Box alignSelf="flex-start" mb="4" w="5rem">
-          <img src="/logos/nurl.svg" alt="Nurl Logo" />
-        </Box>
-
-        <header class={css({ mb: 4 })}>
-          <h1
-            class={css({
-              color: 'page.text.alt',
-              mb: 4,
-              textGradient: 'tertiary',
-              textStyle: 'heading-md',
-            })}
-          >
-            Where Tabletop Legends Are Made
-          </h1>
-          <p
-            class={css({
-              color: 'page.text.initial',
-              textStyle: 'body-xl',
-            })}
-          >
-            Enhance your games with automation that feels like magic, create new
-            worlds with tools that feel sacred.
-          </p>
-        </header>
-
+      <Box>
         <Box mt="10" w="full">
           <VStack
             alignItems="flex-start"
@@ -110,7 +81,7 @@ export default function Home(props: RouteSectionProps<RouteData>) {
             <Button>Join the Waitlist</Button>
           </VStack>
         </Box>
-      </VStack>
-    </main>
+      </Box>
+    </>
   );
 }
