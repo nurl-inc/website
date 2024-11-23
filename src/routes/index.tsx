@@ -8,6 +8,7 @@ import { vstack } from 'styled-system/patterns/vstack';
 import { Button } from '~/components/ui/button';
 import { Box, VStack } from 'styled-system/jsx';
 import Nav from '~/components/shared/nav';
+import Main from '~/components/shared/main';
 
 /**
  * This module is the main entry point for the home page.
@@ -41,9 +42,9 @@ export default function Home(props: RouteSectionProps<RouteData>) {
       <Head {...props.data.metadata} />
       <Nav />
 
-      <main role="main">
+      <Main>
         <Hero />
-      </main>
+      </Main>
 
       <Box>
         <Box mt="10" w="full">
