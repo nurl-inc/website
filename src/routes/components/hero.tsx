@@ -11,13 +11,26 @@ import { button } from 'styled-system/recipes';
 
 export default function Hero() {
   return (
-    <VStack gap="4" minH="96dvh" pb="10" position="relative">
+    <VStack
+      gap="4"
+      minH="96dvh"
+      pb={{
+        base: '10',
+        md: '32rem',
+      }}
+      position="relative"
+    >
       <HeroFeature />
 
       <Box
+        pb="12.5rem"
         px="8"
         zIndex="dropdown"
-        md={{ position: 'absolute', left: 0, top: '35%' }}
+        md={{
+          position: 'absolute',
+          left: 0,
+          top: '20%',
+        }}
       >
         <h1
           class={css({
@@ -69,18 +82,23 @@ export default function Hero() {
           Enhance your games with automation that feels like magic, create new
           worlds with tools that feel sacred.
         </p>
-      </Box>
 
-      <Box
-        mt="7"
-        paddingInlineStart="4"
-        paddingInlineEnd="4"
-        pb="12.5rem"
-        w="full"
-      >
-        <A class={button()} href="#get-started">
-          Get Started
-        </A>
+        <Box
+          mt="7"
+          w="full"
+          _motionSafe={{
+            animationName: 'fadeIn',
+            animationDuration: '600ms',
+            animationTimingFunction: 'ease-in-out',
+            animationFillMode: 'forwards',
+            animationDelay: '800ms',
+            opacity: 0,
+          }}
+        >
+          <A class={button()} href="#get-started">
+            Get Started
+          </A>
+        </Box>
       </Box>
     </VStack>
   );

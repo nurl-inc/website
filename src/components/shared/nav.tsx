@@ -64,6 +64,14 @@ export default function Nav() {
               md: {
                 display: 'flex',
               },
+              _motionSafe: {
+                animationName: 'fadeIn',
+                animationDuration: '600ms',
+                animationTimingFunction: 'ease-in-out',
+                animationFillMode: 'forwards',
+                animationDelay: '1.6s',
+                opacity: 0,
+              },
             })}
           >
             <For each={nav}>

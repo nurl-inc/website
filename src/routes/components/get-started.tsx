@@ -5,7 +5,15 @@ import { Button } from '~/components/ui/button';
 
 export default function GetStarted() {
   return (
-    <Box id="get-started" mt="10" w="full">
+    <Box
+      id="get-started"
+      paddingBlock="11"
+      paddingInline="8"
+      w="full"
+      md={{
+        py: '20',
+      }}
+    >
       <VStack
         alignItems="flex-start"
         bgColor="page.surface.initial"
