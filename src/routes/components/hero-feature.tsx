@@ -67,12 +67,12 @@ export default function HeroFeature() {
         w="110%"
         md={{
           bottom: 0,
-          gap: 4,
+          gap: 6,
           mx: 0,
           position: 'absolute',
-          right: '-25%',
+          right: '-5%',
           top: 0,
-          w: '75%',
+          w: '70%',
           zIndex: 'base',
         }}
       >
@@ -82,7 +82,8 @@ export default function HeroFeature() {
             h="full"
             w="70%"
             md={{
-              gap: 4,
+              gap: 6,
+              w: '90%',
             }}
           >
             <For each={Array.from({ length: 2 })}>
@@ -95,7 +96,8 @@ export default function HeroFeature() {
             mt="14"
             w="45%"
             md={{
-              gap: 4,
+              gap: 6,
+              w: '20%',
             }}
           >
             <For each={Array.from({ length: 2 })}>
