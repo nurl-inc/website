@@ -11,9 +11,11 @@
   "dependencies": {
     "@fontsource-variable/montserrat": "^5.1.0",
     "@fontsource-variable/saira": "^5.1.0",
+    "@kobalte/core": "^0.13.7",
     "@solidjs/meta": "^0.29.4",
     "@solidjs/router": "^0.15.1",
     "@solidjs/start": "^1.0.10",
+    "motion": "^11.11.17",
     "solid-js": "^1.9.2",
     "vinxi": "^0.4.3"
   },
@@ -28,7 +30,7 @@
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
   },
-  "packageManager": "pnpm@9.13.2",
+  "packageManager": "pnpm@9.14.2",
   "engines": {
     "node": ">=18"
   }

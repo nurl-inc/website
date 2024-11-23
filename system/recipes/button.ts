@@ -6,8 +6,6 @@ export const button = defineRecipe({
 
   base: {
     alignItems: 'center',
-    bgColor: 'colorPalette.bg.initial',
-    color: 'colorPalette.text.initial',
     cursor: 'pointer',
     display: 'inline-flex',
     fontStyle: 'oblique',
@@ -15,22 +13,23 @@ export const button = defineRecipe({
     justifyContent: 'center',
     gap: 2,
     h: '2.75rem',
-    paddingInlineStart: 4,
-    paddingInlineEnd: 4,
+    paddingInline: 4,
     textStyle: 'body-md',
     textTransform: 'uppercase',
     transitionProperty: 'background-color',
     transitionTimingFunction: 'ease-in-out',
     transitionDuration: '150ms',
-    w: {
-      base: 'full',
-      md: 'auto',
+    w: 'full',
+    md: {
+      paddingInline: '5rem',
+      w: 'auto',
     },
     _disabled: {
       cursor: 'not-allowed',
       opacity: 0.5,
     },
 
+    // gradient hover effect
     position: 'relative',
     overflow: 'hidden',
     isolation: 'isolate',
@@ -60,9 +59,20 @@ export const button = defineRecipe({
         colorPalette: 'secondaryAction',
       },
     },
+    usage: {
+      filled: {
+        bgColor: 'colorPalette.bg.initial',
+        color: 'colorPalette.text.initial',
+      },
+      ghost: {
+        bgColor: 'transparent',
+        color: 'colorPalette.text.initial',
+      },
+    },
   },
 
   defaultVariants: {
     palette: 'primary',
+    usage: 'filled',
   },
 });
