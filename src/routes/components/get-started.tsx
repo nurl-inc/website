@@ -42,7 +42,7 @@ export default function GetStarted() {
               'Streamlined publishing',
             ]}
           >
-            <Button>Start Creating</Button>
+            <Button>Request Beta Access</Button>
           </TabContentProduct>
         </TabContent>
       </Tabs>
