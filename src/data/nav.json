@@ -1,22 +1,27 @@
 [
   {
     "label": "Home",
+    "description": "",
     "href": "/"
   },
   {
     "label": "Play",
+    "description": "For GMs and Players",
     "href": "/play"
   },
   {
     "label": "Sanctum",
+    "description": "For publishers to manage their games",
     "href": "/sanctum"
   },
   {
     "label": "Blog",
+    "description": "News and updates",
     "href": "/blog"
   },
   {
     "label": "Contact",
+    "description": "Get in touch",
     "href": "/contact"
   }
 ]

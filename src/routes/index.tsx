@@ -1,10 +1,16 @@
+import { lazy, Suspense } from 'solid-js';
 import type { RouteSectionProps } from '@solidjs/router';
 import Head from '~/components/shared/head';
 import type { Metadata } from '~/types';
 import Hero from './components/hero';
 import Nav from '~/components/shared/nav';
 import Main from '~/components/shared/main';
-import GetStarted from './components/get-started';
+import { LeadChoiceProvider } from '~/context/lead-choice';
+
+// Lazy load below the fold components
+const GetStarted = lazy(() => import('./components/get-started'));
+const KeyFeatures = lazy(() => import('./components/key-features'));
+const ReadyCTA = lazy(() => import('./components/ready-cta'));
 
 /**
  * This module is the main entry point for the home page.
@@ -42,7 +48,13 @@ export default function Home(props: RouteSectionProps<RouteData>) {
         <Hero />
       </Main>
 
-      <GetStarted />
+      <LeadChoiceProvider initialChoice="play">
+        <Suspense>
+          <GetStarted />
+          <KeyFeatures />
+          <ReadyCTA />
+        </Suspense>
+      </LeadChoiceProvider>
     </>
   );
 }
