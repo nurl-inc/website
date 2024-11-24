@@ -1,9 +1,8 @@
 import { lazy, Match, onMount, Suspense, Switch } from 'solid-js';
-import { scroll, animate } from 'motion';
 import { css } from 'styled-system/css';
 import { Box, VStack } from 'styled-system/jsx';
 import { useLeadChoice } from '~/context/lead-choice';
-import { Button } from '~/components/ui/button';
+import { scrollFadeInOut } from '~/lib/motion';
 
 /**
  * This module provides the key features section which is determined by the
@@ -19,12 +18,7 @@ export default function KeyFeatures() {
 
   onMount(() => {
     const target = document.getElementById('key-features-heading');
-    if (target) {
-      scroll(animate(target, { opacity: [0, 1, 1, 0] }, { ease: 'linear' }), {
-        target,
-        offset: ['start end', 'end end', 'start start', 'end start'],
-      });
-    }
+    if (target) scrollFadeInOut(target);
   });
 
   return (
