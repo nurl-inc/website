@@ -51,6 +51,7 @@ export function Tabs(props: ParentProps<TabsProps>) {
             </KTabs.Trigger>
           )}
         </For>
+        <KTabs.Indicator class={styles.indicator} />
       </KTabs.List>
 
       {props.children}
