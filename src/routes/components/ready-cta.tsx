@@ -21,6 +21,7 @@ export default function ReadyCTA() {
     <VStack
       gap="8"
       paddingBlockStart="40"
+      paddingInline="8"
       paddingBlockEnd="60"
       w="full"
       md={{
