@@ -10,6 +10,7 @@ import { LeadChoiceProvider } from '~/context/lead-choice';
 // Lazy load below the fold components
 const GetStarted = lazy(() => import('./components/get-started'));
 const KeyFeatures = lazy(() => import('./components/key-features'));
+const ReadyCTA = lazy(() => import('./components/ready-cta'));
 
 /**
  * This module is the main entry point for the home page.
@@ -51,6 +52,7 @@ export default function Home(props: RouteSectionProps<RouteData>) {
         <Suspense>
           <GetStarted />
           <KeyFeatures />
+          <ReadyCTA />
         </Suspense>
       </LeadChoiceProvider>
     </>

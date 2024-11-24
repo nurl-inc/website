@@ -105,7 +105,6 @@ export function HeadingFeatureCard(
           textStyle: 'heading-sm',
           textWrap: 'pretty',
           md: {
-            maxW: '2/3',
             textStyle: 'heading-md',
           },
         })}
@@ -113,7 +112,9 @@ export function HeadingFeatureCard(
         {props.children}
       </p>
       <Show when={props.description}>
-        <p class={css({ textStyle: 'body-md' })}>{props.description}</p>
+        <p class={css({ textStyle: 'body-md', textWrap: 'pretty', w: '2/3' })}>
+          {props.description}
+        </p>
       </Show>
     </Box>
   );

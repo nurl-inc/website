@@ -1,17 +1,18 @@
+import { lazy, Match, onMount, Suspense, Switch } from 'solid-js';
+import { scroll, animate } from 'motion';
+import { css } from 'styled-system/css';
+import { Box, VStack } from 'styled-system/jsx';
+import { useLeadChoice } from '~/context/lead-choice';
+import { Button } from '~/components/ui/button';
+
 /**
  * This module provides the key features section which is determined by the
  * lead choice context.
  * @module routes/components/key-features
  */
 
-import { lazy, Match, onMount, Switch } from 'solid-js';
-import { scroll, animate } from 'motion';
-import { css } from 'styled-system/css';
-import { Box, VStack } from 'styled-system/jsx';
-import { useLeadChoice } from '~/context/lead-choice';
-
 const KeyPlayFeatures = lazy(() => import('./key-play-features'));
-// const KeySanctumFeatures = lazy(() => import('./key-sanctum-features'));
+const KeySanctumFeatures = lazy(() => import('./key-sanctum-features'));
 
 export default function KeyFeatures() {
   const [leadChoice] = useLeadChoice();
@@ -47,23 +48,7 @@ export default function KeyFeatures() {
           pb: 44,
         }}
       >
-        <h2
-          class={css({
-            color: '#10EAAC',
-            lineHeight: 1,
-            maxW: '46rem',
-            mx: 'auto',
-            textStyle: 'heading-sm',
-            textGradient: 'tertiary',
-            textWrap: 'balance',
-            md: {
-              textStyle: 'heading-lg',
-            },
-          })}
-        >
-          Gain advantage{' '}
-          <span class={css({ color: 'page.text.initial' })}>with Nurl</span>
-        </h2>
+        <KeyFeaturesHeading main="Gain advantage" sub="with Nurl" />
         <p
           class={css({
             color: 'page.text.initial',
@@ -84,12 +69,38 @@ export default function KeyFeatures() {
         </p>
       </VStack>
 
-      <Switch>
-        <Match when={leadChoice.choice === 'play'}>
-          <KeyPlayFeatures />
-        </Match>
-        <Match when={leadChoice.choice === 'sanctum'}>Sanctum stuff</Match>
-      </Switch>
+      <Suspense>
+        <Switch>
+          <Match when={leadChoice.choice === 'play'}>
+            <KeyPlayFeatures />
+          </Match>
+          <Match when={leadChoice.choice === 'sanctum'}>
+            <KeySanctumFeatures />
+          </Match>
+        </Switch>
+      </Suspense>
     </Box>
+  );
+}
+
+function KeyFeaturesHeading(props: { main: string; sub: string }) {
+  return (
+    <h2
+      class={css({
+        color: '#10EAAC',
+        lineHeight: 1,
+        maxW: '46rem',
+        mx: 'auto',
+        textStyle: 'heading-sm',
+        textGradient: 'tertiary',
+        textWrap: 'balance',
+        md: {
+          textStyle: 'heading-lg',
+        },
+      })}
+    >
+      {props.main}{' '}
+      <span class={css({ color: 'page.text.initial' })}>{props.sub}</span>
+    </h2>
   );
 }
