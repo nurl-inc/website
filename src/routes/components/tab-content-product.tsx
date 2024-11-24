@@ -1,9 +1,11 @@
-import { ParentProps, For } from 'solid-js';
+import { ParentProps, For, onMount } from 'solid-js';
 import { css } from 'styled-system/css';
 import { Box, Container, VStack } from 'styled-system/jsx';
 import SpotlightItem from '~/components/ui/spotlight-item';
+import { useLeadChoice, type LeadChoice } from '~/context/lead-choice';
 
 interface TabContentProductProps {
+  choice: LeadChoice;
   heading: string;
   description: string;
   spotlight: string[];
@@ -12,6 +14,12 @@ interface TabContentProductProps {
 export default function TabContentProduct(
   props: ParentProps<TabContentProductProps>,
 ) {
+  const [, { setChoice }] = useLeadChoice();
+
+  onMount(() => {
+    setChoice(props.choice);
+  });
+
   return (
     <Container
       md={{

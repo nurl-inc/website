@@ -9,22 +9,14 @@ import { hstack } from 'styled-system/patterns/hstack';
 
 /**
  * The main navigation component that is used on all pages and renders the
- * mobile and desktop versions.
+ * mobile and desktop versions. Must be used within a Route.
  */
 export default function Nav() {
   const [isOpen, setIsOpen] = createSignal<boolean>(false);
 
   return (
-    <header>
-      <Box
-        data-part="nav"
-        bgColor="page.surface.initial"
-        left="0"
-        position="sticky"
-        right="0"
-        top="0"
-        zIndex="sticky"
-      >
+    <header class={css({ position: 'sticky', top: 0, zIndex: 'sticky' })}>
+      <Box data-part="nav" bgColor="page.surface.initial" w="full">
         <HStack
           justify="center"
           w="full"
@@ -74,7 +66,7 @@ export default function Nav() {
               },
             })}
           >
-            <For each={nav}>
+            <For each={nav.slice(1)}>
               {(item) => (
                 <li>
                   <A
@@ -194,6 +186,16 @@ export default function Nav() {
                           href={item.href}
                         >
                           {item.label}
+                          <small
+                            class={css({
+                              display: 'block',
+                              color: 'page.text.100',
+                              textStyle: 'body-sm',
+                              textWrap: 'pretty',
+                            })}
+                          >
+                            {item.description}
+                          </small>
                         </A>
                       </li>
                     )}

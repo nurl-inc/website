@@ -5,6 +5,7 @@ import Hero from './components/hero';
 import Nav from '~/components/shared/nav';
 import Main from '~/components/shared/main';
 import GetStarted from './components/get-started';
+import { LeadChoiceProvider } from '~/context/lead-choice';
 
 /**
  * This module is the main entry point for the home page.
@@ -42,7 +43,9 @@ export default function Home(props: RouteSectionProps<RouteData>) {
         <Hero />
       </Main>
 
-      <GetStarted />
+      <LeadChoiceProvider initialChoice="play">
+        <GetStarted />
+      </LeadChoiceProvider>
     </>
   );
 }
