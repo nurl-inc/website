@@ -20,7 +20,7 @@ export function FeatureCardWithPoints(
   props: ParentProps<FeatureCardWithPointsProps>,
 ) {
   return (
-    <Box class={featureCard()}>
+    <Box id="feature-card" class={featureCard()}>
       <VStack alignItems="flex-start" h="full" justify="flex-end" w="full">
         <p
           class={css({
@@ -92,6 +92,7 @@ export function HeadingFeatureCard(
 ) {
   return (
     <Box
+      id="feature-card"
       class={featureCard({
         cushion: 'md',
       })}
