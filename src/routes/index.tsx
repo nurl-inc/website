@@ -12,6 +12,7 @@ const GetStarted = lazy(() => import('./components/get-started'));
 const KeyFeatures = lazy(() => import('./components/key-features'));
 const ReadyCTA = lazy(() => import('./components/ready-cta'));
 const HowToStart = lazy(() => import('./components/how-to-start'));
+const SocialProof = lazy(() => import('./components/social-proof'));
 
 /**
  * This module is the main entry point for the home page.
@@ -60,6 +61,10 @@ export default function Home(props: RouteSectionProps<RouteData>) {
           </Suspense>
         </Suspense>
       </LeadChoiceProvider>
+
+      <Suspense>
+        <SocialProof />
+      </Suspense>
     </>
   );
 }

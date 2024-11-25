@@ -14,7 +14,7 @@ import { Banner } from './components/ui/banner';
 export default function App() {
   return (
     <MetaProvider>
-      <Banner>Launching Beta - Early 2025</Banner>
+      <Banner>Launching Beta in 2025</Banner>
 
       <Router root={(props) => <Suspense>{props.children}</Suspense>}>
         <FileRoutes />
