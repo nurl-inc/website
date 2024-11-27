@@ -10,8 +10,9 @@ export const conditions = {
     systemMode: '[data-color-mode=system] &, &.system, .system &',
 
     // states
-    open: '&:is([open], [data-open], [data-state=open])',
-    closed: '&:is([closed], [data-closed], [data-state=closed])',
+    open: '&:is([open], [data-open], [data-state=open], [data-expanded], [aria-expanded=true])',
+    closed:
+      '&:is([closed], [data-closed], [data-state=closed], [data-closed], [aria-expanded=false])',
     modalOpen: '&:is([data-modal-open=true])',
     disabled: '&:is(:disabled, [disabled], [data-disabled], [aria-disabled])',
     invalid: '&:is(:invalid, [data-invalid], [aria-invalid])',

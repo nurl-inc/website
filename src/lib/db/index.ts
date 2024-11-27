@@ -2,6 +2,8 @@ import { query } from '@solidjs/router';
 import type { PointCardProps } from '~/routes/components/how-to-start';
 import playHowTo from '~/data/play-how-to.json';
 import sanctumHowTo from '~/data/sanctum-how-to.json';
+import faq from '~/data/faq.json';
+import type { FAQItem } from './types';
 
 export const getHowToData = query(
   async (choice: string): Promise<PointCardProps[]> => {
@@ -21,3 +23,8 @@ export const getHowToData = query(
   },
   'howToData',
 );
+
+export const getFaqData = query(async () => {
+  'use server';
+  return faq as FAQItem[];
+}, 'faqData');

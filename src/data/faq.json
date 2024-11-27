@@ -1,0 +1,50 @@
+[
+  {
+    "question": "What is Nurl Play?",
+    "answer": "Nurl Play is your digital game enhancer that makes tabletop RPGs flow like video games - without losing the magic of physical play. \n\nImagine rolling real dice and moving real miniatures, but never having to pause for rule checks or math. Our smart automation handles the complex stuff in the background, letting you focus on the story and social experience that makes tabletop gaming special.\n\nWhether you're a player or Game Master, Nurl Play works alongside your physical game to:\n- Automate rules and calculations\n- Track character states and conditions\n- Handle complex game mechanics\n- Keep the game flowing naturally\n\nStart free and upgrade when you're ready to enhance your whole group's experience.",
+    "ctaPrimary": {
+      "text": "Try Free",
+      "url": "/play/signup"
+    },
+    "ctaSecondary": {
+      "text": "Watch Demo",
+      "url": "/play/demo"
+    }
+  },
+  {
+    "question": "What is Nurl Sanctum?",
+    "answer": "Nurl Sanctum is the sacred space where tabletop RPG publishers transform their game ideas into reality. \n\nUnlike traditional development tools, Sanctum lets you visually map your entire game system - seeing every relationship, balance point, and interaction at a glance. It's like having a bird's-eye view of your game's DNA.\n\nPublishers using Sanctum can:\n- Cut development time in half\n- Spot system issues instantly\n- Test rule interactions in real-time\n- Deploy seamlessly to Nurl Play\n\nFrom indie creators to established studios, Sanctum grows with your ambitions.",
+    "ctaPrimary": {
+      "text": "Schedule Demo",
+      "url": "/sanctum/demo"
+    },
+    "ctaSecondary": {
+      "text": "View Publisher Stories",
+      "url": "/sanctum/stories"
+    }
+  },
+  {
+    "question": "How much will it cost?",
+    "answer": "Nurl Play:\n- Free Tier: Get started at no cost\n- Player Pro: $19.99/month\n- Group Pack: $49.99/month (covers 5 players)\n\nAll paid tiers include a 14-day free trial. No credit card required to start.\n\nNurl Sanctum:\n- Creator: $29/month\n- Publisher: $199/month\nAnnual plans save 20%\n\nEvery tier includes core features - choose based on your needs, not limitations.",
+    "ctaPrimary": {
+      "text": "See Full Pricing",
+      "url": "/pricing"
+    },
+    "ctaSecondary": {
+      "text": "Compare Plans",
+      "url": "/pricing/compare"
+    }
+  },
+  {
+    "question": "What does Nurl mean?",
+    "answer": "Nurl (from 'neural' + 'URL') represents our mission to create intelligent connections in tabletop gaming. Just as neurons connect in our brains to create something greater, Nurl connects players, publishers, and games to enhance the tabletop experience while preserving what makes it special.\n\nWe chose this name because we believe in:\n- Enhancing, not replacing\n- Connecting, not dividing\n- Empowering creativity\n- Preserving tradition while embracing innovation\n\nJoin the players and publishers who are already part of the Nurl revolution.",
+    "ctaPrimary": {
+      "text": "Join Our Community",
+      "url": "/community"
+    },
+    "ctaSecondary": {
+      "text": "Read Our Story",
+      "url": "/about"
+    }
+  }
+]

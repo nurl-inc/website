@@ -1,7 +1,6 @@
 import { Match, Switch } from 'solid-js';
-import { css } from 'styled-system/css';
 import { VStack } from 'styled-system/jsx';
-import { Button } from '~/components/ui/button';
+import { Button, Text } from '~/components/ui';
 import { useLeadChoice } from '~/context/lead-choice';
 
 // TODO: Add link to forms
@@ -28,7 +27,9 @@ export default function ReadyCTA() {
         paddingBlockEnd: 96,
       }}
     >
-      <h3 class={css({ textStyle: 'heading-sm' })}>Ready to get started?</h3>
+      <Text as="h3" lineHeight="1" textStyle="heading-sm">
+        Ready to get started?
+      </Text>
 
       <Switch>
         <Match when={leadChoice.choice === 'play'}>
