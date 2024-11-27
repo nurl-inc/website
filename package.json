@@ -15,12 +15,16 @@
     "@solidjs/meta": "^0.29.4",
     "@solidjs/router": "^0.15.1",
     "@solidjs/start": "^1.0.10",
+    "dompurify": "^3.2.1",
+    "marked": "^15.0.2",
     "motion": "^11.11.17",
     "solid-js": "^1.9.2",
     "vinxi": "^0.4.3"
   },
   "devDependencies": {
     "@pandacss/dev": "^0.48.0",
+    "@types/dompurify": "^3.2.0",
+    "@types/marked": "^6.0.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.2.10",
     "prettier": "3.3.3",

@@ -1,4 +1,5 @@
 export * from './book';
+export * from './chevron-down';
 export * from './menu';
 export * from './pull-request';
 
