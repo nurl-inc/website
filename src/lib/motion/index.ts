@@ -9,17 +9,21 @@ const SLIDE_IN_FROM_BOTTOM = {
 };
 
 export function scrollFadeInOut(target: Target) {
-  scroll(animate(target, FADE_IN_OUT, { ease: 'linear' }), {
-    target,
-    offset: ['start end', 'end end', 'start start', 'end start'],
-  });
+  if (target) {
+    scroll(animate(target, FADE_IN_OUT, { ease: 'linear' }), {
+      target,
+      offset: ['start end', 'end end', 'start start', 'end start'],
+    });
+  }
 }
 
 export function slideInFromBottom(target: Target) {
-  inView(target, () => {
-    animate(target, SLIDE_IN_FROM_BOTTOM, {
-      delay: stagger(0.1),
-      duration: 0.5,
+  if (target) {
+    inView(target, () => {
+      animate(target, SLIDE_IN_FROM_BOTTOM, {
+        delay: stagger(0.1),
+        duration: 0.5,
+      });
     });
-  });
+  }
 }
