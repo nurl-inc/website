@@ -10,3 +10,7 @@ declare global {
     robots?: string[];
   }
 }
+
+declare module 'solid-mdx' {
+  export { MDXProvider } from 'solid-mdx';
+}

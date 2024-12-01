@@ -1,8 +1,10 @@
+:::main{.prose role=main}
+
 # Nurl Privacy Policy
 
-## Effective: August 29, 2023
+**Effective: August 29, 2023**
 
-## Last Updated: August 29, 2023
+**Last Updated: August 29, 2023**
 
 1. [Welcome!](#welcome)
 2. [Nurl is your place to play role-playing games](#nurl-is-your-place-to-play-role-playing-games)
@@ -310,3 +312,5 @@ We will update this Privacy Policy from time to time. We always indicate the dat
 ### Contact Us
 
 Email us at [privacy@nurl.app](mailto:privacy@nurl.app) with any questions about this Privacy Policy or how we process your information. We’ll be happy to help.
+
+:::

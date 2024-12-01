@@ -18,10 +18,12 @@
     "dompurify": "^3.2.1",
     "marked": "^15.0.2",
     "motion": "^11.11.17",
+    "remove": "^0.1.5",
     "solid-js": "^1.9.2",
     "vinxi": "^0.4.3"
   },
   "devDependencies": {
+    "@mdx-js/mdx": "^3.1.0",
     "@pandacss/dev": "^0.48.0",
     "@types/dompurify": "^3.2.0",
     "@types/marked": "^6.0.0",
@@ -30,6 +32,9 @@
     "lint-staged": "^15.2.10",
     "postcss": "^8.4.49",
     "prettier": "3.3.3",
+    "remark-directive": "^3.0.0",
+    "remark-directive-rehype": "^0.4.2",
+    "solid-mdx": "^0.0.7",
     "typescript": "^5.7.2",
     "vite-tsconfig-paths": "^5.1.3"
   },
