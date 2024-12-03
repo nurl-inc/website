@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'solid-js';
-import type { RouteSectionProps } from '@solidjs/router';
+import { A, type RouteSectionProps } from '@solidjs/router';
 import Head from '~/components/shared/head';
 import type { Metadata } from '~/types';
 import Hero from './components/hero';

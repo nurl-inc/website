@@ -6,6 +6,7 @@ import { MetaProvider } from '@solidjs/meta';
 import '@fontsource-variable/montserrat';
 import '@fontsource-variable/saira';
 import './main.css';
+
 import { Banner } from './components/ui/banner';
 
 /**

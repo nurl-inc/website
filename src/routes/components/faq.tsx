@@ -2,8 +2,8 @@ import { A, createAsync } from '@solidjs/router';
 import { Show, For } from 'solid-js';
 import { Container, HStack, VStack } from 'styled-system/jsx';
 import { button } from 'styled-system/recipes';
-import { Markdown } from '~/components/shared/md';
-import { Accordion, AccordionItem, Button } from '~/components/ui';
+import { Markdown } from '~/components/shared/markdown';
+import { Accordion, AccordionItem } from '~/components/ui';
 import { Text } from '~/components/ui/text';
 import { getFaqData } from '~/lib/db';
 
