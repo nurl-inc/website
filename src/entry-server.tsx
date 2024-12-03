@@ -1,5 +1,7 @@
 // @refresh reload
 import { createHandler, StartServer } from '@solidjs/start/server';
+import { css } from 'styled-system/css';
+import { proseContainerCss } from './styles/prose';
 
 /**
  * This module is the entry point for the server.
@@ -36,7 +38,9 @@ export default createHandler(() => (
         </head>
 
         <body>
-          <div id="app">{children}</div>
+          <div id="app" class={css(proseContainerCss)}>
+            {children}
+          </div>
           {scripts}
         </body>
       </html>

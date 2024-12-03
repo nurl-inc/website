@@ -4,6 +4,10 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 import pkg from '@vinxi/plugin-mdx';
 import remarkDirective from 'remark-directive';
 import remarkDirectiveRehype from 'remark-directive-rehype';
+import remarkCodeFrontmatter from 'remark-code-frontmatter';
+
+import rehypeSlug from 'rehype-slug';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 
 // We need to destructure the default export from the plugin
 const { default: vinxiMdx } = pkg;
@@ -30,8 +34,12 @@ export default defineConfig({
         jsx: true,
         jsxImportSource: 'solid-js',
         providerImportSource: 'solid-mdx',
-        remarkPlugins: [remarkDirective, remarkDirectiveRehype],
-        rehypePlugins: [],
+        remarkPlugins: [
+          remarkDirective,
+          remarkDirectiveRehype,
+          remarkCodeFrontmatter,
+        ],
+        rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings],
       }),
     ],
   },

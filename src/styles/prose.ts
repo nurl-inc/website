@@ -58,6 +58,17 @@ export const proseCss = css.raw({
   '& li': {
     marginBlockEnd: 2,
   },
+  '& blockquote': {
+    borderLeftWidth: '0.25rem',
+    borderLeftStyle: 'solid',
+    bgColor: 'page.surface.200',
+    paddingInlineStart: 4,
+    paddingInlineEnd: 4,
+    paddingBlockStart: 4,
+    paddingBlockEnd: 2,
+    marginBlockStart: 6,
+    marginBlockEnd: 6,
+  },
 });
 
 /**

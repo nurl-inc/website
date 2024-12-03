@@ -45,9 +45,11 @@ export default function Nav() {
             <MenuIcon />
           </Button>
 
-          <Box w="5rem">
-            <img src="/logos/nurl.svg" alt="Nurl Logo" />
-          </Box>
+          <A href="/">
+            <Box w="5rem">
+              <img src="/logos/nurl.svg" alt="Nurl Logo" />
+            </Box>
+          </A>
 
           <ul
             class={hstack({
