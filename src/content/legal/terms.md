@@ -1,5 +1,3 @@
-:::main{.prose role=main}
-
 # Terms of Service
 
 **Effective: August 18, 2023**
@@ -273,5 +271,3 @@ You have certain rights that, by law, can’t be limited by these terms, and we 
 ### Contacting each other
 
 If you have any questions about these terms, please contact us at [privacy@nurl.app](mailto:privacy@nurl.app). We may send you electronic communications related to our services. Where required, we’ll get your consent before sending you direct marketing, and we’ll make it easy for you to opt out.
-
-:::

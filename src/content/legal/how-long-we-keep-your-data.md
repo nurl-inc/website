@@ -1,5 +1,3 @@
-:::main{.prose role=main}
-
 # How long Nurl keeps your information
 
 We collect certain information as you use Nurl. Our [Privacy Policy](/legal/privacy/) describes the information we collect, how we use and share it, and how you can control your information. This page describes how long we hold on to different types of information and why.
@@ -55,8 +53,6 @@ As provided in our [Privacy Policy](/legal/privacy/), all our users have control
 - Right to the portability of your personal data
 - Right to object to the processing of your personal data
 
-<br />
+:br
 
 If you have any questions about data retention or our deletion practices, or if you wish to exercise control over your information, please reach out to [privacy@nurl.app](mailto:privacy@nurl.app).
-
-:::

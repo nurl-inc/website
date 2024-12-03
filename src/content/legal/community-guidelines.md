@@ -1,5 +1,3 @@
-:::main{.prose role=main}
-
 # Nurl Community Guidelines
 
 ## Effective: August 21, 2023
@@ -137,5 +135,3 @@ If you see any activity that violates these guidelines, our [Terms of Service](/
 These guidelines will continue to evolve over time. This means we may take action against a user, group, or content that violates the spirit of these guidelines when we encounter a new threat or harm that is not explicitly covered in the current version.
 
 We will always make our best effort to notify you when we update these guidelines, but it is up to you to follow the spirit of them: keep Nurl safe and a place for everyone to belong. Thanks for doing your part.
-
-:::
