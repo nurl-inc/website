@@ -31,7 +31,13 @@ async function convertToHtml(content: string) {
       .use(remarkCodeFrontmatter)
       .use(remarkRehype)
       .use(rehypeSlug)
-      .use(rehypeAutolinkHeadings)
+      .use(rehypeAutolinkHeadings, {
+        properties: { class: 'header-link' },
+        content: {
+          type: 'text',
+          value: '#',
+        },
+      })
       .use(rehypeSanitize, defaultSchema)
       .use(rehypeStringify)
       .process(content);

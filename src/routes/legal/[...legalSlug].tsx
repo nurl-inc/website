@@ -1,12 +1,12 @@
 import { useParams, type RouteSectionProps } from '@solidjs/router';
-import { createMemo, createResource, Show } from 'solid-js';
+import { createMemo, createResource, Show, Suspense } from 'solid-js';
 import { css } from 'styled-system/css';
-import { Box, Container, VStack } from 'styled-system/jsx';
+import { Box, Container } from 'styled-system/jsx';
 import { getLegalContent } from '~/api';
+import { Breadcrumb } from '~/components/shared/breadcrumb';
 import Head from '~/components/shared/head';
 import Main from '~/components/shared/main';
 import Nav from '~/components/shared/nav';
-import { Text } from '~/components/ui';
 import { makeSlug } from '~/primitives/makeSlug';
 import { proseCss } from '~/styles/prose';
 import type { Metadata } from '~/types';
@@ -51,11 +51,14 @@ export default function LegalPage(props: RouteSectionProps<RouteData>) {
       <Nav />
       <Main>
         <Container>
-          <Show when={data()}>
-            <Box class={css(proseCss)} paddingBlockStart="10" w="full">
-              <div innerHTML={data()!.html as string} />
-            </Box>
-          </Show>
+          <Suspense>
+            <Show when={data()}>
+              <Box class={css(proseCss)} paddingBlockStart="10" w="full">
+                <Breadcrumb />
+                <div innerHTML={data()!.html as string} />
+              </Box>
+            </Show>
+          </Suspense>
         </Container>
       </Main>
     </>

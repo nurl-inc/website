@@ -1,12 +1,15 @@
 import { useParams, type RouteSectionProps } from '@solidjs/router';
-import { createMemo } from 'solid-js';
-import { Container, VStack } from 'styled-system/jsx';
+import { createMemo, createResource, Show, Suspense } from 'solid-js';
+import { Box, Container } from 'styled-system/jsx';
 import Head from '~/components/shared/head';
 import Main from '~/components/shared/main';
 import Nav from '~/components/shared/nav';
-import { Text } from '~/components/ui';
 import { makeSlug } from '~/primitives/makeSlug';
+import { getBlogContent } from '~/api';
 import type { Metadata } from '~/types';
+import { css } from 'styled-system/css';
+import { proseCss } from '~/styles/prose';
+import { Breadcrumb } from '~/components/shared/breadcrumb';
 
 const metadata: Metadata = {
   title: 'Nurl | Blog',
@@ -40,19 +43,22 @@ export default function BlogPage(props: RouteSectionProps<RouteData>) {
     };
   });
 
+  const [data] = createResource(() => getBlogContent(blogSlug));
+
   return (
     <>
       <Head {...metadata()} />
       <Nav />
       <Main>
         <Container>
-          <VStack h="calc(100dvh - 100px)" justify="center">
-            <Text as="h1" textStyle="heading-xl">
-              {blogSlug}
-            </Text>
-
-            {props.children}
-          </VStack>
+          <Suspense>
+            <Show when={data()}>
+              <Box class={css(proseCss)} paddingBlockStart="10" w="full">
+                <Breadcrumb />
+                <div innerHTML={data()!.html as string} />
+              </Box>
+            </Show>
+          </Suspense>
         </Container>
       </Main>
     </>

@@ -29,6 +29,14 @@ export const proseCss = css.raw({
     marginBottom: 4,
     textStyle: 'heading-xs',
   },
+  '& :is(h1, h2, h3, h4, h5, h6) > a': {
+    display: 'inline-block',
+    marginInline: 2,
+    textDecoration: 'none',
+    _hover: {
+      textDecoration: 'underline',
+    },
+  },
   '& p': {
     marginBottom: 4,
     textStyle: 'body-md',
@@ -40,6 +48,9 @@ export const proseCss = css.raw({
     textDecoration: 'underline',
     textUnderlineOffset: '0.2rem',
     _hover: {
+      textDecorationColor: 'action.bg.hover',
+    },
+    _currentPage: {
       textDecorationColor: 'action.bg.hover',
     },
   },

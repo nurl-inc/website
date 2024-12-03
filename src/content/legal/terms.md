@@ -4,28 +4,28 @@
 
 **Last Updated: August 18, 2023**
 
-1. [Who we are](#who-we-are)
-2. [Age requirements and responsibility of parents and legal guardians](#age-requirements-and-responsibility-of-parents-and-legal-guardians)
-3. [What you can expect from us](#what-you-can-expect-from-us)
-4. [Your Nurl account](#your-nurl-account)
-5. [Content in Nurl's services](#content-in-nurls-services)
+1. [Who we are](#user-content-who-we-are)
+2. [Age requirements and responsibility of parents and legal guardians](#user-content-age-requirements-and-responsibility-of-parents-and-legal-guardians)
+3. [What you can expect from us](#user-content-what-you-can-expect-from-us)
+4. [Your Nurl account](#user-content-your-nurl-account)
+5. [Content in Nurl's services](#user-content-content-in-nurls-services)
 
-- [Your content in our services](#your-content-in-our-services)
-- [Nurl's content](#nurls-content)
-- [Other content](#other-content)
+- [Your content in our services](#user-content-your-content-in-our-services)
+- [Nurl's content](#user-content-nurls-content)
+- [Other content](#user-content-other-content)
 
-6. [Software in Nurl's services](#using-our-services)
-7. [Copyright](#copyright)
-8. [Nurl's paid services](#nurls-paid-services)
-9. [Restrictions on your use of Nurl's services](#restrictions-on-your-use-of-nurls-services)
-10. [Ending your relationship with Nurl](#ending-your-relationship-with-nurl)
-11. [Appeals](#appeals)
-12. [Idenmnity](#indemnity)
-13. [Services "AS IS"](#services-as-is)
-14. [Limitation of liability](#limitation-of-liability)
-15. [Settling disputes between you and Nurl](#settling-disputes-between-you-and-nurl)
-16. [More important stuff](#more-important-stuff)
-17. [Contacting each other](#contacting-each-other)
+6. [Software in Nurl's services](#user-content-using-our-services)
+7. [Copyright](#user-content-copyright)
+8. [Nurl's paid services](#user-content-nurls-paid-services)
+9. [Restrictions on your use of Nurl's services](#user-content-restrictions-on-your-use-of-nurls-services)
+10. [Ending your relationship with Nurl](#user-content-ending-your-relationship-with-nurl)
+11. [Appeals](#user-content-appeals)
+12. [Idenmnity](#user-content-indemnity)
+13. [Services "AS IS"](#user-content-services-as-is)
+14. [Limitation of liability](#user-content-limitation-of-liability)
+15. [Settling disputes between you and Nurl](#user-content-settling-disputes-between-you-and-nurl)
+16. [More important stuff](#user-content-more-important-stuff)
+17. [Contacting each other](#user-content-contacting-each-other)
 
 Welcome! Nurl is a platform that brings people together over shared experiences and gives everyone a place to belong. We’re happy you’re here.
 
