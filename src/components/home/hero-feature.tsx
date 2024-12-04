@@ -13,8 +13,8 @@ export default function HeroFeature() {
     const firstColumn = document.querySelector('.hero-feature-first-column');
     const lastColumn = document.querySelector('.hero-feature-last-column');
     if (firstColumn && lastColumn) {
-      scroll(animate(firstColumn, { y: '-10%' }));
-      scroll(animate(lastColumn, { y: '10%' }));
+      scroll(animate(firstColumn, { y: '-50%' }));
+      scroll(animate(lastColumn, { y: '50%' }));
     }
   });
 

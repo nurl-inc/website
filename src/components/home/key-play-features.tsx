@@ -16,8 +16,8 @@ export default function KeyPlayFeatures() {
     const cards = document.querySelectorAll('.feature-card');
 
     if (firstColumn && lastColumn) {
-      scroll(animate(firstColumn, { y: '-10%' }));
-      scroll(animate(lastColumn, { y: '10%' }));
+      scroll(animate(firstColumn, { y: '-50%' }));
+      scroll(animate(lastColumn, { y: '50%' }));
     }
     if (cards) {
       cards.forEach((item) => {
@@ -34,6 +34,7 @@ export default function KeyPlayFeatures() {
       <VStack
         id="player-features-first-column"
         gap="4"
+        paddingBlockStart="20"
         w="full"
         md={{ w: 'calc(50% - 1rem)' }}
       >
@@ -60,7 +61,7 @@ export default function KeyPlayFeatures() {
         gap="4"
         w="full"
         md={{
-          pt: 28,
+          marginBlockStart: '-10rem',
           w: 'calc(50% - 1rem)',
         }}
       >

@@ -1,20 +1,20 @@
 import { lazy, Suspense } from 'solid-js';
-import { A, type RouteSectionProps } from '@solidjs/router';
+import { type RouteSectionProps } from '@solidjs/router';
 import Head from '~/components/shared/head';
 import type { Metadata } from '~/types';
-import Hero from './components/hero';
+import Hero from '~/components/home/hero';
 import Nav from '~/components/shared/nav';
 import Main from '~/components/shared/main';
 import { LeadChoiceProvider } from '~/context/lead-choice';
 
 // Lazy load below the fold components
-const GetStarted = lazy(() => import('./components/get-started'));
-const KeyFeatures = lazy(() => import('./components/key-features'));
-const ReadyCTA = lazy(() => import('./components/ready-cta'));
-const HowToStart = lazy(() => import('./components/how-to-start'));
-const SocialProof = lazy(() => import('./components/social-proof'));
-const Faq = lazy(() => import('./components/faq'));
-const FinalCTA = lazy(() => import('./components/final-cta'));
+const GetStarted = lazy(() => import('../components/home/get-started'));
+const KeyFeatures = lazy(() => import('../components/home/key-features'));
+const ReadyCTA = lazy(() => import('../components/home/ready-cta'));
+const HowToStart = lazy(() => import('../components/home/how-to-start'));
+const SocialProof = lazy(() => import('../components/home/social-proof'));
+const Faq = lazy(() => import('../components/home/faq'));
+const FinalCTA = lazy(() => import('../components/home/final-cta'));
 
 /**
  * This module is the main entry point for the home page.
