@@ -11,10 +11,12 @@ import { css } from 'styled-system/css';
 import { proseCss } from '~/styles/prose';
 import { Breadcrumb } from '~/components/shared/breadcrumb';
 
+import keywords from '~/data/keywords.json';
+
 const metadata: Metadata = {
   title: 'Nurl | Blog',
   description: 'Read our blog posts.',
-  keywords: 'nurl, blog',
+  keywords: `${keywords.base.join(', ')}, ${keywords.blog.join(', ')}`,
   image: 'https://nurl.website/og-meta.png',
 };
 
@@ -39,7 +41,6 @@ export default function BlogPage(props: RouteSectionProps<RouteData>) {
       ...props.data.metadata,
       title: `Nurl | ${slug()} Blog`,
       description: `Read our ${slug()} blog post.`,
-      keywords: `nurl, blog, ${slug()}`,
     };
   });
 

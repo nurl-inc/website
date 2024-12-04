@@ -10,10 +10,12 @@ import Nav from '~/components/shared/nav';
 import { Text } from '~/components/ui';
 import type { Metadata } from '~/types';
 
+import keywords from '~/data/keywords.json';
+
 const metadata: Metadata = {
   title: 'Nurl | Blog',
   description: 'Read our blog posts.',
-  keywords: 'nurl, blog, posts',
+  keywords: `${keywords.base.join(', ')}, ${keywords.blog.join(', ')}`,
   image: 'https://nurl.website/og-meta.png',
 };
 

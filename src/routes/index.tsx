@@ -7,6 +7,8 @@ import Nav from '~/components/shared/nav';
 import Main from '~/components/shared/main';
 import { LeadChoiceProvider } from '~/context/lead-choice';
 
+import keywords from '~/data/keywords.json';
+
 // Lazy load below the fold components
 const GetStarted = lazy(() => import('../components/home/get-started'));
 const KeyFeatures = lazy(() => import('../components/home/key-features'));
@@ -25,8 +27,7 @@ const metadata: Metadata = {
   title: 'Nurl | Where Tabletop Legends Are Made',
   description:
     'Enhance your games with automation that feels like magic, create new worlds with tools that feel sacred.',
-  keywords:
-    'nurl, tabletop, automation, tools, magic, sacred, tabletop gaming tools, TTRPG digital tools, D&D gaming tools, tabletop automation, TTRPG enhancement',
+  keywords: `${keywords.base.join(', ')}, ${keywords.home.join(', ')}`,
   image: 'https://nurl.website/og-meta.png',
 };
 

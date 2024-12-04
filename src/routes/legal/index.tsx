@@ -10,10 +10,12 @@ import Nav from '~/components/shared/nav';
 import { Text } from '~/components/ui';
 import type { Metadata } from '~/types';
 
+import keywords from '~/data/keywords.json';
+
 const metadata: Metadata = {
   title: 'Nurl | Legal',
   description: 'Read our legal documents.',
-  keywords: 'nurl, legal, documents, terms, privacy',
+  keywords: `${keywords.base.join(', ')}, ${keywords.help.join(', ')}`,
   image: 'https://nurl.website/og-meta.png',
 };
 

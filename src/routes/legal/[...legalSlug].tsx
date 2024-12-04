@@ -11,10 +11,12 @@ import { makeSlug } from '~/primitives/makeSlug';
 import { proseCss } from '~/styles/prose';
 import type { Metadata } from '~/types';
 
+import keywords from '~/data/keywords.json';
+
 const metadata: Metadata = {
   title: 'Nurl | Legal',
   description: 'Read our terms and privacy policy.',
-  keywords: 'nurl, legal, terms, privacy',
+  keywords: `${keywords.base.join(', ')}, ${keywords.help.join(', ')}`,
   image: 'https://nurl.website/og-meta.png',
 };
 
@@ -39,7 +41,6 @@ export default function LegalPage(props: RouteSectionProps<RouteData>) {
       ...props.data.metadata,
       title: `Nurl | ${slug()}`,
       description: `Read our ${slug()}`,
-      keywords: `nurl, legal, ${slug()}`,
     };
   });
 
