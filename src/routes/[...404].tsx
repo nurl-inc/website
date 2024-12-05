@@ -1,5 +1,6 @@
 import type { RouteSectionProps } from '@solidjs/router';
 import { Container, VStack } from 'styled-system/jsx';
+import Footer from '~/components/shared/footer';
 import Head from '~/components/shared/head';
 import Main from '~/components/shared/main';
 import Nav from '~/components/shared/nav';
@@ -30,6 +31,7 @@ export default function NotFound(props: RouteSectionProps<RouteData>) {
     <>
       <Head {...props.data.metadata} />
       <Nav />
+
       <Main>
         <Container>
           <VStack h="calc(100dvh - 100px)" justify="center">
@@ -43,6 +45,8 @@ export default function NotFound(props: RouteSectionProps<RouteData>) {
           </VStack>
         </Container>
       </Main>
+
+      <Footer />
     </>
   );
 }

@@ -1,5 +1,5 @@
 import { useParams, type RouteSectionProps } from '@solidjs/router';
-import { createMemo, createResource, Show, Suspense } from 'solid-js';
+import { createMemo, createResource, lazy, Show, Suspense } from 'solid-js';
 import { css } from 'styled-system/css';
 import { Box, Container } from 'styled-system/jsx';
 import { getLegalContent } from '~/api';
@@ -12,6 +12,8 @@ import { proseCss } from '~/styles/prose';
 import type { Metadata } from '~/types';
 
 import keywords from '~/data/keywords.json';
+
+const Footer = lazy(() => import('~/components/shared/footer'));
 
 const metadata: Metadata = {
   title: 'Nurl | Legal',
@@ -62,6 +64,8 @@ export default function LegalPage(props: RouteSectionProps<RouteData>) {
           </Suspense>
         </Container>
       </Main>
+
+      <Footer />
     </>
   );
 }

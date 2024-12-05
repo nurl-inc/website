@@ -1,6 +1,6 @@
 // @refresh reload
 import { createHandler, StartServer } from '@solidjs/start/server';
-
+import schema from '../public/schema.json';
 /**
  * This module is the entry point for the server.
  * It is used to render the app on the server and manage static assets.
@@ -33,6 +33,8 @@ export default createHandler(() => (
           <meta property="og:url" content="https://nurl.website" />
           <meta property="og:type" content="website" />
           <meta property="og:site_name" content="Nurl" />
+
+          <script type="application/ld+json">{JSON.stringify(schema)}</script>
         </head>
 
         <body>

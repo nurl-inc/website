@@ -1,5 +1,5 @@
 import { useParams, type RouteSectionProps } from '@solidjs/router';
-import { createMemo, createResource, Show, Suspense } from 'solid-js';
+import { createMemo, createResource, lazy, Show, Suspense } from 'solid-js';
 import { Box, Container } from 'styled-system/jsx';
 import Head from '~/components/shared/head';
 import Main from '~/components/shared/main';
@@ -12,6 +12,8 @@ import { proseCss } from '~/styles/prose';
 import { Breadcrumb } from '~/components/shared/breadcrumb';
 
 import keywords from '~/data/keywords.json';
+
+const Footer = lazy(() => import('~/components/shared/footer'));
 
 const metadata: Metadata = {
   title: 'Nurl | Blog',
@@ -50,6 +52,7 @@ export default function BlogPage(props: RouteSectionProps<RouteData>) {
     <>
       <Head {...metadata()} />
       <Nav />
+
       <Main>
         <Container>
           <Suspense>
@@ -62,6 +65,8 @@ export default function BlogPage(props: RouteSectionProps<RouteData>) {
           </Suspense>
         </Container>
       </Main>
+
+      <Footer />
     </>
   );
 }
