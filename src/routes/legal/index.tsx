@@ -40,6 +40,7 @@ export default function Legal(props: RouteSectionProps<RouteData>) {
     <>
       <Head {...props.data.metadata} />
       <Nav />
+
       <Main>
         <Container minH="80dvh" paddingBlock="20">
           <header

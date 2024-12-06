@@ -54,7 +54,6 @@ export default function LegalPage(props: RouteSectionProps<RouteData>) {
 
       <Main>
         <Container minH="80dvh">
-          {metadataSlug()}
           <Suspense>
             <Show when={data()}>
               <Box class={css(proseCss)} paddingBlockStart="10" w="full">

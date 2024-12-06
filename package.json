@@ -25,11 +25,9 @@
     "vinxi": "^0.4.3"
   },
   "devDependencies": {
-    "@mdx-js/mdx": "^3.1.0",
     "@pandacss/dev": "^0.48.0",
     "@types/dompurify": "^3.2.0",
     "@types/marked": "^6.0.0",
-    "@vinxi/plugin-mdx": "^3.7.2",
     "husky": "^9.1.7",
     "lint-staged": "^15.2.10",
     "postcss": "^8.4.49",
@@ -45,8 +43,6 @@
     "remark-mdx-frontmatter": "^5.0.0",
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.1.1",
-    "solid-mdx": "^0.0.7",
-    "solid-start-sitemap": "^0.1.0",
     "typescript": "^5.7.2",
     "unified": "^11.0.5",
     "vite-plugin-sitemap": "^0.7.1",
