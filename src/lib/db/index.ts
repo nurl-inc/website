@@ -1,5 +1,5 @@
 import { query } from '@solidjs/router';
-import type { PointCardProps } from '~/routes/components/how-to-start';
+import type { PointCardProps } from '~/components/routes/home/how-to-start';
 import playHowTo from '~/data/play-how-to.json';
 import sanctumHowTo from '~/data/sanctum-how-to.json';
 import faq from '~/data/faq.json';

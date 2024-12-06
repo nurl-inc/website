@@ -1,20 +1,27 @@
 import { lazy, Suspense } from 'solid-js';
-import { A, type RouteSectionProps } from '@solidjs/router';
+import { type RouteSectionProps } from '@solidjs/router';
 import Head from '~/components/shared/head';
 import type { Metadata } from '~/types';
-import Hero from './components/hero';
+import Hero from '~/components/routes/home/hero';
 import Nav from '~/components/shared/nav';
 import Main from '~/components/shared/main';
 import { LeadChoiceProvider } from '~/context/lead-choice';
 
+import keywords from '~/data/keywords.json';
+
 // Lazy load below the fold components
-const GetStarted = lazy(() => import('./components/get-started'));
-const KeyFeatures = lazy(() => import('./components/key-features'));
-const ReadyCTA = lazy(() => import('./components/ready-cta'));
-const HowToStart = lazy(() => import('./components/how-to-start'));
-const SocialProof = lazy(() => import('./components/social-proof'));
-const Faq = lazy(() => import('./components/faq'));
-const FinalCTA = lazy(() => import('./components/final-cta'));
+const GetStarted = lazy(() => import('../components/routes/home/get-started'));
+const KeyFeatures = lazy(
+  () => import('../components/routes/home/key-features'),
+);
+const ReadyCTA = lazy(() => import('../components/routes/home/ready-cta'));
+const HowToStart = lazy(() => import('../components/routes/home/how-to-start'));
+const SocialProof = lazy(
+  () => import('../components/routes/home/social-proof'),
+);
+const Faq = lazy(() => import('../components/routes/home/faq'));
+const FinalCTA = lazy(() => import('../components/routes/home/final-cta'));
+const Footer = lazy(() => import('../components/shared/footer'));
 
 /**
  * This module is the main entry point for the home page.
@@ -25,8 +32,7 @@ const metadata: Metadata = {
   title: 'Nurl | Where Tabletop Legends Are Made',
   description:
     'Enhance your games with automation that feels like magic, create new worlds with tools that feel sacred.',
-  keywords:
-    'nurl, tabletop, automation, tools, magic, sacred, tabletop gaming tools, TTRPG digital tools, D&D gaming tools, tabletop automation, TTRPG enhancement',
+  keywords: `${keywords.base.join(', ')}, ${keywords.home.join(', ')}`,
   image: 'https://nurl.website/og-meta.png',
 };
 
@@ -67,6 +73,8 @@ export default function Home(props: RouteSectionProps<RouteData>) {
           <FinalCTA />
         </Suspense>
       </LeadChoiceProvider>
+
+      <Footer />
     </>
   );
 }

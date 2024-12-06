@@ -1,5 +1,5 @@
 import { A, type RouteSectionProps } from '@solidjs/router';
-import { createResource, Index, Suspense } from 'solid-js';
+import { createResource, Index, lazy, Suspense } from 'solid-js';
 import { css } from 'styled-system/css';
 import { Container } from 'styled-system/jsx';
 import { vstack } from 'styled-system/patterns/vstack';
@@ -10,10 +10,14 @@ import Nav from '~/components/shared/nav';
 import { Text } from '~/components/ui';
 import type { Metadata } from '~/types';
 
+import keywords from '~/data/keywords.json';
+
+const Footer = lazy(() => import('~/components/shared/footer'));
+
 const metadata: Metadata = {
   title: 'Nurl | Blog',
   description: 'Read our blog posts.',
-  keywords: 'nurl, blog, posts',
+  keywords: `${keywords.base.join(', ')}, ${keywords.blog.join(', ')}`,
   image: 'https://nurl.website/og-meta.png',
 };
 
@@ -37,7 +41,7 @@ export default function Blog(props: RouteSectionProps<RouteData>) {
       <Head {...props.data.metadata} />
       <Nav />
       <Main>
-        <Container paddingBlock="20">
+        <Container minH="80dvh" paddingBlock="20">
           <header
             class={vstack({
               alignItems: 'flex-start',
@@ -75,6 +79,8 @@ export default function Blog(props: RouteSectionProps<RouteData>) {
           </Suspense>
         </Container>
       </Main>
+
+      <Footer />
     </>
   );
 }

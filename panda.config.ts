@@ -7,6 +7,7 @@ import { recipes, slotRecipes } from './system/recipes';
 import { keyframes } from './system/keyframes';
 import { conditions } from './system/conditions';
 import { globalCss } from './system/globalCss';
+import { patterns } from './system/patterns';
 
 export default defineConfig({
   preflight: true,
@@ -26,6 +27,7 @@ export default defineConfig({
   },
 
   conditions,
+  patterns,
 
   globalCss,
   globalVars,

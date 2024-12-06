@@ -20,13 +20,15 @@ export function SocialCard(props: SocialCardProps) {
         paddingInline: '10',
       }}
     >
-      <Text
-        fontFamily="montserrat"
-        textStyle={{ base: 'body-md', md: 'body-lg' }}
-        textWrap="pretty"
-      >
-        {props.quote}
-      </Text>
+      <blockquote>
+        <Text
+          fontFamily="montserrat"
+          textStyle={{ base: 'body-md', md: 'body-lg' }}
+          textWrap="pretty"
+        >
+          {props.quote}
+        </Text>
+      </blockquote>
       <Text
         as="small"
         display="block"

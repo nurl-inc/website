@@ -1,3 +1,10 @@
+---
+title: Terms of Service
+slug: terms
+effective: August 18, 2023
+updated: August 18, 2023
+---
+
 # Terms of Service
 
 **Effective: August 18, 2023**

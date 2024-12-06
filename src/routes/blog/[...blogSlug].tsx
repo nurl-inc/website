@@ -1,5 +1,5 @@
 import { useParams, type RouteSectionProps } from '@solidjs/router';
-import { createMemo, createResource, Show, Suspense } from 'solid-js';
+import { createMemo, createResource, lazy, Show, Suspense } from 'solid-js';
 import { Box, Container } from 'styled-system/jsx';
 import Head from '~/components/shared/head';
 import Main from '~/components/shared/main';
@@ -11,10 +11,14 @@ import { css } from 'styled-system/css';
 import { proseCss } from '~/styles/prose';
 import { Breadcrumb } from '~/components/shared/breadcrumb';
 
+import keywords from '~/data/keywords.json';
+
+const Footer = lazy(() => import('~/components/shared/footer'));
+
 const metadata: Metadata = {
   title: 'Nurl | Blog',
   description: 'Read our blog posts.',
-  keywords: 'nurl, blog',
+  keywords: `${keywords.base.join(', ')}, ${keywords.blog.join(', ')}`,
   image: 'https://nurl.website/og-meta.png',
 };
 
@@ -31,26 +35,27 @@ interface RouteData {
 }
 
 export default function BlogPage(props: RouteSectionProps<RouteData>) {
-  const { blogSlug } = useParams();
-  const slug = makeSlug(blogSlug);
+  const params = useParams();
+  const slug = () => params.blogSlug;
+  const metadataSlug = () => makeSlug(params.legalSlug);
 
   const metadata = createMemo(() => {
     return {
       ...props.data.metadata,
-      title: `Nurl | ${slug()} Blog`,
-      description: `Read our ${slug()} blog post.`,
-      keywords: `nurl, blog, ${slug()}`,
+      title: `Nurl | ${metadataSlug()} Blog`,
+      description: `Read our ${metadataSlug()} blog post.`,
     };
   });
 
-  const [data] = createResource(() => getBlogContent(blogSlug));
+  const [data] = createResource(slug, getBlogContent);
 
   return (
     <>
       <Head {...metadata()} />
       <Nav />
+
       <Main>
-        <Container>
+        <Container minH="80dvh">
           <Suspense>
             <Show when={data()}>
               <Box class={css(proseCss)} paddingBlockStart="10" w="full">
@@ -61,6 +66,8 @@ export default function BlogPage(props: RouteSectionProps<RouteData>) {
           </Suspense>
         </Container>
       </Main>
+
+      <Footer />
     </>
   );
 }

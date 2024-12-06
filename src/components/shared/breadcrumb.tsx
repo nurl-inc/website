@@ -14,7 +14,7 @@ export function Breadcrumb() {
     return location.pathname.split('/').slice(1);
   });
 
-  function getFullPath(path: string, index: number) {
+  function getFullPath(_: string, index: number) {
     return (
       '/' +
       routes()

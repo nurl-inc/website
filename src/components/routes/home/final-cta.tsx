@@ -24,6 +24,7 @@ export default function FinalCTA() {
       }}
     >
       <Box
+        class="cta-bg"
         id="final-cta"
         border="1px solid"
         borderColor="#0DE7F2"
