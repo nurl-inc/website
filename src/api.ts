@@ -18,7 +18,16 @@ interface Content {
  */
 export async function getBlogContent(slug: string): Promise<Content> {
   'use server';
-  return import(`./content/blog/generated/${slug}.md.json`);
+  const filePath = path.join(
+    process.cwd(),
+    'src',
+    'content',
+    'blog',
+    'generated',
+    `${slug}.md.json`,
+  );
+  const fileContent = fs.readFileSync(filePath, 'utf-8');
+  return JSON.parse(fileContent);
 }
 
 /**
@@ -28,7 +37,16 @@ export async function getBlogContent(slug: string): Promise<Content> {
  */
 export async function getLegalContent(slug: string): Promise<Content> {
   'use server';
-  return import(`./content/legal/generated/${slug}.md.json`);
+  const filePath = path.join(
+    process.cwd(),
+    'src',
+    'content',
+    'legal',
+    'generated',
+    `${slug}.md.json`,
+  );
+  const fileContent = fs.readFileSync(filePath, 'utf-8');
+  return JSON.parse(fileContent);
 }
 
 /**

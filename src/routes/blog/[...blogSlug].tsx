@@ -35,18 +35,19 @@ interface RouteData {
 }
 
 export default function BlogPage(props: RouteSectionProps<RouteData>) {
-  const { blogSlug } = useParams();
-  const slug = makeSlug(blogSlug);
+  const params = useParams();
+  const slug = () => params.blogSlug;
+  const metadataSlug = () => makeSlug(params.legalSlug);
 
   const metadata = createMemo(() => {
     return {
       ...props.data.metadata,
-      title: `Nurl | ${slug()} Blog`,
-      description: `Read our ${slug()} blog post.`,
+      title: `Nurl | ${metadataSlug()} Blog`,
+      description: `Read our ${metadataSlug()} blog post.`,
     };
   });
 
-  const [data] = createResource(() => getBlogContent(blogSlug));
+  const [data] = createResource(slug, getBlogContent);
 
   return (
     <>
@@ -54,7 +55,7 @@ export default function BlogPage(props: RouteSectionProps<RouteData>) {
       <Nav />
 
       <Main>
-        <Container>
+        <Container minH="80dvh">
           <Suspense>
             <Show when={data()}>
               <Box class={css(proseCss)} paddingBlockStart="10" w="full">

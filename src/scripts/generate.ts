@@ -6,7 +6,8 @@ import { unified } from 'unified';
 import remarkParse from 'remark-parse';
 import remarkDirective from 'remark-directive';
 import remarkDirectiveRehype from 'remark-directive-rehype';
-import remarkCodeFrontmatter from 'remark-code-frontmatter';
+import remarkFrontmatter from 'remark-frontmatter';
+import remarkMdxFrontmatter from 'remark-mdx-frontmatter';
 import remarkRehype from 'remark-rehype';
 import remarkGfm from 'remark-gfm';
 
@@ -28,7 +29,8 @@ async function convertToHtml(content: string) {
       .use(remarkGfm)
       .use(remarkDirective)
       .use(remarkDirectiveRehype)
-      .use(remarkCodeFrontmatter)
+      .use(remarkFrontmatter)
+      .use(remarkMdxFrontmatter)
       .use(remarkRehype)
       .use(rehypeSlug)
       .use(rehypeAutolinkHeadings, {

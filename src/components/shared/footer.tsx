@@ -1,6 +1,20 @@
+import { A } from '@solidjs/router';
 import { css } from 'styled-system/css';
-import { Box, Grid, GridItem, HStack, VisuallyHidden } from 'styled-system/jsx';
+import {
+  Box,
+  Divider,
+  Grid,
+  GridItem,
+  HStack,
+  VisuallyHidden,
+  VStack,
+} from 'styled-system/jsx';
+import { button } from 'styled-system/recipes';
 import { Text } from '~/components/ui';
+import { MailIcon } from '../icons';
+
+import footerLinks from '~/data/footer-links.json';
+import { Index, type ParentProps } from 'solid-js';
 
 export default function Footer() {
   return (
@@ -23,14 +37,11 @@ export default function Footer() {
       >
         <GridItem colSpan={{ base: 1, md: 3 }}>
           <HStack
-            borderBottom="1px solid"
-            borderColor="#032E30"
             gap={10}
             justify={{
               base: 'center',
               md: 'flex-start',
             }}
-            marginBlockEnd="6"
             paddingBlockEnd="10"
             w="full"
           >
@@ -49,6 +60,17 @@ export default function Footer() {
             </Box>
           </HStack>
 
+          <Divider
+            color="#032E30"
+            direction="horizontal"
+            marginBlockEnd="6"
+            thickness="1px"
+            w={{
+              base: 'full',
+              md: '18rem',
+            }}
+          />
+
           <address class={css({ marginBlockEnd: 10 })}>
             <Text
               as="small"
@@ -63,6 +85,46 @@ export default function Footer() {
               Austin, TX 78754
             </Text>
           </address>
+
+          <Box w="full">
+            <A class={button()} href="/contact">
+              <span class={css({ w: '5' })}>
+                <MailIcon />
+              </span>
+              Contact Us
+            </A>
+          </Box>
+        </GridItem>
+
+        <GridItem
+          colSpan={{ base: 1, md: 9 }}
+          paddingBlock="20"
+          md={{
+            paddingBlock: 0,
+          }}
+        >
+          <nav
+            class={css({
+              fontFamily: 'montserrat',
+              fontStyle: 'normal',
+            })}
+          >
+            <HStack
+              alignItems="flex-start"
+              justify={{
+                base: 'space-between',
+                md: 'space-evenly',
+              }}
+              flexWrap="wrap"
+              w="full"
+            >
+              <FooterSection section="products" />
+              <FooterSection section="resources" />
+              <FooterSection section="company" />
+              <FooterSection section="community" />
+              <FooterSection section="legal" />
+            </HStack>
+          </nav>
         </GridItem>
       </Grid>
 
@@ -81,5 +143,52 @@ export default function Footer() {
         </Text>
       </Box>
     </footer>
+  );
+}
+
+interface FooterSectionProps {
+  section: keyof typeof footerLinks;
+}
+
+function FooterSection(props: ParentProps<FooterSectionProps>) {
+  return (
+    <VStack
+      gap={4}
+      w="full"
+      md={{
+        alignItems: 'flex-start',
+        w: 'auto',
+      }}
+    >
+      <Text as="h3" fontWeight="bold" textTransform="capitalize">
+        {props.section}
+      </Text>
+      <Index each={footerLinks[props.section]}>
+        {(item) => (
+          <A
+            class={css({
+              fontFamily: 'montserrat',
+              textStyle: 'body-sm',
+              transitionProperty: 'color',
+              transitionDuration: 'fast',
+              _hover: {
+                color: 'action.bg.initial',
+                textDecoration: 'underline',
+                textDecorationColor: 'page.text.initial',
+                textDecorationThickness: 1,
+                textUnderlineOffset: 4,
+              },
+              _currentPage: {
+                color: 'action.bg.initial',
+              },
+            })}
+            href={item().href}
+            end
+          >
+            {item().name}
+          </A>
+        )}
+      </Index>
+    </VStack>
   );
 }

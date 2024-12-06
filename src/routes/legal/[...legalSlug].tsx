@@ -35,25 +35,26 @@ interface RouteData {
 }
 
 export default function LegalPage(props: RouteSectionProps<RouteData>) {
-  const { legalSlug } = useParams();
-  const slug = makeSlug(legalSlug);
+  const params = useParams();
+  const slug = () => params.legalSlug;
+  const metadataSlug = () => makeSlug(params.legalSlug);
 
-  const metadata = createMemo(() => {
-    return {
-      ...props.data.metadata,
-      title: `Nurl | ${slug()}`,
-      description: `Read our ${slug()}`,
-    };
-  });
+  const [data] = createResource(slug, getLegalContent);
 
-  const [data] = createResource(() => getLegalContent(legalSlug));
+  const metadata = createMemo(() => ({
+    ...props.data.metadata,
+    title: `Nurl | ${metadataSlug()}`,
+    description: `Read our ${metadataSlug()}`,
+  }));
 
   return (
     <>
       <Head {...metadata()} />
       <Nav />
+
       <Main>
-        <Container>
+        <Container minH="80dvh">
+          {metadataSlug()}
           <Suspense>
             <Show when={data()}>
               <Box class={css(proseCss)} paddingBlockStart="10" w="full">

@@ -1,5 +1,5 @@
 import { A, type RouteSectionProps } from '@solidjs/router';
-import { createResource, Index, lazy, Suspense } from 'solid-js';
+import { createResource, Index, lazy, Show, Suspense } from 'solid-js';
 import { css } from 'styled-system/css';
 import { Container } from 'styled-system/jsx';
 import { vstack } from 'styled-system/patterns/vstack';
@@ -41,7 +41,7 @@ export default function Legal(props: RouteSectionProps<RouteData>) {
       <Head {...props.data.metadata} />
       <Nav />
       <Main>
-        <Container paddingBlock="20">
+        <Container minH="80dvh" paddingBlock="20">
           <header
             class={vstack({
               alignItems: 'flex-start',
@@ -59,20 +59,22 @@ export default function Legal(props: RouteSectionProps<RouteData>) {
             <ul class={vstack({ alignItems: 'flex-start', gap: 4 })}>
               <Index each={data()}>
                 {(slug) => (
-                  <li>
-                    <A
-                      class={css({
-                        textStyle: 'link',
-                        textDecoration: 'underline',
-                        _hover: {
-                          textDecorationColor: 'action.bg.hover',
-                        },
-                      })}
-                      href={`/legal/${slug()}`}
-                    >
-                      {slug()}
-                    </A>
-                  </li>
+                  <Show when={slug() !== 'generated'}>
+                    <li>
+                      <A
+                        class={css({
+                          textStyle: 'link',
+                          textDecoration: 'underline',
+                          _hover: {
+                            textDecorationColor: 'action.bg.hover',
+                          },
+                        })}
+                        href={`/legal/${slug()}`}
+                      >
+                        {slug()}
+                      </A>
+                    </li>
+                  </Show>
                 )}
               </Index>
             </ul>

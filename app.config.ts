@@ -3,10 +3,7 @@ import path from 'node:path';
 
 import { defineConfig } from '@solidjs/start/config';
 import tsconfigPaths from 'vite-tsconfig-paths';
-
-function makeBaseRoutes(): string[] {
-  return ['/'];
-}
+import Sitemap from 'vite-plugin-sitemap';
 
 function makeLegalRoutes(): string[] {
   const legalDir = path.join(process.cwd(), 'src', 'content', 'legal');
@@ -22,12 +19,11 @@ function makeBlogRoutes(): string[] {
 
 export default defineConfig({
   server: {
+    compatibilityDate: '2024-12-06',
     preset: 'vercel',
     prerender: {
       crawlLinks: true,
       failOnError: true,
-      // Pre-render all the dynamic routes we need to track with SEO
-      routes: [...makeBaseRoutes(), ...makeLegalRoutes(), ...makeBlogRoutes()],
     },
   },
 
@@ -35,6 +31,13 @@ export default defineConfig({
     plugins: [
       // create aliases from tsconfig.paths
       tsconfigPaths(),
+      // create sitemap.xml
+      Sitemap({
+        hostname: 'https://nurl.website',
+        dynamicRoutes: [...makeLegalRoutes(), ...makeBlogRoutes()],
+        outDir: 'public',
+        extensions: ['html'],
+      }),
     ],
   },
 });

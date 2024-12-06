@@ -41,7 +41,7 @@ export default function Blog(props: RouteSectionProps<RouteData>) {
       <Head {...props.data.metadata} />
       <Nav />
       <Main>
-        <Container paddingBlock="20">
+        <Container minH="80dvh" paddingBlock="20">
           <header
             class={vstack({
               alignItems: 'flex-start',

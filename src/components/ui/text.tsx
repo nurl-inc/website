@@ -27,39 +27,40 @@ interface TextProps extends H1Props {
 }
 
 export function Text(props: ParentProps<TextProps>) {
+  const as = () => props.as ?? 'p';
   return (
     <Switch>
-      <Match when={props.as === 'h1'}>
+      <Match when={as() === 'h1'}>
         <H1 {...props} />
       </Match>
-      <Match when={props.as === 'h2'}>
+      <Match when={as() === 'h2'}>
         <H2 {...props} />
       </Match>
-      <Match when={props.as === 'h3'}>
+      <Match when={as() === 'h3'}>
         <H3 {...props} />
       </Match>
-      <Match when={props.as === 'h4'}>
+      <Match when={as() === 'h4'}>
         <H4 {...props} />
       </Match>
-      <Match when={props.as === 'h5'}>
+      <Match when={as() === 'h5'}>
         <H5 {...props} />
       </Match>
-      <Match when={props.as === 'h6'}>
+      <Match when={as() === 'h6'}>
         <H6 {...props} />
       </Match>
-      <Match when={props.as === 'p'}>
+      <Match when={as() === 'p'}>
         <P {...props} />
       </Match>
-      <Match when={props.as === 'strong'}>
+      <Match when={as() === 'strong'}>
         <Strong {...(props as StrongProps)} />
       </Match>
-      <Match when={props.as === 'em'}>
+      <Match when={as() === 'em'}>
         <Em {...(props as EmProps)} />
       </Match>
-      <Match when={props.as === 'span'}>
+      <Match when={as() === 'span'}>
         <Span {...(props as SpanProps)} />
       </Match>
-      <Match when={props.as === 'small'}>
+      <Match when={as() === 'small'}>
         <Small {...(props as SmallProps)} />
       </Match>
     </Switch>

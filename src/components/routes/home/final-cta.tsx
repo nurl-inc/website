@@ -6,6 +6,9 @@ import { Text } from '~/components/ui';
 import { useLeadChoice } from '~/context/lead-choice';
 import { scrollFadeInOut } from '~/lib/motion';
 
+import mobileCTA from '~/assets/home-cta-mobile.webp';
+import desktopCTA from '~/assets/home-cta.webp';
+
 export default function FinalCTA() {
   const [store] = useLeadChoice();
 
@@ -27,14 +30,14 @@ export default function FinalCTA() {
         id="final-cta"
         border="1px solid"
         borderColor="#0DE7F2"
-        bgImage="url(/home-cta-mobile.webp)"
+        bgImage={`url(${mobileCTA})`}
         bgSize="cover"
         bgPosition="center"
         h="18.75rem"
         rounded="xl"
         w="full"
         md={{
-          bgImage: 'url(/home-cta.webp)',
+          bgImage: `url(${desktopCTA})`,
           rounded: '2xl',
           h: '43.5rem',
         }}
