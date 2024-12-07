@@ -37,7 +37,7 @@ interface RouteData {
 export default function BlogPage(props: RouteSectionProps<RouteData>) {
   const params = useParams();
   const slug = () => params.blogSlug as keyof typeof blogData;
-  const metadataSlug = () => makeSlug(params.legalSlug);
+  const metadataSlug = () => makeSlug(params.blogSlug);
 
   const metadata = createMemo(() => {
     return {
