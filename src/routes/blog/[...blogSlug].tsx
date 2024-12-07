@@ -1,17 +1,17 @@
 import { useParams, type RouteSectionProps } from '@solidjs/router';
-import { createMemo, createResource, lazy, Show, Suspense } from 'solid-js';
+import { createMemo, lazy, Show, Suspense } from 'solid-js';
 import { Box, Container } from 'styled-system/jsx';
 import Head from '~/components/shared/head';
 import Main from '~/components/shared/main';
 import Nav from '~/components/shared/nav';
 import { makeSlug } from '~/primitives/makeSlug';
-import { getBlogContent } from '~/api';
 import type { Metadata } from '~/types';
 import { css } from 'styled-system/css';
 import { proseCss } from '~/styles/prose';
 import { Breadcrumb } from '~/components/shared/breadcrumb';
 
 import keywords from '~/data/keywords.json';
+import blogData from '~/data/generated/blog.json';
 
 const Footer = lazy(() => import('~/components/shared/footer'));
 
@@ -36,8 +36,8 @@ interface RouteData {
 
 export default function BlogPage(props: RouteSectionProps<RouteData>) {
   const params = useParams();
-  const slug = () => params.blogSlug;
-  const metadataSlug = () => makeSlug(params.legalSlug);
+  const slug = () => params.blogSlug as keyof typeof blogData;
+  const metadataSlug = () => makeSlug(params.blogSlug);
 
   const metadata = createMemo(() => {
     return {
@@ -47,7 +47,7 @@ export default function BlogPage(props: RouteSectionProps<RouteData>) {
     };
   });
 
-  const [data] = createResource(slug, getBlogContent);
+  const data = createMemo(() => blogData[slug()]);
 
   return (
     <>
@@ -60,7 +60,7 @@ export default function BlogPage(props: RouteSectionProps<RouteData>) {
             <Show when={data()}>
               <Box class={css(proseCss)} paddingBlockStart="10" w="full">
                 <Breadcrumb />
-                <div innerHTML={data()!.html as string} />
+                <div innerHTML={data()} />
               </Box>
             </Show>
           </Suspense>

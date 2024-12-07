@@ -16,8 +16,8 @@ export default function KeySanctumFeatures() {
     const cards = document.querySelectorAll('.feature-card');
 
     if (firstColumn && lastColumn) {
-      scroll(animate(firstColumn, { y: '-10%' }));
-      scroll(animate(lastColumn, { y: '10%' }));
+      scroll(animate(firstColumn, { y: '-50%' }));
+      scroll(animate(lastColumn, { y: '50%' }));
     }
     if (cards) {
       cards.forEach((item) => {

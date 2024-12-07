@@ -2,8 +2,8 @@
   "name": "@nurl-inc/website",
   "type": "module",
   "scripts": {
-    "clean": "rm -rf src/content/legal/generated src/content/blog/generated",
-    "generate": "deno --allow-read --allow-write --allow-env ./src/scripts/generate.ts",
+    "clean": "rm -rf src/data/generated",
+    "generate": "tsx ./src/scripts/generate.ts",
     "dev": "pnpm run clean && pnpm run generate && vinxi dev",
     "build": "pnpm run clean && pnpm run generate && vinxi build",
     "start": "pnpm run clean && pnpm run generate && vinxi start",
@@ -43,6 +43,7 @@
     "remark-mdx-frontmatter": "^5.0.0",
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.1.1",
+    "tsx": "^4.19.2",
     "typescript": "^5.7.2",
     "unified": "^11.0.5",
     "vite-plugin-sitemap": "^0.7.1",
