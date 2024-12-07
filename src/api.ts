@@ -37,6 +37,15 @@ export async function getBlogContent(slug: string): Promise<Content> {
  */
 export async function getLegalContent(slug: string): Promise<Content> {
   'use server';
+
+  // The production build contains the generated legal documents.
+  if (import.meta.env.VERCEL_ENV === 'production') {
+    return {
+      file: '',
+      html: '',
+    };
+  }
+
   const filePath = path.join(
     process.cwd(),
     'src',
