@@ -38,14 +38,6 @@ export async function getBlogContent(slug: string): Promise<Content> {
 export async function getLegalContent(slug: string): Promise<Content> {
   'use server';
 
-  // The production build contains the generated legal documents.
-  if (import.meta.env.VERCEL_ENV === 'production') {
-    return {
-      file: '',
-      html: '',
-    };
-  }
-
   const filePath = path.join(
     process.cwd(),
     'src',
@@ -54,8 +46,26 @@ export async function getLegalContent(slug: string): Promise<Content> {
     'generated',
     `${slug}.md.json`,
   );
-  const fileContent = fs.readFileSync(filePath, 'utf-8');
-  return JSON.parse(fileContent);
+
+  // Return empty content for production
+  if (process.env.VERCEL_ENV === 'production') {
+    return {
+      file: '',
+      html: '',
+    };
+  }
+
+  // Only try to read the file in development
+  try {
+    const fileContent = fs.readFileSync(filePath, 'utf-8');
+    return JSON.parse(fileContent);
+  } catch (error) {
+    console.error(`Error reading legal content for ${slug}:`, error);
+    return {
+      file: '',
+      html: '',
+    };
+  }
 }
 
 /**
