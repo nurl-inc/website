@@ -2,7 +2,7 @@
   "name": "@nurl-inc/website",
   "type": "module",
   "scripts": {
-    "clean": "rm -rf src/content/legal/generated src/content/blog/generated",
+    "clean": "rm -rf src/data/generated",
     "generate": "tsx ./src/scripts/generate.ts",
     "dev": "pnpm run clean && pnpm run generate && vinxi dev",
     "build": "pnpm run clean && pnpm run generate && vinxi build",

@@ -1,9 +1,8 @@
 import { A, type RouteSectionProps } from '@solidjs/router';
-import { createResource, Index, lazy, Show, Suspense } from 'solid-js';
+import { createMemo, Index, lazy, Show, Suspense } from 'solid-js';
 import { css } from 'styled-system/css';
 import { Container } from 'styled-system/jsx';
 import { vstack } from 'styled-system/patterns/vstack';
-import { getLegalList } from '~/api';
 import Head from '~/components/shared/head';
 import Main from '~/components/shared/main';
 import Nav from '~/components/shared/nav';
@@ -11,6 +10,7 @@ import { Text } from '~/components/ui';
 import type { Metadata } from '~/types';
 
 import keywords from '~/data/keywords.json';
+import legalData from '~/data/generated/legal.json';
 
 const Footer = lazy(() => import('~/components/shared/footer'));
 
@@ -34,7 +34,7 @@ interface RouteData {
 }
 
 export default function Legal(props: RouteSectionProps<RouteData>) {
-  const [data] = createResource(getLegalList);
+  const data = createMemo(() => Object.keys(legalData));
 
   return (
     <>

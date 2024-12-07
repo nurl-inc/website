@@ -1,9 +1,8 @@
 import { A, type RouteSectionProps } from '@solidjs/router';
-import { createResource, Index, lazy, Suspense } from 'solid-js';
+import { createMemo, Index, lazy, Suspense } from 'solid-js';
 import { css } from 'styled-system/css';
 import { Container } from 'styled-system/jsx';
 import { vstack } from 'styled-system/patterns/vstack';
-import { getBlogList } from '~/api';
 import Head from '~/components/shared/head';
 import Main from '~/components/shared/main';
 import Nav from '~/components/shared/nav';
@@ -11,6 +10,7 @@ import { Text } from '~/components/ui';
 import type { Metadata } from '~/types';
 
 import keywords from '~/data/keywords.json';
+import blogData from '~/data/generated/blog.json';
 
 const Footer = lazy(() => import('~/components/shared/footer'));
 
@@ -34,7 +34,7 @@ interface RouteData {
 }
 
 export default function Blog(props: RouteSectionProps<RouteData>) {
-  const [data] = createResource(getBlogList);
+  const data = createMemo(() => Object.keys(blogData));
 
   return (
     <>
