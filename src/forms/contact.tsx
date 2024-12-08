@@ -1,4 +1,4 @@
-import { action, useSubmission } from '@solidjs/router';
+import { action, redirect, useSubmission } from '@solidjs/router';
 import { Show } from 'solid-js';
 import { Box, Divider, VStack } from 'styled-system/jsx';
 import { vstack } from 'styled-system/patterns';
@@ -13,7 +13,15 @@ import {
 } from '~/components/ui';
 
 const contactAction = action(async (formData: FormData) => {
-  console.log(formData);
+  const name = formData.get('name');
+  const email = formData.get('email');
+  const company = formData.get('company');
+  const subject = formData.get('subject');
+  const product = formData.get('product');
+  const message = formData.get('message');
+
+  console.log({ name, email, company, subject, product, message });
+  throw redirect('/thanks');
 }, 'contact');
 
 export default function ContactForm() {

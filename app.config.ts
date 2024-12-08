@@ -35,6 +35,7 @@ export default defineConfig({
       Sitemap({
         hostname: 'https://nurl.website',
         dynamicRoutes: [...makeLegalRoutes(), ...makeBlogRoutes()],
+        exclude: ['/thanks'],
         outDir: 'public',
         extensions: ['html'],
       }),

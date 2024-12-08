@@ -106,7 +106,7 @@ export default function Contact(props: RouteSectionProps<RouteData>) {
               </Box>
 
               <Box paddingBlockStart="4">
-                <Text as="strong">Sales & Partnership</Text>
+                <Text as="strong">Sales &amp; Partnership</Text>
                 <Text>Format: Contact form</Text>
                 <Text>Custom pricing and partnership opportunities</Text>
                 <Text>Enterprise solutions</Text>
