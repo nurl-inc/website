@@ -21,6 +21,9 @@ export function TextLink(props: TextLinkProps) {
         _hover: {
           color: 'action.bg.hover',
         },
+        md: {
+          h: 'initial',
+        },
       })}
       href={props.href}
     >

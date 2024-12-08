@@ -2,6 +2,7 @@ import { accordion } from './accordion';
 import { banner } from './banner';
 import { button } from './button';
 import { featureCard } from './feature-card';
+import { field } from './field';
 import { tabs } from './tabs';
 
 export const recipes = {
@@ -12,5 +13,6 @@ export const recipes = {
 
 export const slotRecipes = {
   accordion,
+  field,
   tabs,
 };
