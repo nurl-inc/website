@@ -11,12 +11,14 @@
     "lint:ts": "tsc --noEmit"
   },
   "dependencies": {
+    "@ark-ui/solid": "^4.5.1",
     "@fontsource-variable/montserrat": "^5.1.0",
     "@fontsource-variable/saira": "^5.1.0",
     "@kobalte/core": "^0.13.7",
     "@solidjs/meta": "^0.29.4",
     "@solidjs/router": "^0.15.1",
     "@solidjs/start": "^1.0.10",
+    "@vercel/functions": "^1.5.1",
     "dompurify": "^3.2.2",
     "marked": "^15.0.3",
     "motion": "^11.13.1",
@@ -25,6 +27,7 @@
     "vinxi": "^0.4.3"
   },
   "devDependencies": {
+    "@ark-ui/anatomy": "^3.5.0",
     "@pandacss/dev": "^0.48.0",
     "@types/dompurify": "^3.2.0",
     "@types/marked": "^6.0.0",
