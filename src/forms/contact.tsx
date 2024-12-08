@@ -1,8 +1,8 @@
 import { action, redirect, useSubmission } from '@solidjs/router';
 import { Show } from 'solid-js';
-import { Box, Divider, HStack, VStack } from 'styled-system/jsx';
+import { Box, Divider, VStack } from 'styled-system/jsx';
 import { vstack } from 'styled-system/patterns';
-import { ErrorIcon, Spinner } from '~/components/icons';
+import { Spinner } from '~/components/icons';
 import {
   Button,
   Input,

@@ -1,28 +1,57 @@
 import { json } from '@solidjs/router';
 import type { APIEvent } from '@solidjs/start/server';
+import { send } from '~/lib/resend';
+
+import emailTemplates from '~/data/emails.json';
 
 export async function POST({ request }: APIEvent) {
   'use server';
 
-  const res = await fetch('https://api.resend.com/emails', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
-    },
-    body: JSON.stringify({
-      from: 'Acme <onboarding@resend.dev>',
-      to: ['delivered@resend.dev'],
-      subject: 'hello world',
-      html: '<strong>it works!</strong>',
-    }),
-  });
+  const submission = await request.json();
 
-  if (res.ok) {
-    const data = await res.json();
-    const formData = await request.json();
-    return json({ data, formData });
+  // Replace template variables
+  const userTemplate =
+    emailTemplates.templates.userConfirmation[
+      submission.product as keyof typeof emailTemplates.templates.userConfirmation
+    ];
+  const teamTemplate = emailTemplates.templates.teamNotification;
+
+  const userHtml = userTemplate.html
+    .replace('{{name}}', submission.name)
+    .replace('{{inquiryType}}', submission.subject)
+    .replace('{{year}}', new Date().getFullYear().toString());
+
+  const teamHtml = teamTemplate.html
+    .replace(/{{name}}/g, submission.name)
+    .replace('{{email}}', submission.email)
+    .replace('{{product}}', submission.product)
+    .replace('{{inquiryType}}', submission.subject)
+    .replace('{{message}}', submission.message)
+    .replace('{{company}}', submission.company ?? '');
+
+  // Send email to user
+  const res = await send({
+    from: 'Nurl Support <admin@nurl.app>',
+    to: [submission.email],
+    subject: userTemplate.subject,
+    html: userHtml,
+  });
+  if (!res.ok) {
+    throw json({ message: 'Failed to send user email' }, { status: 500 });
   }
 
-  throw json({ message: 'Failed to send email' }, { status: 500 });
+  // Send email to team
+  const teamRes = await send({
+    from: 'Nurl Support System<admin@nurl.app>',
+    to: ['admin@nurl.app'],
+    subject: teamTemplate.subject
+      .replace('{{inquiryType}}', submission.subject)
+      .replace('{{name}}', submission.name),
+    html: teamHtml,
+  });
+  if (teamRes.ok) {
+    return json({ success: true });
+  }
+
+  throw json({ message: 'Failed to send team email' }, { status: 500 });
 }
