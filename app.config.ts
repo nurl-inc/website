@@ -20,7 +20,7 @@ function makeBlogRoutes(): string[] {
 export default defineConfig({
   server: {
     compatibilityDate: '2024-12-06',
-    preset: 'vercel',
+    preset: 'vercel_edge',
     prerender: {
       crawlLinks: true,
       failOnError: true,

@@ -1,8 +1,8 @@
 import { action, redirect, useSubmission } from '@solidjs/router';
 import { Show } from 'solid-js';
-import { Box, Divider, VStack } from 'styled-system/jsx';
+import { Box, Divider, HStack, VStack } from 'styled-system/jsx';
 import { vstack } from 'styled-system/patterns';
-import { Spinner } from '~/components/icons';
+import { ErrorIcon, Spinner } from '~/components/icons';
 import {
   Button,
   Input,
@@ -20,7 +20,20 @@ const contactAction = action(async (formData: FormData) => {
   const product = formData.get('product');
   const message = formData.get('message');
 
-  console.log({ name, email, company, subject, product, message });
+  try {
+    const response = await fetch('/api/contact', {
+      method: 'POST',
+      body: JSON.stringify({ name, email, company, subject, product, message }),
+    });
+
+    if (!response.ok) {
+      throw new Error('Failed to submit form');
+    }
+  } catch (error) {
+    console.error(error);
+    throw new Error('Failed to submit form');
+  }
+
   throw redirect('/thanks');
 }, 'contact');
 
@@ -29,6 +42,25 @@ export default function ContactForm() {
 
   return (
     <>
+      <Show when={submission.error}>
+        <VStack
+          alignItems="flex-start"
+          bgColor="red.500"
+          gap="1"
+          marginBlock="10"
+          maxW="prose"
+          paddingBlock="2"
+          paddingInline="4"
+          rounded="lg"
+          w="full"
+        >
+          <Text fontSize="md" textStyle="heading-xs">
+            Crit Fail!
+          </Text>
+          <Text>{submission.error.message}</Text>
+        </VStack>
+      </Show>
+
       <Box
         bgColor="page.surface.100"
         marginBlockStart="4"

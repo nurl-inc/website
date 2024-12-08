@@ -1,5 +1,6 @@
 export * from './book';
 export * from './chevron-down';
+export * from './error';
 export * from './mail';
 export * from './menu';
 export * from './pull-request';
