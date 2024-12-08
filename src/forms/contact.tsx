@@ -19,6 +19,11 @@ const contactAction = action(async (formData: FormData) => {
   const subject = formData.get('subject');
   const product = formData.get('product');
   const message = formData.get('message');
+  const honeypot = formData.get('website');
+
+  if (honeypot) {
+    throw redirect('/thanks');
+  }
 
   try {
     const response = await fetch('/api/contact', {
@@ -74,6 +79,19 @@ export default function ContactForm() {
           action={contactAction}
           method="post"
         >
+          <Box display="none">
+            <Input
+              ids={{
+                control: 'website',
+              }}
+              label="Website"
+              name="website"
+              type="text"
+              autocomplete="off"
+              tabindex="-1"
+            />
+          </Box>
+
           <Input
             helperText="We'll use this to contact you about your request."
             ids={{
