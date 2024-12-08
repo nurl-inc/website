@@ -25,7 +25,7 @@
   },
   {
     "question": "How much will it cost?",
-    "answer": "Nurl Play:\n- Free Tier: Get started at no cost\n- Player Pro: $19.99/month\n- Group Pack: $49.99/month (covers 5 players)\n\nAll paid tiers include a 14-day free trial. No credit card required to start.\n\nNurl Sanctum:\n- Creator: $29/month\n- Publisher: $199/month\nAnnual plans save 20%\n\nEvery tier includes core features - choose based on your needs, not limitations.",
+    "answer": "Nurl Play: \n- Free Tier - Basic automation and single character \n- Personal ($9.99/month) - Full automation, multiple characters, all rulesets \n- Group Master ($29.99/month) - Everything in Personal plus 6 connected players\n\nAdditional Options: \n- Extra player slots: $4.99/player \n- Tokens: $4.99/10k tokens \n- Annual plans save 20%\n\nNurl Sanctum: \n- Creator ($49/month) - Full features, 3 team members, 2 active games \n- Studio ($199/month) - Unlimited team & games, priority support, API access\n\nAdditional Options: \n- One-time implementation fee for Sanctum: $999\nIncludes setup, migration support, and team training.\n\nAll paid plans include a 14-day free trial.",
     "ctaPrimary": {
       "text": "See Full Pricing",
       "url": "/pricing"
