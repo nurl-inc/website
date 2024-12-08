@@ -79,6 +79,7 @@ export default function ContactForm() {
               control: 'subject',
             }}
             label="Type of Inquiry"
+            name="subject"
             required
           >
             <option value="">-- Select an option --</option>
@@ -95,6 +96,7 @@ export default function ContactForm() {
               control: 'product',
             }}
             label="Product"
+            name="product"
             required
           >
             <option value="">-- Select an option --</option>
@@ -108,6 +110,7 @@ export default function ContactForm() {
               control: 'message',
             }}
             label="Message"
+            name="message"
             required
           />
 

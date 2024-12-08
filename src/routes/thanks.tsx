@@ -40,6 +40,11 @@ export default function Thanks(props: RouteSectionProps<RouteData>) {
           <VStack gap="6" h="full" justify="center" w="full">
             <Text
               as="h1"
+              animationName="slideFromBottom, fadeIn"
+              animationDuration="slow"
+              animationFillMode="forwards"
+              animationDelay="400ms"
+              opacity="0"
               textStyle={{
                 base: 'heading-sm',
                 md: 'heading-lg',
@@ -48,6 +53,11 @@ export default function Thanks(props: RouteSectionProps<RouteData>) {
               Send message worked!
             </Text>
             <Text
+              animationName="slideFromBottom, fadeIn"
+              animationDuration="slow"
+              animationFillMode="forwards"
+              animationDelay="400ms"
+              opacity="0"
               maxW="prose"
               textStyle={{ base: 'body-md', md: 'body-xl' }}
               textWrap="pretty"
@@ -56,11 +66,25 @@ export default function Thanks(props: RouteSectionProps<RouteData>) {
               communicate successfully.
             </Text>
 
-            <Text paddingBlockStart="4">
+            <Text
+              animationName="slideFromBottom, fadeIn"
+              animationDuration="slow"
+              animationFillMode="forwards"
+              animationDelay="400ms"
+              opacity="0"
+              paddingBlockStart="4"
+            >
               Please check your email. We will get back to you soon.
             </Text>
 
-            <Box paddingBlockStart="10">
+            <Box
+              animationName="slideFromBottom, fadeIn"
+              animationDuration="slow"
+              animationFillMode="forwards"
+              animationDelay="600ms"
+              opacity="0"
+              paddingBlockStart="10"
+            >
               <A class={button()} href="/">
                 Return home
               </A>
