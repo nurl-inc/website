@@ -1,7 +1,7 @@
 import { A } from '@solidjs/router';
 import { Box, Divider, VStack } from 'styled-system/jsx';
 import { vstack } from 'styled-system/patterns';
-import { Button, Text, TextLink } from '~/components/ui';
+import { Button, Input, Text, TextLink } from '~/components/ui';
 
 export default function ContactForm() {
   return (
@@ -22,14 +22,26 @@ export default function ContactForm() {
           class={vstack({ alignItems: 'flex-start', gap: 4 })}
           method="post"
         >
-          <label for="name">Name</label>
-          <input type="text" name="name" required />
-
-          <label for="email">Email</label>
-          <input type="email" name="email" required />
-
-          <label for="company">Company (optional)</label>
-          <input type="text" name="company" />
+          <Input
+            helperText="We'll use this to contact you about your request."
+            ids={{
+              control: 'email',
+            }}
+            label="Email"
+            name="email"
+            type="email"
+            required
+            autocomplete="email"
+          />
+          <Input
+            helperText="This is optional, but it helps us understand your needs better."
+            ids={{
+              control: 'company',
+            }}
+            label="Company (optional)"
+            name="company"
+            autocomplete="organization"
+          />
 
           <label for="subject">Subject</label>
           <select name="subject" required>
