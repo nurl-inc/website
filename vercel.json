@@ -1,7 +1,0 @@
-{
-  "functions": {
-    "lib/vercel/*.ts": {
-      "runtime": "vercel-deno@3.1.1"
-    }
-  }
-}
