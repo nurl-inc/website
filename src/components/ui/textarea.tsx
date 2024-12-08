@@ -1,33 +1,23 @@
-import {
-  Field,
-  type FieldInputProps,
-  type FieldRootProps,
-} from '@ark-ui/solid/field';
+import { Field, type FieldTextareaProps } from '@ark-ui/solid/field';
 import { createMemo } from 'solid-js';
 import { field } from 'styled-system/recipes';
+import type { InputProps } from './input';
 
-export interface InputProps extends FieldInputProps {
-  ids?: FieldRootProps['ids'];
-  label?: string;
-  helperText?: string;
-  errorText?: string;
-}
-
-export function Input(props: InputProps) {
+export function Textarea(props: InputProps) {
   const styles = field();
 
-  const inputProps = createMemo(() => {
+  const textareaProps = createMemo(() => {
     const propsCopy = { ...props };
     delete propsCopy.label;
     delete propsCopy.helperText;
     delete propsCopy.errorText;
-    return propsCopy;
+    return propsCopy as FieldTextareaProps;
   });
 
   return (
     <Field.Root ids={props.ids} class={styles.root}>
       <Field.Label class={styles.label}>{props.label}</Field.Label>
-      <Field.Input class={styles.input} {...inputProps()} />
+      <Field.Textarea class={styles.textarea} rows={4} {...textareaProps()} />
       <Field.HelperText class={styles.helperText}>
         {props.helperText}
       </Field.HelperText>

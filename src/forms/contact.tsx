@@ -1,29 +1,52 @@
-import { A } from '@solidjs/router';
+import { action, useSubmission } from '@solidjs/router';
+import { Show } from 'solid-js';
 import { Box, Divider, VStack } from 'styled-system/jsx';
 import { vstack } from 'styled-system/patterns';
-import { Button, Input, Text, TextLink } from '~/components/ui';
+import { Spinner } from '~/components/icons';
+import {
+  Button,
+  Input,
+  Select,
+  Text,
+  Textarea,
+  TextLink,
+} from '~/components/ui';
+
+const contactAction = action(async (formData: FormData) => {
+  console.log(formData);
+}, 'contact');
 
 export default function ContactForm() {
+  const submission = useSubmission(contactAction);
+
   return (
     <>
       <Box
         bgColor="page.surface.100"
         marginBlockStart="4"
         maxW="prose"
-        paddingBlockStart="8"
-        paddingBlockEnd={{
-          base: '8',
-          md: 'initial',
-        }}
+        paddingBlock="8"
         paddingInline="8"
         rounded="lg"
       >
         <form
           class={vstack({ alignItems: 'flex-start', gap: 4 })}
+          action={contactAction}
           method="post"
         >
           <Input
             helperText="We'll use this to contact you about your request."
+            ids={{
+              control: 'name',
+            }}
+            label="Name"
+            name="name"
+            type="text"
+            required
+            autocomplete="name"
+          />
+          <Input
+            helperText="This is where we'll send you a reply."
             ids={{
               control: 'email',
             }}
@@ -43,27 +66,50 @@ export default function ContactForm() {
             autocomplete="organization"
           />
 
-          <label for="subject">Subject</label>
-          <select name="subject" required>
+          <Select
+            ids={{
+              control: 'subject',
+            }}
+            label="Type of Inquiry"
+            required
+          >
+            <option value="">-- Select an option --</option>
             <option value="general">General Support</option>
             <option value="technical">Technical Issue</option>
             <option value="sales">Sales Inquiry</option>
             <option value="partnership">Partnership Opportunity</option>
             <option value="media">Media Inquiry</option>
             <option value="other">Other</option>
-          </select>
+          </Select>
 
-          <label for="product">Product</label>
-          <select name="product" required>
+          <Select
+            ids={{
+              control: 'product',
+            }}
+            label="Product"
+            required
+          >
+            <option value="">-- Select an option --</option>
             <option value="play">Nurl Play</option>
             <option value="sanctum">Nurl Sanctum</option>
-          </select>
+          </Select>
 
-          <label for="message">Message</label>
-          <textarea name="message" required />
+          <Textarea
+            helperText="Please describe your request in as much detail as possible."
+            ids={{
+              control: 'message',
+            }}
+            label="Message"
+            required
+          />
 
-          <VStack alignItems="flex-start" gap="2" w="full">
-            <Button type="submit">Submit Request</Button>
+          <VStack alignItems="flex-start" gap="2" marginBlockStart="4" w="full">
+            <Button disabled={submission.pending} type="submit">
+              <Show when={submission.pending} fallback={<>Submit Request</>}>
+                <Spinner />
+                Submitting
+              </Show>
+            </Button>
           </VStack>
         </form>
       </Box>
