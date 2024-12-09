@@ -1,4 +1,4 @@
-import { action, useSubmission } from '@solidjs/router';
+import { action, json, redirect, useSubmission } from '@solidjs/router';
 import { Show } from 'solid-js';
 import { Box, Divider } from 'styled-system/jsx';
 import { vstack } from 'styled-system/patterns';
@@ -12,17 +12,31 @@ const playSignupAction = action(async (formData: FormData) => {
   const otherGameSystems = formData.get('other-game-systems');
   const groupSize = formData.get('group-size');
   const howDidYouHear = formData.get('how-did-you-hear');
+  const honeypot = formData.get('website');
+
+  if (honeypot) {
+    throw redirect('/thanks');
+  }
 
   try {
-    console.log(
-      name,
-      email,
-      primaryRole,
-      primaryGameSystem,
-      otherGameSystems,
-      groupSize,
-      howDidYouHear,
-    );
+    const response = await fetch('/api/play/signup', {
+      method: 'POST',
+      body: JSON.stringify({
+        name,
+        email,
+        primaryRole,
+        primaryGameSystem,
+        otherGameSystems,
+        groupSize,
+        howDidYouHear,
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error('Failed to sign up');
+    }
+
+    return redirect('/thanks');
   } catch (error) {
     console.error(error);
     throw error;
@@ -64,6 +78,19 @@ export default function PlaySignupForm() {
           method="post"
           class={vstack({ alignItems: 'flex-start', gap: 4 })}
         >
+          <Box display="none">
+            <Input
+              ids={{
+                control: 'website',
+              }}
+              label="Website"
+              name="website"
+              type="text"
+              autocomplete="off"
+              tabindex="-1"
+            />
+          </Box>
+
           <Input
             label="Name"
             name="name"
