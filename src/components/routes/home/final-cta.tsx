@@ -77,7 +77,7 @@ export default function FinalCTA() {
                 </A>
               }
             >
-              <A class={button()} href="/play/register">
+              <A class={button()} href="/play/signup">
                 Get Started
               </A>
             </Show>

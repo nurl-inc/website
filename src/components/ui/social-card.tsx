@@ -15,6 +15,7 @@ export function SocialCard(props: SocialCardProps) {
       paddingBlock="12"
       paddingInline="10"
       rounded="lg"
+      w="full"
       md={{
         paddingBlock: '4.5rem',
         paddingInline: '10',

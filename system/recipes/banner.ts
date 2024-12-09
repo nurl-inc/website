@@ -9,6 +9,7 @@ export const banner = defineRecipe({
     bgColor: 'colorPalette.surface.initial',
     color: 'colorPalette.text.initial',
     display: 'flex',
+    fontWeight: '600',
     justifyContent: 'center',
     py: 2,
     textStyle: 'body-md',

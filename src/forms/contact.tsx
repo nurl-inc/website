@@ -5,6 +5,7 @@ import { vstack } from 'styled-system/patterns';
 import { Spinner } from '~/components/icons';
 import {
   Button,
+  ErrorMessage,
   Input,
   Select,
   Text,
@@ -48,22 +49,7 @@ export default function ContactForm() {
   return (
     <>
       <Show when={submission.error}>
-        <VStack
-          alignItems="flex-start"
-          bgColor="red.500"
-          gap="1"
-          marginBlock="10"
-          maxW="prose"
-          paddingBlock="2"
-          paddingInline="4"
-          rounded="lg"
-          w="full"
-        >
-          <Text fontSize="md" textStyle="heading-xs">
-            Crit Fail!
-          </Text>
-          <Text>{submission.error.message}</Text>
-        </VStack>
+        <ErrorMessage>{submission.error.message}</ErrorMessage>
       </Show>
 
       <Box

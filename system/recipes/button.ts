@@ -9,7 +9,7 @@ export const button = defineRecipe({
     cursor: 'pointer',
     display: 'inline-flex',
     fontStyle: 'oblique',
-    fontWeight: '700',
+    fontWeight: '900',
     justifyContent: 'center',
     gap: 2,
     h: '2.75rem',
@@ -20,6 +20,12 @@ export const button = defineRecipe({
     transitionTimingFunction: 'ease-in-out',
     transitionDuration: '150ms',
     w: 'full',
+    _focus: {
+      boxShadow: 'none',
+      outline: '2px solid',
+      outlineColor: 'var(--focus-color)',
+      outlineOffset: '2px',
+    },
     md: {
       paddingInline: '5rem',
       w: 'auto',

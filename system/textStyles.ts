@@ -8,7 +8,7 @@ const headingStyles = {
 };
 
 const bodyStyles = {
-  fontFamily: 'saira',
+  fontFamily: 'montserrat',
   fontStyle: 'normal',
   fontWeight: '400',
 };

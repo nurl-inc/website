@@ -5,7 +5,7 @@ export const globalCss = defineGlobalStyles({
     '--global-color-placeholder': 'slate.800',
     backgroundColor: 'page.surface.initial',
     color: 'page.text.initial',
-    fontFamily: 'var(--font-saira)',
+    fontFamily: 'var(--font-montserrat)',
     fontFeatureSettings: "'tnum' on, 'lnum' on",
     fontSize: '1em',
     fontWeight: 400,
@@ -15,6 +15,6 @@ export const globalCss = defineGlobalStyles({
   },
 
   body: {
-    fontSize: '1rem',
+    fontSize: '16px',
   },
 });
