@@ -1,7 +1,8 @@
-import { action, json, redirect, useSubmission } from '@solidjs/router';
+import { action, redirect, useSubmission } from '@solidjs/router';
 import { Show } from 'solid-js';
 import { Box, Divider } from 'styled-system/jsx';
 import { vstack } from 'styled-system/patterns';
+import { Spinner } from '~/components/icons';
 import { Button, ErrorMessage, Input, Select, Text } from '~/components/ui';
 
 const playSignupAction = action(async (formData: FormData) => {
@@ -184,7 +185,12 @@ export default function PlaySignupForm() {
           </Select>
 
           <Box marginBlockStart="4" w="full">
-            <Button type="submit">Join Waitlist</Button>
+            <Button disabled={submission.pending} type="submit">
+              <Show when={submission.pending} fallback={<>Join Waitlist</>}>
+                <Spinner />
+                Submitting
+              </Show>
+            </Button>
           </Box>
         </form>
       </Box>

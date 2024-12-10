@@ -20,6 +20,10 @@ export const button = defineRecipe({
     transitionTimingFunction: 'ease-in-out',
     transitionDuration: '150ms',
     w: 'full',
+    _disabled: {
+      cursor: 'not-allowed',
+      opacity: 0.5,
+    },
     _focus: {
       boxShadow: 'none',
       outline: '2px solid',
@@ -29,10 +33,6 @@ export const button = defineRecipe({
     md: {
       paddingInline: '5rem',
       w: 'auto',
-    },
-    _disabled: {
-      cursor: 'not-allowed',
-      opacity: 0.5,
     },
 
     // gradient hover effect
