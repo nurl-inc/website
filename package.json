@@ -20,7 +20,7 @@
     "@solidjs/start": "^1.0.10",
     "@vercel/functions": "^1.5.1",
     "dompurify": "^3.2.2",
-    "marked": "^15.0.3",
+    "marked": "^15.0.4",
     "motion": "^11.13.1",
     "remove": "^0.1.5",
     "solid-js": "^1.9.2",
