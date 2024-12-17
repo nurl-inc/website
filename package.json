@@ -32,7 +32,7 @@
     "@types/dompurify": "^3.2.0",
     "@types/marked": "^6.0.0",
     "husky": "^9.1.7",
-    "lint-staged": "^15.2.10",
+    "lint-staged": "^15.2.11",
     "postcss": "^8.4.49",
     "prettier": "3.4.2",
     "rehype-autolink-headings": "^7.1.0",
