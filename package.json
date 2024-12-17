@@ -11,7 +11,7 @@
     "lint:ts": "tsc --noEmit"
   },
   "dependencies": {
-    "@ark-ui/solid": "^4.5.1",
+    "@ark-ui/solid": "^4.6.0",
     "@fontsource-variable/montserrat": "^5.1.0",
     "@fontsource-variable/saira": "^5.1.0",
     "@kobalte/core": "^0.13.7",
