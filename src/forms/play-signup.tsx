@@ -6,20 +6,21 @@ import { Spinner } from '~/components/icons';
 import { Button, ErrorMessage, Input, Select, Text } from '~/components/ui';
 
 const playSignupAction = action(async (formData: FormData) => {
-  const name = formData.get('name');
-  const email = formData.get('email');
-  const primaryRole = formData.get('primary-role');
-  const primaryGameSystem = formData.get('game-system');
-  const otherGameSystems = formData.get('other-game-systems');
-  const groupSize = formData.get('group-size');
-  const howDidYouHear = formData.get('how-did-you-hear');
   const honeypot = formData.get('website');
-
-  if (honeypot) {
+  const honeypot2 = formData.get('fullname');
+  if (honeypot || honeypot2) {
     throw redirect('/thanks');
   }
 
   try {
+    const name = formData.get('name');
+    const email = formData.get('email');
+    const primaryRole = formData.get('primary-role');
+    const primaryGameSystem = formData.get('game-system');
+    const otherGameSystems = formData.get('other-game-systems');
+    const groupSize = formData.get('group-size');
+    const howDidYouHear = formData.get('how-did-you-hear');
+
     const response = await fetch('/api/play/signup', {
       method: 'POST',
       body: JSON.stringify({
@@ -86,6 +87,18 @@ export default function PlaySignupForm() {
               }}
               label="Website"
               name="website"
+              type="text"
+              autocomplete="off"
+              tabindex="-1"
+            />
+          </Box>
+          <Box display="none">
+            <Input
+              ids={{
+                control: 'fullname',
+              }}
+              label="Full Name"
+              name="fullname"
               type="text"
               autocomplete="off"
               tabindex="-1"

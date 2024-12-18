@@ -1,9 +1,9 @@
 import { json } from '@solidjs/router';
 import type { APIEvent } from '@solidjs/start/server';
 import { send } from '~/lib/resend';
+import { verify } from '~/lib/verifier';
 
 import emailTemplates from '~/data/emails.json';
-import { verify } from '~/lib/verifier';
 
 export async function POST({ request }: APIEvent) {
   'use server';
