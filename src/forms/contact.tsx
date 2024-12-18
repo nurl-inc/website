@@ -14,26 +14,27 @@ import {
 } from '~/components/ui';
 
 const contactAction = action(async (formData: FormData) => {
-  const name = formData.get('name');
-  const email = formData.get('email');
-  const company = formData.get('company');
-  const subject = formData.get('subject');
-  const product = formData.get('product');
-  const message = formData.get('message');
   const honeypot = formData.get('website');
-
-  if (honeypot) {
+  const honeypot2 = formData.get('fullname');
+  if (honeypot || honeypot2) {
     throw redirect('/thanks');
   }
 
   try {
+    const name = formData.get('name');
+    const email = formData.get('email') as string;
+    const company = formData.get('company');
+    const subject = formData.get('subject');
+    const product = formData.get('product');
+    const message = formData.get('message');
+
     const response = await fetch('/api/contact', {
       method: 'POST',
       body: JSON.stringify({ name, email, company, subject, product, message }),
     });
 
     if (!response.ok) {
-      throw new Error('Failed to submit form');
+      throw new Error('Bad Request');
     }
   } catch (error) {
     console.error(error);
@@ -72,6 +73,18 @@ export default function ContactForm() {
               }}
               label="Website"
               name="website"
+              type="text"
+              autocomplete="off"
+              tabindex="-1"
+            />
+          </Box>
+          <Box display="none">
+            <Input
+              ids={{
+                control: 'fullname',
+              }}
+              label="Full Name"
+              name="fullname"
               type="text"
               autocomplete="off"
               tabindex="-1"

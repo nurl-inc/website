@@ -1,13 +1,14 @@
 import { Meta, Title } from '@solidjs/meta';
 import metadata from './meta.json';
 import type { Metadata } from '~/types';
+import type { ParentProps } from 'solid-js';
 
 type HeadProps = Metadata;
 /**
  * Head component for using dynamic meta tags for the app.
  * For static meta tags, see entry-server.tsx.
  */
-export default function Head(props: HeadProps) {
+export default function Head(props: ParentProps<HeadProps>) {
   return (
     <>
       <Meta name="description" content={props.description} />
@@ -22,6 +23,8 @@ export default function Head(props: HeadProps) {
       <Meta property="og:image" content={props.image ?? metadata.image} />
 
       <Title>{props.title}</Title>
+
+      {props.children}
     </>
   );
 }
