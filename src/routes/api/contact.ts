@@ -3,11 +3,18 @@ import type { APIEvent } from '@solidjs/start/server';
 import { send } from '~/lib/resend';
 
 import emailTemplates from '~/data/emails.json';
+import { verify } from '~/lib/verifier';
 
 export async function POST({ request }: APIEvent) {
   'use server';
 
   const submission = await request.json();
+
+  // Verify the email address
+  const verification = await verify(submission.email);
+  if (!verification.status) {
+    return json(new Error(verification.error.message), { status: 400 });
+  }
 
   // Replace template variables
   const userTemplate =
@@ -37,7 +44,7 @@ export async function POST({ request }: APIEvent) {
     html: userHtml,
   });
   if (!res.ok) {
-    throw json({ message: 'Failed to send user email' }, { status: 500 });
+    return json(new Error('Failed to send user email'), { status: 500 });
   }
 
   // Send email to team
@@ -53,5 +60,5 @@ export async function POST({ request }: APIEvent) {
     return json({ success: true });
   }
 
-  throw json({ message: 'Failed to send team email' }, { status: 500 });
+  return json(new Error('Failed to send team email'), { status: 500 });
 }

@@ -12,10 +12,11 @@ import {
   Textarea,
   TextLink,
 } from '~/components/ui';
+import { verify } from '~/lib/verifier';
 
 const contactAction = action(async (formData: FormData) => {
   const name = formData.get('name');
-  const email = formData.get('email');
+  const email = formData.get('email') as string;
   const company = formData.get('company');
   const subject = formData.get('subject');
   const product = formData.get('product');
@@ -33,7 +34,7 @@ const contactAction = action(async (formData: FormData) => {
     });
 
     if (!response.ok) {
-      throw new Error('Failed to submit form');
+      throw new Error('Bad Request');
     }
   } catch (error) {
     console.error(error);
