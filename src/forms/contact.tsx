@@ -12,22 +12,22 @@ import {
   Textarea,
   TextLink,
 } from '~/components/ui';
-import { verify } from '~/lib/verifier';
 
 const contactAction = action(async (formData: FormData) => {
-  const name = formData.get('name');
-  const email = formData.get('email') as string;
-  const company = formData.get('company');
-  const subject = formData.get('subject');
-  const product = formData.get('product');
-  const message = formData.get('message');
   const honeypot = formData.get('website');
-
-  if (honeypot) {
+  const honeypot2 = formData.get('fullname');
+  if (honeypot || honeypot2) {
     throw redirect('/thanks');
   }
 
   try {
+    const name = formData.get('name');
+    const email = formData.get('email') as string;
+    const company = formData.get('company');
+    const subject = formData.get('subject');
+    const product = formData.get('product');
+    const message = formData.get('message');
+
     const response = await fetch('/api/contact', {
       method: 'POST',
       body: JSON.stringify({ name, email, company, subject, product, message }),
@@ -73,6 +73,18 @@ export default function ContactForm() {
               }}
               label="Website"
               name="website"
+              type="text"
+              autocomplete="off"
+              tabindex="-1"
+            />
+          </Box>
+          <Box display="none">
+            <Input
+              ids={{
+                control: 'fullname',
+              }}
+              label="Full Name"
+              name="fullname"
               type="text"
               autocomplete="off"
               tabindex="-1"

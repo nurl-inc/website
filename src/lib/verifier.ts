@@ -1,6 +1,7 @@
 /**
  * This module is used to verify the user's email address.
  * @module verifier
+ * @see https://verifyright.co/user
  */
 
 interface BadVerification {

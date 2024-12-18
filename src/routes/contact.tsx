@@ -35,6 +35,7 @@ export default function Contact(props: RouteSectionProps<RouteData>) {
   return (
     <>
       <Head {...props.data.metadata} />
+
       <Nav />
 
       <Main>

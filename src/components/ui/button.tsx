@@ -8,7 +8,7 @@ export function Button(props: ButtonProps) {
   const { palette, usage, ...nativeProps } = props;
   return (
     <button
-      class={cx(button({ palette, usage }), nativeProps.class)}
+      class={cx(button({ palette, usage }), props.class)}
       {...nativeProps}
     />
   );
