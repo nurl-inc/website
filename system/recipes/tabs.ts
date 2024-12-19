@@ -1,5 +1,4 @@
 import { defineSlotRecipe } from '@pandacss/dev';
-import { button } from './button';
 
 export const tabs = defineSlotRecipe({
   className: 'tabs',
@@ -8,68 +7,65 @@ export const tabs = defineSlotRecipe({
 
   base: {
     list: {
-      paddingBlockStart: 11,
-      paddingInline: 8,
-      paddingBlockEnd: 20,
+      alignItems: 'center',
+      bgColor: '#1C1F23',
+      display: 'flex',
+      h: '3.06rem',
+      justifyContent: 'center',
       position: 'relative',
-      overflowX: 'auto',
+      rounded: 'full',
       w: 'full',
-      '&::-webkit-scrollbar': {
-        display: 'none',
+      md: {
+        marginInline: 'auto',
+        w: '1/3',
       },
     },
     trigger: {
-      ...button.base,
-      border: '1px solid',
-      borderColor: '#032E30',
-      fontFamily: 'montserrat',
+      color: '#CFFAFC',
       fontWeight: 1000,
-      flexShrink: 0,
+      fontStyle: 'italic',
+      h: 'full',
       rounded: 'full',
-      transitionProperty: 'background-color, border-color',
-      transitionDuration: 'fast',
-      w: 'full',
-      _hover: {
-        bgColor: '#054B4F/20',
-        bgImage: 'none',
-      },
+      textStyle: 'body-sm',
+      textTransform: 'uppercase',
+      transitionProperty: 'color',
+      transitionDuration: 'slow',
+      w: '1/2',
+      zIndex: 'decorator',
       _selected: {
-        bgColor: '#032E30',
-        _hover: {
-          bgColor: '#032E30',
-        },
+        color: '#032E30',
       },
       md: {
-        borderColor: 'transparent',
-        w: '23rem',
+        fontWeight: 1000,
+        fontStyle: 'italic',
+        textStyle: 'body-md',
       },
     },
     content: {
+      paddingBlockStart: '8',
       w: 'full',
+      md: {
+        paddingBlockStart: 'initial',
+      },
     },
     indicator: {
-      ...button.base,
       animationName: 'fadeIn',
       animationDuration: 'slow',
-      animationDelay: '500ms',
+      animationDelay: '100ms',
       animationFillMode: 'forwards',
+      bgGradient: 'tertiary',
       border: '1px solid',
-      borderColor: 'page.text.initial',
-      flexShrink: 0,
+      borderColor: '#3DECF5',
+      bottom: 0,
+      h: 'full',
       left: 0,
       opacity: 0,
       position: 'absolute',
+      top: 0,
       rounded: 'full',
       transitionProperty: 'all',
       transitionDuration: 'slow',
-      w: 'full',
-      zIndex: 'decorator',
-      _hover: {
-        bgImage: 'none',
-      },
-      md: {
-        w: '23rem',
-      },
+      zIndex: 'base',
     },
   },
 });

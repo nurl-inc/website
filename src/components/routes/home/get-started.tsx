@@ -5,37 +5,22 @@ import TabContentProduct from './tab-content-product';
 
 export default function GetStarted() {
   const tabs = createMemo(() => [
-    { id: 'players', label: 'For Players' },
     { id: 'publishers', label: 'For Publishers' },
+    { id: 'players', label: 'For Players' },
   ]);
 
   return (
     <Box
       id="get-started"
+      paddingBlock="initial"
+      paddingInline="4"
       w="full"
       md={{
-        py: 20,
+        paddingBlock: '20',
+        paddingInline: 'initial',
       }}
     >
-      <Tabs defaultValue="players" tabs={tabs()}>
-        <TabContent value="players">
-          <TabContentProduct
-            choice="play"
-            heading="nurl play"
-            description="Automate the complex. Keep the magic."
-            spotlight={[
-              'Video game-like automation',
-              'Physical play enhancement',
-              'Seamless group tools',
-            ]}
-          >
-            <VStack alignItems="flex-start" gap="6" md={{ gap: '4' }}>
-              <Button>Join the Waitlist</Button>
-              <TextLink href="/play">Learn More</TextLink>
-            </VStack>
-          </TabContentProduct>
-        </TabContent>
-
+      <Tabs defaultValue="publishers" tabs={tabs()}>
         <TabContent value="publishers">
           <TabContentProduct
             choice="sanctum"
@@ -50,6 +35,24 @@ export default function GetStarted() {
             <VStack alignItems="flex-start" gap="4">
               <Button palette="secondary">Request Beta Access</Button>
               <TextLink href="/sanctum">Learn More</TextLink>
+            </VStack>
+          </TabContentProduct>
+        </TabContent>
+
+        <TabContent value="players">
+          <TabContentProduct
+            choice="play"
+            heading="nurl play"
+            description="Automate the complex. Keep the magic."
+            spotlight={[
+              'Video game-like automation',
+              'Physical play enhancement',
+              'Seamless group tools',
+            ]}
+          >
+            <VStack alignItems="flex-start" gap="6" md={{ gap: '4' }}>
+              <Button>Join the Waitlist</Button>
+              <TextLink href="/play">Learn More</TextLink>
             </VStack>
           </TabContentProduct>
         </TabContent>
