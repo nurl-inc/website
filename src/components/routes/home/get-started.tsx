@@ -5,8 +5,8 @@ import TabContentProduct from './tab-content-product';
 
 export default function GetStarted() {
   const tabs = createMemo(() => [
-    { id: 'publishers', label: 'For Publishers' },
-    { id: 'players', label: 'For Players' },
+    { id: 'publishers', label: 'Nurl Sanctum' },
+    { id: 'players', label: 'Nurl Play' },
   ]);
 
   return (

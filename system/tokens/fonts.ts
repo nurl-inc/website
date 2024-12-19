@@ -1,6 +1,6 @@
 export const fonts = {
-  montserrat: {
-    value: 'var(--font-montserrat)',
-    description: 'Montserrat Variable font used for headings and display text',
+  sans: {
+    value: 'var(--font-gibson)',
+    description: 'Gibson font used for all text.',
   },
 };

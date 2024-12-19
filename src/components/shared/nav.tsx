@@ -16,14 +16,18 @@ export default function Nav() {
 
   return (
     <header class={css({ position: 'sticky', top: 0, zIndex: 'sticky' })}>
-      <Box data-part="nav" bgColor="page.surface.initial" w="full">
+      <Box
+        data-part="nav"
+        backdropFilter="blur(15px)"
+        bgColor="black/75"
+        w="full"
+      >
         <HStack
           justify="center"
           w="full"
           md={{
             justifyContent: 'space-between',
-            paddingInlineStart: '6.75rem',
-            paddingInlineEnd: '4rem',
+            paddingInline: '6.75rem',
           }}
         >
           <Button
@@ -53,18 +57,16 @@ export default function Nav() {
 
           <ul
             class={hstack({
+              animationName: 'fadeIn',
+              animationDuration: '600ms',
+              animationTimingFunction: 'ease-in-out',
+              animationFillMode: 'forwards',
+              animationDelay: '1.6s',
               display: 'none',
+              opacity: 0,
               gap: 4,
               md: {
                 display: 'flex',
-              },
-              _motionSafe: {
-                animationName: 'fadeIn',
-                animationDuration: '600ms',
-                animationTimingFunction: 'ease-in-out',
-                animationFillMode: 'forwards',
-                animationDelay: '1.6s',
-                opacity: 0,
               },
             })}
           >
@@ -73,14 +75,19 @@ export default function Nav() {
                 <li>
                   <A
                     class={css({
+                      color: 'neutral.200',
                       display: 'block',
                       px: 4,
-                      textStyle: 'body-xl',
-                      transitionProperty: 'background',
-                      transitionTimingFunction: 'ease-in-out',
+                      fontSize: 'lg',
+                      fontStyle: 'normal',
+                      fontWeight: 800,
+                      textStyle: 'heading-xs',
+                      textTransform: 'uppercase',
+                      transitionProperty: 'all',
                       transitionDuration: 'fast',
                       _hover: {
-                        textGradient: 'tertiary',
+                        color: 'page.text.alt',
+                        textShadow: 'var(--text-glow)',
                       },
                       _currentPage: {
                         textGradient: 'tertiary',
@@ -98,7 +105,6 @@ export default function Nav() {
               )}
             </For>
           </ul>
-          <Box display="none" md={{ display: 'block', w: '5rem' }} />
         </HStack>
 
         <Box
@@ -131,6 +137,9 @@ export default function Nav() {
           }}
           _closed={{
             visibility: 'hidden',
+          }}
+          md={{
+            display: 'none',
           }}
         >
           <nav

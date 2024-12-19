@@ -17,16 +17,19 @@ export const tabs = defineSlotRecipe({
       w: 'full',
       md: {
         marginInline: 'auto',
+        w: '3/4',
+      },
+      xl: {
         w: '1/3',
       },
     },
     trigger: {
       color: 'brand1.200',
-      fontWeight: 1000,
-      fontStyle: 'italic',
       h: 'full',
+      fontSize: 'md',
+      fontWeight: 800,
       rounded: 'full',
-      textStyle: 'body-sm',
+      textStyle: 'heading-xs',
       textTransform: 'uppercase',
       transitionProperty: 'all',
       transitionDuration: 'slow',
@@ -42,9 +45,7 @@ export const tabs = defineSlotRecipe({
         color: 'brand1.1000',
       },
       md: {
-        fontWeight: 1000,
-        fontStyle: 'italic',
-        textStyle: 'body-md',
+        fontSize: 'lg',
       },
     },
     content: {

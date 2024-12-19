@@ -1,5 +1,5 @@
 export const globalVars = {
-  '--font-montserrat': 'Montserrat Variable, sans-serif',
-  '--font-saira': 'Saira Variable, sans-serif',
+  '--font-gibson': 'Gibson, sans-serif',
   '--focus-color': '#10EAAC',
+  '--text-glow': '0 0 10px rgba(255, 255, 255, 0.5)',
 };
