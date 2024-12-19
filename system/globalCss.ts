@@ -17,4 +17,8 @@ export const globalCss = defineGlobalStyles({
   body: {
     fontSize: '16px',
   },
+
+  ':is(button)': {
+    cursor: 'pointer',
+  },
 });

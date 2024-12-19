@@ -8,7 +8,7 @@ export const tabs = defineSlotRecipe({
   base: {
     list: {
       alignItems: 'center',
-      bgColor: '#1C1F23',
+      bgColor: 'neutral.900',
       display: 'flex',
       h: '3.06rem',
       justifyContent: 'center',
@@ -21,19 +21,25 @@ export const tabs = defineSlotRecipe({
       },
     },
     trigger: {
-      color: '#CFFAFC',
+      color: 'brand1.200',
       fontWeight: 1000,
       fontStyle: 'italic',
       h: 'full',
       rounded: 'full',
       textStyle: 'body-sm',
       textTransform: 'uppercase',
-      transitionProperty: 'color',
+      transitionProperty: 'all',
       transitionDuration: 'slow',
       w: '1/2',
       zIndex: 'decorator',
+      _hover: {
+        '&:not([aria-selected=true])': {
+          color: 'page.text.alt',
+          textShadow: '0 0 10px rgba(255, 255, 255, 0.2)',
+        },
+      },
       _selected: {
-        color: '#032E30',
+        color: 'brand1.1000',
       },
       md: {
         fontWeight: 1000,
@@ -55,7 +61,7 @@ export const tabs = defineSlotRecipe({
       animationFillMode: 'forwards',
       bgGradient: 'tertiary',
       border: '1px solid',
-      borderColor: '#3DECF5',
+      borderColor: 'brand1.500',
       bottom: 0,
       h: 'full',
       left: 0,

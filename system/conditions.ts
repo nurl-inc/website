@@ -41,6 +41,10 @@ export const conditions = {
     grammarError: '&:is(::grammar-error)',
 
     // palettes
+    neutralPalette: '&:is([data-palette=neutral])',
+    sanctumPalette: '&:is([data-palette=sanctum])',
+    playPalette: '&:is([data-palette=play])',
+
     pagePalette: '&:is([data-palette=page])',
     actionPalette: '&:is([data-palette=action])',
     secondaryActionPalette: '&:is([data-palette=secondaryAction])',
