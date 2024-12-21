@@ -1,11 +1,13 @@
-import { createMemo, Index } from 'solid-js';
+import { createMemo, Index, Show } from 'solid-js';
 import { Box } from 'styled-system/jsx';
 import { Tabs, TabContent } from '~/components/ui';
 import TabContentProduct from './tab-content-product';
-
-import productTabContent from '~/data/product-tab-content.json';
+import { createAsync } from '@solidjs/router';
+import { getProductTabContentData } from '~/lib/db';
 
 export default function GetStarted() {
+  const productTabContent = createAsync(() => getProductTabContentData());
+
   const tabs = createMemo(() => [
     { id: 'sanctum', label: 'Nurl Sanctum' },
     { id: 'play', label: 'Nurl Play' },
@@ -29,15 +31,17 @@ export default function GetStarted() {
         paddingBlockEnd: '72',
       }}
     >
-      <Tabs defaultValue="sanctum" tabs={tabs()}>
-        <Index each={Object.values(productTabContent)}>
-          {(item) => (
-            <TabContent value={item().choice}>
-              <TabContentProduct {...item()} />
-            </TabContent>
-          )}
-        </Index>
-      </Tabs>
+      <Show when={productTabContent()}>
+        <Tabs defaultValue="sanctum" tabs={tabs()}>
+          <Index each={Object.values(productTabContent()!)}>
+            {(item) => (
+              <TabContent value={item().choice}>
+                <TabContentProduct {...item()} />
+              </TabContent>
+            )}
+          </Index>
+        </Tabs>
+      </Show>
     </Box>
   );
 }

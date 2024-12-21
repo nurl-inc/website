@@ -2,7 +2,6 @@ import { animate, scroll } from 'motion';
 import { onMount } from 'solid-js';
 import { css } from 'styled-system/css';
 import { Box, HStack, VStack } from 'styled-system/jsx';
-import { featureCard } from 'styled-system/recipes';
 import { BookIcon } from '~/components/icons';
 import {
   FeatureCardWithPoints,
