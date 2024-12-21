@@ -31,59 +31,53 @@ export default function HowToStart() {
 
   return (
     <Box
-      bgGradient="tertiary"
-      rounded="2xl"
-      paddingBlockStart="28"
-      paddingBlockEnd="8"
+      bgGradient="bigGlow"
+      paddingBlock="28"
       w="full"
       md={{
-        paddingBlockStart: 64,
-        rounded: '3xl',
+        paddingBlockEnd: '34rem',
       }}
     >
-      <Container
-        paddingBlockEnd={{
-          base: 28,
-          md: 64,
-        }}
-      >
+      <Container>
         <h2
           id="how-to-heading"
           class={css({
-            color: '#066469',
+            color: 'brand1.200',
             textAlign: 'center',
             lineHeight: 1,
+            paddingBlockEnd: {
+              base: 6,
+              md: 24,
+            },
             textStyle: {
               base: 'heading-sm',
-              md: 'heading-xl',
+              md: 'heading-lg',
             },
           })}
         >
-          Your quest{' '}
-          <span
-            class={css({
-              display: 'block',
-              color: 'page.surface.100',
-            })}
-          >
-            to gaming greatness
-          </span>
+          Your quest to gaming greatness
         </h2>
-      </Container>
 
-      <Grid columns={{ base: 1, md: 3 }} gap="3" paddingInline="8">
-        <For each={data()}>
-          {(item) => (
-            <GridItem>
-              <PointCard
-                number={item.number}
-                heading={item.heading}
-                description={item.description}
-              />
-            </GridItem>
-          )}
-        </For>
-      </Grid>
+        <Grid
+          columns={{ base: 1, md: 3 }}
+          gap="12"
+          mx="auto"
+          maxW="60rem"
+          paddingInline="8"
+        >
+          <For each={data()}>
+            {(item) => (
+              <GridItem>
+                <PointCard
+                  number={item.number}
+                  heading={item.heading}
+                  description={item.description}
+                />
+              </GridItem>
+            )}
+          </For>
+        </Grid>
+      </Container>
     </Box>
   );
 }

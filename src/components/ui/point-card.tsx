@@ -1,6 +1,7 @@
 import { Show } from 'solid-js';
 import { css } from 'styled-system/css';
 import { Box, Circle, VStack } from 'styled-system/jsx';
+import { Text } from './text';
 
 interface PointCardProps {
   number?: number;
@@ -12,56 +13,48 @@ export default function PointCard(props: PointCardProps) {
   return (
     <Box
       class="point-card"
-      bgColor="#032E30"
-      p={{ base: '8', md: '10' }}
-      rounded="xl"
+      bgColor="neutral.1000"
+      h="32rem"
+      maxW="17rem"
+      mx="auto"
+      p="4"
+      rounded="full"
     >
-      <VStack alignItems="flex-start" gap="3" h="18rem" justify="flex-end">
-        <Show when={props.number}>
-          <Circle size="8" bgColor="#0DE7F2">
-            <p
-              class={css({
-                color: '#032E30',
-                fontFamily: 'mono',
-                fontSize: 'lg',
-                fontStyle: 'italic',
-                fontWeight: 'black',
-                marginInlineStart: '-2px',
-              })}
-            >
-              {props.number}
-            </p>
-          </Circle>
-        </Show>
+      <VStack gap="7" h="full" textAlign="center">
+        <VStack
+          bgGradient="to-br"
+          gradientFrom="brand1.700"
+          gradientTo="brand2.700"
+          color="white"
+          h="66%"
+          justify="center"
+          rounded="full"
+          w="full"
+        >
+          {props.number}
+        </VStack>
 
-        <p
-          class={css({
-            lineHeight: 1,
-            fontSize: {
-              base: '2xl',
-              md: '3xl',
-            },
-            textStyle: 'heading-sm',
-          })}
-        >
-          {props.heading}
-        </p>
-        <p
-          class={css({
-            color: 'white/80',
-            textStyle: {
-              base: 'body-md',
-              md: 'body-lg',
-            },
-            textWrap: 'pretty',
-            w: {
-              base: 'full',
-              md: '90%',
-            },
-          })}
-        >
-          {props.description}
-        </p>
+        <Box w="full">
+          <Text
+            lineHeight={1}
+            fontSize="xl"
+            paddingBlockEnd="2"
+            textStyle="heading-xs"
+            textAlign="center"
+          >
+            {props.heading}
+          </Text>
+          <Text
+            color="white"
+            lineHeight={1.2}
+            maxW="90%"
+            mx="auto"
+            textStyle="body-md"
+            textWrap="pretty"
+          >
+            {props.description}
+          </Text>
+        </Box>
       </VStack>
     </Box>
   );

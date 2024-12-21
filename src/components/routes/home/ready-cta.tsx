@@ -18,15 +18,19 @@ export default function ReadyCTA() {
   return (
     <VStack
       gap="8"
-      paddingBlockStart="40"
+      paddingBlock="60"
       paddingInline="8"
-      paddingBlockEnd="60"
       w="full"
       md={{
-        paddingBlockEnd: 96,
+        paddingBlock: 96,
       }}
     >
-      <Text as="h3" lineHeight="1" textStyle="heading-sm">
+      <Text
+        as="h3"
+        lineHeight="1"
+        textShadow="0 0 24px rgba(255, 255, 255, 0.56)"
+        textStyle="heading-sm"
+      >
         Ready to get started?
       </Text>
 
