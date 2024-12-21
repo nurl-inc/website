@@ -1,17 +1,19 @@
 import { createAsync } from '@solidjs/router';
-import { For, onMount } from 'solid-js';
-import { Box, HStack, VStack } from 'styled-system/jsx';
-import { SocialCard, Text } from '~/components/ui';
+import { For, lazy, onMount, Suspense } from 'solid-js';
+import { Box, Container, VStack } from 'styled-system/jsx';
+import { Text } from '~/components/ui';
 import { getSocialProofData } from '~/lib/db';
 import { scrollFadeInOut } from '~/lib/motion';
+
+const HeroQuote = lazy(() => import('~/components/ui/hero-quote'));
 
 export default function SocialProof() {
   const socialProof = createAsync(() => getSocialProofData());
 
   onMount(() => {
     const target = document.getElementById('social-proof-heading');
-    const socialCards = document.querySelectorAll('.social-card');
-    if (target) scrollFadeInOut(target);
+    const socialCards = document.querySelectorAll('.hero-quote');
+    scrollFadeInOut(target);
     if (socialCards) {
       socialCards.forEach((card) => {
         scrollFadeInOut(card);
@@ -20,54 +22,48 @@ export default function SocialProof() {
   });
 
   return (
-    <Box
-      paddingBlock="36"
-      paddingInline="8"
-      w="full"
-      md={{
-        paddingInline: 16,
-        paddingBlock: 60,
-      }}
-    >
-      <HStack
-        alignItems="flex-start"
-        justify="space-between"
-        flexWrap={{
-          base: 'wrap',
-          md: 'nowrap',
-        }}
+    <Box w="full" bgColor="#0B0D0E">
+      <Container
+        maxWidth="70rem"
+        paddingBlock="36"
+        paddingInline="8"
         w="full"
+        md={{
+          paddingBlockEnd: 'initial',
+        }}
       >
-        <Text
-          as="h2"
-          id="social-proof-heading"
-          lineHeight="1"
-          maxW="28rem"
-          textStyle={{
-            base: 'heading-sm',
-            md: 'heading-md',
-          }}
-          textWrap="balance"
-        >
-          Tales from the Nurl tavern
-        </Text>
+        <VStack w="full">
+          <Text
+            as="h2"
+            id="social-proof-heading"
+            lineHeight="1"
+            fontSize="lg"
+            textStyle="heading-xs"
+            textWrap="balance"
+          >
+            Tales from the Nurl tavern
+          </Text>
 
-        <VStack
-          justify="center"
-          gap="4"
-          paddingBlock="24"
-          w="full"
-          md={{
-            gap: 6,
-            paddingBlock: 56,
-            w: '1/2',
-          }}
-        >
-          <For each={socialProof()}>
-            {(item) => <SocialCard quote={item.quote} author={item.author} />}
-          </For>
+          <VStack
+            justify="center"
+            gap="4"
+            paddingBlock="24"
+            w="full"
+            md={{
+              gap: 6,
+              paddingBlock: 56,
+            }}
+          >
+            <Suspense>
+              <For each={socialProof()}>
+                {(item) => (
+                  <HeroQuote quote={item.quote} author={item.author} />
+                )}
+              </For>
+            </Suspense>
+          </VStack>
         </VStack>
-      </HStack>
+      </Container>
     </Box>
   );
 }

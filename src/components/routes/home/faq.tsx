@@ -11,7 +11,7 @@ export default function Faq() {
   const data = createAsync(() => getFaqData());
 
   return (
-    <Container paddingInline="8">
+    <Container paddingBlockStart="32" paddingInline="8">
       <VStack
         paddingBlockEnd="64"
         gap="28"

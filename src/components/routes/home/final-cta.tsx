@@ -47,12 +47,17 @@ export default function FinalCTA() {
           }}
           h="full"
           justify="center"
+          textAlign="center"
           w="full"
         >
+          <Text color="white" fontSize="body-xs" textTransform="uppercase">
+            Join the Nurl adventure
+          </Text>
+
           <Text
             as="h2"
             fontSize="xl"
-            textAlign="center"
+            textGradient="tertiary"
             textStyle="heading-xs"
             textWrap="balance"
             w="75%"
