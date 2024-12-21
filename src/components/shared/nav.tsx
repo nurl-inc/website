@@ -89,15 +89,11 @@ export default function Nav() {
                           transitionProperty: 'all',
                           transitionDuration: 'fast',
                           _hover: {
-                            color: 'page.text.alt',
                             textShadow: 'var(--text-glow)',
                           },
                           _currentPage: {
-                            textGradient: 'tertiary',
-                            textDecoration: 'underline',
-                            textDecorationThickness: '1px',
-                            textUnderlineOffset: '6px',
-                            textDecorationColor: 'action.bg.active',
+                            color: 'page.text.alt',
+                            textShadow: 'var(--text-glow)',
                           },
                         })}
                         href={item.href}
