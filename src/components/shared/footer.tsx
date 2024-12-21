@@ -75,7 +75,6 @@ export default function Footer() {
             <Text
               as="small"
               display="block"
-              fontFamily="montserrat"
               fontStyle="normal"
               textStyle="xs"
               w="full"
@@ -103,12 +102,7 @@ export default function Footer() {
             paddingBlock: 0,
           }}
         >
-          <nav
-            class={css({
-              fontFamily: 'montserrat',
-              fontStyle: 'normal',
-            })}
-          >
+          <nav>
             <HStack
               alignItems="flex-start"
               justify={{
@@ -132,7 +126,6 @@ export default function Footer() {
         <Text
           as="small"
           display="block"
-          fontFamily="montserrat"
           fontStyle="normal"
           textAlign="center"
           textStyle="xs"
@@ -160,14 +153,13 @@ function FooterSection(props: ParentProps<FooterSectionProps>) {
         w: 'auto',
       }}
     >
-      <Text as="h3" fontWeight="bold" textTransform="capitalize">
+      <Text as="h3" fontWeight="600" textTransform="capitalize">
         {props.section}
       </Text>
       <Index each={footerLinks[props.section]}>
         {(item) => (
           <A
             class={css({
-              fontFamily: 'montserrat',
               textStyle: 'body-sm',
               transitionProperty: 'color',
               transitionDuration: 'fast',

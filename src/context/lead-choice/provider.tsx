@@ -29,6 +29,7 @@ export function LeadChoiceProvider(
     {
       setChoice(choice: LeadChoice) {
         setStore('choice', choice);
+        document.documentElement.dataset.pandaTheme = choice;
       },
     },
   ];

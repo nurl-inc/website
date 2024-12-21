@@ -1,14 +1,15 @@
 import { defineTextStyles } from '@pandacss/dev';
 
 const headingStyles = {
-  fontFamily: 'montserrat',
+  fontFamily: 'sans',
   fontStyle: 'italic',
-  fontWeight: '900',
+  fontWeight: '700',
+  letterSpacing: '0.03em',
   textTransform: 'uppercase',
 };
 
 const bodyStyles = {
-  fontFamily: 'montserrat',
+  fontFamily: 'sans',
   fontStyle: 'normal',
   fontWeight: '400',
 };

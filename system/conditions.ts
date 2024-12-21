@@ -1,8 +1,8 @@
 export const conditions = {
   extend: {
     // themes
-    primaryTheme: '[data-panda-theme=primary] &',
-    secondaryTheme: '[data-panda-theme=secondary] &',
+    sanctumTheme: '[data-panda-theme=sanctum] &',
+    playTheme: '[data-panda-theme=play] &',
 
     // modes
     lightMode: '[data-color-mode=light] &, &.light, .light &',
@@ -41,6 +41,10 @@ export const conditions = {
     grammarError: '&:is(::grammar-error)',
 
     // palettes
+    neutralPalette: '&:is([data-palette=neutral])',
+    sanctumPalette: '&:is([data-palette=sanctum])',
+    playPalette: '&:is([data-palette=play])',
+
     pagePalette: '&:is([data-palette=page])',
     actionPalette: '&:is([data-palette=action])',
     secondaryActionPalette: '&:is([data-palette=secondaryAction])',

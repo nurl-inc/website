@@ -1,9 +1,13 @@
-import { Tabs as KTabs } from '@kobalte/core';
+import { Tabs as KTabs } from '@kobalte/core/tabs';
 import type { TabsContentProps, TabsRootProps } from '@kobalte/core/tabs';
 import { For, type ParentProps } from 'solid-js';
-import { cx } from 'styled-system/css';
-import { hstack } from 'styled-system/patterns/hstack';
 import { tabs } from 'styled-system/recipes';
+
+/**
+ * This module is a wrapper around the Kobalte Tabs component. We have to use
+ * Kobalte because Ark UI has a bug with the Tabs component.
+ * @module Tabs
+ */
 
 interface TabsProps extends TabsRootProps {
   tabs: {
@@ -30,20 +34,8 @@ export function Tabs(props: ParentProps<TabsProps>) {
   const styles = tabs();
 
   return (
-    <KTabs.Tabs defaultValue={props.defaultValue}>
-      <KTabs.List
-        class={cx(
-          styles.list,
-          hstack({
-            gap: 4,
-            w: 'full',
-            md: {
-              gap: 8,
-              justifyContent: 'center',
-            },
-          }),
-        )}
-      >
+    <KTabs defaultValue={props.defaultValue}>
+      <KTabs.List class={styles.list}>
         <For each={props.tabs}>
           {(tab) => (
             <KTabs.Trigger value={tab.id} class={styles.trigger}>
@@ -55,7 +47,7 @@ export function Tabs(props: ParentProps<TabsProps>) {
       </KTabs.List>
 
       {props.children}
-    </KTabs.Tabs>
+    </KTabs>
   );
 }
 

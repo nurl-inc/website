@@ -1,0 +1,30 @@
+{
+  "sanctum": {
+    "choice": "sanctum",
+    "lead": "The tool for publishers",
+    "main1": "Where game",
+    "main2": "worlds are born.",
+    "action": "Request beta access",
+    "linkText": "Learn more about Nurl Sanctum",
+    "link": "/sanctum",
+    "features": [
+      "Visual system mapping",
+      "Intuitive world building",
+      "Streamlined publishing"
+    ]
+  },
+  "play": {
+    "choice": "play",
+    "lead": "The app for players",
+    "main1": "Automate the complex.",
+    "main2": "Keep the magic.",
+    "action": "Join the waitlist",
+    "linkText": "Learn more about Nurl Play",
+    "link": "/play",
+    "features": [
+      "Video game-like automation",
+      "Physical play enhancement",
+      "Seamless group tools"
+    ]
+  }
+}

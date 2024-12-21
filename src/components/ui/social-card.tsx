@@ -22,11 +22,7 @@ export function SocialCard(props: SocialCardProps) {
       }}
     >
       <blockquote>
-        <Text
-          fontFamily="montserrat"
-          textStyle={{ base: 'body-md', md: 'body-lg' }}
-          textWrap="pretty"
-        >
+        <Text textStyle={{ base: 'body-md', md: 'body-lg' }} textWrap="pretty">
           {props.quote}
         </Text>
       </blockquote>

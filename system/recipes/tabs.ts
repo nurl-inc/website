@@ -1,5 +1,4 @@
 import { defineSlotRecipe } from '@pandacss/dev';
-import { button } from './button';
 
 export const tabs = defineSlotRecipe({
   className: 'tabs',
@@ -8,68 +7,72 @@ export const tabs = defineSlotRecipe({
 
   base: {
     list: {
-      paddingBlockStart: 11,
-      paddingInline: 8,
-      paddingBlockEnd: 20,
+      alignItems: 'center',
+      bgColor: 'neutral.900',
+      display: 'flex',
+      h: '3.06rem',
+      justifyContent: 'center',
       position: 'relative',
-      overflowX: 'auto',
+      rounded: 'full',
       w: 'full',
-      '&::-webkit-scrollbar': {
-        display: 'none',
+      md: {
+        marginInline: 'auto',
+        w: '3/4',
+      },
+      xl: {
+        w: '1/3',
       },
     },
     trigger: {
-      ...button.base,
-      border: '1px solid',
-      borderColor: '#032E30',
-      fontFamily: 'montserrat',
-      fontWeight: 1000,
-      flexShrink: 0,
+      color: 'brand1.200',
+      h: 'full',
+      fontSize: 'md',
+      fontWeight: 800,
       rounded: 'full',
-      transitionProperty: 'background-color, border-color',
-      transitionDuration: 'fast',
-      w: 'full',
+      textStyle: 'heading-xs',
+      textTransform: 'uppercase',
+      transitionProperty: 'all',
+      transitionDuration: 'slow',
+      w: '1/2',
+      zIndex: 'decorator',
       _hover: {
-        bgColor: '#054B4F/20',
-        bgImage: 'none',
-      },
-      _selected: {
-        bgColor: '#032E30',
-        _hover: {
-          bgColor: '#032E30',
+        '&:not([aria-selected=true])': {
+          color: 'page.text.alt',
+          textShadow: '0 0 10px rgba(255, 255, 255, 0.2)',
         },
       },
+      _selected: {
+        color: 'brand1.1000',
+      },
       md: {
-        borderColor: 'transparent',
-        w: '23rem',
+        fontSize: 'lg',
       },
     },
     content: {
+      paddingBlockStart: '8',
       w: 'full',
+      md: {
+        paddingBlockStart: 'initial',
+      },
     },
     indicator: {
-      ...button.base,
       animationName: 'fadeIn',
       animationDuration: 'slow',
-      animationDelay: '500ms',
+      animationDelay: '100ms',
       animationFillMode: 'forwards',
+      bgGradient: 'tertiary',
       border: '1px solid',
-      borderColor: 'page.text.initial',
-      flexShrink: 0,
+      borderColor: 'brand1.500',
+      bottom: 0,
+      h: 'full',
       left: 0,
       opacity: 0,
       position: 'absolute',
+      top: 0,
       rounded: 'full',
       transitionProperty: 'all',
       transitionDuration: 'slow',
-      w: 'full',
-      zIndex: 'decorator',
-      _hover: {
-        bgImage: 'none',
-      },
-      md: {
-        w: '23rem',
-      },
+      zIndex: 'base',
     },
   },
 });

@@ -34,7 +34,6 @@ export default function Hero() {
       >
         <h1
           class={css({
-            color: 'page.text.alt',
             maxW: '42.5rem',
             mb: 4,
             textGradient: 'tertiary',
@@ -63,10 +62,10 @@ export default function Hero() {
         </h1>
         <p
           class={css({
-            color: 'page.text.initial',
+            color: '#d0d0d0',
             maxW: '36rem',
-            pt: {
-              md: 6,
+            paddingBlockStart: {
+              md: 2,
             },
             textStyle: 'body-xl',
             _motionSafe: {
@@ -84,7 +83,7 @@ export default function Hero() {
         </p>
 
         <Box
-          mt="7"
+          mt="14"
           w="full"
           _motionSafe={{
             animationName: 'fadeIn',

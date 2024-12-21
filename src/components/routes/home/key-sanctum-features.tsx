@@ -48,11 +48,10 @@ export default function KeySanctumFeatures() {
           />
         </FeatureCardWithPoints>
         <HeadingFeatureCard
+          heading="Publish Power"
           description="From rules to content, manage your entire game library in one professional platform."
-          class={featureCard({ cushion: 'md', palette: 'secondary' })}
-        >
-          Publish Power
-        </HeadingFeatureCard>
+          palette="secondary"
+        />
       </VStack>
 
       <VStack
@@ -64,15 +63,16 @@ export default function KeySanctumFeatures() {
           w: 'calc(50% - 1rem)',
         }}
       >
-        <HeadingFeatureCard description="Our visual tools make complex game design intuitive. Build, test, and iterate faster than ever.">
-          Create with Confidence
-        </HeadingFeatureCard>
         <HeadingFeatureCard
+          heading="Create with Confidence"
+          description="Our visual tools make complex game design intuitive. Build, test, and iterate faster than ever."
+          palette="tertiary"
+        />
+        <HeadingFeatureCard
+          heading="Direct Insights"
           description="See how players interact with your games through Nurl Play integration."
-          class={featureCard({ cushion: 'md', palette: 'tertiary' })}
-        >
-          Direct Insights
-        </HeadingFeatureCard>
+          palette="accent"
+        />
       </VStack>
     </HStack>
   );
