@@ -1,10 +1,13 @@
+import { createAsync } from '@solidjs/router';
 import { For, onMount } from 'solid-js';
 import { Box, HStack, VStack } from 'styled-system/jsx';
 import { SocialCard, Text } from '~/components/ui';
-import socialProof from '~/data/social-proof.json';
+import { getSocialProofData } from '~/lib/db';
 import { scrollFadeInOut } from '~/lib/motion';
 
 export default function SocialProof() {
+  const socialProof = createAsync(() => getSocialProofData());
+
   onMount(() => {
     const target = document.getElementById('social-proof-heading');
     const socialCards = document.querySelectorAll('.social-card');
@@ -60,7 +63,7 @@ export default function SocialProof() {
             w: '1/2',
           }}
         >
-          <For each={socialProof}>
+          <For each={socialProof()}>
             {(item) => <SocialCard quote={item.quote} author={item.author} />}
           </For>
         </VStack>

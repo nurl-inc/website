@@ -13,6 +13,10 @@ export const gradients = {
   tertiary: {
     value: 'linear-gradient(170deg, #0DE7F2, #0DF2B1)',
   },
+  bigGlow: {
+    value:
+      'radial-gradient(circle, rgba(13,242,177,0.2) 0%, rgba(13,242,177,0.02) 54%, rgba(2,2,4,1) 95%)',
+  },
   play50: {
     value: 'linear-gradient(90deg, #0DE7F2 25%, #6EF0F7 100%)',
   },
