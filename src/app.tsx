@@ -3,8 +3,6 @@ import { Router } from '@solidjs/router';
 import { FileRoutes } from '@solidjs/start/router';
 import { MetaProvider } from '@solidjs/meta';
 
-import '@fontsource-variable/montserrat';
-import '@fontsource-variable/saira';
 import './main.css';
 
 import { Banner } from './components/ui/banner';

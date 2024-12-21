@@ -12,8 +12,6 @@
   },
   "dependencies": {
     "@ark-ui/solid": "^4.6.0",
-    "@fontsource-variable/montserrat": "^5.1.0",
-    "@fontsource-variable/saira": "^5.1.0",
     "@kobalte/core": "^0.13.7",
     "@solidjs/meta": "^0.29.4",
     "@solidjs/router": "^0.15.1",

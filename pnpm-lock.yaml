@@ -10,12 +10,6 @@ importers:
       '@ark-ui/solid':
         specifier: ^4.6.0
         version: 4.6.0(solid-js@1.9.3)
-      '@fontsource-variable/montserrat':
-        specifier: ^5.1.0
-        version: 5.1.0
-      '@fontsource-variable/saira':
-        specifier: ^5.1.0
-        version: 5.1.0
       '@kobalte/core':
         specifier: ^0.13.7
         version: 0.13.7(solid-js@1.9.3)
@@ -1222,18 +1216,6 @@ packages:
     resolution:
       {
         integrity: sha512-kym7SodPp8/wloecOpcmSnWJsK7M0E5Wg8UcFA+uO4B9s5d0ywXOEro/8HM9x0rW+TljRzul/14UYz3TleT3ig==,
-      }
-
-  '@fontsource-variable/montserrat@5.1.0':
-    resolution:
-      {
-        integrity: sha512-1bloVBKJx/ABBmF+/VzhJZDLzaDNUxw/8Pt5AOgfKL6N3t1fAhwtJBb1gdqU7ABckSNLsKf572A5Inv9YneRug==,
-      }
-
-  '@fontsource-variable/saira@5.1.0':
-    resolution:
-      {
-        integrity: sha512-CL8mkwSJ98m30gvkNRqIihp9xu9Vyygimj0fAt2qQrJWYYEbxP+LEFIot9Arvv5wMuG/Zd2voW6B2n/QvcEycQ==,
       }
 
   '@internationalized/date@3.5.5':
@@ -8381,10 +8363,6 @@ snapshots:
       '@floating-ui/utils': 0.2.8
 
   '@floating-ui/utils@0.2.8': {}
-
-  '@fontsource-variable/montserrat@5.1.0': {}
-
-  '@fontsource-variable/saira@5.1.0': {}
 
   '@internationalized/date@3.5.5':
     dependencies:
