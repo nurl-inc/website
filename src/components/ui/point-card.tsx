@@ -1,12 +1,16 @@
-import { Show } from 'solid-js';
-import { css } from 'styled-system/css';
-import { Box, Circle, VStack } from 'styled-system/jsx';
+import { Match, Switch } from 'solid-js';
+import { Box, VStack } from 'styled-system/jsx';
 import { Text } from './text';
+import { CellarIcon, HomeIcon, TransferIcon, StatsIcon } from '../icons';
+import DownloadIcon from '../icons/download';
+import StarIcon from '../icons/star';
+import D20Icon from '../icons/d20';
 
 interface PointCardProps {
   number?: number;
   heading: string;
   description: string;
+  icon?: string;
 }
 
 export default function PointCard(props: PointCardProps) {
@@ -31,7 +35,31 @@ export default function PointCard(props: PointCardProps) {
           rounded="full"
           w="full"
         >
-          {props.number}
+          <Box w="24">
+            <Switch>
+              <Match when={props.icon === 'home'}>
+                <HomeIcon />
+              </Match>
+              <Match when={props.icon === 'transfer'}>
+                <TransferIcon />
+              </Match>
+              <Match when={props.icon === 'stats'}>
+                <StatsIcon />
+              </Match>
+              <Match when={props.icon === 'cellar'}>
+                <CellarIcon />
+              </Match>
+              <Match when={props.icon === 'download'}>
+                <DownloadIcon />
+              </Match>
+              <Match when={props.icon === 'star'}>
+                <StarIcon />
+              </Match>
+              <Match when={props.icon === 'd20'}>
+                <D20Icon />
+              </Match>
+            </Switch>
+          </Box>
         </VStack>
 
         <Box w="full">

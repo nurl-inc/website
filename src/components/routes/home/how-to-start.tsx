@@ -11,6 +11,7 @@ export interface PointCardProps {
   number?: number;
   heading: string;
   description: string;
+  icon: string;
 }
 
 export default function HowToStart() {
@@ -19,8 +20,7 @@ export default function HowToStart() {
 
   onMount(() => {
     const target = document.getElementById('how-to-heading');
-    if (target) scrollFadeInOut(target);
-    slideInFromBottom('.point-card');
+    scrollFadeInOut(target);
   });
 
   createEffect(() => {
@@ -72,6 +72,7 @@ export default function HowToStart() {
                   number={item.number}
                   heading={item.heading}
                   description={item.description}
+                  icon={item.icon}
                 />
               </GridItem>
             )}

@@ -3,18 +3,21 @@
     "id": 1,
     "number": 1,
     "heading": "Enter the Sanctum",
-    "description": "Sign up for an account, create your publisher profile, and start your journey."
+    "description": "Sign up for an account and create your publisher profile to start your journey.",
+    "icon": "cellar"
   },
   {
     "id": 2,
     "number": 2,
     "heading": "Add your Systems",
-    "description": "Create or import your systems and instantly see how they are connected or where conflicts exist."
+    "description": "Create or import your systems and instantly see how they are connected or where conflicts exist.",
+    "icon": "transfer"
   },
   {
     "id": 3,
     "number": 3,
     "heading": "Integrate with Play",
-    "description": "Streamline your updates and get real-time insights of your games with Nurl Play."
+    "description": "Streamline your updates and get real-time insights of your customers with Nurl Play.",
+    "icon": "stats"
   }
 ]
