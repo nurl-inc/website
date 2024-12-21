@@ -1,9 +1,8 @@
-import { Match, Switch } from 'solid-js';
+import { A } from '@solidjs/router';
+import { Match, Switch, type ParentProps } from 'solid-js';
 import { VStack } from 'styled-system/jsx';
 import { Button, Text } from '~/components/ui';
 import { useLeadChoice } from '~/context/lead-choice';
-
-// TODO: Add link to forms
 
 /**
  * This module is used to display a call to action for users to request beta
@@ -33,12 +32,20 @@ export default function ReadyCTA() {
 
       <Switch>
         <Match when={leadChoice.choice === 'play'}>
-          <Button>Join the waitlist</Button>
+          <Button asChild={PlayLink} />
         </Match>
         <Match when={leadChoice.choice === 'sanctum'}>
           <Button palette="secondary">Request beta access</Button>
         </Match>
       </Switch>
     </VStack>
+  );
+}
+
+function PlayLink(props: ParentProps) {
+  return (
+    <A href="/play/signup" {...props}>
+      Join the waitlist
+    </A>
   );
 }
