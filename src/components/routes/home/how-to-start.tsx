@@ -1,3 +1,4 @@
+import { createMediaQuery } from '@solid-primitives/media';
 import { createAsync } from '@solidjs/router';
 import { createEffect, For, onMount } from 'solid-js';
 import { css } from 'styled-system/css';
@@ -16,6 +17,8 @@ export interface PointCardProps {
 
 export default function HowToStart() {
   const [leadChoice] = useLeadChoice();
+  const isSmall = createMediaQuery('(max-width: 767px)');
+
   const data = createAsync(() => getHowToData(leadChoice.choice));
 
   onMount(() => {
@@ -24,7 +27,7 @@ export default function HowToStart() {
   });
 
   createEffect(() => {
-    if (data()?.length) {
+    if (data()?.length && !isSmall()) {
       slideInFromBottom('.point-card');
     }
   });

@@ -13,6 +13,7 @@
   "dependencies": {
     "@ark-ui/solid": "^4.6.0",
     "@kobalte/core": "^0.13.7",
+    "@solid-primitives/media": "^2.2.9",
     "@solidjs/meta": "^0.29.4",
     "@solidjs/router": "^0.15.1",
     "@solidjs/start": "^1.0.10",
@@ -22,6 +23,8 @@
     "motion": "^11.15.0",
     "remove": "^0.1.5",
     "solid-js": "^1.9.2",
+    "three": "^0.171.0",
+    "vanta": "^0.5.24",
     "vinxi": "^0.4.3"
   },
   "devDependencies": {
