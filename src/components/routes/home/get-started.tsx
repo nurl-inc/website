@@ -1,61 +1,42 @@
-import { createMemo } from 'solid-js';
-import { Box, VStack } from 'styled-system/jsx';
-import { Tabs, TabContent, Button, TextLink } from '~/components/ui';
+import { createMemo, Index } from 'solid-js';
+import { Box } from 'styled-system/jsx';
+import { Tabs, TabContent } from '~/components/ui';
 import TabContentProduct from './tab-content-product';
+
+import productTabContent from '~/data/product-tab-content.json';
 
 export default function GetStarted() {
   const tabs = createMemo(() => [
-    { id: 'publishers', label: 'Nurl Sanctum' },
-    { id: 'players', label: 'Nurl Play' },
+    { id: 'sanctum', label: 'Nurl Sanctum' },
+    { id: 'play', label: 'Nurl Play' },
   ]);
 
   return (
     <Box
+      bgColor={{
+        _sanctumTheme: 'brand2.900',
+        _playTheme: 'brand1.1000',
+      }}
       id="get-started"
-      paddingBlock="initial"
+      paddingBlockStart="16"
+      paddingBlockEnd="36"
       paddingInline="4"
+      transitionProperty="background-color"
+      transitionDuration="fast"
       w="full"
       md={{
-        paddingBlock: '20',
         paddingInline: 'initial',
+        paddingBlockEnd: '72',
       }}
     >
-      <Tabs defaultValue="publishers" tabs={tabs()}>
-        <TabContent value="publishers">
-          <TabContentProduct
-            choice="sanctum"
-            heading="nurl sanctum"
-            description="Where game worlds are born."
-            spotlight={[
-              'Visual system mapping',
-              'Intuitive world building',
-              'Streamlined publishing',
-            ]}
-          >
-            <VStack alignItems="flex-start" gap="4">
-              <Button palette="secondary">Request Beta Access</Button>
-              <TextLink href="/sanctum">Learn More</TextLink>
-            </VStack>
-          </TabContentProduct>
-        </TabContent>
-
-        <TabContent value="players">
-          <TabContentProduct
-            choice="play"
-            heading="nurl play"
-            description="Automate the complex. Keep the magic."
-            spotlight={[
-              'Video game-like automation',
-              'Physical play enhancement',
-              'Seamless group tools',
-            ]}
-          >
-            <VStack alignItems="flex-start" gap="6" md={{ gap: '4' }}>
-              <Button>Join the Waitlist</Button>
-              <TextLink href="/play">Learn More</TextLink>
-            </VStack>
-          </TabContentProduct>
-        </TabContent>
+      <Tabs defaultValue="sanctum" tabs={tabs()}>
+        <Index each={Object.values(productTabContent)}>
+          {(item) => (
+            <TabContent value={item().choice}>
+              <TabContentProduct {...item()} />
+            </TabContent>
+          )}
+        </Index>
       </Tabs>
     </Box>
   );

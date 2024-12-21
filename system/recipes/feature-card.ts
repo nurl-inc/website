@@ -3,6 +3,11 @@ import { defineRecipe } from '@pandacss/dev';
 export const featureCard = defineRecipe({
   className: 'feature-card',
   description: 'The styles for a feature card',
+  jsx: [
+    'HeadingFeatureCard',
+    'FeatureCardWithPointsItem',
+    'FeatureCardWithPoints',
+  ],
 
   base: {
     h: '24rem',
@@ -29,7 +34,7 @@ export const featureCard = defineRecipe({
 
     palette: {
       primary: {
-        bg: 'page.text.alt',
+        bgColor: 'page.text.alt',
         color: '#14191A',
       },
       secondary: {
@@ -37,6 +42,7 @@ export const featureCard = defineRecipe({
         border: '1px solid',
         borderColor: 'page.text.alt',
         color: 'page.text.alt',
+        paddingBlockEnd: 'initial',
         textStyle: 'heading-sm',
         textTransform: 'initial',
       },
@@ -45,14 +51,21 @@ export const featureCard = defineRecipe({
         border: '1px solid',
         borderColor: 'page.text.alt',
         color: 'page.text.initial',
+        paddingBlockEnd: 'initial',
         textStyle: 'heading-sm',
         textTransform: 'initial',
+      },
+      accent: {
+        bgColor: 'brand2.700',
+        border: '1px solid',
+        borderColor: 'page.text.alt',
+        color: 'white',
       },
     },
   },
 
   defaultVariants: {
-    cushion: 'sm',
+    cushion: 'md',
     palette: 'primary',
   },
 });

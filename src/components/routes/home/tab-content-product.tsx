@@ -1,48 +1,71 @@
-import { ParentProps, For, onMount } from 'solid-js';
+import { A } from '@solidjs/router';
+import { For, onMount } from 'solid-js';
 import { css } from 'styled-system/css';
 import { Box, Container, VStack } from 'styled-system/jsx';
+import { Button, Text } from '~/components/ui';
 import SpotlightItem from '~/components/ui/spotlight-item';
 import { useLeadChoice, type LeadChoice } from '~/context/lead-choice';
 
-interface TabContentProductProps {
-  choice: LeadChoice;
-  heading: string;
-  description: string;
-  spotlight: string[];
-}
+import productTabContent from '~/data/product-tab-content.json';
+import { staggerList } from '~/lib/motion';
 
-export default function TabContentProduct(
-  props: ParentProps<TabContentProductProps>,
-) {
+type TabContentProductProps = (typeof productTabContent)['sanctum'];
+
+export default function TabContentProduct(props: TabContentProductProps) {
   const [, { setChoice }] = useLeadChoice();
 
   onMount(() => {
-    setChoice(props.choice);
+    setChoice(props.choice as LeadChoice);
+    staggerList('#spotlight-item');
   });
 
   return (
     <Container
+      data-placement="top"
+      animationStyle="slide-fade-in"
+      animationDuration="1s"
+      animationFillMode="forwards"
+      opacity="0"
+      paddingBlock="12"
       md={{
-        py: 20,
+        paddingBlock: 24,
       }}
     >
       <Box
         alignItems="flex-start"
+        bgGradient="to-tr"
+        gradientFrom="neutral.1000"
+        gradientTo={{
+          _sanctumTheme: 'neutral.1000',
+          _playTheme: 'neutral.1000/32',
+        }}
+        border="2px solid"
+        borderColor={{
+          _sanctumTheme: 'brand2.600',
+          _playTheme: 'brand1.500',
+        }}
         display="flex"
         flexDirection="column"
         gap="9"
         justifyContent="flex-start"
         marginBlockEnd="16"
-        pb="12"
-        pt="4"
-        px="4"
+        paddingBlock="12"
+        paddingInline="6"
+        rounded="lg"
+        transitionProperty="border-color"
+        transitionDuration="fast"
         md={{
           alignItems: 'center',
           flexDirection: 'row',
+          h: '38rem',
+          paddingBlock: 12,
+          paddingInline: 12,
         }}
       >
-        <Box
-          mb="6"
+        <VStack
+          alignItems="flex-start"
+          h="full"
+          justify="space-between"
           w="full"
           _motionSafe={{
             animationName: 'slideFromBottom, fadeIn',
@@ -52,24 +75,46 @@ export default function TabContentProduct(
             opacity: 0,
           }}
         >
-          <p
-            class={css({ textStyle: 'heading-sm', textTransform: 'uppercase' })}
+          <Box
+            marginBlockEnd={{
+              base: 10,
+              md: 'initial',
+            }}
+            w="full"
           >
-            {props.heading}
-          </p>
-          <p
-            class={css({
-              mb: 6,
-            })}
-          >
-            {props.description}
-          </p>
+            <Text color="brand1.100" marginBlockEnd="2" textStyle="body-lg">
+              {props.lead}
+            </Text>
+            <Text
+              textTransform="uppercase"
+              textStyle={{
+                base: 'heading-md',
+                md: 'heading-lg',
+              }}
+              textWrap="balance"
+            >
+              {props.main1}{' '}
+              <Text
+                as="span"
+                color={{
+                  _sanctumTheme: 'brand2.600',
+                  _playTheme: 'brand1.600',
+                }}
+              >
+                {props.main2}
+              </Text>
+            </Text>
+          </Box>
 
-          {props.children}
-        </Box>
+          <Button>{props.action}</Button>
+        </VStack>
 
         <VStack
           alignItems="flex-start"
+          gap="4"
+          paddingInlineStart={{
+            md: 32,
+          }}
           w="full"
           _motionSafe={{
             animationName: 'slideFromBottom, fadeIn',
@@ -80,9 +125,39 @@ export default function TabContentProduct(
           }}
           md={{ maxW: '50%' }}
         >
-          <For each={props.spotlight}>
+          <Text
+            color="neutral.300"
+            fontWeight="500"
+            letterSpacing="0.03em"
+            textStyle="body-xl"
+          >
+            Key features
+          </Text>
+
+          <For each={props.features}>
             {(item) => <SpotlightItem>{item}</SpotlightItem>}
           </For>
+
+          <A
+            class={css({
+              color: 'brand1.600',
+              display: 'inline-block',
+              marginBlockStart: '1',
+              textDecoration: 'underline',
+              textStyle: 'body-lg',
+              transitionProperty: 'color',
+              transitionDuration: 'slow',
+              _hover: {
+                color: {
+                  _sanctumTheme: 'brand2.600',
+                  _playTheme: 'brand1.700',
+                },
+              },
+            })}
+            href={props.link}
+          >
+            {props.linkText}
+          </A>
         </VStack>
       </Box>
     </Container>

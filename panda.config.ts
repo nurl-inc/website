@@ -8,6 +8,7 @@ import { keyframes } from './system/keyframes';
 import { conditions } from './system/conditions';
 import { globalCss } from './system/globalCss';
 import { patterns } from './system/patterns';
+import { animationStyles } from './system/animationStyles';
 
 export default defineConfig({
   preflight: true,
@@ -17,6 +18,7 @@ export default defineConfig({
 
   theme: {
     extend: {
+      animationStyles,
       textStyles,
       tokens,
       semanticTokens,

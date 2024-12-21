@@ -18,7 +18,7 @@ export default function KeyFeatures() {
 
   onMount(() => {
     const target = document.getElementById('key-features-heading');
-    if (target) scrollFadeInOut(target);
+    scrollFadeInOut(target);
   });
 
   return (
@@ -27,7 +27,7 @@ export default function KeyFeatures() {
       paddingBlockEnd="32"
       paddingInline="8"
       md={{
-        paddingBlockStart: 28,
+        paddingBlockStart: 44,
         paddingBlockEnd: 60,
         paddingInline: '9',
       }}
@@ -35,11 +35,11 @@ export default function KeyFeatures() {
       <VStack
         id="key-features-heading"
         justify="center"
-        pb="24"
+        paddingBlockEnd="24"
         textAlign="center"
         w="full"
         md={{
-          pb: 44,
+          paddingBlockEnd: 44,
         }}
       >
         <KeyFeaturesHeading main="Gain advantage" sub="with Nurl" />

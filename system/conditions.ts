@@ -1,8 +1,8 @@
 export const conditions = {
   extend: {
     // themes
-    primaryTheme: '[data-panda-theme=primary] &',
-    secondaryTheme: '[data-panda-theme=secondary] &',
+    sanctumTheme: '[data-panda-theme=sanctum] &',
+    playTheme: '[data-panda-theme=play] &',
 
     // modes
     lightMode: '[data-color-mode=light] &, &.light, .light &',

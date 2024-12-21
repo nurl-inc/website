@@ -1,6 +1,7 @@
 import { animate, scroll } from 'motion';
 import { onMount } from 'solid-js';
-import { HStack, VStack } from 'styled-system/jsx';
+import { css } from 'styled-system/css';
+import { Box, HStack, VStack } from 'styled-system/jsx';
 import { featureCard } from 'styled-system/recipes';
 import { BookIcon } from '~/components/icons';
 import {
@@ -49,10 +50,27 @@ export default function KeyPlayFeatures() {
           />
         </FeatureCardWithPoints>
         <HeadingFeatureCard
+          heading="Combat Arena"
           description="Automated combat in all the right places so you can focus on the battle."
-          class={featureCard({ cushion: 'md', palette: 'secondary' })}
+          palette="secondary"
         >
-          Combat Arena
+          <Box
+            borderTopLeftRadius="md"
+            borderTopRightRadius="md"
+            mx="auto"
+            maxW="37.5rem"
+            overflow="hidden"
+          >
+            <img
+              alt="Combat Arena screen shot"
+              class={css({
+                w: 'full',
+              })}
+              decoding="async"
+              loading="lazy"
+              src="/images/combat-arena.webp"
+            />
+          </Box>
         </HeadingFeatureCard>
       </VStack>
 
@@ -65,14 +83,33 @@ export default function KeyPlayFeatures() {
           w: 'calc(50% - 1rem)',
         }}
       >
-        <HeadingFeatureCard description="Install or build custom plugins to enhance and personalize your experience.">
-          Customizable
-        </HeadingFeatureCard>
         <HeadingFeatureCard
+          heading="Customizable"
+          description="Install or build custom plugins to enhance and personalize your experience."
+          palette="secondary"
+        />
+        <HeadingFeatureCard
+          heading="Realtime Group Chat"
           description="Talk, get help, or share quick links to anything in the game."
-          class={featureCard({ cushion: 'md', palette: 'tertiary' })}
+          palette="tertiary"
         >
-          Realtime Group Chat
+          <Box
+            borderTopLeftRadius="md"
+            borderTopRightRadius="md"
+            mx="auto"
+            maxW="37.5rem"
+            overflow="hidden"
+          >
+            <img
+              alt="Combat Arena screen shot"
+              class={css({
+                w: 'full',
+              })}
+              decoding="async"
+              loading="lazy"
+              src="/images/combat-arena.webp"
+            />
+          </Box>
         </HeadingFeatureCard>
       </VStack>
     </HStack>

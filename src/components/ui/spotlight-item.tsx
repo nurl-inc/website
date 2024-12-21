@@ -2,22 +2,31 @@ import type { ParentProps } from 'solid-js';
 import { css } from 'styled-system/css';
 import { Box } from 'styled-system/jsx';
 
-export default function SpotlightItem(props: ParentProps) {
+interface SpotlightItemProps {}
+
+export default function SpotlightItem(props: ParentProps<SpotlightItemProps>) {
   return (
     <Box
-      bgGradient="to-r"
-      gradientFrom="#0DE7F2/60"
-      gradientTo="#0DF2B1/60"
-      p="6"
+      id="spotlight-item"
+      bgGradient={{
+        _sanctumTheme: 'sanctum50',
+        _playTheme: 'play50',
+      }}
+      opacity="0"
+      paddingBlock="8"
+      paddingInline="4"
       rounded="lg"
       w="full"
+      md={{
+        paddingBlock: '11',
+        paddingInline: '7',
+      }}
     >
       <p
         class={css({
-          color: 'page.text.initial',
-          fontSize: '1.125rem',
-          fontStyle: 'normal',
-          textStyle: 'heading-xs',
+          color: 'brand1.1000',
+          fontWeight: 600,
+          textStyle: 'body-lg',
           textWrap: 'pretty',
         })}
       >

@@ -1,7 +1,11 @@
-import { type JSX, type ParentProps, Show } from 'solid-js';
-import { css } from 'styled-system/css';
+import { createMemo, type JSX, type ParentProps, Show } from 'solid-js';
+import { css, cx } from 'styled-system/css';
 import { Box, Circle, HStack, VStack, type BoxProps } from 'styled-system/jsx';
-import { featureCard } from 'styled-system/recipes';
+import {
+  featureCard,
+  type FeatureCardVariantProps,
+} from 'styled-system/recipes';
+import { Text } from './text';
 
 /**
  * This module contains the different types of feature cards that can be used
@@ -83,39 +87,59 @@ export function FeatureCardWithPointsItem(
   );
 }
 
-interface HeadingFeatureCardProps extends BoxProps {
+interface HeadingFeatureCardProps extends FeatureCardVariantProps, BoxProps {
+  heading: string;
   description?: string;
 }
 
 export function HeadingFeatureCard(
   props: ParentProps<HeadingFeatureCardProps>,
 ) {
+  const styles = createMemo(() => {
+    switch (props.palette) {
+      case 'accent':
+        return featureCard({ palette: 'accent' });
+      case 'secondary':
+        return featureCard({ palette: 'secondary' });
+      case 'tertiary':
+        return featureCard({ palette: 'tertiary' });
+      default:
+        return featureCard({ palette: 'primary' });
+    }
+  });
   return (
-    <Box
-      id="feature-card"
-      class={featureCard({
-        cushion: 'md',
-      })}
-      {...props}
-    >
-      <p
-        class={css({
-          lineHeight: 1,
-          paddingBlockEnd: 4,
-          textStyle: 'heading-sm',
-          textWrap: 'pretty',
-          md: {
-            textStyle: 'heading-md',
-          },
-        })}
-      >
+    <Box id="feature-card" class={cx(styles(), props.class)}>
+      <VStack alignItems="flex-start" h="full" justify="space-between" w="full">
+        <Box w="full">
+          <Text
+            as="h3"
+            lineHeight="1"
+            paddingBlockEnd="4"
+            textStyle="heading-sm"
+            textTransform="uppercase"
+            textWrap="pretty"
+            md={{
+              textStyle: 'heading-md',
+            }}
+          >
+            {props.heading}
+          </Text>
+          <Show when={props.description}>
+            <Text
+              as="p"
+              textStyle="body-md"
+              textWrap="pretty"
+              md={{
+                w: '2/3',
+              }}
+            >
+              {props.description}
+            </Text>
+          </Show>
+        </Box>
+
         {props.children}
-      </p>
-      <Show when={props.description}>
-        <p class={css({ textStyle: 'body-md', textWrap: 'pretty', w: '2/3' })}>
-          {props.description}
-        </p>
-      </Show>
+      </VStack>
     </Box>
   );
 }

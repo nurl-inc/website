@@ -13,4 +13,10 @@ export const gradients = {
   tertiary: {
     value: 'linear-gradient(170deg, #0DE7F2, #0DF2B1)',
   },
+  play50: {
+    value: 'linear-gradient(90deg, #0DE7F2 25%, #6EF0F7 100%)',
+  },
+  sanctum50: {
+    value: 'linear-gradient(90deg, #70F2CD 25%, #0DF2B1 100%)',
+  },
 };
