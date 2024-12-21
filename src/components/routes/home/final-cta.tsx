@@ -1,21 +1,31 @@
 import { A } from '@solidjs/router';
-import { onMount, Show } from 'solid-js';
+import { onCleanup, onMount, Show } from 'solid-js';
 import { Box, VStack } from 'styled-system/jsx';
 import { button } from 'styled-system/recipes';
 import { Text } from '~/components/ui';
 import { useLeadChoice } from '~/context/lead-choice';
 import { scrollFadeInOut } from '~/lib/motion';
+import { createFogEffect } from '~/lib/vanta';
 
 export default function FinalCTA() {
   const [store] = useLeadChoice();
+  let vantaEffect: any;
 
   onMount(() => {
     const target = document.getElementById('final-cta');
+    const vantaBox = document.getElementById('cta-box');
+
     scrollFadeInOut(target);
+    if (vantaBox) vantaEffect = createFogEffect(vantaBox);
+  });
+
+  onCleanup(() => {
+    if (vantaEffect) vantaEffect.destroy();
   });
 
   return (
     <Box
+      id="final-cta"
       paddingBlock="8"
       paddingInline="8"
       md={{
@@ -24,18 +34,14 @@ export default function FinalCTA() {
       }}
     >
       <Box
-        class="cta-bg"
-        id="final-cta"
+        id="cta-box"
         border="1px solid"
         borderColor="#0DE7F2"
-        bgImage="url(/home-cta-mobile.webp)"
-        bgSize="cover"
-        bgPosition="center"
         h="18.75rem"
+        overflow="hidden"
         rounded="xl"
         w="full"
         md={{
-          bgImage: 'url(/home-cta.webp)',
           rounded: '2xl',
           h: '43.5rem',
         }}

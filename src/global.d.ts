@@ -14,3 +14,11 @@ declare global {
 declare module 'solid-mdx' {
   export { MDXProvider } from 'solid-mdx';
 }
+
+declare module 'vanta/dist/vanta.fog.min' {
+  export default function FOG(options: any): any;
+}
+
+declare module 'three' {
+  export default THREE;
+}
