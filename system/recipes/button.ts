@@ -3,6 +3,7 @@ import { defineRecipe } from '@pandacss/dev';
 export const button = defineRecipe({
   className: 'button',
   description: 'The styles for a button',
+  jsx: ['Button', 'Link'],
 
   base: {
     alignItems: 'center',
