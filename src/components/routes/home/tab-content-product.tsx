@@ -2,7 +2,7 @@ import { A } from '@solidjs/router';
 import { For, onMount } from 'solid-js';
 import { css } from 'styled-system/css';
 import { Box, Container, VStack } from 'styled-system/jsx';
-import { Button, Text } from '~/components/ui';
+import { Link, Text } from '~/components/ui';
 import SpotlightItem from '~/components/ui/spotlight-item';
 import { useLeadChoice, type LeadChoice } from '~/context/lead-choice';
 
@@ -106,7 +106,9 @@ export default function TabContentProduct(props: TabContentProductProps) {
             </Text>
           </Box>
 
-          <Button>{props.action}</Button>
+          <Link href={props.actionLink} palette="secondary">
+            {props.action}
+          </Link>
         </VStack>
 
         <VStack

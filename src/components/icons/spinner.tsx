@@ -55,14 +55,14 @@ export function Spinner(props: SpinnerProps) {
             attributeName="stroke-dashoffset"
             dur="0.15s"
             values="16;0"
-          ></animate>
+          />
           <animateTransform
             attributeName="transform"
             dur="0.75s"
             repeatCount="indefinite"
             type="rotate"
             values="0 12 12;360 12 12"
-          ></animateTransform>
+          />
         </path>
         <path
           stroke-dasharray="64"
@@ -75,7 +75,7 @@ export function Spinner(props: SpinnerProps) {
             attributeName="stroke-dashoffset"
             dur="0.6s"
             values="64;0"
-          ></animate>
+          />
         </path>
       </g>
     </svg>

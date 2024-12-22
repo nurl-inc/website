@@ -5,6 +5,12 @@ export const keyframes = defineKeyframes({
     from: { backgroundPosition: 'var(--animate-from, 1rem) 0' },
     to: { backgroundPosition: 'var(--animate-to, 0) 0' },
   },
+  bgColor: {
+    '0%': { backgroundColor: 'var(--animate-from-bg)' },
+    '50%': { backgroundColor: 'var(--animate-to-bg)' },
+    '100%': { backgroundColor: 'var(--animate-from-bg)' },
+  },
+
   position: {
     from: {
       insetInlineStart: 'var(--animate-from-x)',
@@ -132,6 +138,16 @@ export const keyframes = defineKeyframes({
     '100%': {
       transform: 'translateX(200%)',
     },
+  },
+
+  // rotate
+  rotateIn: {
+    from: { transform: 'rotate(90deg)' },
+    to: { transform: 'rotate(0deg)' },
+  },
+  rotateOut: {
+    from: { transform: 'rotate(0deg)' },
+    to: { transform: 'rotate(90deg)' },
   },
 
   // scale

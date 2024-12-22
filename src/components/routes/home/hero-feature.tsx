@@ -1,5 +1,5 @@
 import { animate, scroll } from 'motion';
-import { For, lazy, onMount, Suspense } from 'solid-js';
+import { createMemo, Index, lazy, onMount, Suspense } from 'solid-js';
 import { Box, HStack, VStack } from 'styled-system/jsx';
 
 const HeroFeatureItem = lazy(() => import('./hero-feature-item'));
@@ -9,6 +9,8 @@ const HeroFeatureItem = lazy(() => import('./hero-feature-item'));
  * @module route:home:hero-feature
  */
 export default function HeroFeature() {
+  const cols = createMemo(() => Array.from({ length: 2 }));
+
   onMount(() => {
     const firstColumn = document.querySelector('.hero-feature-first-column');
     const lastColumn = document.querySelector('.hero-feature-last-column');
@@ -86,9 +88,7 @@ export default function HeroFeature() {
               w: '90%',
             }}
           >
-            <For each={Array.from({ length: 2 })}>
-              {(_) => <HeroFeatureItem />}
-            </For>
+            <Index each={cols()}>{() => <HeroFeatureItem />}</Index>
           </VStack>
           <VStack
             class="hero-feature-last-column"
@@ -100,9 +100,7 @@ export default function HeroFeature() {
               w: '20%',
             }}
           >
-            <For each={Array.from({ length: 2 })}>
-              {(_) => <HeroFeatureItem />}
-            </For>
+            <Index each={cols()}>{() => <HeroFeatureItem />}</Index>
           </VStack>
         </Suspense>
       </HStack>

@@ -1,7 +1,6 @@
-import { A } from '@solidjs/router';
-import { Match, Switch, type ParentProps } from 'solid-js';
+import { Match, Switch } from 'solid-js';
 import { VStack } from 'styled-system/jsx';
-import { Button, Text } from '~/components/ui';
+import { Link, Text } from '~/components/ui';
 import { useLeadChoice } from '~/context/lead-choice';
 
 /**
@@ -36,20 +35,12 @@ export default function ReadyCTA() {
 
       <Switch>
         <Match when={leadChoice.choice === 'play'}>
-          <Button asChild={PlayLink} />
+          <Link href="/play/signup">Join the waitlist</Link>
         </Match>
         <Match when={leadChoice.choice === 'sanctum'}>
-          <Button palette="secondary">Request beta access</Button>
+          <Link href="/sanctum/register">Request beta access</Link>
         </Match>
       </Switch>
     </VStack>
-  );
-}
-
-function PlayLink(props: ParentProps) {
-  return (
-    <A href="/play/signup" {...props}>
-      Join the waitlist
-    </A>
   );
 }

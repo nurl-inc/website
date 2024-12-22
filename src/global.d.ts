@@ -16,7 +16,7 @@ declare module 'solid-mdx' {
 }
 
 declare module 'vanta/dist/vanta.fog.min' {
-  export default function FOG(options: any): any;
+  export default function FOG(options: unknown): unknown;
 }
 
 declare module 'three' {

@@ -1,3 +1,4 @@
+export * from './arrow-right';
 export * from './book';
 export * from './cellar';
 export * from './chevron-down';

@@ -4,6 +4,7 @@ export * from './button';
 export * from './error-message';
 export * from './feature-cards';
 export * from './input';
+export * from './link';
 export * from './section-heading';
 export * from './select';
 export * from './social-card';

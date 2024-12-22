@@ -1,3 +1,5 @@
+/* eslint-disable solid/no-innerhtml */
+
 import { getMarkdownContent } from '~/lib/db/markdown';
 import { createAsync } from '@solidjs/router';
 import { css } from 'styled-system/css';

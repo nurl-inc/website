@@ -3,23 +3,50 @@ import { defineRecipe } from '@pandacss/dev';
 export const button = defineRecipe({
   className: 'button',
   description: 'The styles for a button',
+  jsx: ['Button', 'Link'],
 
   base: {
     alignItems: 'center',
-    cursor: 'pointer',
+    border: '1px solid',
     display: 'inline-flex',
-    fontStyle: 'oblique',
+    flexShrink: 0,
+    fontSize: 'lg',
     fontWeight: '900',
-    justifyContent: 'center',
     gap: 2,
-    h: '2.75rem',
+    h: '3rem',
+    lineHeight: 1,
+    justifyContent: 'center',
     paddingInline: 4,
-    textStyle: 'body-md',
+    position: 'relative',
+    rounded: 'full',
+    textStyle: 'heading-xs',
     textTransform: 'uppercase',
-    transitionProperty: 'background-color',
-    transitionTimingFunction: 'ease-in-out',
-    transitionDuration: '150ms',
+    transitionProperty: 'all',
+    transitionTimingFunction: 'bouncy',
+    transitionDuration: 'fast',
     w: 'full',
+    '& [data-part="btn-icon"]': {
+      opacity: 0,
+      position: 'absolute',
+      right: '4',
+      transform: 'rotate(-90deg)',
+      transformOrigin: 'center',
+      transitionProperty: 'all',
+      transitionTimingFunction: 'bouncy',
+      transitionDuration: 'slow',
+    },
+    _hover: {
+      animationName: 'bgColor',
+      animationDuration: '6s',
+      animationIterationCount: 'infinite',
+      transform: 'scale(1.1)',
+      shadow: '0 0 18.6px 9.7px rgba(231, 253, 254, 0.33)',
+      '& [data-part="btn-icon"]': {
+        transform: 'rotate(0deg)',
+        opacity: 1,
+        right: '1px',
+      },
+    },
     _disabled: {
       cursor: 'not-allowed',
       opacity: 0.5,
@@ -31,48 +58,42 @@ export const button = defineRecipe({
       outlineOffset: '2px',
     },
     md: {
-      paddingInline: '5rem',
+      h: '2.75rem',
+      paddingInline: 14,
       w: 'auto',
-    },
-
-    // gradient hover effect
-    position: 'relative',
-    overflow: 'hidden',
-    isolation: 'isolate',
-    _hover: {
-      _before: {
-        animationName: 'gradient',
-        animationDuration: '3s',
-        animationTimingFunction: 'linear',
-        animationIterationCount: 'infinite',
-        content: '""',
-        position: 'absolute',
-        inset: 0,
-        background:
-          'linear-gradient(90deg, var(--colors-action-bg-initial), var(--colors-action-bg-hover), var(--colors-action-bg-initial))',
-        backgroundSize: '200% 100%',
-        zIndex: 'hide',
-      },
     },
   },
 
   variants: {
     palette: {
       primary: {
-        colorPalette: 'action',
+        bgColor: 'brand1.500',
+        color: 'black',
+        md: {
+          bgColor: 'black',
+          borderColor: 'brand1.600',
+          color: 'brand2.600',
+          _hover: {
+            bgColor: 'brand1.600',
+            color: 'black',
+          },
+        },
       },
       secondary: {
-        colorPalette: 'secondaryAction',
+        bgColor: 'white',
+        color: 'brand1.1000',
       },
     },
     usage: {
-      filled: {
-        bgColor: 'colorPalette.bg.initial',
-        color: 'colorPalette.text.initial',
-      },
+      filled: {},
       ghost: {
-        bgColor: 'transparent',
-        color: 'colorPalette.text.initial',
+        bgColor: 'transparent !important',
+        borderColor: 'transparent !important',
+        color: 'page.text.alt',
+        _hover: {
+          bgColor: 'transparent',
+          color: 'white !important',
+        },
       },
     },
   },

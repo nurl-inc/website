@@ -16,8 +16,7 @@ import {
   type SpanProps,
   type StrongProps,
 } from 'styled-system/jsx';
-import { Match, Switch } from 'solid-js/web';
-import type { ParentProps } from 'solid-js';
+import { type ParentProps, Match, Switch } from 'solid-js';
 
 type Headings = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 type TextElements = 'p' | 'strong' | 'em' | 'span' | 'small';
