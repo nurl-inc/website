@@ -40,7 +40,8 @@ export default function Faq() {
 
                   <Show when={item.ctaPrimary || item.ctaSecondary}>
                     <HStack
-                      paddingBlock="4"
+                      paddingBlockStart="4"
+                      paddingBlockEnd="8"
                       gap="4"
                       flexDir={{
                         base: 'column',

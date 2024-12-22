@@ -33,8 +33,8 @@ function LinkAnchor(props: AnchorProps) {
 
 function ButtonHoverIcon() {
   return (
-    <span data-part="btn-icon">
-      <Circle bgColor="#0C9B7250" color="black" p="3" size="3rem">
+    <span data-placement="right" data-part="btn-icon">
+      <Circle bgColor="#0C9B7250" color="black" p="3" size="2.5rem">
         <ArrowRight />
       </Circle>
     </span>

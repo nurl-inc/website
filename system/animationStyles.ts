@@ -7,6 +7,18 @@ export const defineAnimationStyles = (
 const transformOrigin = 'var(--transform-origin)';
 
 export const animationStyles: AnimationStyles = defineAnimationStyles({
+  'roll-fade-in': {
+    value: {
+      animationName: 'rotateIn, fadeIn',
+    },
+  },
+
+  'roll-fade-out': {
+    value: {
+      animationName: 'rotateOut, fadeOut',
+    },
+  },
+
   'slide-fade-in': {
     value: {
       transformOrigin,

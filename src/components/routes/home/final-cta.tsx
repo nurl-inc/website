@@ -1,8 +1,6 @@
-import { A } from '@solidjs/router';
 import { onCleanup, onMount, Show } from 'solid-js';
 import { Box, VStack } from 'styled-system/jsx';
-import { button } from 'styled-system/recipes';
-import { Text } from '~/components/ui';
+import { Link, Text } from '~/components/ui';
 import { useLeadChoice } from '~/context/lead-choice';
 import { scrollFadeInOut } from '~/lib/motion';
 import { createFogEffect } from '~/lib/vanta';
@@ -80,17 +78,14 @@ export default function FinalCTA() {
             <Show
               when={store.choice === 'play'}
               fallback={
-                <A
-                  class={button({ palette: 'secondary' })}
-                  href="/sanctum/register"
-                >
+                <Link href="/sanctum/register" palette="secondary">
                   Request Beta Access
-                </A>
+                </Link>
               }
             >
-              <A class={button()} href="/play/signup">
+              <Link href="/play/signup" palette="secondary">
                 Get Started
-              </A>
+              </Link>
             </Show>
           </Box>
         </VStack>
