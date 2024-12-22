@@ -1,11 +1,10 @@
-import { A, type RouteSectionProps } from '@solidjs/router';
+import { type RouteSectionProps } from '@solidjs/router';
 import { Box, Container, VStack } from 'styled-system/jsx';
-import { button } from 'styled-system/recipes';
 import Footer from '~/components/shared/footer';
 import Head from '~/components/shared/head';
 import Main from '~/components/shared/main';
 import Nav from '~/components/shared/nav';
-import { Button, Text } from '~/components/ui';
+import { Link, Text } from '~/components/ui';
 
 import keywords from '~/data/keywords.json';
 import type { Metadata } from '~/types';
@@ -85,9 +84,7 @@ export default function Thanks(props: RouteSectionProps<RouteData>) {
               opacity="0"
               paddingBlockStart="10"
             >
-              <A class={button()} href="/">
-                Return home
-              </A>
+              <Link href="/">Return home</Link>
             </Box>
           </VStack>
         </Container>

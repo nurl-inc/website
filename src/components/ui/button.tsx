@@ -1,4 +1,4 @@
-import { splitProps, type JSX, type ValidComponent } from 'solid-js';
+import { Show, splitProps, type JSX, type ValidComponent } from 'solid-js';
 import { Dynamic } from 'solid-js/web';
 import { cx } from 'styled-system/css';
 import { button, type ButtonVariantProps } from 'styled-system/recipes';
@@ -20,23 +20,24 @@ export function Button(props: ButtonProps) {
     'href',
   ]);
 
-  if (asChild) {
-    return (
+  return (
+    <Show
+      when={asChild}
+      fallback={
+        <button
+          class={cx(button({ palette, usage }), nativeProps.class)}
+          {...nativeProps}
+        >
+          {nativeProps.children}
+        </button>
+      }
+    >
       <Dynamic
         component={asChild}
         class={cx(button({ palette, usage }), nativeProps.class)}
         href={href}
         {...nativeProps}
       />
-    );
-  }
-
-  return (
-    <button
-      class={cx(button({ palette, usage }), nativeProps.class)}
-      {...nativeProps}
-    >
-      {nativeProps.children}
-    </button>
+    </Show>
   );
 }

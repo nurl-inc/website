@@ -18,7 +18,7 @@ export function ChevronDownIcon(props: IconProps) {
         stroke-width="1.5"
         stroke-linecap="round"
         stroke-linejoin="round"
-      ></path>
+      />
     </svg>
   );
 }

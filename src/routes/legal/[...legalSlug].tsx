@@ -1,3 +1,5 @@
+/* eslint-disable solid/no-innerhtml */
+
 import { useParams, type RouteSectionProps } from '@solidjs/router';
 import { createMemo, lazy, Show, Suspense } from 'solid-js';
 import { css } from 'styled-system/css';

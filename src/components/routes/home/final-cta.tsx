@@ -7,7 +7,7 @@ import { createFogEffect } from '~/lib/vanta';
 
 export default function FinalCTA() {
   const [store] = useLeadChoice();
-  let vantaEffect: any;
+  let vantaEffect: unknown;
 
   onMount(() => {
     const target = document.getElementById('final-cta');
@@ -18,7 +18,7 @@ export default function FinalCTA() {
   });
 
   onCleanup(() => {
-    if (vantaEffect) vantaEffect.destroy();
+    if (vantaEffect) (vantaEffect as { destroy: () => void }).destroy();
   });
 
   return (
