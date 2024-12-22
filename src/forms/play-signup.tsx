@@ -1,4 +1,5 @@
 import { action, redirect, useSubmission } from '@solidjs/router';
+import { track } from '@vercel/analytics';
 import { Show } from 'solid-js';
 import { Box, Divider } from 'styled-system/jsx';
 import { vstack } from 'styled-system/patterns';
@@ -37,6 +38,14 @@ const playSignupAction = action(async (formData: FormData) => {
     if (!response.ok) {
       throw new Error('Failed to sign up');
     }
+
+    track('Play signup', {
+      primaryRole: primaryRole as string,
+      primaryGameSystem: primaryGameSystem as string,
+      otherGameSystems: otherGameSystems as string,
+      groupSize: groupSize as string,
+      howDidYouHear: howDidYouHear as string,
+    });
 
     return redirect('/thanks');
   } catch (error) {
