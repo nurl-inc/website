@@ -38,9 +38,7 @@ export default function ReadyCTA() {
           <Link href="/play/signup">Join the waitlist</Link>
         </Match>
         <Match when={leadChoice.choice === 'sanctum'}>
-          <Link href="#" palette="secondary">
-            Request beta access
-          </Link>
+          <Link href="/sanctum/register">Request beta access</Link>
         </Match>
       </Switch>
     </VStack>
