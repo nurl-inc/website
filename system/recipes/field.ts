@@ -29,7 +29,6 @@ export const field = defineSlotRecipe({
     root: {
       display: 'flex',
       flexDirection: 'column',
-      fontFamily: 'montserrat',
       gap: 2,
       w: 'full',
     },

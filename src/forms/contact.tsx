@@ -178,7 +178,6 @@ export default function ContactForm() {
         as="small"
         display="block"
         paddingBlock="4"
-        fontFamily="montserrat"
         fontStyle="italic"
         textStyle="body-sm"
       >
