@@ -2,7 +2,7 @@ import { defineTextStyles } from '@pandacss/dev';
 
 const headingStyles = {
   fontFamily: 'sans',
-  fontStyle: 'italic',
+  fontStyle: 'oblique',
   fontWeight: '700',
   letterSpacing: '0.03em',
   textTransform: 'uppercase',

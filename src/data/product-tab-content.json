@@ -5,6 +5,7 @@
     "main1": "Where game",
     "main2": "worlds are born.",
     "action": "Request beta access",
+    "actionLink": "sanctum/register",
     "linkText": "Learn more about Nurl Sanctum",
     "link": "/sanctum",
     "features": [
@@ -19,6 +20,7 @@
     "main1": "Automate the complex.",
     "main2": "Keep the magic.",
     "action": "Join the waitlist",
+    "actionLink": "play/signup",
     "linkText": "Learn more about Nurl Play",
     "link": "/play",
     "features": [

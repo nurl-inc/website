@@ -1,9 +1,8 @@
-import { A, createAsync } from '@solidjs/router';
+import { createAsync } from '@solidjs/router';
 import { Show, For } from 'solid-js';
 import { Container, HStack, VStack } from 'styled-system/jsx';
-import { button } from 'styled-system/recipes';
 import { Markdown } from '~/components/shared/markdown';
-import { Accordion, AccordionItem } from '~/components/ui';
+import { Accordion, AccordionItem, Link } from '~/components/ui';
 import { Text } from '~/components/ui/text';
 import { getFaqData } from '~/lib/db';
 
@@ -41,7 +40,7 @@ export default function Faq() {
 
                   <Show when={item.ctaPrimary || item.ctaSecondary}>
                     <HStack
-                      paddingBlockStart="4"
+                      paddingBlock="4"
                       gap="4"
                       flexDir={{
                         base: 'column',
@@ -50,19 +49,14 @@ export default function Faq() {
                       w="full"
                     >
                       <Show when={item.ctaPrimary}>
-                        <A class={button()} href={item.ctaPrimary!.url}>
+                        <Link href={item.ctaPrimary!.url}>
                           {item.ctaPrimary!.text}
-                        </A>
+                        </Link>
                       </Show>
                       <Show when={item.ctaSecondary}>
-                        <A
-                          class={button({
-                            usage: 'ghost',
-                          })}
-                          href={item.ctaSecondary!.url}
-                        >
+                        <Link href={item.ctaSecondary!.url} usage="ghost">
                           {item.ctaSecondary!.text}
-                        </A>
+                        </Link>
                       </Show>
                     </HStack>
                   </Show>

@@ -1,8 +1,7 @@
 import { css } from 'styled-system/css';
 import { Box, VStack } from 'styled-system/jsx';
+import { Link } from '~/components/ui';
 import HeroFeature from './hero-feature';
-import { A } from '@solidjs/router';
-import { button } from 'styled-system/recipes';
 
 /**
  * This module is the hero section for the home page.
@@ -94,9 +93,7 @@ export default function Hero() {
             opacity: 0,
           }}
         >
-          <A class={button()} href="#get-started">
-            Get Started
-          </A>
+          <Link href="#get-started">Get Started</Link>
         </Box>
       </Box>
     </VStack>
