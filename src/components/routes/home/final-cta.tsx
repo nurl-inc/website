@@ -32,11 +32,11 @@ export default function FinalCTA() {
       }}
     >
       <Box
-        id="cta-box"
         border="1px solid"
         borderColor="#0DE7F2"
         h="18.75rem"
         overflow="hidden"
+        position="relative"
         rounded="xl"
         w="full"
         md={{
@@ -45,14 +45,20 @@ export default function FinalCTA() {
         }}
       >
         <VStack
+          bottom="0"
           gap={{
             base: 4,
             md: 10,
           }}
           h="full"
           justify="center"
+          position="absolute"
+          right="0"
+          top="0"
+          left="0"
           textAlign="center"
           w="full"
+          zIndex="decorator"
         >
           <Text color="white" fontSize="body-xs" textTransform="uppercase">
             Join the Nurl adventure
@@ -89,6 +95,27 @@ export default function FinalCTA() {
             </Show>
           </Box>
         </VStack>
+
+        <Box
+          id="cta-box"
+          position="absolute"
+          top="0"
+          left="0"
+          w="full"
+          h="full"
+          zIndex="base"
+          _before={{
+            bgColor: '#10EAAC',
+            content: '""',
+            h: 'full',
+            left: 0,
+            mixBlendMode: 'hue',
+            position: 'absolute',
+            top: 0,
+            w: 'full',
+            zIndex: 'decorator',
+          }}
+        />
       </Box>
     </Box>
   );
