@@ -44,3 +44,27 @@ export async function addToPlayWaitlist(contact: AudienceContact) {
     },
   );
 }
+
+/**
+ * Add a contact to the Sanctum Waitlist audience.
+ * @param contact - The contact to add.
+ * @returns The response from Resend.
+ */
+export async function addToSanctumWaitlist(contact: AudienceContact) {
+  return await fetch(
+    'https://api.resend.com/audiences/abccf8d8-501b-4ac3-a9ad-7ff1433ead9f/contacts',
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+      },
+      body: JSON.stringify({
+        email: contact.email,
+        first_name: contact.firstName,
+        last_name: contact.lastName,
+        unsubscribed: contact.unsubscribed,
+      }),
+    },
+  );
+}

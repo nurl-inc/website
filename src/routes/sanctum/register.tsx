@@ -1,14 +1,17 @@
-import { Index, Suspense } from 'solid-js';
+import { Index, lazy, Suspense } from 'solid-js';
 import { Box, Container, VStack } from 'styled-system/jsx';
 import { createAsync, type RouteSectionProps } from '@solidjs/router';
 import { Footer, Main, Nav, TextList } from '~/components/shared';
 import { Head } from '~/components/shared';
 import { SectionHeading, Text } from '~/components/ui';
 import type { Metadata } from '~/types';
+import { getSanctumRegisterData } from '~/lib/db';
 
+// data
 import baseKeywords from '~/data/keywords/base.json';
 import sanctumKeywords from '~/data/keywords/sanctum-register.json';
-import { getSanctumRegisterData } from '~/lib/db';
+
+const SanctumRegisterForm = lazy(() => import('~/forms/sanctum-register'));
 
 /**
  * This module is the main entry point for the sanctum page.
@@ -121,7 +124,9 @@ export default function SanctumRegister(props: RouteSectionProps<RouteData>) {
               </TextList>
             </Box>
 
-            <Suspense>sign up form</Suspense>
+            <Suspense>
+              <SanctumRegisterForm />
+            </Suspense>
 
             <Box w="full">
               <SectionHeading>Beta Timeline</SectionHeading>
