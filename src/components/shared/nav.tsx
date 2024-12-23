@@ -64,10 +64,10 @@ export default function Nav() {
                   animationDuration: '600ms',
                   animationTimingFunction: 'ease-in-out',
                   animationFillMode: 'forwards',
-                  animationDelay: '1.6s',
+                  animationDelay: '200ms',
                   display: 'none',
-                  opacity: 0,
                   gap: 4,
+                  opacity: 0,
                   md: {
                     display: 'flex',
                   },
