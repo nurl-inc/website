@@ -36,11 +36,12 @@ export default function NotFound(props: RouteSectionProps<RouteData>) {
         <Container>
           <VStack h="calc(100dvh - 100px)" justify="center">
             <Text as="h1" textStyle="heading-xl">
-              Crit Fail
+              Coming Soon
             </Text>
-            <Text textStyle="body-xl">
-              You've stumbled into the void. The page you are looking for does
-              not exist.
+            <Text textStyle="2xl">You've stumbled into the void.</Text>
+            <Text textStyle="body-lg">
+              The page you are looking for does not exist but we're working on
+              it.
             </Text>
           </VStack>
         </Container>

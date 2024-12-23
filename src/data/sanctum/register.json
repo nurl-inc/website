@@ -1,0 +1,72 @@
+{
+  "why": [
+    {
+      "title": "Visual System Mapping",
+      "description": "See your entire game's DNA in one view"
+    },
+    {
+      "title": "Instant Validation",
+      "description": "Test rule interactions and spot balance issues in real-time"
+    },
+    {
+      "title": "Seamless Integration",
+      "description": "Direct connection to Nurl Play for immediate player feedback"
+    },
+    {
+      "title": "Development Acceleration",
+      "description": "Cut months off your development cycle"
+    }
+  ],
+  "what": [
+    "✨ Early access to all features",
+    "🎮 Direct integration with Nurl Play",
+    "🛠️ Custom implementation support",
+    "👥 Direct access to our development team",
+    "💡 Shape the future of game development tools"
+  ],
+  "timeline": [
+    {
+      "title": "Application Review",
+      "description": "1-2 business days"
+    },
+    {
+      "title": "Initial Consultation",
+      "description": "Schedule within a week"
+    },
+    {
+      "title": "Custom Implementation",
+      "description": "2-4 weeks"
+    },
+    {
+      "title": "Team Training",
+      "description": "Included"
+    },
+    {
+      "title": "Ongoing Support",
+      "description": "Direct access to our team"
+    }
+  ],
+  "faq": [
+    {
+      "title": "What kind of support can we expect during beta?",
+      "description": "Direct access to our development team, custom implementation support, and priority feature requests consideration."
+    },
+    {
+      "title": "Do we need to integrate with Nurl Play?",
+      "description": "No, but it's available if you want to gather direct player feedback and usage data."
+    },
+    {
+      "title": "How long is the beta period?",
+      "description": "The beta program runs through a quarter of the year, with beta partners receiving special benefits post-launch."
+    },
+    {
+      "title": "What happens after beta?",
+      "description": "Beta partners receive preferred pricing and maintain their direct support channel."
+    }
+  ],
+  "communication": [
+    "What our Development Updates on Discord",
+    "Join our Publisher Network on Discord",
+    "Watch our Blog for Updates"
+  ]
+}

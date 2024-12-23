@@ -63,3 +63,5 @@ export const getSocialProofData = query(async () => {
   'use server';
   return socialProof;
 }, 'socialProofData');
+
+export * from './sanctum';
