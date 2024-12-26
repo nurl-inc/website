@@ -1,10 +1,17 @@
 import type { RouteSectionProps } from '@solidjs/router';
-import SanctumHeroFeature from '~/components/routes/sanctum/hero-feature';
+import { lazy, onMount, Suspense } from 'solid-js';
+import { scrollFadeInOut } from '~/lib/motion';
+import SanctumHero from '~/components/routes/sanctum/hero';
 import { Footer, Main, Nav } from '~/components/shared';
 import { Head } from '~/components/shared';
+import type { Metadata } from '~/types';
 
 import keywords from '~/data/keywords.json';
-import type { Metadata } from '~/types';
+
+// Below the window content
+const PublisherValues = lazy(
+  () => import('~/components/routes/sanctum/publisher-values'),
+);
 
 /**
  * This module is the main entry point for the sanctum page.
@@ -32,13 +39,24 @@ interface RouteData {
 }
 
 export default function Sanctum(props: RouteSectionProps<RouteData>) {
+  onMount(() => {
+    const targets = document.querySelectorAll('#sanctum-value-section');
+    targets.forEach((target) => {
+      scrollFadeInOut(target);
+    });
+  });
+
   return (
     <>
       <Head {...props.data.metadata} />
       <Nav />
 
       <Main>
-        <SanctumHeroFeature />
+        <SanctumHero />
+
+        <Suspense>
+          <PublisherValues />
+        </Suspense>
       </Main>
 
       <Footer />

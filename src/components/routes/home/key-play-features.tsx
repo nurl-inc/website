@@ -100,13 +100,13 @@ export default function KeyPlayFeatures() {
             overflow="hidden"
           >
             <img
-              alt="Combat Arena screen shot"
+              alt="Chat screen shot"
               class={css({
                 w: 'full',
               })}
               decoding="async"
               loading="lazy"
-              src="/images/combat-arena.webp"
+              src="/images/chat.webp"
             />
           </Box>
         </HeadingFeatureCard>

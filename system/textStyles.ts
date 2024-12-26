@@ -12,6 +12,7 @@ const bodyStyles = {
   fontFamily: 'sans',
   fontStyle: 'normal',
   fontWeight: '400',
+  textWrap: 'pretty',
 };
 
 export const textStyles = defineTextStyles({
@@ -56,6 +57,12 @@ export const textStyles = defineTextStyles({
     value: {
       ...headingStyles,
       fontSize: '3xl',
+    },
+  },
+  'body-2xl': {
+    value: {
+      ...bodyStyles,
+      fontSize: '2xl',
     },
   },
   'body-xl': {

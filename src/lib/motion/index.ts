@@ -12,10 +12,10 @@ import { FADE_IN_OUT, SLIDE_IN_FROM_BOTTOM } from './const';
  * Fades in and out the target element.
  * @param target - The target element to animate.
  */
-export function scrollFadeInOut(target: Target) {
+export function scrollFadeInOut(target: Target, parent?: Target) {
   if (target) {
     scroll(animate(target, FADE_IN_OUT, { ease: 'linear' }), {
-      target,
+      target: parent ?? target,
       offset: ['start end', 'end end', 'start start', 'end start'],
     });
   }
@@ -48,6 +48,25 @@ export function staggerList(target: Target) {
       {
         delay: stagger(0.35),
         duration: 0.5,
+      },
+    );
+  }
+}
+
+/**
+ * Animates the path length of the target element.
+ * @param target - The target element to animate. Must use querySelector to
+ * target the SVG path element.
+ */
+export function animatePath(target: Target) {
+  if (target) {
+    scroll(
+      animate(target, {
+        pathLength: [0, 1],
+      }),
+      {
+        target,
+        offset: ['start end', 'end end'],
       },
     );
   }
