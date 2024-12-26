@@ -12,10 +12,10 @@ import { FADE_IN_OUT, SLIDE_IN_FROM_BOTTOM } from './const';
  * Fades in and out the target element.
  * @param target - The target element to animate.
  */
-export function scrollFadeInOut(target: Target) {
+export function scrollFadeInOut(target: Target, parent?: Target) {
   if (target) {
     scroll(animate(target, FADE_IN_OUT, { ease: 'linear' }), {
-      target,
+      target: parent ?? target,
       offset: ['start end', 'end end', 'start start', 'end start'],
     });
   }

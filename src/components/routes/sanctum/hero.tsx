@@ -8,6 +8,7 @@ import { Link, Text } from '~/components/ui';
 export default function SanctumHero() {
   return (
     <VStack
+      bgColor="page.surface.initial"
       gap="4"
       minH="96dvh"
       overflowX="hidden"
@@ -32,7 +33,7 @@ export default function SanctumHero() {
           right: '-10rem',
           top: '15%',
           w: '1/2',
-          zIndex: 'hide',
+          zIndex: 'base',
         }}
       >
         <img
