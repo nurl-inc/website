@@ -1,9 +1,23 @@
-import { lazy, Suspense } from 'solid-js';
+import { createMediaQuery } from '@solid-primitives/media';
+import { lazy, onMount, Suspense } from 'solid-js';
 import { Box } from 'styled-system/jsx';
+import { animatePath } from '~/lib/motion';
 
 const SanctumValueSection = lazy(() => import('./value-section'));
 
 export default function PublisherValues() {
+  const isSmall = createMediaQuery('(max-width: 767px)');
+
+  onMount(() => {
+    if (!isSmall()) {
+      // Wait for the elements to be loaded into the DOM
+      setTimeout(() => {
+        const paths = document.querySelectorAll('#animating-path');
+        paths.forEach((path) => animatePath(path));
+      }, 200);
+    }
+  });
+
   return (
     <Box
       id="learn-more"
@@ -23,18 +37,6 @@ export default function PublisherValues() {
         position: 'absolute',
         right: 0,
         top: 0,
-        zIndex: 'decorator',
-      }}
-      _after={{
-        bgGradient: 'to-t',
-        gradientFrom: 'page.surface.initial',
-        gradientTo: 'transparent',
-        content: '""',
-        h: '15rem',
-        left: 0,
-        position: 'absolute',
-        right: 0,
-        bottom: 0,
         zIndex: 'decorator',
       }}
     >
