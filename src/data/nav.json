@@ -5,14 +5,14 @@
     "href": "/"
   },
   {
-    "label": "Play",
-    "description": "For GMs and Players",
-    "href": "/play"
-  },
-  {
     "label": "Sanctum",
     "description": "For publishers to manage their games",
     "href": "/sanctum"
+  },
+  {
+    "label": "Play",
+    "description": "For GMs and Players",
+    "href": "/play"
   },
   {
     "label": "Blog",
