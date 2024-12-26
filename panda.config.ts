@@ -36,7 +36,7 @@ export default defineConfig({
   globalFontface: {
     Gibson: [
       {
-        fontDisplay: 'swap',
+        fontDisplay: 'optional',
         fontWeight: '100 900',
         src: [
           'url(./public/fonts/GibsonVF-Regular.woff2) format("woff2")',
@@ -44,7 +44,7 @@ export default defineConfig({
         ],
       },
       {
-        fontDisplay: 'swap',
+        fontDisplay: 'optional',
         fontWeight: '100 900',
         fontStyle: 'italic',
         src: [

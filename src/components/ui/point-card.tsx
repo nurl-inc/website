@@ -1,7 +1,13 @@
 import { Match, Switch } from 'solid-js';
 import { Box, VStack } from 'styled-system/jsx';
 import { Text } from './text';
-import { CellarIcon, HomeIcon, TransferIcon, StatsIcon } from '../icons';
+import {
+  CellarIcon,
+  HomeIcon,
+  StatsIcon,
+  NetworkIcon,
+  TestTubeIcon,
+} from '../icons';
 import DownloadIcon from '../icons/download';
 import StarIcon from '../icons/star';
 import D20Icon from '../icons/d20';
@@ -41,7 +47,7 @@ export default function PointCard(props: PointCardProps) {
                 <HomeIcon />
               </Match>
               <Match when={props.icon === 'transfer'}>
-                <TransferIcon />
+                <NetworkIcon />
               </Match>
               <Match when={props.icon === 'stats'}>
                 <StatsIcon />
@@ -57,6 +63,9 @@ export default function PointCard(props: PointCardProps) {
               </Match>
               <Match when={props.icon === 'd20'}>
                 <D20Icon />
+              </Match>
+              <Match when={props.icon === 'test-tube'}>
+                <TestTubeIcon />
               </Match>
             </Switch>
           </Box>

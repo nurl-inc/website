@@ -1,10 +1,8 @@
-import { onMount, Show } from 'solid-js';
+import { Show } from 'solid-js';
 import { css } from 'styled-system/css';
 import { Box, VStack } from 'styled-system/jsx';
 import { Text } from '~/components/ui';
 import AnimatingPath from './animating-path';
-import { animatePath } from '~/lib/motion';
-import { createMediaQuery } from '@solid-primitives/media';
 
 interface SanctumValueSectionProps {
   /**
@@ -22,15 +20,6 @@ interface SanctumValueSectionProps {
 }
 
 export default function SanctumValueSection(props: SanctumValueSectionProps) {
-  const isSmall = createMediaQuery('(max-width: 767px)');
-
-  onMount(() => {
-    if (!isSmall()) {
-      const paths = document.querySelectorAll('.animating-path');
-      paths.forEach((path) => animatePath(path));
-    }
-  });
-
   return (
     <VStack
       id="sanctum-value-section"

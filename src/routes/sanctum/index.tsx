@@ -12,6 +12,9 @@ import keywords from '~/data/keywords.json';
 const PublisherValues = lazy(
   () => import('~/components/routes/sanctum/publisher-values'),
 );
+const FeatureShowcase = lazy(
+  () => import('~/components/routes/sanctum/feature-showcase'),
+);
 
 /**
  * This module is the main entry point for the sanctum page.
@@ -56,6 +59,7 @@ export default function Sanctum(props: RouteSectionProps<RouteData>) {
 
         <Suspense>
           <PublisherValues />
+          <FeatureShowcase />
         </Suspense>
       </Main>
 
