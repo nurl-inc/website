@@ -15,6 +15,9 @@ const PublisherValues = lazy(
 const FeatureShowcase = lazy(
   () => import('~/components/routes/sanctum/feature-showcase'),
 );
+const SanctumPricing = lazy(
+  () => import('~/components/routes/sanctum/pricing'),
+);
 
 /**
  * This module is the main entry point for the sanctum page.
@@ -60,6 +63,7 @@ export default function Sanctum(props: RouteSectionProps<RouteData>) {
         <Suspense>
           <PublisherValues />
           <FeatureShowcase />
+          <SanctumPricing />
         </Suspense>
       </Main>
 

@@ -1,0 +1,56 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Creator",
+      "description": "For indie developers and small teams",
+      "monthlyPrice": 49,
+      "annualPrice": 499,
+      "savings": "(15% savings)",
+      "features": [
+        "Full feature access",
+        "3 team members",
+        "2 active games",
+        "Basic support",
+        "50GB storage"
+      ],
+      "action": "Start 14-Day Trial",
+      "actionLink": "/sanctum/pricing?plan=creator"
+    },
+    {
+      "id": "2",
+      "name": "Studio",
+      "description": "Perfect for established publishers",
+      "monthlyPrice": 199,
+      "annualPrice": "1,999",
+      "savings": "(16% savings)",
+      "features": [
+        "Everything in Creator",
+        "Unlimited team members",
+        "Unlimited games",
+        "Priority support",
+        "500GB storage",
+        "API access"
+      ],
+      "action": "Start Trial",
+      "actionLink": "/sanctum/pricing?plan=studio"
+    }
+  ],
+  "addOns": [
+    {
+      "id": "1",
+      "name": "One-Time Implementation",
+      "description": "Included with annual Studio plans.",
+      "basePrice": 999,
+      "features": [
+        "Custom setup",
+        "Data migration",
+        "Team training",
+        "Integration support",
+        "Best practices setup"
+      ],
+      "action": "Select Add-On",
+      "actionLink": ""
+    }
+  ]
+}
