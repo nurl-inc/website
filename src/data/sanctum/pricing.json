@@ -3,7 +3,7 @@
     {
       "id": "1",
       "name": "Creator",
-      "description": "",
+      "description": "For indie developers and small teams",
       "monthlyPrice": 49,
       "annualPrice": 499,
       "savings": "(15% savings)",
@@ -13,12 +13,14 @@
         "2 active games",
         "Basic support",
         "50GB storage"
-      ]
+      ],
+      "action": "Start 14-Day Trial",
+      "actionLink": "/sanctum/pricing"
     },
     {
       "id": "2",
       "name": "Studio",
-      "description": "",
+      "description": "Perfect for established publishers",
       "monthlyPrice": 199,
       "annualPrice": "1,999",
       "savings": "(16% savings)",
@@ -29,7 +31,9 @@
         "Priority support",
         "500GB storage",
         "API access"
-      ]
+      ],
+      "action": "Start Trial",
+      "actionLink": "/sanctum/pricing"
     }
   ],
   "addOns": [
