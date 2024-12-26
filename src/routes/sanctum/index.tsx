@@ -1,10 +1,12 @@
 import type { RouteSectionProps } from '@solidjs/router';
-import SanctumHeroFeature from '~/components/routes/sanctum/hero-feature';
+import SanctumHero from '~/components/routes/sanctum/hero';
 import { Footer, Main, Nav } from '~/components/shared';
 import { Head } from '~/components/shared';
+import type { Metadata } from '~/types';
 
 import keywords from '~/data/keywords.json';
-import type { Metadata } from '~/types';
+
+// Below the window content
 
 /**
  * This module is the main entry point for the sanctum page.
@@ -38,7 +40,9 @@ export default function Sanctum(props: RouteSectionProps<RouteData>) {
       <Nav />
 
       <Main>
-        <SanctumHeroFeature />
+        <SanctumHero />
+
+        <div id="learn-more">more stuff</div>
       </Main>
 
       <Footer />
