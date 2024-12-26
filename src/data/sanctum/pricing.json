@@ -15,7 +15,7 @@
         "50GB storage"
       ],
       "action": "Start 14-Day Trial",
-      "actionLink": "/sanctum/pricing"
+      "actionLink": "/sanctum/pricing?plan=creator"
     },
     {
       "id": "2",
@@ -33,21 +33,24 @@
         "API access"
       ],
       "action": "Start Trial",
-      "actionLink": "/sanctum/pricing"
+      "actionLink": "/sanctum/pricing?plan=studio"
     }
   ],
   "addOns": [
     {
       "id": "1",
-      "name": "Implementation Help",
-      "description": "",
-      "price": 999,
+      "name": "One-Time Implementation",
+      "description": "Included with annual Studio plans.",
+      "basePrice": 999,
       "features": [
-        "One-time setup",
-        "Migration support",
+        "Custom setup",
+        "Data migration",
         "Team training",
-        "Custom integration"
-      ]
+        "Integration support",
+        "Best practices setup"
+      ],
+      "action": "Select Add-On",
+      "actionLink": ""
     }
   ]
 }

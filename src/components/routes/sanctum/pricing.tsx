@@ -51,6 +51,7 @@ export default function SanctumPricing() {
               <PricingCard
                 {...item}
                 palette={index() === 1 ? 'secondary' : 'primary'}
+                teaser
               />
             )}
           </For>

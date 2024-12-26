@@ -4,7 +4,7 @@ import {
   pricingCard,
   type PricingCardVariantProps,
 } from 'styled-system/recipes';
-import { createMemo, For, splitProps } from 'solid-js';
+import { createMemo, For, Show, splitProps } from 'solid-js';
 import { Link } from './link';
 import { css } from 'styled-system/css';
 import { CheckCircle } from '../icons';
@@ -16,12 +16,14 @@ interface PricingCardProps {
   id: string;
   name: string;
   description: string;
-  monthlyPrice: number;
-  annualPrice: number | string;
-  savings: string;
+  basePrice?: number;
+  monthlyPrice?: number;
+  annualPrice?: number | string;
+  savings?: string;
   features: string[];
   action: string;
   actionLink: string;
+  teaser?: boolean;
 }
 
 export function PricingCard(props: PricingCardProps & PricingCardVariantProps) {
@@ -96,7 +98,11 @@ export function PricingCard(props: PricingCardProps & PricingCardVariantProps) {
           </ul>
         </Box>
 
-        <Link href={rest.actionLink}>{rest.action}</Link>
+        <Link href={rest.actionLink}>
+          <Show when={props.teaser} fallback={rest.action}>
+            Learn More
+          </Show>
+        </Link>
       </Box>
     </Box>
   );
