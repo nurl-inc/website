@@ -25,9 +25,9 @@ export default createHandler(() => (
           />
           <link
             rel="preload"
-            href="/fonts/GibsonVF-Italic.woff2"
+            href="/fonts/GibsonVF-Regular.woff"
             as="font"
-            type="font/woff2"
+            type="font/woff"
             crossOrigin="anonymous"
           />
 
