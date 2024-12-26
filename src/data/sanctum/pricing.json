@@ -1,0 +1,49 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Creator",
+      "description": "",
+      "monthlyPrice": 49,
+      "annualPrice": 499,
+      "savings": "(15% savings)",
+      "features": [
+        "Full feature access",
+        "3 team members",
+        "2 active games",
+        "Basic support",
+        "50GB storage"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Studio",
+      "description": "",
+      "monthlyPrice": 199,
+      "annualPrice": "1,999",
+      "savings": "(16% savings)",
+      "features": [
+        "Everything in Creator",
+        "Unlimited team members",
+        "Unlimited games",
+        "Priority support",
+        "500GB storage",
+        "API access"
+      ]
+    }
+  ],
+  "addOns": [
+    {
+      "id": "1",
+      "name": "Implementation Help",
+      "description": "",
+      "price": 999,
+      "features": [
+        "One-time setup",
+        "Migration support",
+        "Team training",
+        "Custom integration"
+      ]
+    }
+  ]
+}

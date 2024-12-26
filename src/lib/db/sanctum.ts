@@ -3,6 +3,7 @@ import { query } from '@solidjs/router';
 // data files
 import registerData from '~/data/sanctum/register.json';
 import showcaseData from '~/data/sanctum/showcase.json';
+import pricingData from '~/data/sanctum/pricing.json';
 
 /**
  * This module queries for data related to the Sanctum pages.
@@ -26,3 +27,11 @@ export const getSanctumShowcaseData = query(async () => {
   'use server';
   return showcaseData;
 }, 'sanctumShowcaseData');
+
+/**
+ * Fetches the Sanctum pricing data.
+ */
+export const getSanctumPricingData = query(async () => {
+  'use server';
+  return pricingData;
+}, 'sanctumPricingData');
