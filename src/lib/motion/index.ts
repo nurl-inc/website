@@ -52,3 +52,22 @@ export function staggerList(target: Target) {
     );
   }
 }
+
+/**
+ * Animates the path length of the target element.
+ * @param target - The target element to animate. Must use querySelector to
+ * target the SVG path element.
+ */
+export function animatePath(target: Target) {
+  if (target) {
+    scroll(
+      animate(target, {
+        pathLength: [0, 1],
+      }),
+      {
+        target,
+        offset: ['start end', 'end end'],
+      },
+    );
+  }
+}

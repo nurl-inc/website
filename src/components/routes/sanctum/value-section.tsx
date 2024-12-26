@@ -1,7 +1,10 @@
-import { Show } from 'solid-js';
+import { onMount, Show } from 'solid-js';
 import { css } from 'styled-system/css';
 import { Box, VStack } from 'styled-system/jsx';
 import { Text } from '~/components/ui';
+import AnimatingPath from './animating-path';
+import { animatePath } from '~/lib/motion';
+import { createMediaQuery } from '@solid-primitives/media';
 
 interface SanctumValueSectionProps {
   /**
@@ -19,6 +22,15 @@ interface SanctumValueSectionProps {
 }
 
 export default function SanctumValueSection(props: SanctumValueSectionProps) {
+  const isSmall = createMediaQuery('(max-width: 767px)');
+
+  onMount(() => {
+    if (!isSmall()) {
+      const paths = document.querySelectorAll('.animating-path');
+      paths.forEach((path) => animatePath(path));
+    }
+  });
+
   return (
     <VStack
       id="sanctum-value-section"
@@ -32,12 +44,15 @@ export default function SanctumValueSection(props: SanctumValueSectionProps) {
       position="relative"
       w="full"
     >
+      <AnimatingPath />
+
       <VStack
         alignItems="flex-start"
         w={{
           base: 'full',
           md: '37.5rem',
         }}
+        zIndex="decorator"
       >
         <Text color="brand2.600" textStyle="heading-xl">
           {props.idx}
@@ -60,10 +75,13 @@ export default function SanctumValueSection(props: SanctumValueSectionProps) {
         bgColor="page.surface.100"
         overflow="hidden"
         marginBlock="10"
+        minH="13rem"
         rounded="2xl"
         w="full"
+        zIndex="decorator"
         md={{
           alignSelf: 'flex-end',
+          minH: '29rem',
           marginBlock: 16,
           w: 'calc(50% - 3rem)',
         }}
