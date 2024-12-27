@@ -37,10 +37,13 @@ export const accordion = defineSlotRecipe({
       cursor: 'pointer',
       fontStyle: 'normal',
       fontSize: '1.25rem',
+      fontWeight: '600',
       justifyContent: 'space-between',
       paddingBlock: 5,
       paddingInline: 4,
+      textAlign: 'left',
       textStyle: 'heading-xs',
+      textTransform: 'initial',
       w: 'full',
       _open: {
         '& > :is([data-part=indicator])': {

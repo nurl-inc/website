@@ -2,14 +2,16 @@ import { createAsync, type RouteSectionProps } from '@solidjs/router';
 import { createMemo, createSignal, For, onMount, Show } from 'solid-js';
 import { Box, Container, HStack, VStack } from 'styled-system/jsx';
 import { PricingCard } from '~/components/ui/pricing-card';
-import { Footer, Main, Nav } from '~/components/shared';
+import { Footer, Main, Markdown, Nav } from '~/components/shared';
 import { Head } from '~/components/shared';
-import { Tabs, Text } from '~/components/ui';
+import { Accordion, AccordionItem, Link, Tabs, Text } from '~/components/ui';
 import type { Metadata } from '~/types';
 
 import keywords from '~/data/keywords.json';
-import { getSanctumPricingData } from '~/lib/db';
+import { getSanctumPricingData, getSanctumPricingFaqData } from '~/lib/db';
 import { staggerFadeIn } from '~/lib/motion';
+import { MailIcon } from '~/components/icons';
+import { css } from 'styled-system/css';
 
 /**
  * This module is the main entry point for the sanctum page.
@@ -38,7 +40,9 @@ interface RouteData {
 
 export default function SanctumPricing(props: RouteSectionProps<RouteData>) {
   const [activePrice, setActivePrice] = createSignal<'1' | '2'>('1');
+
   const data = createAsync(() => getSanctumPricingData());
+  const faqData = createAsync(() => getSanctumPricingFaqData());
 
   const tabs = createMemo(() => {
     return [
@@ -145,6 +149,75 @@ export default function SanctumPricing(props: RouteSectionProps<RouteData>) {
                   </HStack>
                 </Show>
               </Tabs>
+            </Box>
+
+            <Box
+              paddingBlock={{
+                base: '20',
+                md: '32',
+              }}
+              w="full"
+            >
+              <Text
+                as="h2"
+                lineHeight="1.2"
+                paddingBlockEnd="10"
+                textStyle={{
+                  base: 'heading-sm',
+                  md: 'heading-md',
+                }}
+              >
+                Frequently Asked Questions
+              </Text>
+
+              <Show when={faqData()}>
+                <Accordion>
+                  <For each={faqData()}>
+                    {(item) => (
+                      <AccordionItem
+                        heading={item.question}
+                        value={item.question}
+                      >
+                        <Markdown content={item.answer} />
+                      </AccordionItem>
+                    )}
+                  </For>
+                </Accordion>
+              </Show>
+            </Box>
+
+            <Box w="full">
+              <Text
+                as="h2"
+                lineHeight="1.2"
+                paddingBlockEnd="4"
+                textStyle={{
+                  base: 'heading-sm',
+                  md: 'heading-md',
+                }}
+              >
+                Still have questions?
+              </Text>
+              <Text
+                as="em"
+                fontStyle="oblique"
+                textStyle={{
+                  base: 'body-lg',
+                  md: 'body-xl',
+                }}
+              >
+                Transform your game development with modern tools designed for
+                modern publishers.
+              </Text>
+
+              <Box paddingBlockStart="12" w="full">
+                <Link href="/contact">
+                  <span class={css({ w: '5' })}>
+                    <MailIcon />
+                  </span>
+                  Contact Us
+                </Link>
+              </Box>
             </Box>
           </VStack>
         </Container>
