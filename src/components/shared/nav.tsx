@@ -16,8 +16,8 @@ export default function Nav() {
 
   return (
     <>
-      <Container position="sticky" top="4" zIndex="sticky">
-        <header>
+      <header>
+        <Container position="sticky" top="4" zIndex="sticky">
           <Box
             data-part="nav"
             backdropFilter="blur(15px)"
@@ -58,56 +58,58 @@ export default function Nav() {
                 </Box>
               </A>
 
-              <ul
-                class={hstack({
-                  animationName: 'fadeIn',
-                  animationDuration: '600ms',
-                  animationTimingFunction: 'ease-in-out',
-                  animationFillMode: 'forwards',
-                  animationDelay: '200ms',
-                  display: 'none',
-                  gap: 4,
-                  opacity: 0,
-                  md: {
-                    display: 'flex',
-                  },
-                })}
-              >
-                <For each={nav.slice(1)}>
-                  {(item) => (
-                    <li>
-                      <A
-                        class={css({
-                          color: 'neutral.200',
-                          display: 'block',
-                          px: 4,
-                          fontSize: 'lg',
-                          fontStyle: 'normal',
-                          fontWeight: 800,
-                          textStyle: 'heading-xs',
-                          textTransform: 'uppercase',
-                          transitionProperty: 'all',
-                          transitionDuration: 'fast',
-                          _hover: {
-                            textShadow: 'var(--text-glow)',
-                          },
-                          _currentPage: {
-                            color: 'page.text.alt',
-                            textShadow: 'var(--text-glow)',
-                          },
-                        })}
-                        href={item.href}
-                      >
-                        {item.label}
-                      </A>
-                    </li>
-                  )}
-                </For>
-              </ul>
+              <nav>
+                <ul
+                  class={hstack({
+                    animationName: 'fadeIn',
+                    animationDuration: '600ms',
+                    animationTimingFunction: 'ease-in-out',
+                    animationFillMode: 'forwards',
+                    animationDelay: '200ms',
+                    display: 'none',
+                    gap: 4,
+                    opacity: 0,
+                    md: {
+                      display: 'flex',
+                    },
+                  })}
+                >
+                  <For each={nav.slice(1)}>
+                    {(item) => (
+                      <li>
+                        <A
+                          class={css({
+                            color: 'neutral.200',
+                            display: 'block',
+                            px: 4,
+                            fontSize: 'lg',
+                            fontStyle: 'normal',
+                            fontWeight: 800,
+                            textStyle: 'heading-xs',
+                            textTransform: 'uppercase',
+                            transitionProperty: 'all',
+                            transitionDuration: 'fast',
+                            _hover: {
+                              textShadow: 'var(--text-glow)',
+                            },
+                            _currentPage: {
+                              color: 'page.text.alt',
+                              textShadow: 'var(--text-glow)',
+                            },
+                          })}
+                          href={item.href}
+                        >
+                          {item.label}
+                        </A>
+                      </li>
+                    )}
+                  </For>
+                </ul>
+              </nav>
             </HStack>
           </Box>
-        </header>
-      </Container>
+        </Container>
+      </header>
 
       <Box
         data-part="nav-drawer"
