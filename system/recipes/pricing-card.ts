@@ -21,7 +21,7 @@ export const pricingCard = defineSlotRecipe({
       rounded: 'md',
       w: {
         base: 'full',
-        lg: 'calc(50% - 1rem)',
+        lg: 'calc(33% - 1rem)',
       },
     },
     header: {

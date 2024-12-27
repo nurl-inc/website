@@ -1,4 +1,4 @@
-import { animate, inView, scroll, stagger } from 'motion';
+import { animate, inView, scroll, spring, stagger } from 'motion';
 import type { Target } from 'motion/react';
 import { FADE_IN_OUT, SLIDE_IN_FROM_BOTTOM } from './const';
 
@@ -68,6 +68,20 @@ export function animatePath(target: Target) {
         target,
         offset: ['start end', 'end end'],
       },
+    );
+  }
+}
+
+/**
+ * Staggers the opacity of the target element.
+ * @param target - The target element to animate.
+ */
+export function staggerFadeIn(target: Target) {
+  if (target) {
+    animate(
+      target,
+      { opacity: [0, 1], y: [100, 0] },
+      { type: spring, bounce: 0.3, delay: stagger(0.1), duration: 0.5 },
     );
   }
 }

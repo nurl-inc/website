@@ -6,7 +6,7 @@
       "description": "For indie developers and small teams",
       "monthlyPrice": 49,
       "annualPrice": 499,
-      "savings": "(15% savings)",
+      "savings": "15% savings",
       "features": [
         "Full feature access",
         "3 team members",
@@ -15,7 +15,8 @@
         "50GB storage"
       ],
       "action": "Start 14-Day Trial",
-      "actionLink": "/sanctum/pricing?plan=creator"
+      "actionLink": "/sanctum/register?plan=creator",
+      "teaserLink": "/sanctum/pricing?plan=creator"
     },
     {
       "id": "2",
@@ -23,7 +24,7 @@
       "description": "Perfect for established publishers",
       "monthlyPrice": 199,
       "annualPrice": "1,999",
-      "savings": "(16% savings)",
+      "savings": "16% savings",
       "features": [
         "Everything in Creator",
         "Unlimited team members",
@@ -33,7 +34,8 @@
         "API access"
       ],
       "action": "Start Trial",
-      "actionLink": "/sanctum/pricing?plan=studio"
+      "actionLink": "/sanctum/register?plan=studio",
+      "teaserLink": "/sanctum/pricing?plan=studio"
     }
   ],
   "addOns": [
@@ -50,7 +52,8 @@
         "Best practices setup"
       ],
       "action": "Select Add-On",
-      "actionLink": ""
+      "actionLink": "/sanctum/register?addOn=1",
+      "teaserLink": ""
     }
   ]
 }

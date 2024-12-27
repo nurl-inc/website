@@ -1,6 +1,6 @@
 import { Tabs as KTabs } from '@kobalte/core/tabs';
 import type { TabsContentProps, TabsRootProps } from '@kobalte/core/tabs';
-import { For, type ParentProps } from 'solid-js';
+import { For, splitProps, type ParentProps } from 'solid-js';
 import { tabs } from 'styled-system/recipes';
 
 /**
@@ -31,12 +31,16 @@ interface TabsProps extends TabsRootProps {
  * ```
  */
 export function Tabs(props: ParentProps<TabsProps>) {
+  const [{ tabs: propsTabs, defaultValue }, rootProps] = splitProps(props, [
+    'tabs',
+    'defaultValue',
+  ]);
   const styles = tabs();
 
   return (
-    <KTabs defaultValue={props.defaultValue}>
+    <KTabs defaultValue={defaultValue} {...rootProps}>
       <KTabs.List class={styles.list}>
-        <For each={props.tabs}>
+        <For each={propsTabs}>
           {(tab) => (
             <KTabs.Trigger value={tab.id} class={styles.trigger}>
               {tab.label}
