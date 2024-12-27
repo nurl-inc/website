@@ -61,6 +61,7 @@ export const pricingCard = defineSlotRecipe({
       gap: 4,
     },
     icon: {
+      p: 0.5,
       rounded: 'full',
       w: '1.5rem',
     },
@@ -74,7 +75,8 @@ export const pricingCard = defineSlotRecipe({
           color: 'white',
         },
         icon: {
-          color: '#3DF58765',
+          bgColor: '#3DF58765',
+          color: '#3DF587',
         },
       },
       secondary: {
@@ -83,7 +85,8 @@ export const pricingCard = defineSlotRecipe({
           color: 'brand2.1000',
         },
         icon: {
-          color: '#05200F65',
+          bgColor: '#05200F65',
+          color: 'brand2.1000',
         },
       },
     },

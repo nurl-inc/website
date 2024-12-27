@@ -1,4 +1,4 @@
-import { Box, HStack } from 'styled-system/jsx';
+import { Box, Circle, HStack } from 'styled-system/jsx';
 import { Text } from './text';
 import {
   pricingCard,
@@ -7,7 +7,7 @@ import {
 import { createMemo, For, Show, splitProps } from 'solid-js';
 import { Link } from './link';
 import { css } from 'styled-system/css';
-import { CheckCircle } from '../icons';
+import { CheckIcon } from '../icons';
 
 /**
  * This should match the data/sanctum/pricing.json schema
@@ -87,9 +87,9 @@ export function PricingCard(props: PricingCardProps & PricingCardVariantProps) {
               {(feature) => (
                 <li>
                   <HStack gap="4" w="full">
-                    <Box class={styles.icon}>
-                      <CheckCircle />
-                    </Box>
+                    <Circle class={styles.icon}>
+                      <CheckIcon />
+                    </Circle>
                     <Text>{feature}</Text>
                   </HStack>
                 </li>
