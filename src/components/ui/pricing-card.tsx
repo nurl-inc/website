@@ -4,7 +4,7 @@ import {
   pricingCard,
   type PricingCardVariantProps,
 } from 'styled-system/recipes';
-import { createMemo, For, Show, splitProps } from 'solid-js';
+import { createMemo, For, Match, Show, splitProps, Switch } from 'solid-js';
 import { Link } from './link';
 import { css } from 'styled-system/css';
 import { CheckIcon } from '../icons';
@@ -24,6 +24,8 @@ interface PricingCardProps {
   action: string;
   actionLink: string;
   teaser?: boolean;
+  teaserLink?: string;
+  activePrice?: '1' | '2';
 }
 
 export function PricingCard(props: PricingCardProps & PricingCardVariantProps) {
@@ -31,19 +33,45 @@ export function PricingCard(props: PricingCardProps & PricingCardVariantProps) {
   const styles = pricingCard({ palette });
 
   const price = createMemo(() => {
-    return rest.monthlyPrice;
+    if (rest.basePrice) return rest.basePrice;
+    return rest.activePrice !== '2' ? rest.monthlyPrice : rest.annualPrice;
   });
 
   return (
-    <Box class={styles.root}>
+    <Box id="pricing-card" class={styles.root}>
       <Box class={styles.header}>
         <Box marginBlockEnd="0.5rem" w="full">
-          <Text class={styles.heading}>{rest.name}</Text>
+          <HStack
+            alignItems="flex-start"
+            justifyContent="space-between"
+            w="full"
+          >
+            <Text class={styles.heading}>{rest.name}</Text>
+
+            <Show when={rest.activePrice === '2'}>
+              <Text
+                as="span"
+                bgGradient="play50"
+                color="black"
+                display="inline-block"
+                fontSize="md"
+                paddingBlock="0.5"
+                paddingInline="2"
+                textStyle="heading-xs"
+                rounded="sm"
+              >
+                {rest.savings}
+              </Text>
+            </Show>
+          </HStack>
           <Text class={styles.description}>{rest.description}</Text>
         </Box>
 
         <HStack alignItems="flex-end" gap="0" w="full">
-          <Text class={styles.price}>
+          <Text
+            aria-label={`$${price()} per ${rest.activePrice === '2' ? 'year' : 'month'}`}
+            class={styles.price}
+          >
             <sup
               class={css({
                 display: 'inline-block',
@@ -54,7 +82,9 @@ export function PricingCard(props: PricingCardProps & PricingCardVariantProps) {
             >
               &dollar;
             </sup>
-            {price()}
+            <Text as="span" class={styles.price}>
+              {price()}
+            </Text>
           </Text>
           <Text
             as="span"
@@ -64,7 +94,14 @@ export function PricingCard(props: PricingCardProps & PricingCardVariantProps) {
             textStyle="heading-xs"
             textTransform="uppercase"
           >
-            /mo
+            <Switch>
+              <Match when={rest.activePrice === '2'}>
+                <Text>/yr</Text>
+              </Match>
+              <Match when={rest.activePrice === '1'}>
+                <Text>/mo</Text>
+              </Match>
+            </Switch>
           </Text>
         </HStack>
       </Box>
@@ -98,11 +135,12 @@ export function PricingCard(props: PricingCardProps & PricingCardVariantProps) {
           </ul>
         </Box>
 
-        <Link href={rest.actionLink}>
-          <Show when={props.teaser} fallback={rest.action}>
-            Learn More
-          </Show>
-        </Link>
+        <Show
+          when={props.teaser}
+          fallback={<Link href={rest.actionLink}>request access</Link>}
+        >
+          <Link href={rest.teaserLink}>Learn More</Link>
+        </Show>
       </Box>
     </Box>
   );

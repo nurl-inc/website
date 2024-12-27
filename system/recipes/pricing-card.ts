@@ -21,7 +21,7 @@ export const pricingCard = defineSlotRecipe({
       rounded: 'md',
       w: {
         base: 'full',
-        lg: 'calc(50% - 1rem)',
+        lg: 'calc(33% - 1rem)',
       },
     },
     header: {
@@ -50,7 +50,10 @@ export const pricingCard = defineSlotRecipe({
       display: 'flex',
       flexDirection: 'column',
       gap: 4,
-      h: 'calc(100% - 12.75rem)',
+      h: {
+        base: 'calc(100% - 14.75rem)',
+        lg: 'calc(100% - 12.75rem)',
+      },
       justifyContent: 'space-between',
       p: 7,
       w: 'full',
