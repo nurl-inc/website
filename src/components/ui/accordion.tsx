@@ -1,5 +1,5 @@
-import { Accordion as KAccordion } from '@kobalte/core';
-import type { ParentProps } from 'solid-js';
+import { Accordion as ArkAccordion } from '@ark-ui/solid';
+import { Suspense, type ParentProps } from 'solid-js';
 import { ChevronDownIcon } from '../icons';
 import { accordion } from 'styled-system/recipes';
 
@@ -10,37 +10,35 @@ import { accordion } from 'styled-system/recipes';
 
 const accordionStyles = accordion();
 
-export function Accordion(props: ParentProps<KAccordion.AccordionRootProps>) {
+export function Accordion(props: ParentProps<ArkAccordion.RootProps>) {
   return (
-    <KAccordion.Root
+    <ArkAccordion.Root
       class={accordionStyles.root}
       collapsible
       defaultValue={props.defaultValue}
     >
       {props.children}
-    </KAccordion.Root>
+    </ArkAccordion.Root>
   );
 }
 
-export interface AccordionItemProps extends KAccordion.AccordionItemProps {
+export interface AccordionItemProps extends ArkAccordion.ItemProps {
   heading: string;
 }
 
 export function AccordionItem(props: ParentProps<AccordionItemProps>) {
   return (
-    <KAccordion.Item class={accordionStyles.item} value={props.value}>
-      <KAccordion.Header class={accordionStyles.header}>
-        <KAccordion.Trigger class={accordionStyles.trigger}>
-          {props.heading}
-          <span data-part="indicator" class={accordionStyles.indicator}>
-            <ChevronDownIcon />
-          </span>
-        </KAccordion.Trigger>
-      </KAccordion.Header>
+    <ArkAccordion.Item class={accordionStyles.item} value={props.value}>
+      <ArkAccordion.ItemTrigger class={accordionStyles.itemTrigger}>
+        {props.heading}
+        <ArkAccordion.ItemIndicator class={accordionStyles.itemIndicator}>
+          <ChevronDownIcon />
+        </ArkAccordion.ItemIndicator>
+      </ArkAccordion.ItemTrigger>
 
-      <KAccordion.Content class={accordionStyles.content}>
-        {props.children}
-      </KAccordion.Content>
-    </KAccordion.Item>
+      <ArkAccordion.ItemContent class={accordionStyles.itemContent}>
+        <Suspense>{props.children}</Suspense>
+      </ArkAccordion.ItemContent>
+    </ArkAccordion.Item>
   );
 }

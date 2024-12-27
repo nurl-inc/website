@@ -1,6 +1,6 @@
 import { query } from '@solidjs/router';
 import { marked } from 'marked';
-import DOMPurify from 'dompurify';
+import DOMPurify from 'isomorphic-dompurify';
 
 /**
  * Get the sanitized markdown content

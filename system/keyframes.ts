@@ -25,10 +25,10 @@ export const keyframes = defineKeyframes({
   // collapse
   expandHeight: {
     from: { height: '0' },
-    to: { height: 'var(--kb-collapsible-content-height)' },
+    to: { height: 'var(--height)' },
   },
   collapseHeight: {
-    from: { height: 'var(--kb-collapsible-content-height)' },
+    from: { height: 'var(--height)' },
     to: { height: '0' },
   },
   expandWidth: {

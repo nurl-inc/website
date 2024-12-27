@@ -48,20 +48,20 @@
   ],
   "faq": [
     {
-      "title": "What kind of support can we expect during beta?",
-      "description": "Direct access to our development team, custom implementation support, and priority feature requests consideration."
+      "question": "What kind of support can we expect during beta?",
+      "answer": "Direct access to our development team, custom implementation support, and priority feature requests consideration."
     },
     {
-      "title": "Do we need to integrate with Nurl Play?",
-      "description": "No, but it's available if you want to gather direct player feedback and usage data."
+      "question": "Do we need to integrate with Nurl Play?",
+      "answer": "No, but it's available if you want to gather direct player feedback and usage data."
     },
     {
-      "title": "How long is the beta period?",
-      "description": "The beta program runs through a quarter of the year, with beta partners receiving special benefits post-launch."
+      "question": "How long is the beta period?",
+      "answer": "The beta program runs through a quarter of the year, with beta partners receiving special benefits post-launch."
     },
     {
-      "title": "What happens after beta?",
-      "description": "Beta partners receive preferred pricing and maintain their direct support channel."
+      "question": "What happens after beta?",
+      "answer": "Beta partners receive preferred pricing and maintain their direct support channel."
     }
   ],
   "communication": [

@@ -16,6 +16,31 @@ export default createHandler(() => (
           <meta charset="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+          <style>
+            {`
+              @font-face {
+                font-family: 'Gibson VF Thin';
+                font-display: swap;
+                font-weight: 100 900;
+                font-style: normal;
+                src:
+                  local('Gibson VF Thin'),
+                  url('/fonts/GibsonVF-Regular.woff2') format('woff-variations'),
+                  url('/fonts/GibsonVF-Regular.woff2') format('woff2');
+              }
+
+              @font-face {
+                font-family: 'Gibson VF Thin';
+                font-display: swap;
+                font-weight: 100 900;
+                font-style: italic;
+                src:
+                  local('Gibson VF Thin'),
+                  url('/fonts/GibsonVF-Italic.woff2') format('woff-variations'),
+                  url('/fonts/GibsonVF-Italic.woff2') format('woff2');
+              }
+            `}
+          </style>
           <link
             rel="preload"
             href="/fonts/GibsonVF-Regular.woff2"
@@ -25,9 +50,9 @@ export default createHandler(() => (
           />
           <link
             rel="preload"
-            href="/fonts/GibsonVF-Regular.woff"
+            href="/fonts/GibsonVF-Italic.woff2"
             as="font"
-            type="font/woff"
+            type="font/woff2"
             crossOrigin="anonymous"
           />
 
