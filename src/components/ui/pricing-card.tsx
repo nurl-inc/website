@@ -26,10 +26,14 @@ interface PricingCardProps {
   teaser?: boolean;
   teaserLink?: string;
   activePrice?: '1' | '2';
+  variant?: 'play' | 'sanctum';
 }
 
 export function PricingCard(props: PricingCardProps & PricingCardVariantProps) {
-  const [{ palette }, rest] = splitProps(props, ['palette']);
+  const [{ palette, variant }, rest] = splitProps(props, [
+    'palette',
+    'variant',
+  ]);
   const styles = pricingCard({ palette });
 
   const price = createMemo(() => {
@@ -38,7 +42,7 @@ export function PricingCard(props: PricingCardProps & PricingCardVariantProps) {
   });
 
   return (
-    <Box id="pricing-card" class={styles.root}>
+    <Box data-theme={variant} id="pricing-card" class={styles.root}>
       <Box class={styles.header}>
         <Box marginBlockEnd="0.5rem" w="full">
           <HStack
@@ -124,7 +128,7 @@ export function PricingCard(props: PricingCardProps & PricingCardVariantProps) {
               {(feature) => (
                 <li>
                   <HStack gap="4" w="full">
-                    <Circle class={styles.icon}>
+                    <Circle data-theme={variant} class={styles.icon}>
                       <CheckIcon />
                     </Circle>
                     <Text>{feature}</Text>

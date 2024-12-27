@@ -11,6 +11,7 @@ import keywords from '~/data/keywords.json';
 const FeatureShowcase = lazy(
   () => import('~/components/routes/play/feature-showcase'),
 );
+const Pricing = lazy(() => import('~/components/routes/play/pricing'));
 
 /**
  * This module is the main entry point for the sanctum page.
@@ -49,6 +50,7 @@ export default function Play(props: RouteSectionProps<RouteData>) {
 
         <Suspense>
           <FeatureShowcase />
+          <Pricing />
         </Suspense>
       </Main>
 
