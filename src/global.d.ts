@@ -19,6 +19,10 @@ declare module 'vanta/dist/vanta.fog.min' {
   export default function FOG(options: unknown): unknown;
 }
 
+declare module 'vanta/dist/vanta.dots.min' {
+  export default function DOTS(options: unknown): unknown;
+}
+
 declare module 'three' {
   export default THREE;
 }

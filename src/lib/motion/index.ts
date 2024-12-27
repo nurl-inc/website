@@ -85,3 +85,22 @@ export function staggerFadeIn(target: Target) {
     );
   }
 }
+
+/**
+ * Scales in the target element when scrolled into view.
+ * @param target - The target element to animate.
+ */
+export function scrollScaleIn(target: Target) {
+  if (target) {
+    scroll(
+      animate(target, {
+        opacity: [0, 1],
+        scale: [0.8, 1],
+      }),
+      {
+        target,
+        offset: ['start end', 'end end'],
+      },
+    );
+  }
+}

@@ -1,11 +1,8 @@
 import { css } from 'styled-system/css';
-import { Box, VStack } from 'styled-system/jsx';
+import { VStack, Box } from 'styled-system/jsx';
 import { Link, Text } from '~/components/ui';
 
-/**
- * This is the main hero component for the sanctum page.
- */
-export default function SanctumHero() {
+export default function PlayHero() {
   return (
     <VStack
       bgColor="page.surface.initial"
@@ -30,9 +27,9 @@ export default function SanctumHero() {
         md={{
           animationDelay: '600ms',
           position: 'absolute',
-          right: '-10rem',
-          top: '5%',
-          w: '65%',
+          right: 0,
+          top: '15%',
+          w: '1/2',
           zIndex: 'base',
         }}
       >
@@ -46,8 +43,8 @@ export default function SanctumHero() {
           alt="Sanctum screenshot preview"
           decoding="async"
           loading="lazy"
-          src="/images/sanctum.webp"
-          srcSet="/images/sanctum-mobile.webp 616w, /images/sanctum.webp 2048w"
+          src="/images/play.webp"
+          srcSet="/images/play-mobile.webp 664w, /images/play.webp 1846w"
           sizes="(max-width: 300px) 1024px, 2048px"
         />
       </Box>
@@ -64,9 +61,9 @@ export default function SanctumHero() {
       >
         <Text
           as="h1"
-          color="brand2.600"
+          color="brand1.600"
           mb="4"
-          maxW="42.5rem"
+          maxW="48rem"
           textStyle={{
             base: 'heading-md',
             md: 'heading-lg',
@@ -80,9 +77,9 @@ export default function SanctumHero() {
             opacity: 0,
           }}
         >
-          Enter the Sanctum.{' '}
-          <Text as="span" color="brand2.300">
-            Create Worlds.
+          Play Like a Video Game,{' '}
+          <Text as="span" color="brand1.200">
+            Feel Like Tabletop.
           </Text>
         </Text>
         <Text
@@ -101,8 +98,8 @@ export default function SanctumHero() {
             opacity: 0,
           }}
         >
-          The sacred space where your game systems come to life through visual
-          tools and powerful automation.
+          Experience tabletop gaming with video game-like automation while
+          preserving the physical experience you love.
         </Text>
 
         <Box
