@@ -1,8 +1,9 @@
 import { defineSlotRecipe } from '@pandacss/dev';
+import { accordionAnatomy } from '@ark-ui/anatomy';
 
 export const accordion = defineSlotRecipe({
   className: 'accordion',
-  slots: ['root', 'item', 'header', 'trigger', 'indicator', 'content'],
+  slots: accordionAnatomy.keys(),
   jsx: ['Accordion', 'AccordionItem'],
 
   base: {
@@ -30,7 +31,7 @@ export const accordion = defineSlotRecipe({
         paddingBlockEnd: 5,
       },
     },
-    trigger: {
+    itemTrigger: {
       alignItems: 'center',
       display: 'flex',
       color: 'white',
@@ -45,44 +46,36 @@ export const accordion = defineSlotRecipe({
       textStyle: 'heading-xs',
       textTransform: 'initial',
       w: 'full',
-      _open: {
-        '& > :is([data-part=indicator])': {
-          color: 'page.text.alt',
-          transform: 'rotate(180deg)',
-        },
-      },
-      _closed: {
-        '& > :is([data-part=indicator])': {
-          color: 'page.text.alt/20',
-          transform: 'rotate(0deg)',
-        },
-      },
     },
-    indicator: {
+    itemIndicator: {
       display: 'inline-block',
       _motionSafe: {
-        transitionProperty: 'color, transform',
-        transitionDuration: 'slow',
-        transitionTimingFunction: 'ease-in-out',
+        transitionProperty: 'transform',
+        transitionDuration: 'fast',
       },
-    },
-    content: {
-      overflow: 'hidden',
-      paddingInline: 4,
-      textStyle: 'body-lg',
-      willChange: 'height, padding',
       _open: {
-        animationName: 'expandHeight, fadeIn',
+        transform: 'rotate(180deg)',
       },
       _closed: {
-        animationName: 'collapseHeight, fadeOut',
+        transform: 'rotate(0deg)',
       },
+    },
+    itemContent: {
+      overflow: 'hidden',
+      paddingInline: 4,
+      textStyle: 'body-xl',
+      willChange: 'height, padding',
       _motionSafe: {
         animationDuration: 'fast',
-        animationTimingFunction: 'ease-in-out',
         animationFillMode: 'forwards',
         transitionProperty: 'padding',
         transitionDuration: 'fast',
+        _open: {
+          animationName: 'expandHeight, fadeIn',
+        },
+        _closed: {
+          animationName: 'collapseHeight, fadeOut',
+        },
       },
     },
   },

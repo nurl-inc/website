@@ -1,13 +1,20 @@
-import { createMemo, Index, lazy, Suspense } from 'solid-js';
-import type { RouteSectionProps } from '@solidjs/router';
+import { For, Index, lazy, Suspense } from 'solid-js';
+import { createAsync, type RouteSectionProps } from '@solidjs/router';
 import { Box, Container, VStack } from 'styled-system/jsx';
-import { TextList, Head, Main, Nav } from '~/components/shared';
-import { SectionHeading, SocialCard, Text } from '~/components/ui';
+import { TextList, Head, Main, Nav, Markdown } from '~/components/shared';
+import {
+  Accordion,
+  AccordionItem,
+  SectionHeading,
+  SocialCard,
+  Text,
+} from '~/components/ui';
 import type { Metadata } from '~/types';
+import { getPlaySignupData } from '~/lib/db/play';
 
 import keywords from '~/data/keywords.json';
-import signup from '~/data/signup.json';
 
+// Below the fold components
 const PlaySignupForm = lazy(() => import('~/forms/play-signup'));
 const Footer = lazy(() => import('~/components/shared/footer'));
 
@@ -37,7 +44,7 @@ interface RouteData {
 }
 
 export default function Signup(props: RouteSectionProps<RouteData>) {
-  const data = createMemo(() => signup.play);
+  const data = createAsync(() => getPlaySignupData());
 
   return (
     <>
@@ -95,7 +102,7 @@ export default function Signup(props: RouteSectionProps<RouteData>) {
             <Box w="full">
               <SectionHeading>What to Expect</SectionHeading>
               <TextList>
-                <Index each={data().expect}>
+                <Index each={data()?.expect}>
                   {(content) => (
                     <li>
                       <Text>
@@ -111,7 +118,7 @@ export default function Signup(props: RouteSectionProps<RouteData>) {
             <Box w="full">
               <SectionHeading>Why Join the Waitlist?</SectionHeading>
               <TextList>
-                <Index each={data().why}>
+                <Index each={data()?.why}>
                   {(content) => (
                     <li>
                       <Text>{content()}</Text>
@@ -128,7 +135,7 @@ export default function Signup(props: RouteSectionProps<RouteData>) {
             <Box w="full">
               <SectionHeading>What Happens Next?</SectionHeading>
               <TextList>
-                <Index each={data().next}>
+                <Index each={data()?.next}>
                   {(content) => (
                     <li>
                       <Text>
@@ -144,7 +151,7 @@ export default function Signup(props: RouteSectionProps<RouteData>) {
             <Box w="full">
               <SectionHeading>Beta Timeline</SectionHeading>
               <TextList>
-                <Index each={data().timeline}>
+                <Index each={data()?.timeline}>
                   {(content) => (
                     <li>
                       <Text>
@@ -167,7 +174,7 @@ export default function Signup(props: RouteSectionProps<RouteData>) {
                 }}
                 w="full"
               >
-                <Index each={data().community}>
+                <Index each={data()?.community}>
                   {(content) => (
                     <SocialCard
                       quote={content().quote}
@@ -180,7 +187,18 @@ export default function Signup(props: RouteSectionProps<RouteData>) {
 
             <Box w="full">
               <SectionHeading>FAQ</SectionHeading>
-              Make new accordion
+              <Accordion>
+                <For each={data()?.faq}>
+                  {(item) => (
+                    <AccordionItem
+                      heading={item.question}
+                      value={item.question}
+                    >
+                      <Markdown content={item.answer} />
+                    </AccordionItem>
+                  )}
+                </For>
+              </Accordion>
             </Box>
           </VStack>
         </Container>

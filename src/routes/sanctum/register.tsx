@@ -1,9 +1,14 @@
-import { Index, lazy, Suspense } from 'solid-js';
+import { For, Index, lazy, Suspense } from 'solid-js';
 import { Box, Container, VStack } from 'styled-system/jsx';
 import { createAsync, type RouteSectionProps } from '@solidjs/router';
-import { Footer, Main, Nav, TextList } from '~/components/shared';
+import { Footer, Main, Markdown, Nav, TextList } from '~/components/shared';
 import { Head } from '~/components/shared';
-import { SectionHeading, Text } from '~/components/ui';
+import {
+  Accordion,
+  AccordionItem,
+  SectionHeading,
+  Text,
+} from '~/components/ui';
 import type { Metadata } from '~/types';
 import { getSanctumRegisterData } from '~/lib/db';
 
@@ -146,7 +151,18 @@ export default function SanctumRegister(props: RouteSectionProps<RouteData>) {
 
             <Box w="full">
               <SectionHeading>FAQ</SectionHeading>
-              Make new accordion
+              <Accordion>
+                <For each={data()?.faq}>
+                  {(item) => (
+                    <AccordionItem
+                      heading={item.question}
+                      value={item.question}
+                    >
+                      <Markdown content={item.answer} />
+                    </AccordionItem>
+                  )}
+                </For>
+              </Accordion>
             </Box>
 
             <Box w="full">

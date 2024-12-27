@@ -1,6 +1,5 @@
 import { query } from '@solidjs/router';
-import { marked } from 'marked';
-import DOMPurify from 'dompurify';
+import { convertToHtml } from '~/scripts/generate';
 
 /**
  * Get the sanitized markdown content
@@ -8,7 +7,6 @@ import DOMPurify from 'dompurify';
  * @returns The sanitized markdown content
  */
 export const getMarkdownContent = query(async (content: string) => {
-  const rawMarkup = await marked(content);
-  const cleanMarkup = DOMPurify.sanitize(rawMarkup);
+  const cleanMarkup = await convertToHtml(content);
   return cleanMarkup;
 }, 'markdownContent');
