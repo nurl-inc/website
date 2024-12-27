@@ -22,7 +22,7 @@ import rehypeStringify from 'rehype-stringify';
  * @module
  */
 
-async function convertToHtml(content: string) {
+export async function convertToHtml(content: string) {
   try {
     const html = await unified()
       .use(remarkParse)
