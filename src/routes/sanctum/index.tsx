@@ -18,6 +18,9 @@ const FeatureShowcase = lazy(
 const SanctumPricing = lazy(
   () => import('~/components/routes/sanctum/pricing'),
 );
+const SanctumFinalCTA = lazy(
+  () => import('~/components/routes/sanctum/final-cta'),
+);
 
 /**
  * This module is the main entry point for the sanctum page.
@@ -64,6 +67,7 @@ export default function Sanctum(props: RouteSectionProps<RouteData>) {
           <PublisherValues />
           <FeatureShowcase />
           <SanctumPricing />
+          <SanctumFinalCTA />
         </Suspense>
       </Main>
 

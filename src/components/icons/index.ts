@@ -1,6 +1,7 @@
 export * from './arrow-right';
 export * from './book';
 export * from './cellar';
+export * from './check';
 export * from './check-circle';
 export * from './chevron-down';
 export * from './d20';
