@@ -74,22 +74,46 @@ export const pricingCard = defineSlotRecipe({
     palette: {
       primary: {
         root: {
-          bgColor: 'neutral.900',
-          color: 'white',
+          _sanctumTheme: {
+            bgColor: 'neutral.900',
+            color: 'white',
+          },
+          _playTheme: {
+            bgColor: 'transparent',
+            color: 'white',
+          },
         },
         icon: {
-          bgColor: '#3DF58765',
-          color: '#3DF587',
+          _sanctumTheme: {
+            bgColor: '#3DF58765',
+            color: '#3DF587',
+          },
+          _playTheme: {
+            bgColor: 'brand1.900',
+            color: 'brand1.600',
+          },
         },
       },
       secondary: {
         root: {
-          bgColor: 'page.text.alt',
-          color: 'brand2.1000',
+          _sanctumTheme: {
+            bgColor: 'page.text.alt',
+            color: 'brand2.1000',
+          },
+          _playTheme: {
+            bgColor: 'brand1.600',
+            color: 'black',
+          },
         },
         icon: {
-          bgColor: '#05200F65',
-          color: 'brand2.1000',
+          _sanctumTheme: {
+            bgColor: '#05200F65',
+            color: 'brand2.1000',
+          },
+          _playTheme: {
+            bgColor: '#05200F65',
+            color: 'brand2.1000',
+          },
         },
       },
     },

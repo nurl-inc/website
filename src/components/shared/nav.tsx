@@ -16,8 +16,8 @@ export default function Nav() {
 
   return (
     <>
-      <header>
-        <Container position="sticky" top="4" zIndex="sticky">
+      <header class={css({ position: 'sticky', top: 2, zIndex: 'sticky' })}>
+        <Container>
           <Box
             data-part="nav"
             backdropFilter="blur(15px)"

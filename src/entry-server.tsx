@@ -80,6 +80,11 @@ export default createHandler(() => (
         <body>
           <div id="app">{children}</div>
           {scripts}
+          <script
+            async
+            type="module"
+            src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"
+          />
         </body>
       </html>
     )}

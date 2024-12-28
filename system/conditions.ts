@@ -1,8 +1,8 @@
 export const conditions = {
   extend: {
     // themes
-    sanctumTheme: '[data-panda-theme=sanctum] &',
-    playTheme: '[data-panda-theme=play] &',
+    sanctumTheme: '[data-panda-theme=sanctum] &, &:is([data-theme=sanctum])',
+    playTheme: '[data-panda-theme=play] &, &:is([data-theme=play])',
 
     // modes
     lightMode: '[data-color-mode=light] &, &.light, .light &',
