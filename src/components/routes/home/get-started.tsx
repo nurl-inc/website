@@ -15,9 +15,9 @@ export default function GetStarted() {
 
   return (
     <Box
-      bgColor={{
-        _sanctumTheme: 'brand2.900',
-        _playTheme: 'brand1.1000',
+      bgGradient={{
+        _sanctumTheme: 'sanctumBigLinearStart',
+        _playTheme: 'playBigLinearStart',
       }}
       id="get-started"
       paddingBlockStart="16"

@@ -34,32 +34,57 @@ export const featureCard = defineRecipe({
 
     palette: {
       primary: {
-        bgColor: 'page.text.alt',
+        bgColor: {
+          _sanctumTheme: 'brand2.600',
+          _playTheme: 'brand1.500',
+        },
         color: '#14191A',
       },
       secondary: {
         bgGradient: 'primary',
         border: '1px solid',
-        borderColor: 'page.text.alt',
-        color: 'page.text.alt',
+        borderColor: {
+          _sanctumTheme: 'brand2.600',
+          _playTheme: 'brand1.500',
+        },
+        color: {
+          _sanctumTheme: 'brand2.600',
+          _playTheme: 'brand1.500',
+        },
         paddingBlockEnd: 'initial',
         textStyle: 'heading-sm',
         textTransform: 'initial',
       },
       tertiary: {
-        bgGradient: 'secondary',
+        bgColor: {
+          _sanctumTheme: 'brand2.1000',
+          _playTheme: 'brand1.1000',
+        },
         border: '1px solid',
-        borderColor: 'page.text.alt',
-        color: 'page.text.initial',
+        borderColor: {
+          _sanctumTheme: 'brand2.600',
+          _playTheme: 'brand1.500',
+        },
+        color: {
+          _sanctumTheme: 'brand2.600',
+          _playTheme: 'brand1.500',
+        },
         paddingBlockEnd: 'initial',
         textStyle: 'heading-sm',
         textTransform: 'initial',
       },
       accent: {
-        bgColor: 'brand2.700',
+        bgColor: {
+          _sanctumTheme: 'brand2.700',
+          _playTheme: 'brand1.700',
+        },
         border: '1px solid',
-        borderColor: 'page.text.alt',
+        borderColor: {
+          _sanctumTheme: 'brand2.600',
+          _playTheme: 'brand1.600',
+        },
         color: 'white',
+        paddingBlockEnd: 'initial',
       },
     },
   },

@@ -1,7 +1,7 @@
 import { Tabs as KTabs } from '@kobalte/core/tabs';
 import type { TabsContentProps, TabsRootProps } from '@kobalte/core/tabs';
 import { For, splitProps, type ParentProps } from 'solid-js';
-import { tabs } from 'styled-system/recipes';
+import { tabs, type TabsVariantProps } from 'styled-system/recipes';
 
 /**
  * This module is a wrapper around the Kobalte Tabs component. We have to use
@@ -9,7 +9,7 @@ import { tabs } from 'styled-system/recipes';
  * @module Tabs
  */
 
-interface TabsProps extends TabsRootProps {
+interface TabsProps extends TabsRootProps, TabsVariantProps {
   tabs: {
     id: string;
     label: string;

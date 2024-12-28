@@ -23,6 +23,10 @@ export default function KeyFeatures() {
 
   return (
     <Box
+      bgGradient={{
+        _sanctumTheme: 'sanctumBigLinearEnd',
+        _playTheme: 'playBigLinearEnd',
+      }}
       paddingBlockStart="20"
       paddingBlockEnd="32"
       paddingInline="8"
@@ -81,7 +85,10 @@ function KeyFeaturesHeading(props: { main: string; sub: string }) {
   return (
     <h2
       class={css({
-        color: '#10EAAC',
+        color: {
+          _sanctumTheme: 'brand2.600',
+          _playTheme: 'brand1.600',
+        },
         lineHeight: 1,
         maxW: '46rem',
         mx: 'auto',
