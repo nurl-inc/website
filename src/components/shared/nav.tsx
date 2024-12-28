@@ -16,7 +16,7 @@ export default function Nav() {
 
   return (
     <>
-      <header class={css({ position: 'sticky', top: 0, zIndex: 'sticky' })}>
+      <header class={css({ position: 'sticky', top: 2, zIndex: 'sticky' })}>
         <Container>
           <Box
             data-part="nav"
