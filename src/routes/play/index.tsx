@@ -12,6 +12,8 @@ const FeatureShowcase = lazy(
   () => import('~/components/routes/play/feature-showcase'),
 );
 const Pricing = lazy(() => import('~/components/routes/play/pricing'));
+const SocialProof = lazy(() => import('~/components/routes/home/social-proof'));
+const FinalCTA = lazy(() => import('~/components/routes/play/final-cta'));
 
 /**
  * This module is the main entry point for the sanctum page.
@@ -51,6 +53,8 @@ export default function Play(props: RouteSectionProps<RouteData>) {
         <Suspense>
           <FeatureShowcase />
           <Pricing />
+          <SocialProof />
+          <FinalCTA />
         </Suspense>
       </Main>
 
