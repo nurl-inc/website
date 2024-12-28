@@ -2,17 +2,17 @@ import { createAsync, type RouteSectionProps } from '@solidjs/router';
 import { createMemo, createSignal, For, onMount, Show } from 'solid-js';
 import { Box, Container, HStack, VStack } from 'styled-system/jsx';
 import { PricingCard } from '~/components/ui/pricing-card';
-import { Footer, Main, Markdown, Nav } from '~/components/shared';
+import { Footer, Main, Markdown, Nav, TextList } from '~/components/shared';
 import { Head } from '~/components/shared';
 import { Accordion, AccordionItem, Link, Tabs, Text } from '~/components/ui';
 import type { Metadata } from '~/types';
-
-import keywords from '~/data/keywords.json';
-import { getSanctumPricingFaqData } from '~/lib/db';
 import { staggerFadeIn } from '~/lib/motion';
 import { MailIcon } from '~/components/icons';
 import { css } from 'styled-system/css';
-import { getPlayPricingData } from '~/lib/db/play';
+import { getPlayPricingPageData } from '~/lib/db/play';
+
+import keywords from '~/data/keywords.json';
+import HeroQuote from '~/components/ui/hero-quote';
 
 /**
  * This module is the main entry point for the play page.
@@ -41,8 +41,7 @@ interface RouteData {
 export default function PlayPricing(props: RouteSectionProps<RouteData>) {
   const [activePrice, setActivePrice] = createSignal<'1' | '2'>('1');
 
-  const data = createAsync(() => getPlayPricingData());
-  const faqData = createAsync(() => getSanctumPricingFaqData());
+  const data = createAsync(() => getPlayPricingPageData());
 
   const tabs = createMemo(() => {
     return [
@@ -76,7 +75,7 @@ export default function PlayPricing(props: RouteSectionProps<RouteData>) {
                 md: 'heading-lg',
               }}
             >
-              Transform Your Game Development
+              Enhance Your Tabletop Experience
             </Text>
             <Text
               textStyle={{
@@ -84,8 +83,8 @@ export default function PlayPricing(props: RouteSectionProps<RouteData>) {
                 md: 'body-xl',
               }}
             >
-              Choose the plan that fits your creative vision. All plans include
-              our core visual system mapping and testing tools.
+              Keep the physical play you love while automating the complex.
+              Choose the plan that fits your group's style.
             </Text>
 
             <Text
@@ -108,7 +107,7 @@ export default function PlayPricing(props: RouteSectionProps<RouteData>) {
                 tabs={tabs()}
                 value={activePrice()}
               >
-                <Show when={data()?.products?.length}>
+                <Show when={data()?.pricing?.products?.length}>
                   <HStack
                     flexWrap="wrap"
                     gap="4"
@@ -116,7 +115,7 @@ export default function PlayPricing(props: RouteSectionProps<RouteData>) {
                     paddingBlockStart="12"
                     w="full"
                   >
-                    <For each={data()?.products}>
+                    <For each={data()?.pricing?.products}>
                       {(product) => (
                         <PricingCard
                           {...product}
@@ -145,7 +144,7 @@ export default function PlayPricing(props: RouteSectionProps<RouteData>) {
                       paddingBlockStart="12"
                       w="full"
                     >
-                      <For each={data()?.addOns}>
+                      <For each={data()?.pricing?.addOns}>
                         {(addOn) => (
                           <PricingCard
                             {...addOn}
@@ -161,12 +160,81 @@ export default function PlayPricing(props: RouteSectionProps<RouteData>) {
             </Box>
 
             <Box
-              paddingBlock={{
+              paddingBlockStart={{
                 base: '20',
-                md: '32',
+                md: '44',
               }}
+              paddingBlockEnd="20"
               w="full"
             >
+              <Text
+                as="h2"
+                lineHeight="1.2"
+                paddingBlockEnd="10"
+                textStyle={{
+                  base: 'heading-sm',
+                  md: 'heading-md',
+                }}
+              >
+                All Plans Include
+              </Text>
+
+              <Show when={data()?.features?.include}>
+                <Text as="h3" textStyle="heading-xs">
+                  Core Features
+                </Text>
+                <TextList>
+                  <For each={data()?.features?.include.core}>
+                    {(item) => <li>{item}</li>}
+                  </For>
+                </TextList>
+
+                <Text as="h3" textStyle="heading-xs">
+                  Security &amp; Support
+                </Text>
+                <TextList>
+                  <For each={data()?.features?.include.security}>
+                    {(item) => <li>{item}</li>}
+                  </For>
+                </TextList>
+              </Show>
+            </Box>
+
+            <Box paddingBlockEnd="20" w="full">
+              <Text
+                as="h2"
+                lineHeight="1.2"
+                paddingBlockEnd="10"
+                textStyle={{
+                  base: 'heading-sm',
+                  md: 'heading-md',
+                }}
+              >
+                Made for Every Player
+              </Text>
+
+              <Show when={data()?.features?.madeFor}>
+                <Text as="h3" textStyle="heading-xs">
+                  Players
+                </Text>
+                <TextList>
+                  <For each={data()?.features?.madeFor.players}>
+                    {(item) => <li>{item}</li>}
+                  </For>
+                </TextList>
+
+                <Text as="h3" textStyle="heading-xs">
+                  Game Masters
+                </Text>
+                <TextList>
+                  <For each={data()?.features?.madeFor.gameMasters}>
+                    {(item) => <li>{item}</li>}
+                  </For>
+                </TextList>
+              </Show>
+            </Box>
+
+            <Box paddingBlockEnd="24" w="full">
               <Text
                 as="h2"
                 lineHeight="1.2"
@@ -179,9 +247,9 @@ export default function PlayPricing(props: RouteSectionProps<RouteData>) {
                 Frequently Asked Questions
               </Text>
 
-              <Show when={faqData()}>
+              <Show when={data()?.faq?.length}>
                 <Accordion>
-                  <For each={faqData()}>
+                  <For each={data()?.faq}>
                     {(item) => (
                       <AccordionItem
                         heading={item.question}
@@ -193,6 +261,77 @@ export default function PlayPricing(props: RouteSectionProps<RouteData>) {
                   </For>
                 </Accordion>
               </Show>
+            </Box>
+
+            <Box w="full">
+              <Text
+                as="h2"
+                lineHeight="1.2"
+                paddingBlockEnd="10"
+                textStyle={{
+                  base: 'heading-sm',
+                  md: 'heading-md',
+                }}
+              >
+                Why Players Love Nurl Play
+              </Text>
+
+              <Show when={data()?.features?.madeFor}>
+                <Text as="h3" textStyle="heading-xs">
+                  Alpha Success Metrics
+                </Text>
+                <TextList>
+                  <li>40% less time spent on rules lookup</li>
+                  <li>60% faster combat resolution</li>
+                  <li>90% reduction in math errors</li>
+                  <li>75% less time tracking states</li>
+                </TextList>
+              </Show>
+            </Box>
+
+            <Box paddingBlockStart="20" w="full">
+              <Container
+                maxWidth="70rem"
+                paddingBlock="36"
+                paddingInline="8"
+                w="full"
+                md={{
+                  paddingBlockEnd: 'initial',
+                }}
+              >
+                <VStack w="full">
+                  <Text
+                    as="h2"
+                    id="social-proof-heading"
+                    lineHeight="1"
+                    fontSize="lg"
+                    textStyle="heading-xs"
+                    textWrap="balance"
+                  >
+                    Tales from the Nurl tavern
+                  </Text>
+
+                  <VStack
+                    justify="center"
+                    gap="4"
+                    paddingBlock="24"
+                    w="full"
+                    md={{
+                      gap: 6,
+                      paddingBlock: 56,
+                    }}
+                  >
+                    <HeroQuote
+                      author="Alex, D&D Player"
+                      quote="Finally, I can focus on the story instead of constantly checking rules."
+                    />
+                    <HeroQuote
+                      author="Sarah, Game Master"
+                      quote="My group's combat flows like a video game now, but we still get to roll our dice!"
+                    />
+                  </VStack>
+                </VStack>
+              </Container>
             </Box>
 
             <Box w="full">
@@ -215,8 +354,7 @@ export default function PlayPricing(props: RouteSectionProps<RouteData>) {
                   md: 'body-xl',
                 }}
               >
-                Transform your game development with modern tools designed for
-                modern publishers.
+                Ask us how Nurl Play can enhance your tabletop experience today.
               </Text>
 
               <Box paddingBlockStart="12" w="full">
