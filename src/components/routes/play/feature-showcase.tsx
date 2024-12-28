@@ -1,4 +1,5 @@
 import { onCleanup, onMount, type ParentProps } from 'solid-js';
+import { css } from 'styled-system/css';
 import { Box, Container, HStack, VStack } from 'styled-system/jsx';
 import D20Icon from '~/components/icons/d20';
 import { Text } from '~/components/ui';
@@ -156,6 +157,20 @@ export default function FeatureShowcase() {
               rounded="md"
               w="full"
             >
+              <Box paddingBlockEnd="8" maxW="20rem" w="full">
+                <img
+                  class={css({
+                    objectFit: 'cover',
+                    objectPosition: 'center',
+                    width: '100%',
+                    height: '100%',
+                  })}
+                  alt="Dungeons & Dragons logo"
+                  decoding="async"
+                  loading="lazy"
+                  src="/images/dnd-logo.webp"
+                />
+              </Box>
               <FeatureCardHeading>Play Any System</FeatureCardHeading>
               <FeatureCardText>
                 From D&D to indie games, Nurl Play works with every system in

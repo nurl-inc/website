@@ -1,0 +1,32 @@
+{
+  "include": {
+    "core": [
+      "Real-time automation",
+      "Character tracking",
+      "Rule validation",
+      "Basic chat"
+    ],
+    "security": [
+      "Regular backups",
+      "Discord community",
+      "Help center access",
+      "Regular updates"
+    ]
+  },
+  "madeFor": {
+    "players": [
+      "Focus on your character",
+      "Quick rule reference",
+      "Automated calculations",
+      "State tracking",
+      "Inventory management"
+    ],
+    "gameMasters": [
+      "Run smoother sessions",
+      "Track multiple NPCs",
+      "Manage encounters",
+      "Rule lookup and validation",
+      "Session planning"
+    ]
+  }
+}

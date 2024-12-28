@@ -30,7 +30,7 @@ interface PricingCardProps {
 }
 
 export function PricingCard(props: PricingCardProps & PricingCardVariantProps) {
-  const [{ palette, variant }, rest] = splitProps(props, [
+  const [{ palette, variant = 'sanctum' }, rest] = splitProps(props, [
     'palette',
     'variant',
   ]);
@@ -52,10 +52,14 @@ export function PricingCard(props: PricingCardProps & PricingCardVariantProps) {
           >
             <Text class={styles.heading}>{rest.name}</Text>
 
-            <Show when={rest.activePrice === '2'}>
+            <Show when={rest.activePrice === '2' && rest.savings}>
               <Text
+                data-theme={variant}
                 as="span"
-                bgGradient="play50"
+                bgGradient={{
+                  _sanctumTheme: 'play50',
+                  _playTheme: 'sanctum50',
+                }}
                 color="black"
                 display="inline-block"
                 fontSize="md"
@@ -144,7 +148,13 @@ export function PricingCard(props: PricingCardProps & PricingCardVariantProps) {
 
         <Show
           when={props.teaser}
-          fallback={<Link href={rest.actionLink}>request access</Link>}
+          fallback={
+            <Link href={rest.actionLink}>
+              <Show when={variant === 'sanctum'} fallback={<>join waitlist</>}>
+                request access
+              </Show>
+            </Link>
+          }
         >
           <Link href={rest.teaserLink}>Learn More</Link>
         </Show>
