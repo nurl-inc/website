@@ -68,7 +68,14 @@ export function FeatureCardWithPointsItem(
         paddingBlock: 6,
       }}
     >
-      <Circle size="11" bg="page.text.alt" p="2">
+      <Circle
+        bg={{
+          _sanctumTheme: 'brand2.600',
+          _playTheme: 'brand1.500',
+        }}
+        p="2"
+        size="11"
+      >
         {props.icon}
       </Circle>
       <p
@@ -116,7 +123,6 @@ export function HeadingFeatureCard(
             lineHeight="1"
             paddingBlockEnd="4"
             textStyle="heading-sm"
-            textTransform="uppercase"
             textWrap="pretty"
             md={{
               textStyle: 'heading-md',
@@ -126,9 +132,7 @@ export function HeadingFeatureCard(
           </Text>
           <Show when={props.description}>
             <Text
-              as="p"
               textStyle="body-md"
-              textWrap="pretty"
               md={{
                 w: '2/3',
               }}

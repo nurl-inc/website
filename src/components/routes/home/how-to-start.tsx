@@ -34,7 +34,10 @@ export default function HowToStart() {
 
   return (
     <Box
-      bgGradient="bigGlow"
+      bgGradient={{
+        _sanctumTheme: 'bigGlow',
+        _playTheme: 'playGlow',
+      }}
       paddingBlock="28"
       w="full"
       md={{

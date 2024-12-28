@@ -13,7 +13,9 @@ const headingStyles = {
 const bodyStyles = {
   fontFamily: 'sans',
   fontStyle: 'normal',
-  fontWeight: '400',
+  fontFeatureSettings:
+    "'calt' 1, 'liga' 1, 'rlig' 1, 'rvrn' 1, 'kern' 1, 'rclt' 1",
+  fontVariationSettings: "'wght' 400",
   textWrap: 'pretty',
 };
 

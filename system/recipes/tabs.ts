@@ -66,6 +66,7 @@ export const tabs = defineSlotRecipe({
       bottom: 0,
       h: 'full',
       left: 0,
+      minW: '1/2',
       opacity: 0,
       position: 'absolute',
       top: 0,

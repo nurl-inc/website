@@ -85,12 +85,12 @@ export default function KeyPlayFeatures() {
         <HeadingFeatureCard
           heading="Customizable"
           description="Install or build custom plugins to enhance and personalize your experience."
-          palette="secondary"
+          palette="tertiary"
         />
         <HeadingFeatureCard
           heading="Realtime Group Chat"
           description="Talk, get help, or share quick links to anything in the game."
-          palette="tertiary"
+          palette="accent"
         >
           <Box
             borderTopLeftRadius="md"

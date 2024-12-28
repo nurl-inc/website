@@ -24,6 +24,18 @@ export const gradients = {
   play50: {
     value: 'linear-gradient(90deg, #0DE7F2 25%, #6EF0F7 100%)',
   },
+  playBigLinearStart: {
+    value: 'linear-gradient(180deg, black 0%, #032E30 100%)',
+  },
+  playBigLinearEnd: {
+    value: 'linear-gradient(180deg, #032E30 0%, black 100%)',
+  },
+  sanctumBigLinearStart: {
+    value: 'linear-gradient(180deg, black 0%, #032F22 100%)',
+  },
+  sanctumBigLinearEnd: {
+    value: 'linear-gradient(180deg, #032F22 0%, black 100%)',
+  },
   sanctum50: {
     value: 'linear-gradient(90deg, #70F2CD 25%, #0DF2B1 100%)',
   },
