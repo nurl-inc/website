@@ -104,17 +104,6 @@ export default function FinalCTA() {
           w="full"
           h="full"
           zIndex="base"
-          _before={{
-            bgColor: '#10EAAC',
-            content: '""',
-            h: 'full',
-            left: 0,
-            mixBlendMode: 'hue',
-            position: 'absolute',
-            top: 0,
-            w: 'full',
-            zIndex: 'decorator',
-          }}
         />
       </Box>
     </Box>
