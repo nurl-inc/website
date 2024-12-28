@@ -1,0 +1,88 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Free",
+      "description": "Try the basics",
+      "basePrice": 0,
+      "savings": "",
+      "features": [
+        "Basic real-time automation",
+        "Single character",
+        "Core ruleset",
+        "Combat assistance",
+        "Rule validation",
+        "Basic chat",
+        "Community support"
+      ],
+      "action": "Get Started Free",
+      "actionLink": "/play/signup?plan=free",
+      "teaserLink": "/play/pricing?plan=free"
+    },
+    {
+      "id": "2",
+      "name": "Player",
+      "description": "Level up your game",
+      "monthlyPrice": 9.99,
+      "annualPrice": 95.88,
+      "savings": "$24 savings",
+      "features": [
+        "Everything in Free",
+        "Full real-time automation",
+        "Multiple characters",
+        "All rulesets",
+        "Basic group tools",
+        "10k tokens/month"
+      ],
+      "action": "Start FreeTrial",
+      "actionLink": "/play/signup?plan=player",
+      "teaserLink": "/play/pricing?plan=player"
+    },
+    {
+      "id": "3",
+      "name": "Game Master",
+      "description": "Perfect for your whole party",
+      "monthlyPrice": 29.99,
+      "annualPrice": 287.88,
+      "savings": "$72 savings",
+      "features": [
+        "Everything in Player",
+        "Up to 6 connected players",
+        "Advanced group tools",
+        "Priority support",
+        "Session recording",
+        "Campaign management",
+        "30k tokens/month"
+      ],
+      "action": "Start FreeTrial",
+      "actionLink": "/play/signup?plan=game-master",
+      "teaserLink": "/play/pricing?plan=game-master"
+    }
+  ],
+  "addOns": [
+    {
+      "id": "1A",
+      "name": "Extra Player Slots",
+      "description": "Add extra players to your game",
+      "monthlyPrice": 4.99,
+      "annualPrice": 47.88,
+      "savings": "20% savings",
+      "features": ["Price per player", "No limit", "Perfect for large groups"],
+      "action": "Select Add-On",
+      "actionLink": "/play/signup?addOn=1A",
+      "teaserLink": "/play/pricing?addOn=1A"
+    },
+    {
+      "id": "1B",
+      "name": "Additional Tokens",
+      "description": "Add more tokens to your game",
+      "monthlyPrice": 4.99,
+      "annualPrice": 47.88,
+      "savings": "20% savings",
+      "features": ["Price per 10k tokens"],
+      "action": "Select Add-On",
+      "actionLink": "/play/signup?addOn=1B",
+      "teaserLink": "/play/pricing?addOn=1B"
+    }
+  ]
+}

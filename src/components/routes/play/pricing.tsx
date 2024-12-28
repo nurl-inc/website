@@ -3,14 +3,14 @@ import { For, onMount } from 'solid-js';
 import { Box, Container, HStack } from 'styled-system/jsx';
 import { Text } from '~/components/ui';
 import { PricingCard } from '~/components/ui/pricing-card';
-import { getSanctumPricingData } from '~/lib/db';
+import { getPlayPricingData } from '~/lib/db/play';
 import { scrollFadeInOut } from '~/lib/motion';
 
 export default function PlayPricing() {
-  const data = createAsync(() => getSanctumPricingData());
+  const data = createAsync(() => getPlayPricingData());
 
   onMount(() => {
-    const target = document.getElementById('sanctum-pricing-heading');
+    const target = document.getElementById('play-pricing-heading');
     scrollFadeInOut(target);
   });
 
@@ -26,7 +26,7 @@ export default function PlayPricing() {
       <Container>
         <Text
           as="h2"
-          id="sanctum-pricing-heading"
+          id="play-pricing-heading"
           textAlign="center"
           textStyle={{
             base: 'heading-sm',
@@ -50,7 +50,7 @@ export default function PlayPricing() {
             {(item, index) => (
               <PricingCard
                 {...item}
-                palette={index() === 1 ? 'secondary' : 'primary'}
+                palette={index() === 2 ? 'secondary' : 'primary'}
                 teaser
                 variant="play"
               />

@@ -37,7 +37,7 @@ export function PricingCard(props: PricingCardProps & PricingCardVariantProps) {
   const styles = pricingCard({ palette });
 
   const price = createMemo(() => {
-    if (rest.basePrice) return rest.basePrice;
+    if (rest.basePrice != null) return rest.basePrice;
     return rest.activePrice !== '2' ? rest.monthlyPrice : rest.annualPrice;
   });
 
@@ -99,6 +99,9 @@ export function PricingCard(props: PricingCardProps & PricingCardVariantProps) {
             textTransform="uppercase"
           >
             <Switch>
+              <Match when={rest.basePrice === 0}>
+                <Text>/free forever</Text>
+              </Match>
               <Match when={rest.activePrice === '2'}>
                 <Text>/yr</Text>
               </Match>
