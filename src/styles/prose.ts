@@ -6,28 +6,25 @@ import { css } from 'styled-system/css';
 export const proseCss = css.raw({
   color: 'page.text.initial',
   '& h1': {
-    marginBottom: 4,
     textStyle: 'heading-lg',
   },
   '& h2': {
-    marginBottom: 4,
     textStyle: 'heading-md',
   },
   '& h3': {
-    marginBottom: 4,
     textStyle: 'heading-sm',
   },
   '& h4': {
-    marginBottom: 4,
     textStyle: 'heading-xs',
   },
   '& h5': {
-    marginBottom: 4,
     textStyle: 'heading-xs',
   },
   '& h6': {
-    marginBottom: 4,
     textStyle: 'heading-xs',
+  },
+  '& :is(h1, h2, h3, h4, h5, h6)': {
+    marginBlock: 8,
   },
   '& :is(h1, h2, h3, h4, h5, h6) > a': {
     display: 'inline-block',
@@ -38,7 +35,7 @@ export const proseCss = css.raw({
     },
   },
   '& p': {
-    marginBottom: 4,
+    marginBlockEnd: 10,
     textStyle: 'body-md',
   },
   '& strong': {

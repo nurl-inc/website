@@ -120,10 +120,45 @@ async function generateBlog() {
   }
 }
 
+/**
+ * Generate the legal documents via a single JSON file used to dynamically
+ * load the legal documents on the client in the [...legalSlug].tsx route.
+ */
+async function generateFooter() {
+  try {
+    const footerDir = path.join(process.cwd(), 'src', 'content', 'footer');
+    const files = fs.readdirSync(footerDir);
+
+    // Create the data/generated directory
+    const generatedDir = path.join(process.cwd(), 'src', 'data', 'generated');
+    fs.mkdirSync(generatedDir, { recursive: true });
+
+    // Create an object to store all legal documents
+    const footerDocs: Record<string, string> = {};
+
+    // Convert each file to HTML and add to the legalDocs object
+    for (const file of files) {
+      const content = fs.readFileSync(path.join(footerDir, file), 'utf8');
+      const html = await convertToHtml(content);
+      // Remove the .md extension from the key
+      const key = file.replace(/\.md$/, '');
+      footerDocs[key] = html;
+    }
+
+    // Save all documents to a single JSON file
+    const jsonFile = path.join(generatedDir, 'footer.json');
+    fs.writeFileSync(jsonFile, JSON.stringify(footerDocs, null, 2));
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+}
+
 async function generate() {
   try {
     await generateLegal();
     await generateBlog();
+    await generateFooter();
     console.log('Generated all files ✅');
   } catch (error) {
     console.error(error);
