@@ -73,6 +73,7 @@ export default function FeatureShowcase() {
             overflowX="hidden"
             paddingBlock="8"
             paddingInline="6"
+            position="relative"
             rounded="md"
             w="full"
             md={{
@@ -84,24 +85,29 @@ export default function FeatureShowcase() {
           >
             <FeatureCardHeading>Automate the complex</FeatureCardHeading>
 
-            <HStack
-              h={{
-                base: '11rem',
-                md: '21rem',
-              }}
-              marginBlock="10"
-              w="200%"
-            >
-              <Box bgColor="page.surface.100" h="full" rounded="lg" w="1/2" />
-              <Box bgColor="page.surface.100" h="full" rounded="lg" w="1/2" />
-            </HStack>
+            {/* <Box position="absolute" top="0" left="0" w="full" h="full">
+              <img
+                alt="Dungeons & Dragons logo"
+                decoding="async"
+                loading="lazy"
+                src="/images/dnd-logo.webp"
+              />
+            </Box> */}
 
-            <FeatureCardText>
-              Focus on the story while{' '}
-              <FeatureAccentText>
-                Nurl handles the math, tracking, and rule-checking.
-              </FeatureAccentText>
-            </FeatureCardText>
+            <Box
+              paddingBlockStart={{
+                base: '11rem',
+                md: '26.1rem',
+              }}
+              w="full"
+            >
+              <FeatureCardText>
+                Focus on the story while{' '}
+                <FeatureAccentText>
+                  Nurl handles the math, tracking, and rule-checking.
+                </FeatureAccentText>
+              </FeatureCardText>
+            </Box>
           </Box>
 
           <VStack gap="7" h="full" w={{ base: 'full', md: 'calc(50% - 3rem)' }}>
@@ -140,8 +146,9 @@ export default function FeatureShowcase() {
                   md: 'block',
                 }}
                 position="absolute"
-                right="-20"
+                right="-32"
                 top="-10"
+                transform="rotate(10deg)"
                 w="2/3"
                 zIndex="decorator"
               >

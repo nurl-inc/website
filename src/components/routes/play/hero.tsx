@@ -1,6 +1,5 @@
-import { css } from 'styled-system/css';
 import { VStack, Box } from 'styled-system/jsx';
-import { Link, Text } from '~/components/ui';
+import { Image, Link, Text } from '~/components/ui';
 
 export default function PlayHero() {
   return (
@@ -33,16 +32,8 @@ export default function PlayHero() {
           zIndex: 'base',
         }}
       >
-        <img
-          class={css({
-            objectFit: 'cover',
-            objectPosition: 'center',
-            width: '100%',
-            height: '100%',
-          })}
+        <Image
           alt="Sanctum screenshot preview"
-          decoding="async"
-          loading="lazy"
           src="/images/play.webp"
           srcSet="/images/play-mobile.webp 664w, /images/play.webp 1846w"
           sizes="(max-width: 300px) 1024px, 2048px"
