@@ -8,6 +8,7 @@ export default function DownloadIcon(props: IconProps) {
       stroke-width="1.5"
       color={props.color ?? fallbackColor}
       viewBox="0 0 24 24"
+      {...props}
     >
       <path
         stroke={props.color ?? fallbackColor}

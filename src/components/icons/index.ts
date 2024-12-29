@@ -20,5 +20,6 @@ export * from './test-tube';
 
 export interface IconProps {
   color?: string;
+  'stroke-width'?: string;
 }
 export const fallbackColor = 'currentColor';
