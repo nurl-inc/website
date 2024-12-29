@@ -55,6 +55,10 @@
   ],
   "community": [
     {
+      "name": "Blue Sky",
+      "href": "https://bsky.app/profile/nurl-ttrpg.bsky.social/"
+    },
+    {
       "name": "X",
       "href": "https://x.com/NurlApp/"
     },
