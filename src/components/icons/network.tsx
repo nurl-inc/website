@@ -8,6 +8,7 @@ export function NetworkIcon(props: IconProps) {
       stroke-width="1.5"
       color={props.color ?? fallbackColor}
       viewBox="0 0 24 24"
+      {...props}
     >
       <rect
         width="7"

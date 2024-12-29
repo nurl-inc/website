@@ -42,9 +42,11 @@ export const pricingCard = defineSlotRecipe({
       textStyle: 'body-lg',
     },
     price: {
+      letterSpacing: '-0.04em',
       lineHeight: 1,
+      fontSize: '4rem',
       fontStyle: 'normal',
-      textStyle: 'heading-lg',
+      fontVariationSettings: "'wght' 700",
     },
     content: {
       display: 'flex',

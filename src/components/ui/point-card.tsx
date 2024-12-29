@@ -44,28 +44,28 @@ export default function PointCard(props: PointCardProps) {
           <Box w="24">
             <Switch>
               <Match when={props.icon === 'home'}>
-                <HomeIcon />
+                <HomeIcon stroke-width="1" />
               </Match>
               <Match when={props.icon === 'transfer'}>
-                <NetworkIcon />
+                <NetworkIcon stroke-width="1" />
               </Match>
               <Match when={props.icon === 'stats'}>
-                <StatsIcon />
+                <StatsIcon stroke-width="1" />
               </Match>
               <Match when={props.icon === 'cellar'}>
-                <CellarIcon />
+                <CellarIcon stroke-width="1" />
               </Match>
               <Match when={props.icon === 'download'}>
-                <DownloadIcon />
+                <DownloadIcon stroke-width="1" />
               </Match>
               <Match when={props.icon === 'star'}>
-                <StarIcon />
+                <StarIcon stroke-width="1" />
               </Match>
               <Match when={props.icon === 'd20'}>
-                <D20Icon />
+                <D20Icon stroke-width="1" />
               </Match>
               <Match when={props.icon === 'test-tube'}>
-                <TestTubeIcon />
+                <TestTubeIcon stroke-width="1" />
               </Match>
             </Switch>
           </Box>

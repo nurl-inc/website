@@ -30,7 +30,6 @@ export default function Nav() {
               w="full"
               md={{
                 justifyContent: 'space-between',
-                paddingInline: '6.75rem',
               }}
             >
               <Button
