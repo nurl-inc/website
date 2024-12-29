@@ -58,7 +58,7 @@ export default function SanctumHero() {
         zIndex="dropdown"
         md={{
           position: 'absolute',
-          left: 0,
+          left: 16,
           top: '23%',
         }}
       >
