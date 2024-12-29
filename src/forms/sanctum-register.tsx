@@ -1,7 +1,8 @@
+import { CaptchaFox } from '@captchafox/solid';
 import { action, redirect, useSubmission } from '@solidjs/router';
 import { track } from '@vercel/analytics';
-import { Show } from 'solid-js';
-import { Box, Divider } from 'styled-system/jsx';
+import { createSignal, Show } from 'solid-js';
+import { Box, Divider, VStack } from 'styled-system/jsx';
 import { vstack } from 'styled-system/patterns';
 import { Spinner } from '~/components/icons';
 import {
@@ -80,6 +81,7 @@ const sanctumRegisterAction = action(async (formData: FormData) => {
 }, 'sanctum-register');
 
 export default function SanctumRegisterForm() {
+  const [verified, setVerified] = createSignal<boolean>(false);
   const submission = useSubmission(sanctumRegisterAction);
 
   return (
@@ -289,8 +291,13 @@ export default function SanctumRegisterForm() {
             helperText="So we know more about your needs."
           />
 
-          <Box marginBlockStart="4" w="full">
-            <Button disabled={submission.pending} type="submit">
+          <VStack alignItems="flex-start" gap="6" marginBlockStart="4" w="full">
+            <CaptchaFox
+              sitekey={import.meta.env.VITE_FOX_KEY}
+              onVerify={() => setVerified(true)}
+            />
+
+            <Button disabled={submission.pending || !verified()} type="submit">
               <Show
                 when={submission.pending}
                 fallback={<>Request Beta Access</>}
@@ -299,7 +306,7 @@ export default function SanctumRegisterForm() {
                 Submitting
               </Show>
             </Button>
-          </Box>
+          </VStack>
         </form>
       </Box>
     </>

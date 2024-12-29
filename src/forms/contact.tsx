@@ -1,5 +1,6 @@
 import { action, redirect, useSubmission } from '@solidjs/router';
-import { Show } from 'solid-js';
+import { createSignal, Show } from 'solid-js';
+import { CaptchaFox } from '@captchafox/solid';
 import { Box, Divider, VStack } from 'styled-system/jsx';
 import { vstack } from 'styled-system/patterns';
 import { Spinner } from '~/components/icons';
@@ -45,6 +46,7 @@ const contactAction = action(async (formData: FormData) => {
 }, 'contact');
 
 export default function ContactForm() {
+  const [verified, setVerified] = createSignal<boolean>(false);
   const submission = useSubmission(contactAction);
 
   return (
@@ -163,8 +165,12 @@ export default function ContactForm() {
             required
           />
 
-          <VStack alignItems="flex-start" gap="2" marginBlockStart="4" w="full">
-            <Button disabled={submission.pending} type="submit">
+          <VStack alignItems="flex-start" gap="6" marginBlockStart="4" w="full">
+            <CaptchaFox
+              sitekey={import.meta.env.VITE_FOX_KEY}
+              onVerify={() => setVerified(true)}
+            />
+            <Button disabled={submission.pending || !verified()} type="submit">
               <Show when={submission.pending} fallback={<>Submit Request</>}>
                 <Spinner />
                 Submitting
