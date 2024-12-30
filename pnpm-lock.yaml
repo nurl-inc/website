@@ -53,7 +53,7 @@ importers:
     devDependencies:
       '@ark-ui/anatomy':
         specifier: ^3.5.0
-        version: 3.5.0(@internationalized/date@3.5.5)
+        version: 3.5.0(@internationalized/date@3.6.0)
       '@eslint/js':
         specifier: ^9.17.0
         version: 9.17.0
@@ -61,8 +61,8 @@ importers:
         specifier: ^0.49.0
         version: 0.49.0(jsdom@25.0.1)(typescript@5.7.2)
       '@pandacss/types':
-        specifier: ^0.49.0
-        version: 0.49.0
+        specifier: ^0.50.0
+        version: 0.50.0
       '@types/marked':
         specifier: ^6.0.0
         version: 6.0.0
@@ -1036,6 +1036,9 @@ packages:
 
   '@pandacss/types@0.49.0':
     resolution: {integrity: sha512-Chmgjci8ycjxEIaL0DIs9ie0O8XW6Q0zByyuKe/NkBOFM06U+I6OrAK18qUmfseeGzpQdp3iaRirVlMvrYtJrg==}
+
+  '@pandacss/types@0.50.0':
+    resolution: {integrity: sha512-IP+MC7QmP5biXbzTfubi5XHR2FpBI+6dEfK2+PLKMPm/PphNkeSI8AZ3rPCmbAuEck2WnjsyckpaulUsHaYPKA==}
 
   '@parcel/watcher-android-arm64@2.5.0':
     resolution: {integrity: sha512-qlX4eS28bUcQCdribHkg/herLe+0A9RyYC+mm2PXpncit8z5b3nSqGVzMNR3CmtAOgRutiZ02eIJJgP/b1iEFQ==}
@@ -5073,7 +5076,7 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.5
       '@jridgewell/trace-mapping': 0.3.25
 
-  '@ark-ui/anatomy@3.5.0(@internationalized/date@3.5.5)':
+  '@ark-ui/anatomy@3.5.0(@internationalized/date@3.6.0)':
     dependencies:
       '@zag-js/accordion': 0.62.1
       '@zag-js/anatomy': 0.62.1
@@ -5086,7 +5089,7 @@ snapshots:
       '@zag-js/color-utils': 0.62.1
       '@zag-js/combobox': 0.62.1
       '@zag-js/date-picker': 0.62.1
-      '@zag-js/date-utils': 0.62.1(@internationalized/date@3.5.5)
+      '@zag-js/date-utils': 0.62.1(@internationalized/date@3.6.0)
       '@zag-js/dialog': 0.62.1
       '@zag-js/editable': 0.62.1
       '@zag-js/file-upload': 0.62.1
@@ -5949,6 +5952,8 @@ snapshots:
 
   '@pandacss/types@0.49.0': {}
 
+  '@pandacss/types@0.50.0': {}
+
   '@parcel/watcher-android-arm64@2.5.0':
     optional: true
 
@@ -6770,6 +6775,10 @@ snapshots:
   '@zag-js/date-utils@0.62.1(@internationalized/date@3.5.5)':
     dependencies:
       '@internationalized/date': 3.5.5
+
+  '@zag-js/date-utils@0.62.1(@internationalized/date@3.6.0)':
+    dependencies:
+      '@internationalized/date': 3.6.0
 
   '@zag-js/date-utils@0.79.1(@internationalized/date@3.6.0)':
     dependencies:
