@@ -1,8 +1,7 @@
 import { onCleanup, onMount, type ParentProps } from 'solid-js';
-import { css } from 'styled-system/css';
 import { Box, Container, HStack, VStack } from 'styled-system/jsx';
 import D20Icon from '~/components/icons/d20';
-import { Text } from '~/components/ui';
+import { Image, Text } from '~/components/ui';
 import { scrollScaleIn } from '~/lib/motion';
 import { createDotsEffect } from '~/lib/vanta';
 
@@ -70,14 +69,14 @@ export default function FeatureShowcase() {
           <Box
             class="play-feature"
             bgColor="neutral.1000"
-            overflowX="hidden"
-            paddingBlock="8"
+            overflow="hidden"
+            paddingBlockStart="8"
             paddingInline="6"
             position="relative"
             rounded="md"
             w="full"
             md={{
-              paddingBlock: 14,
+              paddingBlockStart: 14,
               paddingInline: 7,
               rounded: 'lg',
               w: 'calc(50% - 3rem)',
@@ -85,21 +84,49 @@ export default function FeatureShowcase() {
           >
             <FeatureCardHeading>Automate the complex</FeatureCardHeading>
 
-            {/* <Box position="absolute" top="0" left="0" w="full" h="full">
-              <img
-                alt="Dungeons & Dragons logo"
-                decoding="async"
-                loading="lazy"
-                src="/images/dnd-logo.webp"
+            <Box
+              bgColor="inherit"
+              border="1px solid"
+              borderColor="black"
+              bottom={{
+                base: '-6',
+                md: '0',
+              }}
+              left="0"
+              overflow="hidden"
+              position="absolute"
+              w="98%"
+              zIndex="hide"
+              _before={{
+                bgColor: 'brand1.700',
+                mixBlendMode: 'hue',
+                bottom: 0,
+                content: '""',
+                display: 'block',
+                left: 0,
+                position: 'absolute',
+                right: 0,
+                top: 0,
+                zIndex: 'base',
+              }}
+            >
+              <Image
+                alt="Character moves preview"
+                src="/images/play-feat.webp"
+                srcSet="/images/play-feat-mobile.webp 684w, /images/play-feat.webp 1210w"
+                sizes="(min-width: 768px) 45vw, 98vw"
               />
-            </Box> */}
+            </Box>
 
             <Box
-              paddingBlockStart={{
-                base: '11rem',
-                md: '26.1rem',
-              }}
+              paddingBlockStart="14rem"
+              paddingBlockEnd="6"
               w="full"
+              zIndex="decorator"
+              md={{
+                paddingBlockStart: '28rem',
+                paddingInlineStart: 1,
+              }}
             >
               <FeatureCardText>
                 Focus on the story while{' '}
@@ -146,9 +173,9 @@ export default function FeatureShowcase() {
                   md: 'block',
                 }}
                 position="absolute"
-                right="-32"
+                right="-10rem"
                 top="-10"
-                transform="rotate(10deg)"
+                transform="rotate(8deg)"
                 w="2/3"
                 zIndex="decorator"
               >
@@ -165,16 +192,8 @@ export default function FeatureShowcase() {
               w="full"
             >
               <Box paddingBlockEnd="8" maxW="20rem" w="full">
-                <img
-                  class={css({
-                    objectFit: 'cover',
-                    objectPosition: 'center',
-                    width: '100%',
-                    height: '100%',
-                  })}
+                <Image
                   alt="Dungeons & Dragons logo"
-                  decoding="async"
-                  loading="lazy"
                   src="/images/dnd-logo.webp"
                 />
               </Box>
