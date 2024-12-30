@@ -75,7 +75,7 @@ export default function HeroFeature() {
           gap: 6,
           mx: 0,
           position: 'absolute',
-          right: '-5%',
+          right: '-8%',
           top: 0,
           w: '70%',
           zIndex: 'base',
@@ -88,7 +88,7 @@ export default function HeroFeature() {
             w="70%"
             md={{
               gap: 6,
-              w: '90%',
+              w: '80%',
             }}
           >
             <Index each={heroImgs()?.col1}>

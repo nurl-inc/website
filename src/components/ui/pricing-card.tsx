@@ -102,7 +102,7 @@ export function PricingCard(props: PricingCardProps & PricingCardVariantProps) {
             textStyle="heading-xs"
             textTransform="uppercase"
           >
-            <Switch>
+            <Switch fallback={<Text>/mo</Text>}>
               <Match when={rest.basePrice === 0}>
                 <Text>/free forever</Text>
               </Match>

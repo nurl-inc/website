@@ -66,6 +66,7 @@ export default function PublisherValues() {
           idx={3}
           heading="Publish with Power"
           description="From rules to content, manage your entire game library in one professional platform."
+          image="battle"
         />
       </Suspense>
     </Box>
