@@ -47,7 +47,7 @@ export default function SanctumHero() {
           decoding="async"
           loading="lazy"
           src="/images/sanctum.webp"
-          srcSet="/images/sanctum-mobile.webp 616w, /images/sanctum.webp 2048w"
+          srcset="/images/sanctum-mobile.webp 616w, /images/sanctum.webp 2048w"
           sizes="(max-width: 300px) 1024px, 2048px"
         />
       </Box>

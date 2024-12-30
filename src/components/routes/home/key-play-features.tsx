@@ -1,12 +1,12 @@
 import { animate, scroll } from 'motion';
 import { onMount } from 'solid-js';
-import { css } from 'styled-system/css';
 import { Box, HStack, VStack } from 'styled-system/jsx';
 import { BookIcon } from '~/components/icons';
 import {
   FeatureCardWithPoints,
   FeatureCardWithPointsItem,
   HeadingFeatureCard,
+  Image,
 } from '~/components/ui';
 
 export default function KeyPlayFeatures() {
@@ -60,13 +60,8 @@ export default function KeyPlayFeatures() {
             maxW="37.5rem"
             overflow="hidden"
           >
-            <img
+            <Image
               alt="Combat Arena screen shot"
-              class={css({
-                w: 'full',
-              })}
-              decoding="async"
-              loading="lazy"
               src="/images/combat-arena.webp"
             />
           </Box>
@@ -99,14 +94,13 @@ export default function KeyPlayFeatures() {
             maxW="37.5rem"
             overflow="hidden"
           >
-            <img
+            <Image
               alt="Chat screen shot"
-              class={css({
-                w: 'full',
-              })}
               decoding="async"
               loading="lazy"
-              src="/images/chat.webp"
+              src="/images/chat-full.webp"
+              srcset="/images/chat-full-mobile.webp 632w, /images/chat-full.webp 1200w"
+              sizes="(max-width: 768px) 632px, 1200px"
             />
           </Box>
         </HeadingFeatureCard>

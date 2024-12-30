@@ -2,7 +2,7 @@ import { css } from 'styled-system/css';
 
 interface ImageProps {
   src: string;
-  srcSet?: string;
+  srcset?: string;
   sizes?: string;
   alt: string;
   decoding?: 'async' | 'sync';

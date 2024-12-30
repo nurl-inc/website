@@ -87,7 +87,7 @@ export default function SanctumValueSection(props: SanctumValueSectionProps) {
             decoding="async"
             loading="lazy"
             sizes="(max-width: 300px) 1024px, 2048px"
-            srcSet={`/images/${props.image}-mobile.webp 616w, /images/${props.image}.webp 2048w`}
+            srcset={`/images/${props.image}-mobile.webp 616w, /images/${props.image}.webp 2048w`}
             src={`/images/${props.image}.webp`}
           />
         </Show>

@@ -4,7 +4,7 @@ import { Image } from '~/components/ui';
 export interface HeroFeatureItemProps {
   alt: string;
   src: string;
-  srcSet: string;
+  srcset: string;
   sizes: string;
 }
 
@@ -28,7 +28,7 @@ export default function HeroFeatureItem(props: HeroFeatureItemProps) {
           <Image
             alt={props.alt}
             src={props.src}
-            srcSet={props.srcSet}
+            srcset={props.srcset}
             sizes={props.sizes}
           />
         </Show>
