@@ -73,10 +73,10 @@ export function animatePath(target: Target) {
 }
 
 /**
- * Staggers the opacity of the target element.
+ * Staggers the position of the target element.
  * @param target - The target element to animate.
  */
-export function staggerFadeIn(target: Target) {
+export function staggerSlideInFromBottom(target: Target) {
   if (target) {
     animate(
       target,
@@ -101,6 +101,20 @@ export function scrollScaleIn(target: Target) {
         target,
         offset: ['start end', 'end end'],
       },
+    );
+  }
+}
+
+/**
+ * Staggers the opacity of the target element.
+ * @param target - The target element to animate.
+ */
+export function staggerFadeIn(target: Target) {
+  if (target) {
+    animate(
+      target,
+      { opacity: [0, 1] },
+      { delay: stagger(0.3), duration: 0.5 },
     );
   }
 }

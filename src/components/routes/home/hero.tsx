@@ -2,6 +2,8 @@ import { css } from 'styled-system/css';
 import { Box, VStack } from 'styled-system/jsx';
 import { Link } from '~/components/ui';
 import HeroFeature from './hero-feature';
+import { onMount } from 'solid-js';
+import { staggerFadeIn } from '~/lib/motion';
 
 /**
  * This module is the hero section for the home page.
@@ -9,6 +11,12 @@ import HeroFeature from './hero-feature';
  */
 
 export default function Hero() {
+  onMount(() => {
+    setTimeout(() => {
+      staggerFadeIn('#hero-feature-item');
+    }, 400);
+  });
+
   return (
     <VStack
       gap="4"

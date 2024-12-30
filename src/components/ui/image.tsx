@@ -18,10 +18,10 @@ export function Image(props: ImageProps) {
         objectPosition: 'center',
         width: '100%',
       })}
-      alt={props.alt}
+      {...props}
       decoding={props.decoding ?? 'async'}
       loading={props.loading ?? 'lazy'}
-      src={props.src}
+      sizes={props.sizes ?? '(max-width: 300px) 1024px, 2048px'}
     />
   );
 }
