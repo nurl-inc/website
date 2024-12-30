@@ -9,7 +9,7 @@ import type { Metadata } from '~/types';
 
 import keywords from '~/data/keywords.json';
 import { getSanctumPricingData, getSanctumPricingFaqData } from '~/lib/db';
-import { staggerFadeIn } from '~/lib/motion';
+import { staggerSlideInFromBottom } from '~/lib/motion';
 import { MailIcon } from '~/components/icons';
 import { css } from 'styled-system/css';
 
@@ -61,7 +61,7 @@ export default function SanctumPricing(props: RouteSectionProps<RouteData>) {
   });
 
   onMount(() => {
-    staggerFadeIn('#pricing-card');
+    staggerSlideInFromBottom('#pricing-card');
   });
 
   return (

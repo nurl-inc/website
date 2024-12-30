@@ -1,26 +1,38 @@
+import { Show } from 'solid-js';
 import { Box } from 'styled-system/jsx';
+import { Image } from '~/components/ui';
+export interface HeroFeatureItemProps {
+  alt: string;
+  src: string;
+  srcSet: string;
+  sizes: string;
+}
 
-export default function HeroFeatureItem() {
+export default function HeroFeatureItem(props: HeroFeatureItemProps) {
   return (
     <Box
+      id="hero-feature-item"
       h="12rem"
       overflow="hidden"
+      opacity="0"
       rounded="lg"
       shadow="lg"
       w="full"
-      _motionSafe={{
-        animationName: 'fadeIn',
-        animationDuration: 'slow',
-        animationFillMode: 'forwards',
-        animationDelay: '1.3s',
-        opacity: 0,
-      }}
       md={{
         h: '28rem',
         rounded: 'xl',
       }}
     >
-      <Box bgColor="#1d1d1d" h="full" w="full" />
+      <Box bgColor="#1d1d1d" h="full" overflow="hidden" w="full">
+        <Show when={props.src}>
+          <Image
+            alt={props.alt}
+            src={props.src}
+            srcSet={props.srcSet}
+            sizes={props.sizes}
+          />
+        </Show>
+      </Box>
     </Box>
   );
 }

@@ -6,7 +6,7 @@ import { Footer, Main, Markdown, Nav, TextList } from '~/components/shared';
 import { Head } from '~/components/shared';
 import { Accordion, AccordionItem, Link, Tabs, Text } from '~/components/ui';
 import type { Metadata } from '~/types';
-import { staggerFadeIn } from '~/lib/motion';
+import { staggerSlideInFromBottom } from '~/lib/motion';
 import { MailIcon } from '~/components/icons';
 import { css } from 'styled-system/css';
 import { getPlayPricingPageData } from '~/lib/db/play';
@@ -51,7 +51,7 @@ export default function PlayPricing(props: RouteSectionProps<RouteData>) {
   });
 
   onMount(() => {
-    staggerFadeIn('#pricing-card');
+    staggerSlideInFromBottom('#pricing-card');
   });
 
   return (

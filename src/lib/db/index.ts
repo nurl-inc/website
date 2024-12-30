@@ -7,6 +7,7 @@ import sanctumHowTo from '~/data/sanctum/how-to.json';
 import productTabContent from '~/data/product-tab-content.json';
 import faq from '~/data/faq.json';
 import socialProof from '~/data/social-proof.json';
+import heroImgs from '~/data/hero-imgs.json';
 
 /**
  * This module is responsible for fetching data from the "database".
@@ -63,5 +64,14 @@ export const getSocialProofData = query(async () => {
   'use server';
   return socialProof;
 }, 'socialProofData');
+
+/**
+ * Fetches the hero images data.
+ * @returns The hero images data.
+ */
+export const getHeroImgsData = query(async () => {
+  'use server';
+  return heroImgs;
+}, 'heroImgsData');
 
 export * from './sanctum';

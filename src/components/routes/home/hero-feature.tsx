@@ -1,6 +1,9 @@
+import { createAsync } from '@solidjs/router';
 import { animate, scroll } from 'motion';
-import { createMemo, Index, lazy, onMount, Suspense } from 'solid-js';
+import { Index, lazy, onMount, Suspense } from 'solid-js';
 import { Box, HStack, VStack } from 'styled-system/jsx';
+import { getHeroImgsData } from '~/lib/db';
+import type { HeroFeatureItemProps } from './hero-feature-item';
 
 const HeroFeatureItem = lazy(() => import('./hero-feature-item'));
 
@@ -9,7 +12,7 @@ const HeroFeatureItem = lazy(() => import('./hero-feature-item'));
  * @module route:home:hero-feature
  */
 export default function HeroFeature() {
-  const cols = createMemo(() => Array.from({ length: 2 }));
+  const heroImgs = createAsync(() => getHeroImgsData());
 
   onMount(() => {
     const firstColumn = document.querySelector('.hero-feature-first-column');
@@ -88,7 +91,11 @@ export default function HeroFeature() {
               w: '90%',
             }}
           >
-            <Index each={cols()}>{() => <HeroFeatureItem />}</Index>
+            <Index each={heroImgs()?.col1}>
+              {(img) => (
+                <HeroFeatureItem {...(img() as HeroFeatureItemProps)} />
+              )}
+            </Index>
           </VStack>
           <VStack
             class="hero-feature-last-column"
@@ -100,7 +107,11 @@ export default function HeroFeature() {
               w: '20%',
             }}
           >
-            <Index each={cols()}>{() => <HeroFeatureItem />}</Index>
+            <Index each={heroImgs()?.col2}>
+              {(img) => (
+                <HeroFeatureItem {...(img() as HeroFeatureItemProps)} />
+              )}
+            </Index>
           </VStack>
         </Suspense>
       </HStack>
