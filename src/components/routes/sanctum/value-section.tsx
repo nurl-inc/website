@@ -1,7 +1,6 @@
 import { Show } from 'solid-js';
-import { css } from 'styled-system/css';
 import { Box, VStack } from 'styled-system/jsx';
-import { Text } from '~/components/ui';
+import { Image, Text } from '~/components/ui';
 import AnimatingPath from './animating-path';
 
 interface SanctumValueSectionProps {
@@ -76,19 +75,11 @@ export default function SanctumValueSection(props: SanctumValueSectionProps) {
         }}
       >
         <Show when={props.image}>
-          <img
-            class={css({
-              h: 'full',
-              objectFit: 'cover',
-              objectPosition: 'center',
-              w: 'full',
-            })}
+          <Image
             alt={props.heading}
-            decoding="async"
-            loading="lazy"
-            sizes="(max-width: 300px) 1024px, 2048px"
-            srcset={`/images/${props.image}-mobile.webp 616w, /images/${props.image}.webp 2048w`}
             src={`/images/${props.image}.webp`}
+            srcset={`/images/${props.image}-mobile.webp 616w, /images/${props.image}.webp 2048w`}
+            sizes="(max-width: 300px) 1024px, 2048px"
           />
         </Show>
       </Box>
