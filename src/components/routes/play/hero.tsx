@@ -35,7 +35,7 @@ export default function PlayHero() {
         <Image
           alt="Sanctum screenshot preview"
           src="/images/play.webp"
-          srcSet="/images/play-mobile.webp 664w, /images/play.webp 1846w"
+          srcset="/images/play-mobile.webp 664w, /images/play.webp 1846w"
           sizes="(max-width: 300px) 1024px, 2048px"
         />
       </Box>

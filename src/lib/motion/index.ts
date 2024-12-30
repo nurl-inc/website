@@ -113,7 +113,7 @@ export function staggerFadeIn(target: Target) {
   if (target) {
     animate(
       target,
-      { opacity: [0, 1] },
+      { opacity: [0, 0.3] },
       { delay: stagger(0.3), duration: 0.5 },
     );
   }

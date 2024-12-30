@@ -113,7 +113,7 @@ export default function FeatureShowcase() {
               <Image
                 alt="Character moves preview"
                 src="/images/play-feat.webp"
-                srcSet="/images/play-feat-mobile.webp 684w, /images/play-feat.webp 1210w"
+                srcset="/images/play-feat-mobile.webp 684w, /images/play-feat.webp 1210w"
                 sizes="(min-width: 768px) 45vw, 98vw"
               />
             </Box>

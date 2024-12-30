@@ -32,6 +32,7 @@
     "segoe",
     "signup",
     "slnt",
+    "srcset",
     "starfinder",
     "tseslint",
     "vanta",
@@ -39,7 +40,8 @@
     "vinxi",
     "VITE",
     "Waitlist",
-    "wdth"
+    "wdth",
+    "webp"
   ],
   "prettier.configPath": ".prettierrc",
   "prettier.useEditorConfig": false
