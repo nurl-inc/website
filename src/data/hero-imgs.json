@@ -1,10 +1,8 @@
 {
   "col1": [
     {
-      "alt": "Battle sheet preview",
-      "src": "/images/battle.webp",
-      "srcset": "/images/battle-mobile.webp 562w, /images/battle.webp 1940w",
-      "sizes": "(max-width: 768px) 562px, 1940px"
+      "alt": "Sanctum teaser",
+      "src": "/images/sanctum-teaser.webp"
     },
     {
       "alt": "Battle sheet preview",
@@ -21,10 +19,8 @@
       "sizes": "(max-width: 768px) 1406px, 1712px"
     },
     {
-      "alt": "Chat preview",
-      "src": "/images/chat.webp",
-      "srcset": "/images/chat-mobile.webp 1406w, /images/chat.webp 1712w",
-      "sizes": "(max-width: 768px) 1406px, 1712px"
+      "alt": "Battle moves preview",
+      "src": "/images/battle-moves-halved.webp"
     }
   ]
 }
