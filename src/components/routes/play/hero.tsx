@@ -1,5 +1,6 @@
 import { VStack, Box } from 'styled-system/jsx';
-import { Image, Link, Text } from '~/components/ui';
+import { Link, Text } from '~/components/ui';
+import PlayHeroFeature from './hero-feature';
 
 export default function PlayHero() {
   return (
@@ -14,31 +15,7 @@ export default function PlayHero() {
       }}
       position="relative"
     >
-      <Box
-        animationName="fadeIn"
-        animationDelay="200ms"
-        animationDuration="600ms"
-        animationTimingFunction="ease-in-out"
-        animationFillMode="forwards"
-        opacity={0}
-        mx="auto"
-        w="90%"
-        md={{
-          animationDelay: '600ms',
-          position: 'absolute',
-          right: 0,
-          top: '15%',
-          w: '1/2',
-          zIndex: 'base',
-        }}
-      >
-        <Image
-          alt="Sanctum screenshot preview"
-          src="/images/play.webp"
-          srcset="/images/play-mobile.webp 664w, /images/play.webp 1846w"
-          sizes="(max-width: 300px) 1024px, 2048px"
-        />
-      </Box>
+      <PlayHeroFeature />
 
       <Box
         pb="12.5rem"
