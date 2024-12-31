@@ -1,3 +1,5 @@
+import { onMount } from 'solid-js';
+import { track } from '@vercel/analytics';
 import { Box, Container, VStack } from 'styled-system/jsx';
 import { Button, Text } from '~/components/ui';
 import { Footer, Head, Nav, Main } from '.';
@@ -10,6 +12,13 @@ interface PageErrorProps {
 }
 
 export default function PageError(props: PageErrorProps) {
+  onMount(() => {
+    track('page_error', {
+      message: props.error.message || 'An unknown error occurred.',
+      url: window.location.href,
+    });
+  });
+
   return (
     <>
       <Head
