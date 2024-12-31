@@ -23,7 +23,7 @@ const metadata: Metadata = {
   title: 'Nurl Play | Pricing',
   description: 'Pricing for the Nurl Play. Plans that scale with your growth.',
   keywords: `${keywords.base.join(', ')}, ${keywords.play.join(', ')}`,
-  image: 'https://nurl.website/og-meta.png',
+  image: 'https://nurl.website/og-meta-play.png',
 };
 
 export const route = {
