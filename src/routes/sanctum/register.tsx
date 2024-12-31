@@ -29,7 +29,7 @@ const metadata: Metadata = {
   description:
     'Join the Nurl Sanctum beta program. Transform your tabletop RPG development with visual system mapping, instant validation, and seamless play-testing. Cut development time in half.',
   keywords: `${baseKeywords.join(', ')}, ${sanctumKeywords.join(', ')}`,
-  image: 'https://nurl.website/og-meta.png',
+  image: 'https://nurl.website/og-meta-sanctum.png',
 };
 
 export const route = {

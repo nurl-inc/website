@@ -3,15 +3,15 @@ import { animate, scroll } from 'motion';
 import { Index, lazy, onMount, Suspense } from 'solid-js';
 import { Box, HStack, VStack } from 'styled-system/jsx';
 import { getHeroImgsData } from '~/lib/db';
-import type { HeroFeatureItemProps } from './hero-feature-item';
+import type { HeroFeatureItemProps } from '../home/hero-feature-item';
 
-const HeroFeatureItem = lazy(() => import('./hero-feature-item'));
+const HeroFeatureItem = lazy(() => import('../home/hero-feature-item'));
 
 /**
  * The hero image masonry layout on the home page.
  * @module route:home:hero-feature
  */
-export default function HeroFeature() {
+export default function PlayHeroFeature() {
   const heroImgs = createAsync(() => getHeroImgsData());
 
   onMount(() => {
@@ -77,6 +77,7 @@ export default function HeroFeature() {
           position: 'absolute',
           right: '-8%',
           top: 0,
+          transform: 'rotate(-15deg)',
           w: '70%',
           zIndex: 'base',
         }}
