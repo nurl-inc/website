@@ -2,7 +2,9 @@ import { createMediaQuery } from '@solid-primitives/media';
 import { Show } from 'solid-js';
 import { Box } from 'styled-system/jsx';
 import { Image } from '~/components/ui';
+
 export interface HeroFeatureItemProps {
+  idx?: 1 | 2;
   alt: string;
   src: string;
   srcset: string;
@@ -11,6 +13,7 @@ export interface HeroFeatureItemProps {
 
 export default function HeroFeatureItem(props: HeroFeatureItemProps) {
   const isSmall = createMediaQuery('(max-width: 767px)');
+  const vFit = () => (props.idx === 1 ? 'full' : 'default');
 
   return (
     <Box
@@ -33,6 +36,7 @@ export default function HeroFeatureItem(props: HeroFeatureItemProps) {
             src={props.src}
             srcset={props.srcset}
             sizes={props.sizes}
+            vFit={vFit()}
           />
         </Show>
       </Box>

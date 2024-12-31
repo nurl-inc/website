@@ -1,8 +1,16 @@
 import { VStack, Box } from 'styled-system/jsx';
 import { Link, Text } from '~/components/ui';
 import PlayHeroFeature from './hero-feature';
+import { staggerFadeIn } from '~/lib/motion';
+import { onMount } from 'solid-js';
 
 export default function PlayHero() {
+  onMount(() => {
+    setTimeout(() => {
+      staggerFadeIn('#hero-feature-item');
+    }, 400);
+  });
+
   return (
     <VStack
       bgColor="page.surface.initial"

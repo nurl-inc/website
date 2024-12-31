@@ -92,8 +92,11 @@ export default function HeroFeature() {
             }}
           >
             <Index each={heroImgs()?.col1}>
-              {(img) => (
-                <HeroFeatureItem {...(img() as HeroFeatureItemProps)} />
+              {(img, idx) => (
+                <HeroFeatureItem
+                  {...(img() as HeroFeatureItemProps)}
+                  idx={idx === 0 ? 1 : 2}
+                />
               )}
             </Index>
           </VStack>
@@ -108,8 +111,11 @@ export default function HeroFeature() {
             }}
           >
             <Index each={heroImgs()?.col2}>
-              {(img) => (
-                <HeroFeatureItem {...(img() as HeroFeatureItemProps)} />
+              {(img, idx) => (
+                <HeroFeatureItem
+                  {...(img() as HeroFeatureItemProps)}
+                  idx={idx === 0 ? 1 : 2}
+                />
               )}
             </Index>
           </VStack>

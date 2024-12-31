@@ -77,6 +77,7 @@ export default function PlayHeroFeature() {
           position: 'absolute',
           right: '-8%',
           top: 0,
+          transform: 'rotate(-15deg)',
           w: '70%',
           zIndex: 'base',
         }}
@@ -93,7 +94,7 @@ export default function PlayHeroFeature() {
           >
             <Index each={heroImgs()?.col1}>
               {(img) => (
-                <HeroFeatureItem {...(img() as HeroFeatureItemProps)} />
+                <HeroFeatureItem {...(img() as HeroFeatureItemProps)} idx={1} />
               )}
             </Index>
           </VStack>

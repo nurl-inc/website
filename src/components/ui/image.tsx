@@ -1,4 +1,5 @@
-import { css } from 'styled-system/css';
+import { createMemo, splitProps } from 'solid-js';
+import { image, type ImageVariantProps } from 'styled-system/recipes';
 
 interface ImageProps {
   src: string;
@@ -9,19 +10,20 @@ interface ImageProps {
   loading?: 'eager' | 'lazy';
 }
 
-export function Image(props: ImageProps) {
+export function Image(props: ImageProps & ImageVariantProps) {
+  const [{ vFit }, nativeProps] = splitProps(props, ['vFit']);
+  const styles = createMemo(() => {
+    if (vFit === 'full') return image({ vFit: 'full' });
+    return image();
+  });
+
   return (
     <img
-      class={css({
-        height: 'auto',
-        objectFit: 'cover',
-        objectPosition: 'center',
-        width: '100%',
-      })}
-      {...props}
-      decoding={props.decoding ?? 'async'}
-      loading={props.loading ?? 'lazy'}
-      sizes={props.sizes ?? '(max-width: 300px) 1024px, 2048px'}
+      {...nativeProps}
+      class={styles()}
+      decoding={nativeProps.decoding ?? 'async'}
+      loading={nativeProps.loading ?? 'lazy'}
+      sizes={nativeProps.sizes ?? '(max-width: 300px) 1024px, 2048px'}
     />
   );
 }
