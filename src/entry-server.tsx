@@ -73,6 +73,8 @@ export default createHandler(() => (
           <meta property="og:url" content="https://nurl.website" />
           <meta property="og:type" content="website" />
           <meta property="og:site_name" content="Nurl" />
+          <meta property="og:image:width" content="2400" />
+          <meta property="og:image:height" content="1260" />
 
           <script type="application/ld+json">{JSON.stringify(schema)}</script>
         </head>
