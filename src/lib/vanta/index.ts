@@ -44,3 +44,24 @@ export function createDotsEffect(el: HTMLElement) {
     showLines: false,
   });
 }
+
+/**
+ * Create a dots effect for the given element. Used for the Play theme.
+ * @param el - The element to apply the dots effect to.
+ * @returns The dots effect.
+ */
+export function createBlackDotsEffect(el: HTMLElement) {
+  return DOTS({
+    el: el,
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.0,
+    minWidth: 200.0,
+    scale: 1.0,
+    scaleMobile: 1.0,
+    color: 0x106f75,
+    backgroundColor: 0x000000,
+    showLines: false,
+  });
+}

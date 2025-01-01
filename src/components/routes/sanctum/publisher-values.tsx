@@ -2,6 +2,7 @@ import { createMediaQuery } from '@solid-primitives/media';
 import { lazy, onMount, Suspense } from 'solid-js';
 import { Box } from 'styled-system/jsx';
 import { animatePath } from '~/lib/motion';
+import { createBlackDotsEffect } from '~/lib/vanta';
 
 const SanctumValueSection = lazy(() => import('./value-section'));
 
@@ -16,6 +17,9 @@ export default function PublisherValues() {
         paths.forEach((path) => animatePath(path));
       }, 200);
     }
+
+    const vantaBox = document.getElementById('sanctum-value-section-img-2');
+    if (vantaBox) createBlackDotsEffect(vantaBox);
   });
 
   return (

@@ -1,7 +1,9 @@
-import { Show } from 'solid-js';
+import { lazy, Show, Suspense } from 'solid-js';
 import { Box, VStack } from 'styled-system/jsx';
 import { Image, Text } from '~/components/ui';
 import AnimatingPath from './animating-path';
+
+const ValueFallback = lazy(() => import('./value-fallback'));
 
 interface SanctumValueSectionProps {
   /**
@@ -60,28 +62,29 @@ export default function SanctumValueSection(props: SanctumValueSectionProps) {
       </VStack>
 
       <Box
-        bgColor="page.surface.100"
+        id={`sanctum-value-section-img-${props.idx}`}
+        bgColor="black"
         overflow="hidden"
         marginBlock="10"
-        minH="13rem"
         rounded="2xl"
         w="full"
         zIndex="decorator"
         md={{
           alignSelf: 'flex-end',
-          minH: '29rem',
           marginBlock: 16,
           w: 'calc(50% - 3rem)',
         }}
       >
-        <Show when={props.image}>
-          <Image
-            alt={props.heading}
-            src={`/images/${props.image}.webp`}
-            srcset={`/images/${props.image}-mobile.webp 616w, /images/${props.image}.webp 2048w`}
-            sizes="(max-width: 300px) 1024px, 2048px"
-          />
-        </Show>
+        <Suspense>
+          <Show when={props.image} fallback={<ValueFallback />}>
+            <Image
+              alt={props.heading}
+              src={`/images/${props.image}.webp`}
+              srcset={`/images/${props.image}-mobile.webp 616w, /images/${props.image}.webp 2048w`}
+              sizes="(max-width: 300px) 1024px, 2048px"
+            />
+          </Show>
+        </Suspense>
       </Box>
     </VStack>
   );
