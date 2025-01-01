@@ -62,9 +62,9 @@ export default function SanctumValueSection(props: SanctumValueSectionProps) {
       </VStack>
 
       <Box
-        id={`sanctum-value-section-img-${props.idx}`}
         bgColor="black"
         overflow="hidden"
+        position="relative"
         marginBlock="10"
         rounded="2xl"
         w="full"
