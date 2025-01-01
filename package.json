@@ -3,7 +3,7 @@
   "type": "module",
   "scripts": {
     "clean": "rm -rf src/data/generated",
-    "generate": "tsx ./src/scripts/generate.ts",
+    "generate": "tsx ./scripts/generate.ts",
     "dev": "pnpm run clean && pnpm run generate && vinxi dev",
     "build": "pnpm run clean && pnpm run generate && vinxi build",
     "start": "pnpm run clean && pnpm run generate && vinxi start",

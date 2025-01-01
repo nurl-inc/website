@@ -1,5 +1,5 @@
 import { query } from '@solidjs/router';
-import { convertToHtml } from '~/scripts/generate';
+import { convertToHtml } from '~/lib/rehype';
 
 /**
  * Get the sanitized markdown content
