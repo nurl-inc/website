@@ -18,7 +18,7 @@ export default function PublisherValues() {
       }, 200);
     }
 
-    const vantaBox = document.getElementById('sanctum-value-section-img-2');
+    const vantaBox = document.getElementById('value-fallback-bg');
     if (vantaBox) createBlackDotsEffect(vantaBox);
   });
 
