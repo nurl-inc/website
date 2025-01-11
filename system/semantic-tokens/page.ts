@@ -4,6 +4,11 @@ export const page = {
       value: '#130A18',
     },
   },
+  border: {
+    initial: {
+      value: '{colors.brand1.1000}',
+    },
+  },
   surface: {
     alt: {
       value: '#321B0B',

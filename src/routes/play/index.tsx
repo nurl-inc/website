@@ -21,8 +21,7 @@ const FinalCTA = lazy(() => import('~/components/routes/play/final-cta'));
  */
 
 const metadata: Metadata = {
-  title:
-    'Nurl Play | Enhance Your Tabletop RPG Experience | Keep the Magic, Automate the Complex',
+  title: 'Nurl Play - Enhanced Tabletop RPG Experience',
   description:
     'Transform your tabletop RPG sessions with video game-like automation while preserving the physical experience you love. Automate rules, track states, and enhance storytelling without losing the magic of in-person play.',
   keywords: `${keywords.base.join(', ')}, ${keywords.play.join(', ')}`,

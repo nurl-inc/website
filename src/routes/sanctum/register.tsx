@@ -24,8 +24,7 @@ const SanctumRegisterForm = lazy(() => import('~/forms/sanctum-register'));
  */
 
 const metadata: Metadata = {
-  title:
-    'Nurl Sanctum Register: Transform Your TTRPG Development | Visual Game System Design',
+  title: 'Nurl Sanctum Register: TTRPG Development Platform',
   description:
     'Join the Nurl Sanctum beta program. Transform your tabletop RPG development with visual system mapping, instant validation, and seamless play-testing. Cut development time in half.',
   keywords: `${baseKeywords.join(', ')}, ${sanctumKeywords.join(', ')}`,

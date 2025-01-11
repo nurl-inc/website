@@ -5,6 +5,7 @@ import signup from '~/data/play/signup.json';
 import pricing from '~/data/play/pricing.json';
 import features from '~/data/play/features.json';
 import faq from '~/data/play/faq.json';
+
 /**
  * This module contains all the data queries for the Play product.
  * @module lib/db/play
