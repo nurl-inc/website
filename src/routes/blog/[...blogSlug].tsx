@@ -1,6 +1,10 @@
 /* eslint-disable solid/no-innerhtml */
 
-import { useParams, type RouteSectionProps } from '@solidjs/router';
+import {
+  createAsync,
+  useParams,
+  type RouteSectionProps,
+} from '@solidjs/router';
 import { createMemo, lazy, Show, Suspense } from 'solid-js';
 import { Box, Container } from 'styled-system/jsx';
 import Head from '~/components/shared/head';
@@ -14,6 +18,7 @@ import { Breadcrumb } from '~/components/shared/breadcrumb';
 
 import keywords from '~/data/keywords.json';
 import blogData from '~/data/generated/blog.json';
+import { getBlogPostData } from '~/lib/db/blog';
 
 const Footer = lazy(() => import('~/components/shared/footer'));
 
@@ -41,11 +46,14 @@ export default function BlogPage(props: RouteSectionProps<RouteData>) {
   const slug = () => params.blogSlug as keyof typeof blogData;
   const metadataSlug = () => makeSlug(params.blogSlug);
 
+  const metaData = createAsync(() => getBlogPostData(slug()));
+
   const metadata = createMemo(() => {
     return {
       ...props.data.metadata,
-      title: `Nurl | ${metadataSlug()} Blog`,
-      description: `Read our ${metadataSlug()} blog post.`,
+      title: metaData()?.title || `Nurl Blog | ${metadataSlug()}`,
+      description:
+        metaData()?.description || `Read our ${metadataSlug()} blog post.`,
     };
   });
 
