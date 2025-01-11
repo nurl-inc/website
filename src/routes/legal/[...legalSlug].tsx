@@ -45,8 +45,8 @@ export default function LegalPage(props: RouteSectionProps<RouteData>) {
 
   const metadata = createMemo(() => ({
     ...props.data.metadata,
-    title: `Nurl | ${metadataSlug()}`,
-    description: `Read our ${metadataSlug()}`,
+    title: `Nurl Legal | Learn about our ${metadataSlug()} policy`,
+    description: `Read our ${metadataSlug()} policy.`,
   }));
 
   return (

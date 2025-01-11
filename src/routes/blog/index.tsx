@@ -15,7 +15,7 @@ import blogData from '~/data/generated/blog.json';
 const Footer = lazy(() => import('~/components/shared/footer'));
 
 const metadata: Metadata = {
-  title: 'Nurl | Blog',
+  title: 'Nurl Blog - Tabletop RPG Development Insights',
   description: 'Read our blog posts.',
   keywords: `${keywords.base.join(', ')}, ${keywords.blog.join(', ')}`,
   image: 'https://nurl.website/og-meta.png',

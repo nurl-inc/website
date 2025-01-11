@@ -15,7 +15,7 @@ import legalData from '~/data/generated/legal.json';
 const Footer = lazy(() => import('~/components/shared/footer'));
 
 const metadata: Metadata = {
-  title: 'Nurl | Legal',
+  title: 'Nurl Legal - Anything you need to know about Nurl',
   description: 'Read our legal documents.',
   keywords: `${keywords.base.join(', ')}, ${keywords.help.join(', ')}`,
   image: 'https://nurl.website/og-meta.png',
