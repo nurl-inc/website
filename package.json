@@ -18,7 +18,7 @@
     "@solid-primitives/media": "^2.2.9",
     "@solidjs/meta": "^0.29.4",
     "@solidjs/router": "^0.15.2",
-    "@solidjs/start": "^1.0.10",
+    "@solidjs/start": "^1.0.11",
     "@vercel/analytics": "^1.4.1",
     "@vercel/functions": "^1.5.2",
     "motion": "^11.15.0",
