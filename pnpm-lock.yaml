@@ -18,8 +18,8 @@ importers:
         specifier: ^0.13.7
         version: 0.13.7(solid-js@1.9.3)
       '@solid-primitives/media':
-        specifier: ^2.2.9
-        version: 2.2.9(solid-js@1.9.3)
+        specifier: ^2.2.10
+        version: 2.2.10(solid-js@1.9.3)
       '@solidjs/meta':
         specifier: ^0.29.4
         version: 0.29.4(solid-js@1.9.3)
@@ -1333,8 +1333,8 @@ packages:
     peerDependencies:
       solid-js: ^1.6.12
 
-  '@solid-primitives/media@2.2.9':
-    resolution: {integrity: sha512-QUmU62D4/d9YWx/4Dvr/UZasIkIpqNXz7wosA5GLmesRW9XlPa3G5M6uOmTw73SByHNTCw0D6x8bSdtvvLgzvQ==}
+  '@solid-primitives/media@2.2.10':
+    resolution: {integrity: sha512-zICx9lXvevycyHmzUp1AfrxmUsF27JGvDygf51mHUpvy/Y2SmxkM6UHKstBDlRSpLUhPTnF0iHCfdfne6g4Fow==}
     peerDependencies:
       solid-js: ^1.6.12
 
@@ -1360,6 +1360,11 @@ packages:
 
   '@solid-primitives/static-store@0.0.8':
     resolution: {integrity: sha512-ZecE4BqY0oBk0YG00nzaAWO5Mjcny8Fc06CdbXadH9T9lzq/9GefqcSe/5AtdXqjvY/DtJ5C6CkcjPZO0o/eqg==}
+    peerDependencies:
+      solid-js: ^1.6.12
+
+  '@solid-primitives/static-store@0.0.9':
+    resolution: {integrity: sha512-8zaTXTEnQFqdwfkqWmGVb/OYgSTbRgxJSWQNfLuA+KnuW4RzTRQE2jzgnNJjJjaloruv9EHGvikmJzQJ5aOrEw==}
     peerDependencies:
       solid-js: ^1.6.12
 
@@ -5792,7 +5797,7 @@ snapshots:
       '@solid-primitives/event-listener': 2.3.3(solid-js@1.9.3)
       '@solid-primitives/keyed': 1.2.3(solid-js@1.9.3)
       '@solid-primitives/map': 0.4.13(solid-js@1.9.3)
-      '@solid-primitives/media': 2.2.9(solid-js@1.9.3)
+      '@solid-primitives/media': 2.2.10(solid-js@1.9.3)
       '@solid-primitives/props': 3.1.11(solid-js@1.9.3)
       '@solid-primitives/refs': 1.0.8(solid-js@1.9.3)
       '@solid-primitives/utils': 6.2.3(solid-js@1.9.3)
@@ -6241,11 +6246,11 @@ snapshots:
       '@solid-primitives/trigger': 1.1.0(solid-js@1.9.3)
       solid-js: 1.9.3
 
-  '@solid-primitives/media@2.2.9(solid-js@1.9.3)':
+  '@solid-primitives/media@2.2.10(solid-js@1.9.3)':
     dependencies:
       '@solid-primitives/event-listener': 2.3.3(solid-js@1.9.3)
       '@solid-primitives/rootless': 1.4.5(solid-js@1.9.3)
-      '@solid-primitives/static-store': 0.0.8(solid-js@1.9.3)
+      '@solid-primitives/static-store': 0.0.9(solid-js@1.9.3)
       '@solid-primitives/utils': 6.2.3(solid-js@1.9.3)
       solid-js: 1.9.3
 
@@ -6273,6 +6278,11 @@ snapshots:
       solid-js: 1.9.3
 
   '@solid-primitives/static-store@0.0.8(solid-js@1.9.3)':
+    dependencies:
+      '@solid-primitives/utils': 6.2.3(solid-js@1.9.3)
+      solid-js: 1.9.3
+
+  '@solid-primitives/static-store@0.0.9(solid-js@1.9.3)':
     dependencies:
       '@solid-primitives/utils': 6.2.3(solid-js@1.9.3)
       solid-js: 1.9.3
