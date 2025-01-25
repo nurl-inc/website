@@ -28,7 +28,7 @@ const metadata: Metadata = {
   description:
     'Join the waitlist for Nurl Play and enhance your tabletop RPG experience with video game-like automation. Keep the physical experience you love while automating the complex. Early access and exclusive benefits for beta users.',
   keywords: `${keywords.base.join(', ')}, ${keywords.play.join(', ')} , nurl play signup`,
-  image: 'https://nurl.website/og-meta-play.png',
+  image: 'https://nurlttrpg.com/og-meta-play.png',
 };
 
 export const route = {

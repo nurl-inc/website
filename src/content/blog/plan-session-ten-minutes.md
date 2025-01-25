@@ -16,7 +16,7 @@ It has long-been expected that a GM should take at least a couple hours prepping
 
 The Nurl app was recently [released](/blog/nurl-beta-goes-global/) to enhance IRL sessions of tabletop role-playing games like [Dungeons & Dragons&copy;](https://dnd.wizards.com/) and [Pathfinder&copy;](https://paizo.com/pathfinder) by combining AI, extensions, and all your necessary tools into one online dashboard so you can level up your enjoyment of the game while powering down the chaos.
 
-For GMs, the path to a better session, and easier planning, can come from the numerous widgets and extensions in the current form of Nurl. Nurl CEO [Casey Baggz](https://www.linkedin.com/in/caseybaggz/) recently broadcasted a Twitch [stream](https://nurl.website/blog/nurl-now-on-twitch) where he demonstrated how he actually used Nurl to plan his game session, and how it reduced his planning time from three hours to just 10 minutes.
+For GMs, the path to a better session, and easier planning, can come from the numerous widgets and extensions in the current form of Nurl. Nurl CEO [Casey Baggz](https://www.linkedin.com/in/caseybaggz/) recently broadcasted a Twitch [stream](https://nurlttrpg.com/blog/nurl-now-on-twitch) where he demonstrated how he actually used Nurl to plan his game session, and how it reduced his planning time from three hours to just 10 minutes.
 
 > “I surprised even myself, which is wild,” said Baggz. “Even though I’m building the app, it was impressive to see the benefits I am getting in my own game. Now any GM can utilize Nurl to enhance their games so they can focus on the story and have a better experience for running their game sessions.”
 
@@ -36,7 +36,7 @@ Look back at the ideas you previously had, or reminders of certain game-play sce
 
 ### 4. Engage Nuro™ for Game Advice
 
-Last month, Nurl launched the TTRPG expert [Nuro&trade;](https://nurl.website/blog/feature-focus-nuro) to provide instant answers to all types of GM and player questions. And it’s not ChatGPT. It is Nurl’s proprietary AI engine that was specifically built to be a TTRPG expert and do anything TTRPG related. The AI tool can be used for story ideas, challenges, riddles, game support, player creation/management – anything you need when preparing or running the game.
+Last month, Nurl launched the TTRPG expert [Nuro&trade;](https://nurlttrpg.com/blog/feature-focus-nuro) to provide instant answers to all types of GM and player questions. And it’s not ChatGPT. It is Nurl’s proprietary AI engine that was specifically built to be a TTRPG expert and do anything TTRPG related. The AI tool can be used for story ideas, challenges, riddles, game support, player creation/management – anything you need when preparing or running the game.
 
 Baggz used Nuro for advice on his upcoming session. He asked for three problems for the players to solve, each one harder than the last. Nuro instantly provided three thorough scenarios that he was able to utilize, thus saving tons of time in scenario development. He further asked Nurl for a difficult riddle suggestion that was specific to Curse of Strahd, of which Nuro provided one that even shocked Baggz.
 

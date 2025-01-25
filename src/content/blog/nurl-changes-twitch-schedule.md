@@ -8,7 +8,7 @@ slug: nurl-changes-twitch-schedule
 
 ## 2024-02-06
 
-Nurl, the table-top RPG app for IRL or hybrid sessions where all your game tools now appear in one magical place, launched its own broadcast [channel](https://www.twitch.tv/nurl_app) on Twitch in late [December](https://nurl.website/blog/nurl-now-on-twitch). The company has been streaming every Thursday at 6PM CST.
+Nurl, the table-top RPG app for IRL or hybrid sessions where all your game tools now appear in one magical place, launched its own broadcast [channel](https://www.twitch.tv/nurl_app) on Twitch in late [December](https://nurlttrpg.com/blog/nurl-now-on-twitch). The company has been streaming every Thursday at 6PM CST.
 
 To test other nights of the week for viewership, and because of the recent announcement about moving into app store development, Nurl will be changing Twitch streams to Wednesdays at 6PM CST beginning in February. It will also move to a bi-monthly broadcast instead of weekly.
 

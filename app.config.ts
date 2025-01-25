@@ -33,7 +33,7 @@ export default defineConfig({
       tsconfigPaths(),
       // create sitemap.xml
       Sitemap({
-        hostname: 'https://nurl.website',
+        hostname: 'https://nurlttrpg.com',
         dynamicRoutes: [...makeLegalRoutes(), ...makeBlogRoutes()],
         exclude: ['/thanks', '/404'],
         outDir: 'public',

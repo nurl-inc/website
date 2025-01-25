@@ -16,7 +16,7 @@ const metadata: Metadata = {
   title: 'Nurl | Contact Us',
   description: 'Get in touch with the Nurl team',
   keywords: `${keywords.base.join(', ')}, ${keywords.contact.join(', ')}`,
-  image: 'https://nurl.website/og-meta.png',
+  image: 'https://nurlttrpg.com/og-meta.png',
 };
 
 export const route = {

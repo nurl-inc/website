@@ -8,7 +8,7 @@ slug: nurl-app-not-just-for-dnd
 
 ## 2024-02-13
 
-The month of January, and specifically [Dungeons & Dragons&copy;](https://dnd.wizards.com/) Day on January 26, marked the [50th anniversary](https://nurl.website/blog/og-ttrpg-turns-50) of Gary Gygax and Dave Arneson launching the original tabletop role-playing game. With over 50 million players according to [GameRant](https://gamerant.com/), the medieval fantasy game continues to be the most popular TTRPG in the world.
+The month of January, and specifically [Dungeons & Dragons&copy;](https://dnd.wizards.com/) Day on January 26, marked the [50th anniversary](https://nurlttrpg.com/blog/og-ttrpg-turns-50) of Gary Gygax and Dave Arneson launching the original tabletop role-playing game. With over 50 million players according to [GameRant](https://gamerant.com/), the medieval fantasy game continues to be the most popular TTRPG in the world.
 
 A [2020](https://www.dndresearch.com/blog/2020-survey-result-update-1-demographic-of-ttrpg-players#/) survey by DND Research found that 94.3% of all tabletop respondents play D&D. But it is by no means the only game in the realm, and the number of TTRPG players continues to increase. Here are the top 10 TTRPG games from that survey, and the percent of survey participants that play each.
 

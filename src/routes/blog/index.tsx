@@ -19,7 +19,7 @@ const metadata: Metadata = {
   description:
     "Explore Nurl's TTRPG blog for expert insights, game mastering tips, and developer resources. Stay updated with the latest tabletop gaming trends and platform features.",
   keywords: `${keywords.base.join(', ')}, ${keywords.blog.join(', ')}`,
-  image: 'https://nurl.website/og-meta.png',
+  image: 'https://nurlttrpg.com/og-meta.png',
 };
 
 export const route = {

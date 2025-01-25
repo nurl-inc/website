@@ -43,4 +43,4 @@ With Multigroup Campaigns and our feature enhancements, Nurl invites you to emba
 
 Experience the future of collaborative storytelling with Nurl's Multigroup Campaigns. Join us and embark on your next epic adventure today!
 
-[Sign up for Nurl and start your epic journey now!](https://nurl.website)
+[Sign up for Nurl and start your epic journey now!](https://nurlttrpg.com)

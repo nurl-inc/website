@@ -32,7 +32,7 @@ const metadata: Metadata = {
   description:
     'The sacred space where your game systems come to life through visual tools and powerful automation.',
   keywords: `${keywords.base.join(', ')}, ${keywords.sanctum.join(', ')}`,
-  image: 'https://nurl.website/og-meta-sanctum.png',
+  image: 'https://nurlttrpg.com/og-meta-sanctum.png',
 };
 
 export const route = {

@@ -249,8 +249,8 @@ Now, let's get this party started!
 
 ## Related Posts
 
-- [Nurl, we help publishers enhance the player experience](https://nurl.website/publishers/)
-- [Nurl | Legal terms policy](https://nurl.website/legal/terms/)
+- [Nurl, we help publishers enhance the player experience](https://nurlttrpg.com/publishers/)
+- [Nurl | Legal terms policy](https://nurlttrpg.com/legal/terms/)
 
 ## Frequently Asked Questions (FAQs)
 
@@ -302,7 +302,7 @@ Yup, Nurl is made to work with lots of famous tabletop role-playing game systems
 
 ### How can I get started with Nurl?
 
-Commencing with Nurl is straightforward. Merely visit their website at [https://nurl.website](https://nurl.website/) & join the wait list. You will receive email updates where you will stay up to date on launch or even join a beta testing batch!
+Commencing with Nurl is straightforward. Merely visit their website at [https://nurlttrpg.com](https://nurlttrpg.com/) & join the wait list. You will receive email updates where you will stay up to date on launch or even join a beta testing batch!
 
 ## Sources
 

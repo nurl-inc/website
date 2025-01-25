@@ -65,12 +65,12 @@ export default createHandler(() => (
           <meta name="theme-color" content="#020204" />
 
           <meta name="twitter:card" content="summary" />
-          <meta property="twitter:domain" content="nurl.website" />
-          <meta property="twitter:url" content="https://nurl.website" />
+          <meta property="twitter:domain" content="nurlttrpg.com" />
+          <meta property="twitter:url" content="https://nurlttrpg.com" />
           <meta name="twitter:site" content="@nurl_inc" />
           <meta name="twitter:image:alt" content="Nurl logo" />
 
-          <meta property="og:url" content="https://nurl.website" />
+          <meta property="og:url" content="https://nurlttrpg.com" />
           <meta property="og:type" content="website" />
           <meta property="og:site_name" content="Nurl" />
           <meta property="og:image:width" content="2400" />

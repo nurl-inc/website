@@ -26,7 +26,7 @@ const metadata: Metadata = {
   title: 'Nurl | Blog',
   description: 'Read our blog posts.',
   keywords: `${keywords.base.join(', ')}, ${keywords.blog.join(', ')}`,
-  image: 'https://nurl.website/og-meta.png',
+  image: 'https://nurlttrpg.com/og-meta.png',
 };
 
 export const route = {

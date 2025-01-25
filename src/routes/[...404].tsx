@@ -11,7 +11,7 @@ const metadata: Metadata = {
   title: 'Nurl | Page Not Found',
   description: 'The page you are looking for does not exist.',
   keywords: 'nurl, page not found, 404',
-  image: 'https://nurl.website/og-meta.png',
+  image: 'https://nurlttrpg.com/og-meta.png',
 };
 
 export const route = {
