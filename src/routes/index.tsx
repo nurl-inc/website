@@ -33,7 +33,7 @@ const metadata: Metadata = {
   description:
     'Enhance your games with automation that feels like magic, create new worlds with tools that feel sacred.',
   keywords: `${keywords.base.join(', ')}, ${keywords.home.join(', ')}`,
-  image: 'https://www.nurl.website/og-meta.png',
+  image: 'https://nurlttrpg.com/og-meta.png',
 };
 
 export const route = {

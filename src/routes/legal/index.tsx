@@ -19,7 +19,7 @@ const metadata: Metadata = {
   description:
     "Review Nurl's legal documents. Learn about user rights, responsibilities, and platform policies for both our Nurl Sanctum and Nurl Play platform.",
   keywords: `${keywords.base.join(', ')}, ${keywords.help.join(', ')}`,
-  image: 'https://nurl.website/og-meta.png',
+  image: 'https://nurlttrpg.com/og-meta.png',
 };
 
 export const route = {

@@ -20,7 +20,7 @@ But don't worry - we've got you covered with our 15-part series on practical GMi
 
 ## The Table of Contents
 
-1. [Simplifying Complex Rules](https://nurl.website/blog/practical-gm-part-1-simplifying-complex-rules/): A GM's Guide to Keeping the Game Flowing
+1. [Simplifying Complex Rules](https://nurlttrpg.com/blog/practical-gm-part-1-simplifying-complex-rules/): A GM's Guide to Keeping the Game Flowing
 2. Balancing Technology and Tradition in IRL/Hybrid TTRPG Sessions
 3. The Art of Improvisation: Using AI to Enhance, Not Replace, GM Creativity
 4. Accessibility in TTRPGs: How Digital Tools Can Make Games More Inclusive

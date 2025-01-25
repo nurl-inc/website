@@ -23,7 +23,7 @@ const metadata: Metadata = {
   description:
     'Pricing for the Nurl Sanctum. Plans that scale with your growth.',
   keywords: `${keywords.base.join(', ')}, ${keywords.sanctum.join(', ')}`,
-  image: 'https://nurl.website/og-meta-sanctum.png',
+  image: 'https://nurlttrpg.com/og-meta-sanctum.png',
 };
 
 export const route = {

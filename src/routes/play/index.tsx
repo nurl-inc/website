@@ -25,7 +25,7 @@ const metadata: Metadata = {
   description:
     'Transform your tabletop RPG sessions with video game-like automation while preserving the physical experience you love. Automate rules, track states, and enhance storytelling without losing the magic of in-person play.',
   keywords: `${keywords.base.join(', ')}, ${keywords.play.join(', ')}`,
-  image: 'https://nurl.website/og-meta-play.png',
+  image: 'https://nurlttrpg.com/og-meta-play.png',
 };
 
 export const route = {

@@ -21,7 +21,7 @@ const metadata: Metadata = {
   title: 'Nurl | Legal',
   description: 'Read our terms and privacy policy.',
   keywords: `${keywords.base.join(', ')}, ${keywords.help.join(', ')}`,
-  image: 'https://nurl.website/og-meta.png',
+  image: 'https://nurlttrpg.com/og-meta.png',
 };
 
 export const route = {

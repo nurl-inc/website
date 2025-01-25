@@ -13,7 +13,7 @@ const metadata: Metadata = {
   title: 'Nurl | Thanks',
   description: 'Thanks for contacting us, we will get back to you soon.',
   keywords: `${keywords.base.join(', ')}}`,
-  image: 'https://nurl.website/og-meta.png',
+  image: 'https://nurlttrpg.com/og-meta.png',
 };
 
 export const route = {

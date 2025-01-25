@@ -19,7 +19,7 @@ const metadata: Metadata = {
   description:
     'Nurl is a team of developers and designers who are passionate about creating tools that make tabletop games more fun and engaging.',
   keywords: `${keywords.base.join(', ')}, ${keywords.home.join(', ')}`,
-  image: 'https://nurl.website/og-meta.png',
+  image: 'https://nurlttrpg.com/og-meta.png',
 };
 
 export const route = {

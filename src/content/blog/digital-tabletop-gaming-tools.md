@@ -52,7 +52,7 @@ Click to watch video
 
 Tabletop role-playing activities (TTRPGs) have been a cherished hobby for many years, uniting companions & relatives for grand quests & shared narrative encounters. Nonetheless, the arrival of digital tech has transformed how we tackle these pastimes, ushering in a fresh period of virtual gaming surfaces.
 
-These apps, like [Nurl](https://nurl.website/), Roll20, Foundry Virtual Tabletop, & Fantasy Grounds, have changed the normal tabletop gaming experience by giving a smooth & engaging digital setting. Gamers can currently assemble from anywhere across the globe and opening up fresh chances for cooperative gameplay.
+These apps, like [Nurl](https://nurlttrpg.com/), Roll20, Foundry Virtual Tabletop, & Fantasy Grounds, have changed the normal tabletop gaming experience by giving a smooth & engaging digital setting. Gamers can currently assemble from anywhere across the globe and opening up fresh chances for cooperative gameplay.
 
 ### Benefits of Digital Tabletop Gaming
 
@@ -86,14 +86,14 @@ While these platforms share many similarities, each offers unique strengths & ca
 
 ### Nurl
 
-[Nurl](https://nurl.website) stands out against the before-mentioned platforms by offering an app that focuses on four main aspects:
+[Nurl](https://nurlttrpg.com) stands out against the before-mentioned platforms by offering an app that focuses on four main aspects:
 
 1. Simplifying game rules - making it easier to learn, run, or play your game of choice.
 2. Providing a fully inclusive and accessible experience (including for people with neurological disorders).
 3. Focusing on enhancing the game experience for groups that play IRL or hybrid.
 4. Provide an exclusive database with analytics for game publishers (of any size) to easily add and manage their games within Nurl.
 
-Whether you are a Publisher, Game Master, or Player - Nurl helps to "make tabletop role play games easy". What's more is that the company has already [won awards](https://nurl.website//blog/netty-awards-2024-winner/) for their unreleased app. It gives the ability to have dashboard of widgets relating to your game or character, hosting group (or private GM) notes that is presented as a Google Docs/Notion mash-up, group chat, an NPC "contacts list", planning tools, a "combat arena" which simplifies and streamlines enemy encounters, and ground breaking accessibility features. The list really does go on.
+Whether you are a Publisher, Game Master, or Player - Nurl helps to "make tabletop role play games easy". What's more is that the company has already [won awards](https://nurlttrpg.com//blog/netty-awards-2024-winner/) for their unreleased app. It gives the ability to have dashboard of widgets relating to your game or character, hosting group (or private GM) notes that is presented as a Google Docs/Notion mash-up, group chat, an NPC "contacts list", planning tools, a "combat arena" which simplifies and streamlines enemy encounters, and ground breaking accessibility features. The list really does go on.
 
 ## Essential Features for Digital Tabletop Gaming
 
@@ -103,7 +103,7 @@ Whether you are a Publisher, Game Master, or Player - Nurl helps to "make tablet
 
 One of the most essential parts of any tabletop RPG is making & handling characters. Digital tabletop platforms give interactive character sheets that simplify this process, letting players effortlessly create, customize, & update their characters' stats, skills, and gear. These character sheets frequently integrate with the game's rules, automatically figuring out modifiers & ensuring adherence to the system's mechanics!
 
-However, [Nurl](https://nurl.website) takes this a step further and is the only platform that _simplifies_ the character sheet. They deconstruct the sheet data to make it easier to understand and faster to learn the game for players of all experience.
+However, [Nurl](https://nurlttrpg.com) takes this a step further and is the only platform that _simplifies_ the character sheet. They deconstruct the sheet data to make it easier to understand and faster to learn the game for players of all experience.
 
 ### Virtual Dice Rolling
 
@@ -156,13 +156,13 @@ When assessing trendy tabletop platforms, it's advantageous to contrast their st
 - **[Roll20 VTT](https://roll20.net/)**: Recognized for its extensive collection of instruments, & huge content library, Roll20 is a safe bet for most fully virtual players.
 - **[Foundry Virtual Tabletop](https://foundryvtt.com/)**: Giving a self-run, web-based experience with cool stuff like free player links & an official store, Foundry VTT is a strong choice for those wanting to change things up and be in charge.
 - **[Fantasy Grounds VTT](https://www.fantasygrounds.com/)**: A long-lasting virtual tabletop answer with strong character sheet modification, dynamic lighting, and support for a wide variety of tabletop RPG systems.
-- **[Nurl](https://nurl.website/)**: Though not a total virtual tabletop stage, Nurl gives roleplaying game stages & TTRPG crusade the executives apparatuses that can supplement and improve your experience. Not to mention be fully accessible and inclusive!
+- **[Nurl](https://nurlttrpg.com/)**: Though not a total virtual tabletop stage, Nurl gives roleplaying game stages & TTRPG crusade the executives apparatuses that can supplement and improve your experience. Not to mention be fully accessible and inclusive!
 
 Lastly, the suitable digital tabletop instrument for you will rely on your particular requirements, preferences, & the gaming encounter you & your crew wish. By thoroughly assessing the accessible possibilities & considering the aspects stated above, you can make an educated decision that raises your roleplaying escapades to innovative peaks.
 
 ## Conclusion
 
-In the always-changing world of board gaming, digital tools have become essential for improving the roleplaying experience. While platforms like Roll20, Foundry Virtual Tabletop, and Fantasy Grounds offer complete solutions for remote play, [Nurl](https://nurl.website/), the simplest way to play TTRPGs, stands out as a game-changer for in-person & hybrid sessions.
+In the always-changing world of board gaming, digital tools have become essential for improving the roleplaying experience. While platforms like Roll20, Foundry Virtual Tabletop, and Fantasy Grounds offer complete solutions for remote play, [Nurl](https://nurlttrpg.com/), the simplest way to play TTRPGs, stands out as a game-changer for in-person & hybrid sessions.
 
 Nurl simplifies the setup procedure, making it simpler than ever to plunge into your beloved TTRPG escapades. With its user-friendly interface & seamless incorporation of digital assets, Nurl enables you to concentrate on what genuinely matters:
 
@@ -174,8 +174,8 @@ Blending the finest of both realms - the tangible pleasure of physical gaming pi
 
 ## Related Posts
 
-- [Nurl, we help publishers enhance the player experience](https://nurl.website/publishers/)
-- [Nurl | Legal terms policy](https://nurl.website/legal/terms/)
+- [Nurl, we help publishers enhance the player experience](https://nurlttrpg.com/publishers/)
+- [Nurl | Legal terms policy](https://nurlttrpg.com/legal/terms/)
 
 ## Frequently Asked Questions (FAQs)
 
@@ -205,7 +205,7 @@ Yup, Nurl is made to work with lots of famous tabletop role-playing game systems
 
 ### How can I get started with Nurl?
 
-Commencing with Nurl is straightforward. Merely visit their website at [https://nurl.website](https://nurl.website/) & join the wait list. You will receive email updates where you will stay up to date on launch or even join a beta testing batch!
+Commencing with Nurl is straightforward. Merely visit their website at [https://nurlttrpg.com](https://nurlttrpg.com/) & join the wait list. You will receive email updates where you will stay up to date on launch or even join a beta testing batch!
 
 ## Sources
 

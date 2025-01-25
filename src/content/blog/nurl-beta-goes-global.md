@@ -24,4 +24,4 @@ In the first 48 hours of launch, Nurl quickly had its first 100 beta users. The 
 
 “The Nurl app is in a beta development phase,” says Baggz. “I am so thankful for our beta users and the insight they will provide as we continue to grow Nurl for all TTRPG players.”
 
-Nurl is still accepting free beta users on its [new website](https://nurl.website). Beta users will also become part of the inner circle of the upcoming Nurl Rewards platform.
+Nurl is still accepting free beta users on its [new website](https://nurlttrpg.com). Beta users will also become part of the inner circle of the upcoming Nurl Rewards platform.
