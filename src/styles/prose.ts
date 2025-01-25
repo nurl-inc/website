@@ -6,13 +6,13 @@ import { css } from 'styled-system/css';
 export const proseCss = css.raw({
   color: 'page.text.initial',
   '& h1': {
-    textStyle: 'heading-lg',
-  },
-  '& h2': {
     textStyle: 'heading-md',
   },
-  '& h3': {
+  '& h2': {
     textStyle: 'heading-sm',
+  },
+  '& h3': {
+    textStyle: 'heading-xs',
   },
   '& h4': {
     textStyle: 'heading-xs',
@@ -38,8 +38,8 @@ export const proseCss = css.raw({
     marginBlockEnd: 10,
     textStyle: 'body-md',
   },
-  '& strong': {
-    fontWeight: 'bold',
+  '& :is(strong)': {
+    fontVariationSettings: "'wght' 600",
   },
   '& a': {
     textDecoration: 'underline',
