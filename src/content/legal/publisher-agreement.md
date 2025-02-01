@@ -13,7 +13,7 @@ updated: January 25, 2025
 
 The following documents are part of the Publisher Agreement when you apply to verify as a publisher on Nurl. By submitting your application, you agree to the terms and conditions outlined in these documents.
 
-1. [Data Usage Agreement](./data-usage-agreement/)
-2. [Content Standards](./content-standards/)
-3. [Terms of Service](./terms/)
-4. [Support Policy](./support-policy/)
+1. [Data Usage Agreement](/legal/data-usage-agreement/)
+2. [Content Standards](/legal/content-standards/)
+3. [Terms of Service](/legal/terms/)
+4. [Support Policy](/legal/support-policy/)

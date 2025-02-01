@@ -34,7 +34,7 @@ Business and legal requirements may mean that we need to retain certain informat
 
 - **To exercise or defend legal claims.** When you contact Nurl directly (such as for customer support inquiries and requests to access your information), we retain related information for five years from the closure of your request in case of a dispute or to exercise or defend our legal rights.
 
-- **Continuity of our service:** If you delete your account, we continue to retain and display the content you shared with other users, but that content is no longer tied to your account. We do this in order to ensure that other users continue to have access to the content shared with them. If you want to delete specific content, please do so before you delete your account. You can delete specific content as described in the “Information you can delete directly from the services” section above, or if you need help deleting content, you can write in to [privacy@nurl.app](mailto:privacy@nurl.app).
+- **Continuity of our service:** If you delete your account, we continue to retain and display the content you shared with other users, but that content is no longer tied to your account. We do this in order to ensure that other users continue to have access to the content shared with them. If you want to delete specific content, please do so before you delete your account. You can delete specific content as described in the “Information you can delete directly from the services” section above, or if you need help deleting content, you can write in to <privacy@nurl.app>.
 
 Some content is automatically deleted once you delete your account. For example, your profiles and groups.
 
@@ -55,4 +55,4 @@ As provided in our [Privacy Policy](/legal/privacy/), all our users have control
 
 :br
 
-If you have any questions about data retention or our deletion practices, or if you wish to exercise control over your information, please reach out to [privacy@nurl.app](mailto:privacy@nurl.app).
+If you have any questions about data retention or our deletion practices, or if you wish to exercise control over your information, please reach out to <privacy@nurl.app>.

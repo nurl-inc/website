@@ -127,7 +127,7 @@ We retain and use your information in connection with potential legal claims whe
 
 #### With your consent
 
-We may ask for your consent to use your information for certain specific reasons. You may withdraw your consent at any time by contacting us at [privacy@nurl.app](mailto:privacy@nurl.app). For example, we may ask for your consent to collect your precise location or to collect your voice data to improve our voice recognition technology.
+We may ask for your consent to use your information for certain specific reasons. You may withdraw your consent at any time by contacting us at <privacy@nurl.app>. For example, we may ask for your consent to collect your precise location or to collect your voice data to improve our voice recognition technology.
 
 #### ‍To protect someone’s vital interests
 

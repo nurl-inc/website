@@ -16,7 +16,7 @@
   "resources": [
     {
       "name": "Documentation",
-      "href": "/help"
+      "href": "/docs"
     },
     {
       "name": "API Reference",
