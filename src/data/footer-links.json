@@ -119,6 +119,10 @@
     {
       "name": "GDPR Compliance",
       "href": "/legal/gdpr"
+    },
+    {
+      "name": "All Legal",
+      "href": "/legal"
     }
   ]
 }

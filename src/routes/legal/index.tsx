@@ -52,9 +52,13 @@ export default function Legal(props: RouteSectionProps<RouteData>) {
             })}
           >
             <Text as="h1" textStyle="heading-md">
-              Legal
+              Legal Documents
             </Text>
-            <Text>Anything you need to know about Nurl.</Text>
+            <Text>
+              Review Nurl's legal documents. Learn about user rights,
+              responsibilities, and platform policies for both our Nurl Sanctum
+              and Nurl Play platform.
+            </Text>
           </header>
 
           <Suspense>

@@ -1,6 +1,6 @@
-import { query } from '@solidjs/router';
+'use server';
 
-// data
+import { query } from '@solidjs/router';
 import signup from '~/data/play/signup.json';
 import pricing from '~/data/play/pricing.json';
 import features from '~/data/play/features.json';

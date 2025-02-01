@@ -1,10 +1,6 @@
 /* eslint-disable solid/no-innerhtml */
 
-import {
-  createAsync,
-  useParams,
-  type RouteSectionProps,
-} from '@solidjs/router';
+import { createAsync, type RouteSectionProps } from '@solidjs/router';
 import { createMemo, lazy, Show, Suspense } from 'solid-js';
 import { Box, Container } from 'styled-system/jsx';
 import Head from '~/components/shared/head';
@@ -42,9 +38,8 @@ interface RouteData {
 }
 
 export default function BlogPage(props: RouteSectionProps<RouteData>) {
-  const params = useParams();
-  const slug = () => params.blogSlug as keyof typeof blogData;
-  const metadataSlug = () => makeSlug(params.blogSlug);
+  const slug = () => props.params.blogSlug as keyof typeof blogData;
+  const metadataSlug = () => makeSlug(props.params.blogSlug);
 
   const metaData = createAsync(() => getBlogPostData(slug()));
 
