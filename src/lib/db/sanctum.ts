@@ -1,6 +1,6 @@
-import { query } from '@solidjs/router';
+'use server';
 
-// data files
+import { query } from '@solidjs/router';
 import registerData from '~/data/sanctum/register.json';
 import showcaseData from '~/data/sanctum/showcase.json';
 import pricingData from '~/data/sanctum/pricing.json';

@@ -36,9 +36,8 @@ Nurl assessed the accessibility of our platform by the following approaches:
 
 We welcome your feedback on the accessibility of Nurl. Please let us know if you encounter accessibility barriers:
 
-- Email: accessibility@nurl.com
-- Phone: [Your Phone Number]
-- Feedback form: [Link to Form]
+- Email: <accessibility@nurl.com>
+- Feedback form: [Contact Page](/contact)
 
 We try to respond to feedback within 2 business days.
 

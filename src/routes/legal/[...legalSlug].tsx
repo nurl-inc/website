@@ -1,6 +1,6 @@
 /* eslint-disable solid/no-innerhtml */
 
-import { useParams, type RouteSectionProps } from '@solidjs/router';
+import { createAsync, query, type RouteSectionProps } from '@solidjs/router';
 import { createMemo, lazy, Show, Suspense } from 'solid-js';
 import { css } from 'styled-system/css';
 import { Box, Container } from 'styled-system/jsx';
@@ -11,11 +11,20 @@ import Nav from '~/components/shared/nav';
 import { makeSlug } from '~/primitives/makeSlug';
 import { proseCss } from '~/styles/prose';
 import type { Metadata } from '~/types';
+import { getLegalMetaData, getLegalPostData } from '~/lib/db/legal';
 
 import keywords from '~/data/keywords.json';
-import legalData from '~/data/generated/legal.json';
 
 const Footer = lazy(() => import('~/components/shared/footer'));
+
+// Data
+
+const legalPageData = query(async (slug: string) => {
+  'use server';
+  const meta = await getLegalMetaData();
+  const content = await getLegalPostData(slug);
+  return { meta: meta[slug as keyof typeof meta], content };
+}, 'legal-page-data');
 
 const metadata: Metadata = {
   title: 'Nurl | Legal',
@@ -32,21 +41,26 @@ export const route = {
   },
 };
 
+// Component
+
 interface RouteData {
   metadata: Metadata;
 }
 
 export default function LegalPage(props: RouteSectionProps<RouteData>) {
-  const params = useParams();
-  const slug = () => params.legalSlug as keyof typeof legalData;
-  const metadataSlug = () => makeSlug(params.legalSlug);
+  const slug = () => props.params.legalSlug;
+  const metadataSlug = () => makeSlug(props.params.legalSlug);
 
-  const data = createMemo(() => legalData[slug()]);
+  const data = createAsync(() => legalPageData(slug()));
 
   const metadata = createMemo(() => ({
     ...props.data.metadata,
-    title: `Nurl Legal | Learn about our ${metadataSlug()} policy`,
-    description: `Read about Nurl's ${metadataSlug()} policies and all the things you need to know about Nurl for both our Nurl Sanctum and Nurl Play platform.`,
+    title:
+      data()?.meta?.title ||
+      `Nurl Legal | Learn about our ${metadataSlug()} policy`,
+    description:
+      data()?.meta?.description ||
+      `Read about Nurl's ${metadataSlug()} policies and all the things you need to know about Nurl for both our Nurl Sanctum and Nurl Play platform.`,
   }));
 
   return (
@@ -60,7 +74,7 @@ export default function LegalPage(props: RouteSectionProps<RouteData>) {
             <Show when={data()}>
               <Box class={css(proseCss)} paddingBlockStart="10" w="full">
                 <Breadcrumb />
-                <div innerHTML={data()} />
+                <div innerHTML={data()?.content} />
               </Box>
             </Show>
           </Suspense>

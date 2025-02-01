@@ -1,6 +1,6 @@
-import { query } from '@solidjs/router';
+'use server';
 
-// data
+import { query } from '@solidjs/router';
 import meta from '~/data/blog/meta.json';
 
 /**

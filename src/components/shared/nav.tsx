@@ -22,6 +22,7 @@ export default function Nav() {
             data-part="nav"
             backdropFilter="blur(15px)"
             bgColor="black/75"
+            paddingInline="4"
             rounded="xl"
             w="full"
           >

@@ -7,6 +7,7 @@ import { convertToHtml } from '~/lib/rehype';
  * @returns The sanitized markdown content
  */
 export const getMarkdownContent = query(async (content: string) => {
+  'use server';
   const cleanMarkup = await convertToHtml(content);
   return cleanMarkup;
 }, 'markdownContent');

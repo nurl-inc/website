@@ -16,7 +16,7 @@
   "resources": [
     {
       "name": "Documentation",
-      "href": "/help"
+      "href": "/docs"
     },
     {
       "name": "API Reference",
@@ -119,6 +119,10 @@
     {
       "name": "GDPR Compliance",
       "href": "/legal/gdpr"
+    },
+    {
+      "name": "All Legal",
+      "href": "/legal"
     }
   ]
 }

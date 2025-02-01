@@ -156,6 +156,7 @@ function FooterSection(props: ParentProps<FooterSectionProps>) {
       <Text as="h3" fontWeight="600" textTransform="capitalize">
         {props.section}
       </Text>
+
       <Index each={footerLinks[props.section]}>
         {(item) => (
           <A

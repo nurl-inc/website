@@ -74,7 +74,7 @@ We implement appropriate technical and organizational measures:
 For any GDPR-related queries:
 
 Data Protection Officer
-Email: privacy@nurl.com
+Email: <privacy@nurl.com>
 
 ## Updates to This Statement
 
