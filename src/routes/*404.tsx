@@ -1,5 +1,4 @@
 import type { RouteSectionProps } from '@solidjs/router';
-import { HttpStatusCode } from '@solidjs/start';
 import { Container, VStack } from 'styled-system/jsx';
 import Footer from '~/components/shared/footer';
 import Head from '~/components/shared/head';
@@ -30,7 +29,6 @@ interface RouteData {
 export default function NotFound(props: RouteSectionProps<RouteData>) {
   return (
     <>
-      <HttpStatusCode code={404} />
       <Head {...props.data.metadata} />
       <Nav />
 
