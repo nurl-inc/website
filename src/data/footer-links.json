@@ -9,8 +9,12 @@
       "href": "/sanctum"
     },
     {
-      "name": "Pricing",
-      "href": "/pricing"
+      "name": "Sanctum Pricing",
+      "href": "/sanctum/pricing"
+    },
+    {
+      "name": "Play Pricing",
+      "href": "/play/pricing"
     }
   ],
   "resources": [
@@ -24,7 +28,7 @@
     },
     {
       "name": "Game System Library",
-      "href": "/game-systems"
+      "href": "/resources/game-systems"
     },
     {
       "name": "Community Guidelines",

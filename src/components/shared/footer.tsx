@@ -176,6 +176,10 @@ function FooterSection(props: ParentProps<FooterSectionProps>) {
               },
             })}
             href={item().href}
+            target={item().href.includes('http') ? '_blank' : undefined}
+            rel={
+              item().href.includes('http') ? 'noopener noreferrer' : undefined
+            }
             end
           >
             {item().name}
