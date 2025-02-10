@@ -61,8 +61,8 @@ importers:
         specifier: ^0.51.1
         version: 0.51.1(jsdom@25.0.1)(typescript@5.7.3)
       '@pandacss/types':
-        specifier: ^0.51.1
-        version: 0.51.1
+        specifier: ^0.52.0
+        version: 0.52.0
       '@types/marked':
         specifier: ^6.0.0
         version: 6.0.0
@@ -1081,6 +1081,9 @@ packages:
 
   '@pandacss/types@0.51.1':
     resolution: {integrity: sha512-yy8wr6LjdwRZUaid37CE/TxJyxkD1cyTj8OQfwSFxwfxSLsupzX00/IoNw4OJyfm/inTCmcj7DfSVmRrAsi4Bw==}
+
+  '@pandacss/types@0.52.0':
+    resolution: {integrity: sha512-HOoWNeJFthg6fNAaGPvRevO6CQxlC42xANvTolD6xhKujvuGr+W7OlCoTtWc4s0XUg1AGBPCmeEdFR4pwSzAsg==}
 
   '@parcel/watcher-android-arm64@2.5.0':
     resolution: {integrity: sha512-qlX4eS28bUcQCdribHkg/herLe+0A9RyYC+mm2PXpncit8z5b3nSqGVzMNR3CmtAOgRutiZ02eIJJgP/b1iEFQ==}
@@ -6091,6 +6094,8 @@ snapshots:
       ts-pattern: 5.0.8
 
   '@pandacss/types@0.51.1': {}
+
+  '@pandacss/types@0.52.0': {}
 
   '@parcel/watcher-android-arm64@2.5.0':
     optional: true
