@@ -61,7 +61,7 @@
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
   },
-  "packageManager": "pnpm@9.14.2",
+  "packageManager": "pnpm@10.4.1",
   "engines": {
     "node": ">=22"
   }
