@@ -4,11 +4,13 @@ import { css } from 'styled-system/css';
 
 export type TextLinkProps = JSX.AnchorHTMLAttributes<HTMLAnchorElement> & {
   href: string;
+  capitalize?: boolean;
 };
 
 export function TextLink(props: TextLinkProps) {
   return (
     <A
+      data-capitalize={props.capitalize}
       class={css({
         display: 'inline-block',
         color: 'action.bg.initial',
@@ -18,6 +20,9 @@ export function TextLink(props: TextLinkProps) {
         textStyle: 'link',
         transitionProperty: 'color',
         transitionDuration: 'fast',
+        '&:is([data-capitalize=true])': {
+          textTransform: 'capitalize',
+        },
         _hover: {
           color: 'action.bg.hover',
         },
@@ -26,6 +31,7 @@ export function TextLink(props: TextLinkProps) {
         },
       })}
       href={props.href}
+      end
     >
       {props.children}
     </A>
