@@ -8,7 +8,7 @@
     },
     "ctaSecondary": {
       "text": "Watch Demo",
-      "url": "/play/demo"
+      "url": "https://www.youtube.com/@NurlApp"
     }
   },
   {
@@ -16,7 +16,7 @@
     "answer": "Nurl Sanctum is the sacred space where tabletop RPG publishers transform their game ideas into reality. \n\nUnlike traditional development tools, Sanctum lets you visually map your entire game system - seeing every relationship, balance point, and interaction at a glance. It's like having a bird's-eye view of your game's DNA.\n\nPublishers using Sanctum can:\n- Cut development time in half\n- Spot system issues instantly\n- Test rule interactions in real-time\n- Deploy seamlessly to Nurl Play\n\nFrom indie creators to established studios, Sanctum grows with your ambitions.",
     "ctaPrimary": {
       "text": "Schedule Demo",
-      "url": "/sanctum/demo"
+      "url": "/sanctum/register"
     },
     "ctaSecondary": {
       "text": "View Publisher Stories",
@@ -27,12 +27,12 @@
     "question": "How much will it cost?",
     "answer": "Nurl Play: \n- Free Tier - Basic automation and single character \n- Personal ($9.99/month) - Full automation, multiple characters, all rulesets \n- Group Master ($29.99/month) - Everything in Personal plus 6 connected players\n\nAdditional Options: \n- Extra player slots: $4.99/player \n- Tokens: $4.99/10k tokens \n- Annual plans save 20%\n\nNurl Sanctum: \n- Creator ($49/month) - Full features, 3 team members, 2 active games \n- Studio ($199/month) - Unlimited team & games, priority support, API access\n\nAdditional Options: \n- One-time implementation fee for Sanctum: $999\nIncludes setup, migration support, and team training.\n\nAll paid plans include a 14-day free trial.",
     "ctaPrimary": {
-      "text": "See Full Pricing",
-      "url": "/pricing"
+      "text": "See Sanctum Pricing",
+      "url": "/sanctum/pricing"
     },
     "ctaSecondary": {
-      "text": "Compare Plans",
-      "url": "/pricing/compare"
+      "text": "See Play Pricing",
+      "url": "/play/pricing"
     }
   },
   {
