@@ -1,6 +1,5 @@
-import { A, type RouteSectionProps } from '@solidjs/router';
+import { type RouteSectionProps } from '@solidjs/router';
 import { createMemo, Index, lazy, Suspense } from 'solid-js';
-import { css } from 'styled-system/css';
 import { Box, Container, VStack } from 'styled-system/jsx';
 import { vstack } from 'styled-system/patterns/vstack';
 import Head from '~/components/shared/head';
@@ -75,15 +74,15 @@ export default function Blog(props: RouteSectionProps<RouteData>) {
 
               <Box w="full">
                 <Text as="h2" textStyle="heading-sm">
-                  The Practical GM
+                  Introducing Nurl Sanctum
                 </Text>
                 <Text>
-                  Learn how to become a more effective Game Master with Nurl
-                  Play.
+                  Learn how Nurl Sanctum will help you build, test, validate,
+                  and iterate your tabletop RPG games faster.
                 </Text>
               </Box>
 
-              <TextLink href="/blog/the-practical-gm">Check it out</TextLink>
+              <TextLink href="/blog/introducing-sanctum">Check it out</TextLink>
             </VStack>
           </Box>
 
@@ -104,18 +103,9 @@ export default function Blog(props: RouteSectionProps<RouteData>) {
               <Index each={data()}>
                 {(slug) => (
                   <li>
-                    <A
-                      class={css({
-                        textStyle: 'link',
-                        textDecoration: 'underline',
-                        _hover: {
-                          textDecorationColor: 'action.bg.hover',
-                        },
-                      })}
-                      href={`/blog/${slug()}`}
-                    >
-                      {slug()}
-                    </A>
+                    <TextLink capitalize href={`/blog/${slug()}`}>
+                      {slug().replace(/-/g, ' ')}
+                    </TextLink>
                   </li>
                 )}
               </Index>
