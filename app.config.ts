@@ -17,6 +17,12 @@ function makeBlogRoutes(): string[] {
   return files.map((file) => `/blog/${file.replace('.md', '')}`);
 }
 
+function makeDocsRoutes(): string[] {
+  const docsDir = path.join(process.cwd(), 'src', 'content', 'docs');
+  const files = fs.readdirSync(docsDir);
+  return files.map((file) => `/docs/${file.replace('.md', '')}`);
+}
+
 export default defineConfig({
   server: {
     compatibilityDate: '2024-12-06',
@@ -34,7 +40,11 @@ export default defineConfig({
       // create sitemap.xml
       Sitemap({
         hostname: 'https://nurlttrpg.com',
-        dynamicRoutes: [...makeLegalRoutes(), ...makeBlogRoutes()],
+        dynamicRoutes: [
+          ...makeLegalRoutes(),
+          ...makeBlogRoutes(),
+          ...makeDocsRoutes(),
+        ],
         exclude: ['/thanks'],
         outDir: 'public',
         extensions: ['html'],

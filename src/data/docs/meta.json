@@ -1,0 +1,14 @@
+{
+  "workspace-management": {
+    "title": "Workspace Management - Nurl Sanctum Guide",
+    "description": "Learn how to efficiently manage your workspaces in Nurl Sanctum. Create, switch, edit, and delete workspaces with ease."
+  },
+  "managing-workspace-members": {
+    "title": "Managing Workspace Members - Nurl Sanctum Guide",
+    "description": "Discover how to manage team members in your Nurl Sanctum workspace. Add, remove, and edit member roles seamlessly."
+  },
+  "authentication": {
+    "title": "Authentication - Secure Access to Nurl Services",
+    "description": "Understand Nurl's authentication process using one-time login tokens. Securely access all Nurl services with a single account."
+  }
+}

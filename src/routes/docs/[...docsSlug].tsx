@@ -13,15 +13,16 @@ import { proseCss } from '~/styles/prose';
 import { Breadcrumb } from '~/components/shared/breadcrumb';
 
 import keywords from '~/data/keywords.json';
-import blogData from '~/data/generated/blog.json';
-import { getBlogPostData } from '~/lib/db/blog';
+import docsKeywords from '~/data/keywords/docs.json';
+import docsData from '~/data/generated/docs.json';
+import { getDocsPostData } from '~/lib/db/docs';
 
 const Footer = lazy(() => import('~/components/shared/footer'));
 
 const metadata: Metadata = {
-  title: 'Nurl | Blog',
-  description: 'Read our blog posts.',
-  keywords: `${keywords.base.join(', ')}, ${keywords.blog.join(', ')}`,
+  title: 'Nurl Docs | Learn how to use Nurl',
+  description: 'Read our docs.',
+  keywords: `${keywords.base.join(', ')}, ${docsKeywords.join(', ')}`,
   image: 'https://nurlttrpg.com/og-meta.png',
 };
 
@@ -38,21 +39,21 @@ interface RouteData {
 }
 
 export default function BlogPage(props: RouteSectionProps<RouteData>) {
-  const slug = () => props.params.blogSlug as keyof typeof blogData;
-  const metadataSlug = () => makeSlug(props.params.blogSlug);
+  const slug = () => props.params.docsSlug as keyof typeof docsData;
+  const metadataSlug = () => makeSlug(props.params.docsSlug);
 
-  const metaData = createAsync(() => getBlogPostData(slug()));
+  const metaData = createAsync(() => getDocsPostData(slug()));
 
   const metadata = createMemo(() => {
     return {
       ...props.data.metadata,
-      title: metaData()?.title || `Nurl Blog | ${metadataSlug()}`,
+      title: metaData()?.title || `Nurl Docs | ${metadataSlug()}`,
       description:
-        metaData()?.description || `Read our ${metadataSlug()} blog post.`,
+        metaData()?.description || `Learn how to use Nurl | ${metadataSlug()}`,
     };
   });
 
-  const data = createMemo(() => blogData[slug()]);
+  const data = createMemo(() => docsData[slug()]);
 
   return (
     <>
@@ -62,9 +63,10 @@ export default function BlogPage(props: RouteSectionProps<RouteData>) {
       <Main>
         <Container maxW="100ch" minH="80dvh" paddingBlock="4" paddingInline="4">
           <Breadcrumb />
+
           <Suspense>
             <Show when={data()}>
-              <Box class={css(proseCss)} paddingBlockStart="10" w="full">
+              <Box class={css(proseCss)} w="full">
                 <div innerHTML={data()} />
               </Box>
             </Show>
