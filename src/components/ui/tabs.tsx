@@ -1,11 +1,13 @@
-import { Tabs as KTabs } from '@kobalte/core/tabs';
-import type { TabsContentProps, TabsRootProps } from '@kobalte/core/tabs';
-import { For, splitProps, type ParentProps } from 'solid-js';
+import {
+  Tabs as ArkTabs,
+  type TabContentProps,
+  type TabsRootProps,
+} from '@ark-ui/solid/tabs';
+import { Index, splitProps, type ParentProps } from 'solid-js';
 import { tabs, type TabsVariantProps } from 'styled-system/recipes';
 
 /**
- * This module is a wrapper around the Kobalte Tabs component. We have to use
- * Kobalte because Ark UI has a bug with the Tabs component.
+ * This module is a wrapper around the Arks Tabs component.
  * @module Tabs
  */
 
@@ -38,30 +40,28 @@ export function Tabs(props: ParentProps<TabsProps>) {
   const styles = tabs();
 
   return (
-    <KTabs defaultValue={defaultValue} {...rootProps}>
-      <KTabs.List class={styles.list}>
-        <For each={propsTabs}>
+    <ArkTabs.Root value={defaultValue} {...rootProps}>
+      <ArkTabs.List class={styles.list}>
+        <Index each={propsTabs}>
           {(tab) => (
-            <KTabs.Trigger value={tab.id} class={styles.trigger}>
-              {tab.label}
-            </KTabs.Trigger>
+            <ArkTabs.Trigger value={tab().id} class={styles.trigger}>
+              {tab().label}
+            </ArkTabs.Trigger>
           )}
-        </For>
-        <KTabs.Indicator class={styles.indicator} />
-      </KTabs.List>
+        </Index>
+        <ArkTabs.Indicator class={styles.indicator} />
+      </ArkTabs.List>
 
       {props.children}
-    </KTabs>
+    </ArkTabs.Root>
   );
 }
 
 /**
  * TabsContent component that renders the content for a tab.
- *
- * @param props - KTabs.ContentProps
- */
-export function TabContent(props: ParentProps<TabsContentProps>) {
-  const styles = tabs();
 
-  return <KTabs.Content {...props} class={styles.content} />;
+ */
+export function TabContent(props: ParentProps<TabContentProps>) {
+  const styles = tabs();
+  return <ArkTabs.Content {...props} class={styles.content} />;
 }
