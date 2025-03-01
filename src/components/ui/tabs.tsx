@@ -33,14 +33,11 @@ interface TabsProps extends TabsRootProps, TabsVariantProps {
  * ```
  */
 export function Tabs(props: ParentProps<TabsProps>) {
-  const [{ tabs: propsTabs, defaultValue }, rootProps] = splitProps(props, [
-    'tabs',
-    'defaultValue',
-  ]);
+  const [{ tabs: propsTabs }, rootProps] = splitProps(props, ['tabs']);
   const styles = tabs();
 
   return (
-    <ArkTabs.Root value={defaultValue} {...rootProps}>
+    <ArkTabs.Root {...rootProps}>
       <ArkTabs.List class={styles.list}>
         <Index each={propsTabs}>
           {(tab) => (

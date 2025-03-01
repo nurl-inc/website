@@ -15,7 +15,7 @@ export type LeadChoiceValue = [
   { setChoice: (choice: LeadChoice) => void },
 ];
 
-export const INITIAL_TYPE: LeadChoice = 'play';
+export const INITIAL_TYPE: LeadChoice = 'sanctum';
 
 const INITIAL_STORE_SETTER = {
   setChoice: () => undefined,

@@ -4,7 +4,6 @@ import { css } from 'styled-system/css';
 import { Box, Container, VStack } from 'styled-system/jsx';
 import { Link, Text } from '~/components/ui';
 import SpotlightItem from '~/components/ui/spotlight-item';
-import { useLeadChoice, type LeadChoice } from '~/context/lead-choice';
 
 import productTabContent from '~/data/product-tab-content.json';
 import { staggerList } from '~/lib/motion';
@@ -12,10 +11,7 @@ import { staggerList } from '~/lib/motion';
 type TabContentProductProps = (typeof productTabContent)['sanctum'];
 
 export default function TabContentProduct(props: TabContentProductProps) {
-  const [, { setChoice }] = useLeadChoice();
-
   onMount(() => {
-    setChoice(props.choice as LeadChoice);
     staggerList('#spotlight-item');
   });
 
