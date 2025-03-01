@@ -7,6 +7,10 @@
     "title": "Managing Workspace Members - Nurl Sanctum Guide",
     "description": "Discover how to manage team members in your Nurl Sanctum workspace. Add, remove, and edit member roles seamlessly."
   },
+  "repository-management": {
+    "title": "Repository Management - Nurl Sanctum Guide",
+    "description": "Learn how to create and manage repositories in Nurl Sanctum. Control visibility settings, edit repository details, and organize your game content effectively."
+  },
   "authentication": {
     "title": "Authentication - Secure Access to Nurl Services",
     "description": "Understand Nurl's authentication process using one-time login tokens. Securely access all Nurl services with a single account."
