@@ -104,6 +104,14 @@ export default function TabContentProduct(props: TabContentProductProps) {
                 {props.main2}
               </Text>
             </Text>
+            <Text
+              color="neutral.300"
+              marginBlockStart="6"
+              textStyle="body-lg"
+              w="3/4"
+            >
+              {props.description}
+            </Text>
           </Box>
 
           <Link href={props.actionLink} palette="secondary">

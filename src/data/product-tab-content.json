@@ -4,14 +4,15 @@
     "lead": "The tool for publishers",
     "main1": "Where game",
     "main2": "worlds are born.",
+    "description": "Nurl Sanctum is a tool for publishers and designers to build your games faster, better, and safer.",
     "action": "Request beta access",
     "actionLink": "sanctum/register",
     "linkText": "Learn more about Nurl Sanctum",
     "link": "/sanctum",
     "features": [
       "Visual system mapping",
-      "Intuitive world building",
-      "Streamlined publishing"
+      "Automated validation and testing",
+      "Intuitive world building"
     ]
   },
   "play": {
@@ -19,6 +20,7 @@
     "lead": "The app for players",
     "main1": "Automate the complex.",
     "main2": "Keep the magic.",
+    "description": "Nurl Play is a tool for IRL groups to experience enhanced gameplay.",
     "action": "Join the waitlist",
     "actionLink": "play/signup",
     "linkText": "Learn more about Nurl Play",

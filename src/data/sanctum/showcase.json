@@ -2,8 +2,8 @@
   {
     "id": 1,
     "number": 1,
-    "heading": "Visual System Mapping",
-    "description": "Transform spreadsheets into clear, interactive system maps.",
+    "heading": "Intuitive Game Design",
+    "description": "Transform documents into a clear interactive system.",
     "icon": "transfer"
   },
   {
@@ -16,8 +16,8 @@
   {
     "id": 3,
     "number": 3,
-    "heading": "Direct Player Insights",
-    "description": "See how players interact with your games through Nurl Play integration.",
+    "heading": "Direct Insights",
+    "description": "Get low-level insights into your game's mechanics from real players.",
     "icon": "stats"
   }
 ]
