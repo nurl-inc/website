@@ -64,7 +64,7 @@ export default function PublisherValues() {
         <SanctumValueSection
           idx={2}
           heading="Create with Confidence"
-          description="Our visual tools make complex game design intuitive. Build, test, and iterate faster than ever."
+          description="Validate your game scales correctly with each change and something doesn't break at higher levels."
         />
         <SanctumValueSection
           idx={3}

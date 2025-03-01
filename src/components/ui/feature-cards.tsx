@@ -33,7 +33,7 @@ export function FeatureCardWithPoints(
             textStyle: 'heading-sm',
             textWrap: 'balance',
             md: {
-              maxW: '2/3',
+              maxW: '3/4',
             },
           })}
         >
@@ -134,7 +134,8 @@ export function HeadingFeatureCard(
             <Text
               textStyle="body-md"
               md={{
-                w: '2/3',
+                textStyle: 'body-lg',
+                w: '3/4',
               }}
             >
               {props.description}

@@ -1,12 +1,14 @@
 import { createMemo, Index, Show } from 'solid-js';
-import { Box } from 'styled-system/jsx';
-import { Tabs, TabContent } from '~/components/ui';
-import TabContentProduct from './tab-content-product';
 import { createAsync } from '@solidjs/router';
+import { Box } from 'styled-system/jsx';
 import { getProductTabContentData } from '~/lib/db';
+import { Tabs, TabContent } from '~/components/ui';
+import { useLeadChoice, type LeadChoice } from '~/context/lead-choice';
+import TabContentProduct from './tab-content-product';
 
 export default function GetStarted() {
   const productTabContent = createAsync(() => getProductTabContentData());
+  const [, { setChoice }] = useLeadChoice();
 
   const tabs = createMemo(() => [
     { id: 'sanctum', label: 'Nurl Sanctum' },
@@ -32,7 +34,13 @@ export default function GetStarted() {
       }}
     >
       <Show when={productTabContent()}>
-        <Tabs defaultValue="sanctum" tabs={tabs()}>
+        <Tabs
+          onValueChange={(details) => {
+            setChoice(details.value as LeadChoice);
+          }}
+          tabs={tabs()}
+          value="sanctum"
+        >
           <Index each={Object.values(productTabContent()!)}>
             {(item) => (
               <TabContent value={item().choice}>

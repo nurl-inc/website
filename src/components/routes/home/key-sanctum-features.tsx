@@ -36,19 +36,19 @@ export default function KeySanctumFeatures() {
         w="full"
         md={{ w: 'calc(50% - 1rem)' }}
       >
-        <FeatureCardWithPoints heading="Visualize your game">
+        <FeatureCardWithPoints heading="Real version control">
           <FeatureCardWithPointsItem
             icon={<PullRequestIcon color="#435356" />}
-            label="See your entire game system at a glance"
+            label="Keep track of every change"
           />
           <FeatureCardWithPointsItem
             icon={<BookIcon color="#435356" />}
-            label="Transform spreadsheets into clear information"
+            label="Rollback to a previous state when needed"
           />
         </FeatureCardWithPoints>
         <HeadingFeatureCard
-          heading="Publish Power"
-          description="From rules to content, manage your entire game library in one professional platform."
+          heading="Automated testing"
+          description="Ensure each update doesn't introduce breaking changes in your system."
           palette="secondary"
         />
       </VStack>
@@ -64,12 +64,12 @@ export default function KeySanctumFeatures() {
       >
         <HeadingFeatureCard
           heading="Create with Confidence"
-          description="Our visual tools make complex game design intuitive. Build, test, and iterate faster than ever."
+          description="Validate your game scales correctly with each change and something doesn't break at higher levels."
           palette="tertiary"
         />
         <HeadingFeatureCard
           heading="Direct Insights"
-          description="See how players interact with your games through Nurl Play integration."
+          description="See how players interact with your games with the Nurl Play integration."
           palette="accent"
         />
       </VStack>
