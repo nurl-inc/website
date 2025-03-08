@@ -29,20 +29,7 @@ export async function POST({ request }: APIEvent) {
       unsubscribed: false,
     });
 
-    // Update template with user data
-    const confirmationHtml =
-      emailTemplates.templates.userConfirmation.sanctum.html
-        .replace('{{name}}', data.name)
-        .replace('{{companyName}}', data.companyName)
-        .replace('{{year}}', new Date().getFullYear().toString());
-
-    // Step 2: Send waitlist confirmation
-    await send({
-      from: 'Nurl Sanctum <admin@nurl.app>',
-      to: [data.email],
-      subject: emailTemplates.templates.userConfirmation.sanctum.subject,
-      html: confirmationHtml,
-    });
+    // Step 2: User should receive a confirmation email via Kit
 
     // Step 3: Send team notification
     const scores = calculateQualificationScores(data);
