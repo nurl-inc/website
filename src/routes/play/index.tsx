@@ -6,6 +6,7 @@ import type { Metadata } from '~/types';
 import PlayHero from '~/components/routes/play/hero';
 
 import keywords from '~/data/keywords.json';
+import schema from '~/data/schema/play.json';
 
 // Below the window content
 const FeatureShowcase = lazy(
@@ -43,7 +44,10 @@ interface RouteData {
 export default function Play(props: RouteSectionProps<RouteData>) {
   return (
     <>
-      <Head {...props.data.metadata} />
+      <Head {...props.data.metadata}>
+        <script type="application/ld+json">{JSON.stringify(schema)}</script>
+      </Head>
+
       <Nav />
 
       <Main>

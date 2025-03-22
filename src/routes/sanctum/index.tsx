@@ -7,7 +7,7 @@ import { Head } from '~/components/shared';
 import type { Metadata } from '~/types';
 
 import keywords from '~/data/keywords.json';
-
+import schema from '~/data/schema/sanctum.json';
 // Below the window content
 const PublisherValues = lazy(
   () => import('~/components/routes/sanctum/publisher-values'),
@@ -57,7 +57,9 @@ export default function Sanctum(props: RouteSectionProps<RouteData>) {
 
   return (
     <>
-      <Head {...props.data.metadata} />
+      <Head {...props.data.metadata}>
+        <script type="application/ld+json">{JSON.stringify(schema)}</script>
+      </Head>
       <Nav />
 
       <Main>

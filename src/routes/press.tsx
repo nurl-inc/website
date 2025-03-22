@@ -6,7 +6,9 @@ import Main from '~/components/shared/main';
 import Nav from '~/components/shared/nav';
 import { Text } from '~/components/ui';
 import type { Metadata } from '~/types';
+
 import keywords from '~/data/keywords.json';
+import schema from '~/data/schema/home.json';
 
 // Route Data
 
@@ -35,7 +37,9 @@ interface RouteData {
 export default function Press(props: RouteSectionProps<RouteData>) {
   return (
     <>
-      <Head {...props.data.metadata} />
+      <Head {...props.data.metadata}>
+        <script type="application/ld+json">{JSON.stringify(schema)}</script>
+      </Head>
       <Nav />
 
       <Main>

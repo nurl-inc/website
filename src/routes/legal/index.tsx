@@ -11,6 +11,7 @@ import type { Metadata } from '~/types';
 
 import keywords from '~/data/keywords.json';
 import legalData from '~/data/generated/legal.json';
+import schema from '~/data/schema/home.json';
 
 const Footer = lazy(() => import('~/components/shared/footer'));
 
@@ -39,7 +40,9 @@ export default function Legal(props: RouteSectionProps<RouteData>) {
 
   return (
     <>
-      <Head {...props.data.metadata} />
+      <Head {...props.data.metadata}>
+        <script type="application/ld+json">{JSON.stringify(schema)}</script>
+      </Head>
       <Nav />
 
       <Main>
