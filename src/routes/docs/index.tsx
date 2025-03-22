@@ -12,6 +12,7 @@ import type { Metadata } from '~/types';
 import keywords from '~/data/keywords.json';
 import docsKeywords from '~/data/keywords/docs.json';
 import docsData from '~/data/generated/docs.json';
+import schema from '~/data/schema/home.json';
 
 const metadata: Metadata = {
   title: 'Nurl Docs - Helpful guides and tutorials for Nurl products',
@@ -38,7 +39,9 @@ export default function Docs(props: RouteSectionProps<RouteData>) {
 
   return (
     <>
-      <Head {...props.data.metadata} />
+      <Head {...props.data.metadata}>
+        <script type="application/ld+json">{JSON.stringify(schema)}</script>
+      </Head>
       <Nav />
 
       <Main>

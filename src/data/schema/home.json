@@ -1,0 +1,48 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Nurl",
+  "url": "https://nurlttrpg.com",
+  "logo": "https://nurlttrpg.com/logos/nurl_avatar_black.png",
+  "sameAs": [
+    "https://bsky.app/profile/nurl-ttrpg.bsky.social/",
+    "https://x.com/NurlApp/",
+    "https://www.instagram.com/nurl.hq/",
+    "https://www.facebook.com/NurlApp/",
+    "https://www.youtube.com/@NurlApp/",
+    "https://mastodon.social/@nurl/",
+    "https://www.reddit.com/r/nurl/",
+    "https://www.twitch.tv/nurl_app/",
+    "https://github.com/nurl-inc/",
+    "https://www.linkedin.com/company/nurl/",
+    "https://www.tiktok.com/@nurl.app/"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "admin@nurl.app",
+    "contactType": "customer support",
+    "availableLanguage": "English"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1606 Headway Circle, STE 9186",
+    "addressLocality": "Austin",
+    "addressRegion": "Texas",
+    "addressCountry": "US",
+    "postalCode": "78754"
+  },
+  "description": "Nurl provides innovative tools for tabletop RPG players and publishers, enhancing physical gameplay with digital automation and streamlining game development.",
+  "foundingDate": "2024",
+  "founders": [
+    {
+      "@type": "Person",
+      "name": "Casey Baggz"
+    }
+  ],
+  "knowsAbout": [
+    "Tabletop RPGs",
+    "Game Development",
+    "Digital Automation",
+    "Publisher Tools"
+  ]
+}

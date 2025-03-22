@@ -9,6 +9,7 @@ import type { Metadata } from '~/types';
 import { Text } from '~/components/ui';
 
 import keywords from '~/data/keywords.json';
+import schema from '~/data/schema/home.json';
 
 const ContactForm = lazy(() => import('~/forms/contact'));
 
@@ -34,7 +35,9 @@ interface RouteData {
 export default function Contact(props: RouteSectionProps<RouteData>) {
   return (
     <>
-      <Head {...props.data.metadata} />
+      <Head {...props.data.metadata}>
+        <script type="application/ld+json">{JSON.stringify(schema)}</script>
+      </Head>
 
       <Nav />
 

@@ -8,7 +8,7 @@ import TabContentProduct from './tab-content-product';
 
 export default function GetStarted() {
   const productTabContent = createAsync(() => getProductTabContentData());
-  const [, { setChoice }] = useLeadChoice();
+  const [store, { setChoice }] = useLeadChoice();
 
   const tabs = createMemo(() => [
     { id: 'sanctum', label: 'Nurl Sanctum' },
@@ -39,7 +39,7 @@ export default function GetStarted() {
             setChoice(details.value as LeadChoice);
           }}
           tabs={tabs()}
-          value="sanctum"
+          value={store.choice}
         >
           <Index each={Object.values(productTabContent()!)}>
             {(item) => (

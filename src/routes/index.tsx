@@ -8,6 +8,7 @@ import Main from '~/components/shared/main';
 import { LeadChoiceProvider } from '~/context/lead-choice';
 
 import keywords from '~/data/keywords.json';
+import schema from '~/data/schema/home.json';
 
 // Lazy load below the fold components
 const GetStarted = lazy(() => import('../components/routes/home/get-started'));
@@ -51,14 +52,16 @@ interface RouteData {
 export default function Home(props: RouteSectionProps<RouteData>) {
   return (
     <>
-      <Head {...props.data.metadata} />
+      <Head {...props.data.metadata}>
+        <script type="application/ld+json">{JSON.stringify(schema)}</script>
+      </Head>
       <Nav />
 
       <Main>
         <Hero />
       </Main>
 
-      <LeadChoiceProvider initialChoice="play">
+      <LeadChoiceProvider initialChoice="sanctum">
         <Suspense>
           <GetStarted />
           <KeyFeatures />
