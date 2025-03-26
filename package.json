@@ -29,7 +29,7 @@
     "@ark-ui/anatomy": "^3.5.0",
     "@eslint/js": "^9.23.0",
     "@pandacss/dev": "^0.53.2",
-    "@pandacss/types": "^0.53.0",
+    "@pandacss/types": "^0.53.3",
     "@types/marked": "^6.0.0",
     "eslint": "^9.23.0",
     "eslint-plugin-solid": "^0.14.5",
