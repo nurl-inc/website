@@ -5,6 +5,29 @@ import { defineConfig } from '@solidjs/start/config';
 import tsconfigPaths from 'vite-tsconfig-paths';
 import Sitemap from 'vite-plugin-sitemap';
 
+/**
+ * We have to do this because the sitemap plugin is ignoring all the
+ * routes that are not in the dynamicRoutes array.
+ */
+function makeNonDynamicRoutes(): string[] {
+  return [
+    '/',
+    '/sanctum',
+    '/sanctum/pricing',
+    '/play',
+    '/play/pricing',
+    '/blog',
+    '/docs',
+    '/contact',
+    '/resources/game-systems',
+    '/about',
+    '/careers',
+    '/press',
+    '/legal',
+    '/sitemap.xml',
+  ];
+}
+
 function makeLegalRoutes(): string[] {
   const legalDir = path.join(process.cwd(), 'src', 'content', 'legal');
   const files = fs.readdirSync(legalDir);
@@ -41,6 +64,7 @@ export default defineConfig({
       Sitemap({
         hostname: 'https://nurlttrpg.com',
         dynamicRoutes: [
+          ...makeNonDynamicRoutes(),
           ...makeLegalRoutes(),
           ...makeBlogRoutes(),
           ...makeDocsRoutes(),
