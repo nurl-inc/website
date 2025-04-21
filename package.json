@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@ark-ui/anatomy": "^3.5.0",
-    "@eslint/js": "^9.23.0",
+    "@eslint/js": "^9.25.0",
     "@pandacss/dev": "^0.53.4",
     "@pandacss/types": "^0.53.4",
     "@types/marked": "^6.0.0",
