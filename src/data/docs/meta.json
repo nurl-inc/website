@@ -14,5 +14,41 @@
   "authentication": {
     "title": "Authentication - Secure Access to Nurl Services",
     "description": "Understand Nurl's authentication process using one-time login tokens. Securely access all Nurl services with a single account."
+  },
+  "managing-licenses": {
+    "title": "Managing Licenses - Nurl Sanctum Guide",
+    "description": "Learn how to create and manage game system licenses in Nurl Sanctum. Control permissions, restrictions, and license details for your content."
+  },
+  "managing-permissions-and-restrictions": {
+    "title": "Managing Permissions & Restrictions - Nurl Sanctum Guide",
+    "description": "Understand how to set up and manage permissions and restrictions for your game system licenses in Nurl Sanctum."
+  },
+  "creating-a-license": {
+    "title": "Creating a License - Nurl Sanctum Guide",
+    "description": "Step-by-step guide to creating new licenses for your game systems in Nurl Sanctum. Define terms, permissions, and restrictions effectively."
+  },
+  "licenses": {
+    "title": "Licenses - Nurl Sanctum Guide",
+    "description": "Comprehensive overview of the licensing system in Nurl Sanctum. Understand different license types and their applications."
+  },
+  "repository-history": {
+    "title": "Repository History - Nurl Sanctum Guide",
+    "description": "Track and manage the complete history of your repositories in Nurl Sanctum. View changes, revisions, and updates over time."
+  },
+  "collaborators": {
+    "title": "Collaborators - Nurl Sanctum Guide",
+    "description": "Learn how to work with collaborators in your Nurl Sanctum repositories. Manage access, roles, and permissions effectively."
+  },
+  "current-work": {
+    "title": "Current Work - Nurl Sanctum Guide",
+    "description": "Understand how to track and manage ongoing work in your Nurl Sanctum repositories. Monitor progress and coordinate updates."
+  },
+  "game-systems": {
+    "title": "Game Systems - Nurl Sanctum Guide",
+    "description": "Learn how to create, extend, and manage game systems in Nurl Sanctum. Build and customize your gaming content effectively."
+  },
+  "publisher-verification": {
+    "title": "Publisher Verification - Nurl Sanctum Guide",
+    "description": "Complete guide to getting verified as a publisher in Nurl Sanctum. Understand the benefits and process of verification."
   }
 }
