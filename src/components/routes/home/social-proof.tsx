@@ -13,10 +13,10 @@ export default function SocialProof() {
   onMount(() => {
     const target = document.getElementById('social-proof-heading');
     const socialCards = document.querySelectorAll('.hero-quote');
-    scrollFadeInOut(target);
+    if (target) scrollFadeInOut(target);
     if (socialCards) {
       socialCards.forEach((card) => {
-        scrollFadeInOut(card);
+        if (card) scrollFadeInOut(card);
       });
     }
   });

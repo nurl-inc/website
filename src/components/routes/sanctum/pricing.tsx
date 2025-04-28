@@ -11,7 +11,7 @@ export default function SanctumPricing() {
 
   onMount(() => {
     const target = document.getElementById('sanctum-pricing-heading');
-    scrollFadeInOut(target);
+    if (target) scrollFadeInOut(target);
   });
 
   return (

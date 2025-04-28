@@ -1,17 +1,22 @@
 import { createAsync, type RouteSectionProps } from '@solidjs/router';
 import { createMemo, createSignal, For, onMount, Show } from 'solid-js';
 import { Box, Container, HStack, VStack } from 'styled-system/jsx';
-import { PricingCard } from '~/components/ui/pricing-card';
-import { Footer, Main, Markdown, Nav } from '~/components/shared';
-import { Head } from '~/components/shared';
-import { Accordion, AccordionItem, Link, Tabs, Text } from '~/components/ui';
+import { css } from 'styled-system/css';
+import { Footer, Main, Markdown, Nav, Head } from '~/components/shared';
+import {
+  Accordion,
+  AccordionItem,
+  Link,
+  Tabs,
+  Text,
+  PricingCard,
+} from '~/components/ui';
+import { MailIcon } from '~/components/icons';
+import { getSanctumPricingData, getSanctumPricingFaqData } from '~/lib/db';
+import { staggerSlideInFromBottom } from '~/lib/motion';
 import type { Metadata } from '~/types';
 
 import keywords from '~/data/keywords.json';
-import { getSanctumPricingData, getSanctumPricingFaqData } from '~/lib/db';
-import { staggerSlideInFromBottom } from '~/lib/motion';
-import { MailIcon } from '~/components/icons';
-import { css } from 'styled-system/css';
 
 /**
  * This module is the main entry point for the sanctum page.

@@ -15,7 +15,7 @@ export default function FeatureShowcase() {
 
   onMount(() => {
     const target = document.getElementById('how-to-heading');
-    scrollFadeInOut(target);
+    if (target) scrollFadeInOut(target);
   });
 
   createEffect(() => {
