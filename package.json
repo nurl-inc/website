@@ -31,7 +31,7 @@
     "@pandacss/dev": "^0.53.4",
     "@pandacss/types": "^0.53.4",
     "@types/marked": "^6.0.0",
-    "eslint": "^9.24.0",
+    "eslint": "^9.25.1",
     "eslint-plugin-solid": "^0.14.5",
     "globals": "^16.0.0",
     "husky": "^9.1.7",
