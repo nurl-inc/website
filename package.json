@@ -29,7 +29,7 @@
     "@ark-ui/anatomy": "^3.5.0",
     "@eslint/js": "^9.25.0",
     "@pandacss/dev": "^0.53.6",
-    "@pandacss/types": "^0.53.4",
+    "@pandacss/types": "^0.53.6",
     "@types/marked": "^6.0.0",
     "eslint": "^9.24.0",
     "eslint-plugin-solid": "^0.14.5",
@@ -61,7 +61,7 @@
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
   },
-  "packageManager": "pnpm@10.9.0",
+  "packageManager": "pnpm@10.10.0",
   "pnpm": {
     "overrides": {
       "esbuild": "0.25.0",
