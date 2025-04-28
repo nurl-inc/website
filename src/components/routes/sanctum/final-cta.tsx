@@ -10,8 +10,7 @@ export default function SanctumFinalCTA() {
   onMount(() => {
     const target = document.getElementById('final-cta');
     const vantaBox = document.getElementById('cta-box');
-
-    scrollFadeInOut(target);
+    if (target) scrollFadeInOut(target);
     if (vantaBox) vantaEffect = createFogEffect(vantaBox);
   });
 

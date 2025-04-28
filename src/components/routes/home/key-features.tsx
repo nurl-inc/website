@@ -18,7 +18,7 @@ export default function KeyFeatures() {
 
   onMount(() => {
     const target = document.getElementById('key-features-heading');
-    scrollFadeInOut(target);
+    if (target) scrollFadeInOut(target);
   });
 
   return (

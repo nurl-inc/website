@@ -11,7 +11,7 @@ export default function PlayPricing() {
 
   onMount(() => {
     const target = document.getElementById('play-pricing-heading');
-    scrollFadeInOut(target);
+    if (target) scrollFadeInOut(target);
   });
 
   return (

@@ -23,7 +23,7 @@ export default function HowToStart() {
 
   onMount(() => {
     const target = document.getElementById('how-to-heading');
-    scrollFadeInOut(target);
+    if (target) scrollFadeInOut(target);
   });
 
   createEffect(() => {

@@ -6,6 +6,8 @@ export * from './feature-cards';
 export * from './image';
 export * from './input';
 export * from './link';
+export * from './point-card';
+export * from './pricing-card';
 export * from './section-heading';
 export * from './select';
 export * from './social-card';
