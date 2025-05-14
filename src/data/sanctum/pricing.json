@@ -2,45 +2,63 @@
   "products": [
     {
       "id": "1",
-      "name": "Creator",
-      "description": "For indie developers and small teams",
-      "monthlyPrice": 49,
-      "annualPrice": 499,
-      "savings": "15% savings",
+      "name": "Starter",
+      "description": "Get to know Sanctum",
+      "monthlyPrice": 0,
+      "savings": "",
       "features": [
         "Full feature access",
-        "3 team members",
-        "2 active games",
-        "Basic support",
-        "50GB storage"
+        "1 personal workspace",
+        "1 game system",
+        "Community support"
       ],
       "action": "Start 14-Day Trial",
-      "actionLink": "/sanctum/register?plan=creator",
-      "teaserLink": "/sanctum/pricing?plan=creator"
+      "actionLink": "/sanctum/register?plan=starter",
+      "teaserLink": "/sanctum/pricing?plan=starter"
     },
     {
       "id": "2",
+      "name": "Indie",
+      "description": "For indie designers and small teams",
+      "monthlyPrice": 15,
+      "annualPrice": 150,
+      "perUserPrice": true,
+      "savings": "15% savings",
+      "features": [
+        "Everything in Starter",
+        "Publisher verification",
+        "Up to 3 game systems",
+        "1 game system testable",
+        "25GB storage",
+        "Basic support"
+      ],
+      "action": "Start 14-Day Trial",
+      "actionLink": "/sanctum/register?plan=indie",
+      "teaserLink": "/sanctum/pricing?plan=indie"
+    },
+    {
+      "id": "3",
       "name": "Studio",
-      "description": "Perfect for established publishers",
-      "monthlyPrice": 199,
-      "annualPrice": "1,999",
+      "description": "For established designers and teams",
+      "monthlyPrice": 79,
+      "annualPrice": 790,
+      "perUserPrice": true,
       "savings": "16% savings",
       "features": [
-        "Everything in Creator",
-        "Unlimited team members",
+        "Everything in Indie",
         "Unlimited games",
-        "Priority support",
+        "Unlimited testable game systems",
         "500GB storage",
-        "API access"
+        "Priority support"
       ],
-      "action": "Start Trial",
+      "action": "Start 14-Day Trial",
       "actionLink": "/sanctum/register?plan=studio",
       "teaserLink": "/sanctum/pricing?plan=studio"
     }
   ],
   "addOns": [
     {
-      "id": "1",
+      "id": "1a",
       "name": "One-Time Implementation",
       "description": "Included with annual Studio plans.",
       "basePrice": 999,
