@@ -57,19 +57,19 @@ export default function PublisherValues() {
       <Suspense>
         <SanctumValueSection
           idx={1}
-          heading="Visualize your game"
-          description="See your entire game system at a glance. Spot connections, balance issues, and opportunities instantly."
+          heading="Ignite your imagination"
+          description="Use our TTRPG Canvas&trade; to organize your ideas into a cohesive game system."
           image="sanctum"
         />
         <SanctumValueSection
           idx={2}
           heading="Create with Confidence"
-          description="Validate your game scales correctly with each change and something doesn't break at higher levels."
+          description="Create your system blocks without the hassle of worrying about balance or refinement."
         />
         <SanctumValueSection
           idx={3}
-          heading="Publish with Power"
-          description="From rules to content, manage your entire game library in one professional platform."
+          heading="Test Confidently"
+          description="Get valuable feedback from our community and test your game in a safe environment."
           image="battle"
         />
       </Suspense>
