@@ -1,5 +1,5 @@
 import { action, redirect, useSubmission } from '@solidjs/router';
-import { createSignal, Show } from 'solid-js';
+import { createEffect, createSignal, Show } from 'solid-js';
 import { CaptchaFox } from '@captchafox/solid';
 import { Box, Divider, VStack } from 'styled-system/jsx';
 import { vstack } from 'styled-system/patterns';
@@ -13,6 +13,7 @@ import {
   Textarea,
   TextLink,
 } from '~/components/ui';
+import { track } from '@vercel/analytics';
 
 const contactAction = action(async (formData: FormData) => {
   const honeypot = formData.get('website');
@@ -37,17 +38,23 @@ const contactAction = action(async (formData: FormData) => {
     if (!response.ok) {
       throw new Error('Bad Request');
     }
+
+    return { success: true };
   } catch (error) {
     console.error(error);
     throw new Error('Failed to submit form');
   }
-
-  throw redirect('/thanks');
 }, 'contact');
 
 export default function ContactForm() {
   const [verified, setVerified] = createSignal<boolean>(false);
   const submission = useSubmission(contactAction);
+
+  createEffect(() => {
+    if (submission.result?.success) {
+      track('Contact Form Submission');
+    }
+  });
 
   return (
     <>

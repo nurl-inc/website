@@ -1,7 +1,6 @@
 import { json } from '@solidjs/router';
 import type { APIEvent } from '@solidjs/start/server';
 import { addToPlayWaitlist, send } from '~/lib/resend';
-import { verify } from '~/lib/verifier';
 
 import emailTemplates from '~/data/emails.json';
 
@@ -10,12 +9,6 @@ export async function POST({ request }: APIEvent) {
 
   try {
     const data = await request.json();
-
-    // Verify the email address
-    const verification = await verify(data.email);
-    if (!verification.status) {
-      return json(new Error(verification.error.message), { status: 400 });
-    }
 
     // Step 1: Add to waitlist
     await addToPlayWaitlist({
