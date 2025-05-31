@@ -8,6 +8,8 @@ slug: feature-focus-nuro
 
 ## January 10, 2024
 
+> **Update:** As of 14 May 2025, Nurl only uses AI to summarize notes within the Nurl Play app. Nurl does not use AI to generate game content or art and takes a zero-tolerance policy on AI-generated content that replaces the human creator's work. While we believe that AI can be a powerful tool for TTRPGs, we also believe that it should be used to enhance the experience, not replace it. Until there are strict regulations on AI-generated content, **Nurl will not use AI to generate game content or art.**
+
 No two TTRPG players are alike. Some have been playing for years and are always working toward leveling up their established character. Others are brand new, trying to figure out the basics of tabletop role-playing games and trying to fit into this new world. And don’t forget Game Masters, who are trying to balance creativity and coordination of sessions while staying one step ahead of the players.
 
 Nurl, the TTRPG app for IRL and hybrid sessions where all your game tools now appear in one magical place, has recently added its biggest feature to date that will help players and GMs alike.
@@ -23,5 +25,3 @@ What about experienced players? You’ve been around the realm a few times and h
 Game Masters also have a companion in Nurl Play Assistant. Your world as a GM is stressful as you prep and portray the story. And it takes a lot of time and brain power to create an optimal session. But no matter how prepared you are, crazy things can happen and your group is looking to you for quick answers. Nurl Play Assistant can give you instant in-game advice on addressing plot twists and moving the story and its players forward. And as you become a more experienced GM, Nurl Play Assistant can even help you create homebrew stories to make the game even more interesting.
 
 So, there you have it. The Beta of Nurl Play Assistant is currently integrated into Nurl, and your TTRPG world just got a whole lot easier. It helps level the playing field amongst new and experienced players, while giving GMs a new ally in game management. Your new tabletop expert is ready to help whenever you need it. Just power up Nurl and ask away. Happy adventuring.
-
-> Update: As of 14 May 2025, Nurl only uses AI to summarize notes or chat logs within the Nurl Play app. Nurl does not use AI to generate game content or art and takes a zero-tolerance policy on AI-generated content that replaces the human creator's work.

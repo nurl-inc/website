@@ -8,6 +8,7 @@ import type { Metadata } from '~/types';
 
 import keywords from '~/data/keywords.json';
 import schema from '~/data/schema/sanctum.json';
+
 // Below the window content
 const PublisherValues = lazy(
   () => import('~/components/routes/sanctum/publisher-values'),

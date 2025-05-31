@@ -1,18 +1,18 @@
 {
   "sanctum": {
     "choice": "sanctum",
-    "lead": "The tool for publishers",
+    "lead": "The tool for designers",
     "main1": "Where game",
     "main2": "worlds are born.",
-    "description": "Nurl Sanctum is a tool for publishers and designers to build your games faster, better, and safer.",
+    "description": "Nurl Sanctum is a tool for designers to streamline game design with collaboration and play test support.",
     "action": "Request beta access",
     "actionLink": "sanctum/register",
     "linkText": "Learn more about Nurl Sanctum",
     "link": "/sanctum",
     "features": [
-      "Visual system mapping",
-      "Automated validation and testing",
-      "Intuitive world building"
+      "TTRPG Canvas for idea development",
+      "Streamlined mechanics tooling",
+      "Play-testing and analytics support"
     ]
   },
   "play": {

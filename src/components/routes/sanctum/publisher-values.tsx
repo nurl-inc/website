@@ -68,8 +68,8 @@ export default function PublisherValues() {
         />
         <SanctumValueSection
           idx={3}
-          heading="Test Confidently"
-          description="Get valuable feedback from our community and test your game in a safe environment."
+          heading="Test without Hassle"
+          description="Get valuable feedback from players and test your game in a safe environment."
           image="battle"
         />
       </Suspense>
