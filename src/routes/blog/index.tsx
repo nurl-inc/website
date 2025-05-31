@@ -80,8 +80,8 @@ export default function Blog(props: RouteSectionProps<RouteData>) {
                   Introducing Nurl Sanctum
                 </Text>
                 <Text>
-                  Learn how Nurl Sanctum will help you build, test, validate,
-                  and iterate your tabletop RPG games faster.
+                  Learn how Nurl Sanctum will help you streamline your game
+                  design so you can get to publishing faster and more confident.
                 </Text>
               </Box>
 
