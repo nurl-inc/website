@@ -69,7 +69,7 @@ export default function LegalPage(props: RouteSectionProps<RouteData>) {
       <Nav />
 
       <Main>
-        <Container minH="80dvh">
+        <Container minH="80dvh" maxW="98ch">
           <Suspense>
             <Show when={data()}>
               <Box class={css(proseCss)} paddingBlockStart="10" w="full">
