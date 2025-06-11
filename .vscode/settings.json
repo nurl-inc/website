@@ -5,6 +5,7 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "cSpell.words": [
+    "Alexa",
     "atpk",
     "automagically",
     "avenir",
@@ -12,6 +13,7 @@
     "calt",
     "Cantarell",
     "captchafox",
+    "chatbots",
     "cwebp",
     "Fontface",
     "fontsource",
@@ -36,6 +38,7 @@
     "saira",
     "segoe",
     "signup",
+    "Siri",
     "slnt",
     "solidjs",
     "srcset",
