@@ -24,6 +24,7 @@ export const button = defineRecipe({
     transitionProperty: 'all',
     transitionTimingFunction: 'bouncy',
     transitionDuration: 'fast',
+    userSelect: 'none',
     w: 'full',
     '& [data-part="btn-icon"]': {
       opacity: 0,

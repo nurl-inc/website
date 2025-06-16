@@ -60,7 +60,7 @@ export const textStyles = defineTextStyles({
   'heading-xs': {
     value: {
       ...headingStyles,
-      fontSize: '3xl',
+      fontSize: 'lg',
     },
   },
   'body-2xl': {
