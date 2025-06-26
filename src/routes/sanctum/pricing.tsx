@@ -1,5 +1,5 @@
 import { createAsync, type RouteSectionProps } from '@solidjs/router';
-import { createMemo, createSignal, For, onMount, Show } from 'solid-js';
+import { createMemo, createSignal, Index, onMount, Show, For } from 'solid-js';
 import { Box, Container, HStack, VStack } from 'styled-system/jsx';
 import { css } from 'styled-system/css';
 import { Footer, Main, Markdown, Nav, Head } from '~/components/shared';
@@ -56,15 +56,6 @@ export default function SanctumPricing(props: RouteSectionProps<RouteData>) {
     ];
   });
 
-  const annualFeatures = createMemo(() => {
-    const baseFeats =
-      data()?.products.find((product) => product.id === '2')?.features ?? [];
-
-    return activePrice() === '2'
-      ? [...baseFeats, 'One-time implementation']
-      : baseFeats;
-  });
-
   onMount(() => {
     staggerSlideInFromBottom('#pricing-card');
   });
@@ -90,7 +81,7 @@ export default function SanctumPricing(props: RouteSectionProps<RouteData>) {
                 md: 'heading-lg',
               }}
             >
-              Transform Your Game Development
+              Transform Your Game Design
             </Text>
             <Text
               textStyle={{
@@ -98,8 +89,7 @@ export default function SanctumPricing(props: RouteSectionProps<RouteData>) {
                 md: 'body-xl',
               }}
             >
-              Choose the plan that fits your creative vision. All plans include
-              our core visual system mapping and testing tools.
+              Choose the plan that fits your creative vision. Prices in USD.
             </Text>
 
             <Text
@@ -130,26 +120,21 @@ export default function SanctumPricing(props: RouteSectionProps<RouteData>) {
                     paddingBlockStart="12"
                     w="full"
                   >
-                    <For each={data()?.products}>
+                    <Index each={data()?.products}>
                       {(product) => (
                         <PricingCard
-                          {...product}
+                          {...product()}
                           activePrice={activePrice()}
-                          features={
-                            product.id === '1'
-                              ? product.features
-                              : annualFeatures()
-                          }
                         />
                       )}
-                    </For>
+                    </Index>
 
                     <Show when={activePrice() === '1'}>
-                      <For each={data()?.addOns}>
+                      <Index each={data()?.addOns}>
                         {(addOn) => (
-                          <PricingCard {...addOn} palette="secondary" />
+                          <PricingCard {...addOn()} palette="secondary" />
                         )}
-                      </For>
+                      </Index>
                     </Show>
                   </HStack>
                 </Show>
