@@ -19,6 +19,7 @@ interface PricingCardProps {
   basePrice?: number;
   monthlyPrice?: number;
   annualPrice?: number | string;
+  annualOnly?: boolean;
   perUserPrice?: boolean;
   savings?: string;
   features: string[];
@@ -52,7 +53,6 @@ export function PricingCard(props: PricingCardProps & PricingCardVariantProps) {
             w="full"
           >
             <Text class={styles.heading}>{rest.name}</Text>
-
             <Show when={rest.activePrice === '2' && rest.savings}>
               <Text
                 data-theme={variant}
@@ -95,6 +95,7 @@ export function PricingCard(props: PricingCardProps & PricingCardVariantProps) {
               {price()}
             </Text>
           </Text>
+
           <Text
             as="span"
             fontSize="sm"
@@ -109,6 +110,9 @@ export function PricingCard(props: PricingCardProps & PricingCardVariantProps) {
               </Match>
               <Match when={rest.activePrice === '2'}>
                 <Text>/yr</Text>
+              </Match>
+              <Match when={rest.basePrice}>
+                <Text>/one-time</Text>
               </Match>
               <Match when={rest.activePrice === '1'}>
                 <Text>
