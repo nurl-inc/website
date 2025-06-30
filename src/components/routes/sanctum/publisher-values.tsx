@@ -1,8 +1,8 @@
-import { createMediaQuery } from '@solid-primitives/media';
 import { lazy, onMount, Suspense } from 'solid-js';
 import { Box } from 'styled-system/jsx';
 import { animatePath } from '~/lib/motion';
 import { createBlackDotsEffect } from '~/lib/vanta';
+import { createMediaQuery } from '~/primitives/media';
 
 const SanctumValueSection = lazy(() => import('./value-section'));
 
