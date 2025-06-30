@@ -1,4 +1,3 @@
-import { createMediaQuery } from '@solid-primitives/media';
 import { createAsync } from '@solidjs/router';
 import { createEffect, For, onMount } from 'solid-js';
 import { css } from 'styled-system/css';
@@ -7,6 +6,7 @@ import PointCard from '~/components/ui/point-card';
 import { useLeadChoice } from '~/context/lead-choice';
 import { getHowToData } from '~/lib/db';
 import { scrollFadeInOut, slideInFromBottom } from '~/lib/motion';
+import { createMediaQuery } from '~/primitives/media';
 
 export interface PointCardProps {
   number?: number;

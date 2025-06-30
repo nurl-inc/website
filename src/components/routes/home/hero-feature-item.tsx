@@ -1,7 +1,7 @@
-import { createMediaQuery } from '@solid-primitives/media';
 import { Show } from 'solid-js';
 import { Box } from 'styled-system/jsx';
 import { Image } from '~/components/ui';
+import { createMediaQuery } from '~/primitives/media';
 
 export interface HeroFeatureItemProps {
   idx?: 1 | 2;
