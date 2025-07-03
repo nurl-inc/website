@@ -108,7 +108,10 @@ export default function SanctumPricing(props: RouteSectionProps<RouteData>) {
             <Box w="full">
               <Tabs
                 defaultValue="1"
-                onChange={setActivePrice}
+                onValueChange={(e) => {
+                  console.log(e);
+                  setActivePrice(e.value as '1' | '2');
+                }}
                 tabs={tabs()}
                 value={activePrice()}
               >
