@@ -114,11 +114,8 @@ export function PricingCard(props: PricingCardProps & PricingCardVariantProps) {
               <Match when={rest.basePrice}>
                 <Text>/one-time</Text>
               </Match>
-              <Match when={rest.activePrice === '1'}>
-                <Text>
-                  /mo
-                  <Show when={rest.perUserPrice}> per user</Show>
-                </Text>
+              <Match when={rest.perUserPrice}>
+                <Text>/mo per user</Text>
               </Match>
             </Switch>
           </Text>

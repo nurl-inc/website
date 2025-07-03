@@ -1,26 +1,29 @@
 {
   "why": [
     {
-      "title": "Visual System Mapping",
-      "description": "See your entire game's DNA in one view"
+      "title": "Ideation Tools",
+      "description": "Use our TTRPG canvas to validate your game ideas"
     },
     {
-      "title": "Instant Validation",
-      "description": "Test rule interactions and spot balance issues in real-time"
+      "title": "Foundational Tools",
+      "description": "Build your game system with meta-game tools that scale."
     },
     {
-      "title": "Seamless Integration",
-      "description": "Direct connection to Nurl Play for immediate player feedback"
+      "title": "Creation Tools",
+      "description": "Streamline game creation with your system blocks."
     },
     {
-      "title": "Development Acceleration",
-      "description": "Cut months off your development cycle"
+      "title": "Validation Tools",
+      "description": "Test your game using Nurl Play with low-level insights."
+    },
+    {
+      "title": "License Management",
+      "description": "Create, manage, or use licenses with ease."
     }
   ],
   "what": [
     "✨ Early access to all features",
     "🎮 Direct integration with Nurl Play",
-    "🛠️ Custom implementation support",
     "👥 Direct access to our development team",
     "💡 Shape the future of game development tools"
   ],
@@ -34,19 +37,15 @@
       "description": "Schedule within a week"
     },
     {
-      "title": "Custom Implementation",
+      "title": "Approval Response",
       "description": "2-4 weeks"
-    },
-    {
-      "title": "Team Training",
-      "description": "Included"
-    },
-    {
-      "title": "Ongoing Support",
-      "description": "Direct access to our team"
     }
   ],
   "faq": [
+    {
+      "question": "What's the catch? Why is the program free?",
+      "answer": "All we ask is that you are committed to using Sanctum and sharing your feedback. If you don't use Sanctum or ghost our program, we will happily replace your spot with another partner in our waitlist."
+    },
     {
       "question": "What kind of support can we expect during beta?",
       "answer": "Direct access to our development team, custom implementation support, and priority feature requests consideration."
@@ -57,11 +56,11 @@
     },
     {
       "question": "How long is the beta period?",
-      "answer": "The beta program runs through a quarter of the year, with beta partners receiving special benefits post-launch."
+      "answer": "Ideally, a quarter of the year depending on how quickly we can reach our satisfaction level."
     },
     {
       "question": "What happens after beta?",
-      "answer": "Beta partners receive preferred pricing and maintain their direct support channel."
+      "answer": "Beta partners are converted to the free tier and maintain their direct support channel."
     }
   ],
   "communication": [

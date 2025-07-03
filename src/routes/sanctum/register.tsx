@@ -60,17 +60,18 @@ export default function SanctumRegister(props: RouteSectionProps<RouteData>) {
           }}
         >
           <VStack alignItems="flex-start" gap={{ base: 8, md: 12 }} w="full">
-            <Box w="full">
+            <VStack alignItems="flex-start" mb="4" w="full">
               <Text
                 as="h1"
                 lineHeight="1"
+                maxW="3/4"
                 textGradient="tertiary"
                 textStyle={{
                   base: 'heading-sm',
                   md: 'heading-md',
                 }}
               >
-                Transform Your Game Development with Nurl Sanctum
+                Transform Your Game Design with Nurl Sanctum
               </Text>
               <Text
                 as="h2"
@@ -93,11 +94,10 @@ export default function SanctumRegister(props: RouteSectionProps<RouteData>) {
                   md: 'body-lg',
                 }}
               >
-                Visualize your entire game system at a glance. Test rule
-                interactions instantly. Cut development time in half. Request
-                beta access to start transforming your game development process.
+                Streamline your game design from start to finish using our
+                multi-phase development process.
               </Text>
-            </Box>
+            </VStack>
 
             <Box w="full">
               <SectionHeading>Why Sanctum?</SectionHeading>
@@ -106,17 +106,22 @@ export default function SanctumRegister(props: RouteSectionProps<RouteData>) {
                   {(content) => (
                     <li>
                       <Text>
-                        <Text as="strong">{content().title}</Text>{' '}
+                        <Text as="strong">{content().title}:</Text>{' '}
                         {content().description}
                       </Text>
                     </li>
                   )}
                 </Index>
               </TextList>
+
+              <Text mt="10">
+                Bonus, you get full snap-shot history of every change made to
+                your system providing real version control.
+              </Text>
             </Box>
 
             <Box w="full">
-              <SectionHeading>What Beta Partners Get</SectionHeading>
+              <SectionHeading>What Beta Adopters Get</SectionHeading>
               <TextList>
                 <Index each={data()?.what}>
                   {(content) => (
@@ -133,7 +138,7 @@ export default function SanctumRegister(props: RouteSectionProps<RouteData>) {
             </Suspense>
 
             <Box w="full">
-              <SectionHeading>Beta Timeline</SectionHeading>
+              <SectionHeading>Response Timeline</SectionHeading>
               <TextList>
                 <Index each={data()?.timeline}>
                   {(content) => (
