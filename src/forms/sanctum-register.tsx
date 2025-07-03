@@ -86,13 +86,24 @@ export default function SanctumRegisterForm() {
 
   return (
     <>
+      <Text
+        as="h3"
+        maxW="1/2"
+        textStyle={{
+          base: 'heading-xs',
+          md: 'heading-sm',
+        }}
+        textWrap="pretty"
+      >
+        Apply for our next Cohort in Fall 2025
+      </Text>
+
       <Show when={submission.error}>
         <ErrorMessage>{submission.error.message}</ErrorMessage>
       </Show>
 
       <Box
         bgColor="page.surface.100"
-        marginBlockStart="4"
         maxW="prose"
         paddingBlock="8"
         paddingInline="8"
@@ -142,12 +153,12 @@ export default function SanctumRegisterForm() {
           </Box>
 
           <Input
-            label="Company/Studio Name"
+            label="Studio Name"
             name="name"
             type="text"
             required
             autocomplete="company"
-            helperText="So we know more about you."
+            helperText="If you are a solo developer, please enter your name."
           />
 
           <Input
@@ -178,7 +189,7 @@ export default function SanctumRegisterForm() {
           />
 
           <Select
-            label="Current Game Systems"
+            label="Current Games"
             name="game-systems"
             helperText="This will help us understand your needs."
             required
