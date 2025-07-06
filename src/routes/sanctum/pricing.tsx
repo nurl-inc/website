@@ -89,21 +89,30 @@ export default function SanctumPricing(props: RouteSectionProps<RouteData>) {
                 md: 'body-xl',
               }}
             >
-              Choose the plan that fits your creative vision. Prices in USD.
+              Choose the plan that fits your creative vision. Scale with your
+              growth.
             </Text>
 
-            <Text
-              as="h2"
-              paddingBlockStart="12"
-              paddingBlockEnd="4"
-              textStyle="heading-xs"
-              md={{
-                paddingBlockEnd: 20,
-                textStyle: 'heading-md',
+            <VStack
+              alignItems="flex-start"
+              pb={{
+                base: 4,
+                md: 20,
               }}
+              pt="12"
+              w="full"
             >
-              Pricing Plans
-            </Text>
+              <Text
+                as="h2"
+                textStyle={{
+                  base: 'heading-sm',
+                  md: 'heading-md',
+                }}
+              >
+                Pricing Plans
+              </Text>
+              <Text>Pricing plans in USD.</Text>
+            </VStack>
 
             <Box w="full">
               <Tabs

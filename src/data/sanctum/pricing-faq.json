@@ -1,7 +1,7 @@
 [
   {
-    "question": "Do I need to pay for the implementation package?",
-    "answer": "The implementation package is included free with annual Studio plans. For monthly plans, it's a one-time fee that ensures your team gets the most value from Sanctum right from the start."
+    "question": "Do I need the implementation package?",
+    "answer": "No. The implementation package is a one-time fee that ensures you get the most value from Sanctum right from the start by allowing us to set you up with a workspace, migrate your game content, and provide one-on-one training. This is beneficial for a designer or studio who is new to Sanctum with an existing game system or portfolio."
   },
   {
     "question": "Can I change plans later?",
@@ -12,15 +12,11 @@
     "answer": "You'll only be billed after your 14-day trial if you choose to continue. We'll send a reminder before your trial ends, and you can cancel anytime."
   },
   {
-    "question": "Is there a limit on games?",
-    "answer": "Creator plans can have 2 active games at a time. Studio plans have no limits."
-  },
-  {
-    "question": "Do you offer discounts for indie publishers?",
-    "answer": "Yes! Contact our sales team to learn about our indie publisher program and special pricing."
+    "question": "Do you offer discounts for non-profit organizations?",
+    "answer": "Yes! Contact our team to learn about our non-profit program and special pricing."
   },
   {
     "question": "Do you support Enterprise plans?",
-    "answer": "No. Today, we focus on helping indie publishers and mid-sized teams. We're working on a solution for larger teams and organizations."
+    "answer": "No. Today, we focus on helping indie publishers and mid-sized teams."
   }
 ]
