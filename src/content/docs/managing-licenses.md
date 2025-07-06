@@ -1,6 +1,6 @@
 # Managing Licenses
 
-Licenses are a way to manage the usage of your game systems. Each license is associated with a verified publisher.
+Licenses are a way to manage the usage of your game systems. Each license is associated with an organization.
 
 > [!NOTE]
 > While Nurl Sanctum allows helps you to manage licenses, we are not a license management company. We always recommend using a legal counsel to help you establish your license agreements first.
@@ -17,7 +17,7 @@ There are three parts to a custom license in Nurl Sanctum:
 
 ## General
 
-The general section is where you will be able to manage the general information about the license.active
+The general section is where you will be able to manage the general information about the license.
 
 This includes (but is not limited to):
 
@@ -26,6 +26,7 @@ This includes (but is not limited to):
 - **License Version** - The version of the license.
 - **License Source URL** - The URL to the source of the license.
 - **License Full Text** - The full text of the license (e.g. the license agreement itself).
+- **License Assets** - Any assets associated with the license.
 
 ## Permissions
 

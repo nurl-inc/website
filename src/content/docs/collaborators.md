@@ -2,10 +2,6 @@
 
 Collaborators are users who have access to a repository. They can be added by the repository owner and can have different levels of access to the repository.
 
-## Overview
-
-Collaborators are users who have access to a repository. They can be added by the repository owner and can have different levels of access to the repository.
-
 ## Accessing Collaborators
 
 To access collaborators, navigate to the repository dashboard and click the "Collaborators" link in the left sidebar.

@@ -2,7 +2,7 @@
 
 ## Overview
 
-The repository history is a way to track the changes that have been made to a game system. This is useful for understanding the evolution of a game system and for seeing who made the changes.
+The repository history is a way to track the changes that have been made to game content within a repository. This is useful for understanding the evolution of a repository and for seeing who made the changes.
 
 ## Accessing the Repository History
 
@@ -10,7 +10,7 @@ To access the repository history, navigate to the repository dashboard and click
 
 ## History Types
 
-Depending on the change made to a game system, the history entry will be different. Think of the history as a log of changes (i.e. commits) that have been made to the game system.
+Depending on the change made to a game content item, the history entry will be different. Think of the history as a log of changes (i.e. commits) that have been made to the game system.
 
 - **Added** - A new change has been added to the repository.
 - **Modified** - Something has been modified in the repository.
@@ -33,7 +33,7 @@ Each history entry will have the following information:
 
 ## Why is this important?
 
-The repository history is important because it allows you to see the changes that have been made to a game system. This is useful for understanding the evolution of a game system and for seeing who made the changes.
+The repository history is important because it allows you to see the changes that have been made to game content within a repository. This is useful for understanding the evolution of a repository and for seeing who made the changes.
 
 ## How is this useful?
 
