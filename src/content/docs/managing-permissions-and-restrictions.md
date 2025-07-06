@@ -1,6 +1,6 @@
 # Managing Permissions and Restrictions
 
-Licenses are a way to manage the usage of your game systems. Each license is associated with a verified publisher.
+Licenses are a way to manage the usage of your game systems. Each license is associated with an organization.
 
 > [!NOTE]
 > While Nurl Sanctum allows helps you to manage licenses, we are not a license management company. We always recommend using a legal counsel to help you establish your license agreements first.

@@ -4,11 +4,11 @@ You can manage the members of your workspace by clicking the "team" tab in the t
 
 ## Adding a Member
 
-You can add members from your workspace by clicking the "add member"button in the top right corner of the team management table. You will be presented a dialog where you can enter the email address and select the role of the member you'd like to add.
+You can add members from your workspace by clicking the "add member" button in the top right corner of the team management table. You will be presented a dialog where you can enter the email address and select the role of the member you'd like to add.
 
 If the member is already a Sanctum user, they will be added to the workspace and a welcome email will be sent to them. If they have in app notifications enabled, they will also receive a notification.
 
-If the member is not a Sanctum user, they will receive an email with a link to sign up for Sanctum.
+If the member is not a Sanctum user, they will receive an email with a link to sign up for Sanctum but will not be added to the team list until they have signed up.
 
 ## Removing a Member
 

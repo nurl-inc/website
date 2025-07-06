@@ -4,7 +4,7 @@ Nurl Sanctum provides an easy way to manage your workspaces.
 
 ## Overview
 
-A workspace is a collection of projects for a single or team of users.
+A workspace is a collection of repositories for a single or team of users.
 
 ## Creating a Workspace
 
@@ -16,7 +16,7 @@ Once you've submitted the form, you'll be redirected to the new workspace settin
 
 ## Switching Workspaces
 
-You can switch between workspaces at any time. To switch between workspaces, click the "projects" dropdown in the top left corner of the Nurl Sanctum main navigation app bar. This will display a dropdown menu of all the workspaces you're a part of.
+You can switch between workspaces at any time. To switch between workspaces, click the "workspaces" dropdown in the top left corner of the Nurl Sanctum main navigation app bar. This will display a dropdown menu of all the workspaces you're a part of.
 
 Click the workspace you'd like to switch to and you'll be redirected to the new workspace settings page.
 
@@ -34,4 +34,4 @@ In this section, you'll see a "delete workspace" button. Clicking this button wi
 
 Once confirmed, the workspace will be deleted and you'll be redirected to the Nurl Sanctum dashboard.
 
-**Note:** _This action is irreversible. Deleting a workspace will also delete all the projects and data associated with it._
+**Note:** _This action is irreversible. Deleting a workspace will also delete all the repositories and data associated with it._

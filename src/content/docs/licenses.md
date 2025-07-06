@@ -1,30 +1,32 @@
 # Licenses
 
-Licenses are a way to manage the usage of your game systems. Each license is associated with a verified publisher.
+Licenses are a way to manage the usage of your game systems. Each license is associated with an organization.
 
 > [!NOTE]
 > While Nurl Sanctum allows helps you to manage licenses, we are not a license management company. We always recommend using a legal counsel to help you establish your license agreements first.
 
 ## Overview
 
-Depending on if you are associated with a verified publisher or not, you will have different options available to you when it comes to managing licenses.
+Depending on if you are associated with an organization or not, you will have different options available to you when it comes to managing licenses.
 
-### Verified Publisher
+### Organization
 
-If you are associated with a verified publisher, you will be able to create, claim ownership, and manage licenses for your game systems.
+If you are an admin of an organization, you will be able to create, and manage licenses associated with your game systems.
 
-### Unverified Publisher
+### Non-Organization
 
-If you are not associated with a verified publisher, you will be able to use licenses to extend game systems, but you will not be able to create your own game systems.
+If you are not an admin of an organization, you will be able to use any licenses available to create game systems.
+
+If you are an admin of a professional subscription, you will be able to create a single license for your game system.
 
 ## Viewing Licenses
 
-On your dashboard, you will see a "Licenses" section on the left sidebar. Here you will be able to create, claim, and manage licenses for your game systems.
+On your dashboard, you will see a "Licenses" section on the left sidebar. Here you will be able to create, and manage licenses for your game systems.
 
-Click the "Licenses" link to navigate to the licenses page. Here you will see a list of licenses that you have created, claimed, or are associated with.
+Click the "Licenses" link to navigate to the licenses page. Here you will see a list of licenses that you have created, or are associated with.
 
 > [!NOTE]
-> If you are not associated with a verified publisher account, you will not see the "Licenses" section on the left sidebar.
+> If you are not associated with an organization or professional subscription, you will not see the "Licenses" section on the left sidebar.
 
 ## License Permissions & Restrictions
 
@@ -46,13 +48,21 @@ Another unique feature of Nurl Sanctum is the ability to version licenses in a a
 
 Once you update the license version, Nurl Sanctum will remove the warning and the license will be up to date.
 
+## License Assets
+
+If you are an admin of an organization, you will be able to create assets associated with your license permissions and restrictions. This will apply the asset to the game system that is using the license.
+
+For example, if a user is creating a new game system that uses the Mörk Borg license, they will have the "Compatible with Mörk Borg" asset applied to their game system.
+
 ## Licenses and Game Systems
 
-When you utilize Nurl Sanctum to manage your licenses, you will gain extra features and benefits.
+When you utilize Nurl Sanctum to manage your licenses, you will gain extra features and benefits that aren't available outside of Nurl Sanctum.
 
 ### Game System Access
 
-When you create a license, it will be utilized in the Nurl Sanctum "License Assistant" feature. This feature allows users that are creating or extending a game system to understand the license requirements and restrictions in a streamlined and user friendly manner.
+When you create and publish a license, it will be utilized in the Nurl Sanctum "License Assistant" feature. This feature allows users that are creating or extending a game system to understand the license requirements and restrictions in a streamlined and user friendly manner. While also applying the assets associated with the license to the game system.
+
+Likewise, if you have associated a public game system with a license, the user will have the "official" system blocks applied to their game system to ensure compatibility.
 
 ### Game Extension Accountability
 
@@ -68,4 +78,6 @@ If the license permissions or restrictions are updated, Nurl Sanctum will be abl
 
 ## Claiming a License
 
-To claim a license, contact support at <admin@nurlttrpg.com>.
+If you are an admin of an organization, that owns the rights to a license that comes built into Nurl Sanctum, you will be able to claim the license for your organization.
+
+To claim a license, contact support at <admin@nurl.app>.

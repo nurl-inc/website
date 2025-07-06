@@ -50,7 +50,7 @@
         "Everything in Creator",
         "Team access",
         "Can join multiple orgs",
-        "Unlimited custom licenses",
+        "1 custom licenses",
         "Full analytics",
         "Basic support"
       ],
@@ -61,18 +61,18 @@
     {
       "id": "3",
       "name": "Organizations",
-      "description": "For established designers or studios",
+      "description": "For established studios",
       "monthlyPrice": 195,
       "annualPrice": 1950,
       "perUserPrice": false,
       "annualOnly": true,
       "savings": "",
       "features": [
-        "Unlimited workspaces",
+        "Everything in Professional",
         "Unlimited team members",
-        "Unlimited game content",
         "Unlimited custom licenses",
         "Unlimited testable game systems",
+        "Fixed monthly price",
         "Priority support"
       ],
       "action": "Start 14-Day Trial",
@@ -87,10 +87,9 @@
       "description": "We do the heavy lifting for you.",
       "basePrice": 999,
       "features": [
-        "Data migration",
-        "Team training",
-        "Integration support",
-        "Best practices setup"
+        "Workspace setup",
+        "Data migration for one game content",
+        "Team training"
       ],
       "action": "Select Add-On",
       "actionLink": "/sanctum/register?addOn=1",
