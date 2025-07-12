@@ -1,5 +1,5 @@
 import { css } from 'styled-system/css';
-import { Box, Container, VStack } from 'styled-system/jsx';
+import { Box, Container, Stack, VStack } from 'styled-system/jsx';
 import { Link, Text } from '~/components/ui';
 import HeroQuote from '~/components/ui/hero-quote';
 
@@ -107,7 +107,12 @@ export default function SanctumHero() {
             tools and powerful automation.
           </Text>
 
-          <Box
+          <Stack
+            direction={{
+              base: 'column',
+              md: 'row',
+            }}
+            gap="4"
             mt="14"
             w="full"
             _motionSafe={{
@@ -119,8 +124,11 @@ export default function SanctumHero() {
               opacity: 0,
             }}
           >
-            <Link href="#learn-more">Learn More</Link>
-          </Box>
+            <Link href="/sanctum/register">Reserve spot</Link>
+            <Link usage="ghost" href="#learn-more">
+              Learn More
+            </Link>
+          </Stack>
         </Box>
       </VStack>
 
@@ -134,7 +142,7 @@ export default function SanctumHero() {
       >
         <Container>
           <HeroQuote
-            quote="Notes apps were never meant to design TTRPGs. But Sanctum is."
+            quote="Note apps were never meant to design TTRPGs. But Sanctum is."
             author="Casey Baggz / Founder"
           />
         </Container>
