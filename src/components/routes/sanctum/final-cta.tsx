@@ -79,7 +79,7 @@ export default function SanctumFinalCTA() {
 
           <Box mx="auto" maxW="75%">
             <Link href="/sanctum/register" palette="secondary">
-              Request Beta Access
+              Reserve beta spot
             </Link>
           </Box>
         </VStack>
