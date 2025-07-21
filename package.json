@@ -16,7 +16,7 @@
     "@captchafox/solid": "^1.4.0",
     "@solidjs/meta": "^0.29.4",
     "@solidjs/router": "^0.15.3",
-    "@solidjs/start": "^1.1.6",
+    "@solidjs/start": "^1.1.7",
     "@vercel/analytics": "^1.5.0",
     "@vercel/functions": "^2.2.3",
     "motion": "^12.23.5",
