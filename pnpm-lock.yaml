@@ -32,8 +32,8 @@ importers:
         specifier: ^1.5.0
         version: 1.5.0
       '@vercel/functions':
-        specifier: ^2.2.3
-        version: 2.2.3
+        specifier: ^2.2.4
+        version: 2.2.4
       motion:
         specifier: ^12.23.5
         version: 12.23.5
@@ -1415,8 +1415,8 @@ packages:
       vue-router:
         optional: true
 
-  '@vercel/functions@2.2.3':
-    resolution: {integrity: sha512-Z6xwsxM/57/92PLW2HoLLmVw4+Nb5OZzMzDA4qfkksWgG1k5dGV7kvP1TDEOlW3WHjqWtfPJBcd61dE2p0mbxQ==}
+  '@vercel/functions@2.2.4':
+    resolution: {integrity: sha512-dol8/MiNG9u7/FSPumYEEl2MJijXBxhKoBJpY83Sqay1VWi4XngaWzBkzSut0SCL4DVVRLtZNEcCkj2/vW3LMg==}
     engines: {node: '>= 18'}
     peerDependencies:
       '@aws-sdk/credential-provider-web-identity': '*'
@@ -7047,7 +7047,7 @@ snapshots:
 
   '@vercel/analytics@1.5.0': {}
 
-  '@vercel/functions@2.2.3': {}
+  '@vercel/functions@2.2.4': {}
 
   '@vercel/nft@0.29.4(rollup@4.44.1)':
     dependencies:
