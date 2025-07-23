@@ -1,5 +1,17 @@
 [
   {
+    "question": "What is Nurl Sanctum?",
+    "answer": "Nurl Sanctum is a tool for designers to streamline game design with collaboration and play-test support. It combines the power of automated version control with a permission model that allows designers to create private or open-source games with the community.\n\nSanctum provides multiple tools to help you create, scale, and keep your portfolio consistent as your game and career grows. Our tools cover the entire game development lifecycle, from ideations to validation.\n\nThis allows you to easily create (or use existing) game systems, manage licensing, create game content (e.g., core book, adventures, supplements, etc.), and validate your game with play-test support so you can get to publishing faster and more confident.\n\nSanctum is currently in private beta. Reserve your spot to be the first to try it out.",
+    "ctaPrimary": {
+      "text": "Reserve your spot",
+      "url": "/sanctum/register"
+    },
+    "ctaSecondary": {
+      "text": "View features",
+      "url": "/sanctum"
+    }
+  },
+  {
     "question": "What is Nurl Play?",
     "answer": "Nurl Play is your digital game enhancer that makes tabletop RPGs flow like video games - without losing the magic of physical play. \n\nImagine rolling real dice and moving real miniatures, but never having to pause for rule checks or math. Our smart automation handles the complex stuff in the background, letting you focus on the story and social experience that makes tabletop gaming special.\n\nWhether you're a player or Game Master, Nurl Play works alongside your physical game to:\n- Automate rules and calculations\n- Track character states and conditions\n- Handle complex game mechanics\n- Keep the game flowing naturally\n\nStart free and upgrade when you're ready to enhance your whole group's experience.",
     "ctaPrimary": {
@@ -9,18 +21,6 @@
     "ctaSecondary": {
       "text": "Watch Demo",
       "url": "https://www.youtube.com/@NurlApp"
-    }
-  },
-  {
-    "question": "What is Nurl Sanctum?",
-    "answer": "Nurl Sanctum is the sacred space where tabletop RPG publishers transform their game ideas into reality. \n\nUnlike traditional development tools, Sanctum lets you visually map your entire game system - seeing every relationship, balance point, and interaction at a glance. It's like having a bird's-eye view of your game's DNA.\n\nPublishers using Sanctum can:\n- Cut development time in half\n- Spot system issues instantly\n- Test rule interactions in real-time\n- Deploy seamlessly to Nurl Play\n\nFrom indie creators to established studios, Sanctum grows with your ambitions.",
-    "ctaPrimary": {
-      "text": "Schedule Demo",
-      "url": "/sanctum/register"
-    },
-    "ctaSecondary": {
-      "text": "View Publisher Stories",
-      "url": "/sanctum/stories"
     }
   },
   {
