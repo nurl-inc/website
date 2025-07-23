@@ -1,7 +1,15 @@
 {
-  "workspace-management": {
-    "title": "Workspace Management - Nurl Sanctum Guide",
-    "description": "Learn how to efficiently manage your workspaces in Nurl Sanctum. Create, switch, edit, and delete workspaces with ease."
+  "organizations": {
+    "title": "Organizations - Nurl Sanctum Guide",
+    "description": "Learn how to create and manage organizations in Nurl Sanctum. Control visibility settings, edit organization details, and organize your game content effectively."
+  },
+  "repositories": {
+    "title": "Repositories - Nurl Sanctum Guide",
+    "description": "Learn about repositories in Nurl Sanctum. Understand their purpose and how to use them to manage your game content."
+  },
+  "repository-files": {
+    "title": "Repository Files - Nurl Sanctum Guide",
+    "description": "Learn about repository files in Nurl Sanctum. Understand the different types of files and how to use them to manage your game content."
   },
   "managing-workspace-members": {
     "title": "Managing Workspace Members - Nurl Sanctum Guide",
@@ -46,9 +54,5 @@
   "game-systems": {
     "title": "Game Systems - Nurl Sanctum Guide",
     "description": "Learn how to create, extend, and manage game systems in Nurl Sanctum. Build and customize your gaming content effectively."
-  },
-  "publisher-verification": {
-    "title": "Publisher Verification - Nurl Sanctum Guide",
-    "description": "Complete guide to getting verified as a publisher in Nurl Sanctum. Understand the benefits and process of verification."
   }
 }
