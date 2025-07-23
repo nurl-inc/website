@@ -15,7 +15,7 @@ Repository files are the content that make up a repository. They are the files t
 
 To create a repository file, navigate to the repository and click the "Create" button. You will be prompted with a menu to select the type of file you'd like to create.
 
-Once you've selected the type of file you'd like to create, a new file of that type will be created and you in the repository with the name "Untitled [file type]". You can then edit the file to your liking.
+Once you've selected the type of file you'd like to create, a new file of that type will be created and placed in the repository with the name "Untitled [file type]". You can then edit the file to your liking.
 
 ## Viewing a Repository File
 
