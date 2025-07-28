@@ -12,7 +12,7 @@
     "lint:es": "eslint ."
   },
   "dependencies": {
-    "@ark-ui/solid": "^5.17.0",
+    "@ark-ui/solid": "^5.18.2",
     "@captchafox/solid": "^1.4.0",
     "@solidjs/meta": "^0.29.4",
     "@solidjs/router": "^0.15.3",
@@ -26,11 +26,11 @@
   },
   "devDependencies": {
     "@ark-ui/anatomy": "^3.5.0",
-    "@eslint/js": "^9.31.0",
+    "@eslint/js": "^9.32.0",
     "@pandacss/dev": "^0.54.0",
     "@pandacss/types": "^0.54.0",
     "@types/marked": "^6.0.0",
-    "eslint": "^9.31.0",
+    "eslint": "^9.32.0",
     "eslint-plugin-solid": "^0.14.5",
     "globals": "^16.3.0",
     "husky": "^9.1.7",
@@ -50,7 +50,7 @@
     "remark-rehype": "^11.1.1",
     "tsx": "^4.19.3",
     "typescript": "^5.7.3",
-    "typescript-eslint": "^8.37.0",
+    "typescript-eslint": "^8.38.0",
     "unified": "^11.0.5",
     "vinxi": "^0.5.8",
     "vite": "^6.2.7",
@@ -60,7 +60,7 @@
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
   },
-  "packageManager": "pnpm@10.12.4",
+  "packageManager": "pnpm@10.13.1",
   "pnpm": {
     "overrides": {
       "esbuild": "0.25.0",
