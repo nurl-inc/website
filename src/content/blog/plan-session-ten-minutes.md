@@ -24,7 +24,7 @@ Here are the five steps Baggz used to accelerate his planning.
 
 ### 1. Determine Your Session Objective
 
-Consider what you’d like to do for the upcoming session. Determine what you would like the group goal to be, the challenges you’d like to execute, and the potential reward the players will get in the end. The objectives, at this point, can be very top level and if you need help - use Nuro™ to your advantage.
+Consider what you’d like to do for the upcoming session. Determine what you would like the group goal to be, the challenges you’d like to execute, and the potential reward the players will get in the end. The objectives, at this point, can be very top level and if you need help - use Nurl to your advantage.
 
 ### 2. Review Previous Nurl Notes
 
@@ -34,17 +34,9 @@ It may have been a few days, or it may have been weeks since your last session. 
 
 Look back at the ideas you previously had, or reminders of certain game-play scenarios. If you install the Reminders extension, it is also on your Nurl dashboard, and it can help keep track of the high level points you want to hit instead of them getting lost in your GM Notes.
 
-### 4. Engage Nuro™ for Game Advice
+### 4. Update Nurl Notes
 
-Last month, Nurl launched the TTRPG expert [Nuro&trade;](https://nurlttrpg.com/blog/feature-focus-nuro) to provide instant answers to all types of GM and player questions. And it’s not ChatGPT. It is Nurl’s proprietary AI engine that was specifically built to be a TTRPG expert and do anything TTRPG related. The AI tool can be used for story ideas, challenges, riddles, game support, player creation/management – anything you need when preparing or running the game.
-
-Baggz used Nuro for advice on his upcoming session. He asked for three problems for the players to solve, each one harder than the last. Nuro instantly provided three thorough scenarios that he was able to utilize, thus saving tons of time in scenario development. He further asked Nurl for a difficult riddle suggestion that was specific to Curse of Strahd, of which Nuro provided one that even shocked Baggz.
-
-> “Wow, wow, wow,” he said. “This is the magic of Nuro.”
-
-### 5. Update Nurl Notes
-
-Take the Nuro advice and simply edit your private GM notes. All these tools in one magical place will make planning much simpler and it will help you structure a better session without the stress.
+Take the Nurl advice and simply edit your private GM notes. All these tools in one magical place will make planning much simpler and it will help you structure a better session without the stress.
 
 “Using all the tools available on Nurl allow me to improv more and not spend so much time planning,” said Baggz. “Now I can focus on how I want the NPC to act, any special events I want to take place. I didn’t take that many notes because I didn’t have to, and the session went on for four hours.”
 
