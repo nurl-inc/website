@@ -57,8 +57,8 @@ importers:
         specifier: ^1.0.1
         version: 1.0.1(jsdom@25.0.1)(typescript@5.8.3)
       '@pandacss/types':
-        specifier: ^0.54.0
-        version: 0.54.0
+        specifier: ^1.0.1
+        version: 1.0.1
       '@types/marked':
         specifier: ^6.0.0
         version: 6.0.0
@@ -784,9 +784,6 @@ packages:
 
   '@pandacss/token-dictionary@1.0.1':
     resolution: {integrity: sha512-x5yuHAtt1dk6WqKOjQlln7Hs4f6xRxHfMUslH02ergkGwYbIpnaDHjSxXCPnEcYQGpE3nVxRIfgOmp2n64mv0g==}
-
-  '@pandacss/types@0.54.0':
-    resolution: {integrity: sha512-5kspg2UOgFWrawbHeoleZvbZ6id/kIBLHoDeD1CnLbl9fEbZAZ3Avi5Hi1mIFe9E8PFzp9V+N9IfQL7pYhavfA==}
 
   '@pandacss/types@1.0.1':
     resolution: {integrity: sha512-a7r5PMF33yWPzMjx9D5aN1b0cKd/h+phr2L+4FWg8Np1zgPfLUPHcBf3Heia1aay3KjL1y5jEpKzJlAM2/IpwQ==}
@@ -6456,8 +6453,6 @@ snapshots:
       '@pandacss/shared': 1.0.1
       '@pandacss/types': 1.0.1
       ts-pattern: 5.8.0
-
-  '@pandacss/types@0.54.0': {}
 
   '@pandacss/types@1.0.1': {}
 
