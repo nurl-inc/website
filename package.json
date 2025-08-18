@@ -21,7 +21,7 @@
     "@vercel/functions": "^2.2.7",
     "motion": "^12.23.12",
     "remove": "^0.1.5",
-    "solid-js": "^1.9.7",
+    "solid-js": "^1.9.9",
     "vanta": "^0.5.24"
   },
   "devDependencies": {
