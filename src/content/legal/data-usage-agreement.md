@@ -144,4 +144,4 @@ We reserve the right to modify this Agreement with 30 days notice. Continued use
 
 ## 11. Contact Information
 
-For questions about this Agreement, contact: <legal@nurl.app>
+For questions about this Agreement, contact: <legal@nurlttrpg.com>

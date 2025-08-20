@@ -1,6 +1,6 @@
 import { json } from '@solidjs/router';
 import type { APIEvent } from '@solidjs/start/server';
-import { addToSanctumWaitlist, send } from '~/lib/resend';
+import { send } from '~/lib/resend';
 
 import emailTemplates from '~/data/emails.json';
 import {
@@ -14,15 +14,7 @@ export async function POST({ request }: APIEvent) {
   try {
     const data: BetaRequest = await request.json();
 
-    // Step 1: Add to beta contacts
-    await addToSanctumWaitlist({
-      email: data.email,
-      firstName: data.name.split(' ')[0],
-      lastName: data.name.split(' ')[1],
-      unsubscribed: false,
-    });
-
-    // Step 2: User should receive a confirmation email via Kit
+    // Step 1: TODO: Add to subscribers in Kit
 
     // Step 3: Send team notification
     const scores = calculateQualificationScores(data);
@@ -58,15 +50,21 @@ export async function POST({ request }: APIEvent) {
       );
 
     await send({
-      from: 'Nurl Play<admin@nurl.app>',
-      to: ['admin@nurl.app'],
+      from: 'Nurl Support <support@nurlttrpg.com>',
+      to: ['admin@nurlttrpg.com'],
       subject: subject,
       html: teamTemplate,
     });
 
     return json({ success: true, data });
   } catch (error) {
-    const message = error instanceof Error ? error.message : 'Unknown error';
-    return json({ success: false, error: message }, { status: 500 });
+    console.error(error);
+    return json(
+      {
+        success: false,
+        error: 'Unable to send email to team',
+      },
+      { status: 500 },
+    );
   }
 }

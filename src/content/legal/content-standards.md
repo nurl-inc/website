@@ -204,4 +204,4 @@ We may update these standards with 30 days notice. Continued use of the platform
 
 ## 10. Contact Information
 
-For questions about these standards, contact: <admin@nurl.app>
+For questions about these standards, contact: <admin@nurlttrpg.com>

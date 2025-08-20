@@ -21,14 +21,12 @@ This Support Policy outlines the technical support and customer service we provi
 Our support team assists with the following:
 
 1. Platform Access and Authentication
-
    - Account access issues
    - Authentication problems
    - Permission settings
    - User role management
 
 2. Data Management
-
    - Content upload assistance
    - Database queries
    - Data migration support
@@ -36,14 +34,12 @@ Our support team assists with the following:
    - Version control issues
 
 3. Technical Integration
-
    - API implementation
    - Webhook configuration
    - Schema validation
    - Integration troubleshooting
 
 4. Consumer App Integration
-
    - Content display issues
    - Rule formatting problems
    - Accessibility features
@@ -60,14 +56,12 @@ Our support team assists with the following:
 To maintain service quality, we cannot assist with:
 
 1. Game Design
-
    - Rule creation or balancing
    - Game mechanics design
    - Content writing or editing
    - Artwork or visual design
 
 2. End User Support
-
    - Direct player support
    - Game rule clarifications
    - Player account issues
@@ -138,7 +132,7 @@ To maintain service quality, we cannot assist with:
 
 ### Email Support
 
-- <support@nurl.app>
+- <support@nurlttrpg.com>
 - Monitored during business hours
 - Auto-routing based on issue type
 - Ticket creation confirmation
@@ -265,4 +259,4 @@ We may update this policy to improve our service quality. Publishers will receiv
 
 For questions about this policy:
 
-- Email: <admin@nurl.app>
+- Email: <admin@nurlttrpg.com>

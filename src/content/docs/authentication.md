@@ -40,4 +40,4 @@ Signing out is just as easy as signing in. Simply click the "Sign Out" button in
 
 ## Forgot Your Email Address?
 
-If you forgot your email address you can sign up with a new email address and we can link your accounts on your behalf. Once you've signed up with a new email address contact us at <admin@nurl.app> and we can link your accounts on your behalf.
+If you forgot your email address you can sign up with a new email address and we can link your accounts on your behalf. Once you've signed up with a new email address contact us at <admin@nurlttrpg.com> and we can link your accounts on your behalf.

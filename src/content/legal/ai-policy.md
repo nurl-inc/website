@@ -86,4 +86,4 @@ We hope that this policy will help to ensure that the TTRPG industry remains a p
 
 ---
 
-If you have any questions or concerns, please don't hesitate to reach out to us at [admin@nurl.app](mailto:admin@nurl.app).
+If you have any questions or concerns, please don't hesitate to reach out to us at [admin@nurlttrpg.com](mailto:admin@nurlttrpg.com).

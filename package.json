@@ -12,7 +12,7 @@
     "lint:es": "eslint ."
   },
   "dependencies": {
-    "@ark-ui/solid": "^5.18.4",
+    "@ark-ui/solid": "^5.20.0",
     "@captchafox/solid": "^1.4.0",
     "@solidjs/meta": "^0.29.4",
     "@solidjs/router": "^0.15.3",
@@ -21,14 +21,15 @@
     "@vercel/functions": "^2.2.7",
     "motion": "^12.23.12",
     "remove": "^0.1.5",
+    "resend": "^6.0.1",
     "solid-js": "^1.9.9",
     "vanta": "^0.5.24"
   },
   "devDependencies": {
     "@ark-ui/anatomy": "^3.5.0",
     "@eslint/js": "^9.32.0",
-    "@pandacss/dev": "^1.0.1",
-    "@pandacss/types": "^1.0.1",
+    "@pandacss/dev": "^1.1.0",
+    "@pandacss/types": "^1.1.0",
     "@types/marked": "^6.0.0",
     "eslint": "^9.33.0",
     "eslint-plugin-solid": "^0.14.5",
@@ -60,7 +61,7 @@
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
   },
-  "packageManager": "pnpm@10.14.0",
+  "packageManager": "pnpm@10.15.0",
   "pnpm": {
     "overrides": {
       "esbuild": "0.25.0",

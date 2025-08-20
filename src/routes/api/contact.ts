@@ -30,29 +30,31 @@ export async function POST({ request }: APIEvent) {
     .replace('{{company}}', submission.company ?? '');
 
   // Send email to user
-  const res = await send({
-    from: 'Nurl Support <admin@nurl.app>',
-    to: [submission.email],
-    subject: userTemplate.subject,
-    html: userHtml,
-  });
-
-  if (!res.ok) {
-    return json(new Error('Failed to send user email'), { status: 500 });
+  try {
+    await send({
+      from: 'Nurl Support <support@nurlttrpg.com>',
+      to: [submission.email],
+      subject: userTemplate.subject,
+      html: userHtml,
+    });
+  } catch (error) {
+    console.error(error);
+    return json(new Error('Failed to send email to support'), { status: 500 });
   }
 
   // Send email to team
-  const teamRes = await send({
-    from: 'Nurl Support System<admin@nurl.app>',
-    to: ['admin@nurl.app'],
-    subject: teamTemplate.subject
-      .replace('{{inquiryType}}', submission.subject)
-      .replace('{{name}}', submission.name),
-    html: teamHtml,
-  });
-  if (teamRes.ok) {
+  try {
+    await send({
+      from: 'Nurl Support System <support@nurlttrpg.com>',
+      to: ['support@nurlttrpg.com'],
+      subject: teamTemplate.subject
+        .replace('{{inquiryType}}', submission.subject)
+        .replace('{{name}}', submission.name),
+      html: teamHtml,
+    });
     return json({ success: true });
+  } catch (error) {
+    console.error(error);
+    return json(new Error('Failed to send email to team'), { status: 500 });
   }
-
-  return json(new Error('Failed to send team email'), { status: 500 });
 }
