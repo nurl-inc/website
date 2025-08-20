@@ -80,4 +80,4 @@ If the license permissions or restrictions are updated, Nurl Sanctum will be abl
 
 If you are an admin of an organization, that owns the rights to a license that comes built into Nurl Sanctum, you will be able to claim the license for your organization.
 
-To claim a license, contact support at <admin@nurl.app>.
+To claim a license, contact support at <admin@nurlttrpg.com>.

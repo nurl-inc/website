@@ -1,5 +1,5 @@
 import { action, redirect, useSubmission } from '@solidjs/router';
-import { createEffect, createSignal, Show } from 'solid-js';
+import { createSignal, Show } from 'solid-js';
 import { CaptchaFox } from '@captchafox/solid';
 import { Box, Divider, VStack } from 'styled-system/jsx';
 import { vstack } from 'styled-system/patterns';
@@ -39,7 +39,11 @@ const contactAction = action(async (formData: FormData) => {
       throw new Error('Bad Request');
     }
 
-    return { success: true };
+    track('Contact Form Submission', {
+      email,
+    });
+
+    return redirect('/thanks');
   } catch (error) {
     console.error(error);
     throw new Error('Failed to submit form');
@@ -49,12 +53,6 @@ const contactAction = action(async (formData: FormData) => {
 export default function ContactForm() {
   const [verified, setVerified] = createSignal<boolean>(false);
   const submission = useSubmission(contactAction);
-
-  createEffect(() => {
-    if (submission.result?.success) {
-      track('Contact Form Submission');
-    }
-  });
 
   return (
     <>

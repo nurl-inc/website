@@ -1,6 +1,6 @@
 import { json } from '@solidjs/router';
 import type { APIEvent } from '@solidjs/start/server';
-import { addToPlayWaitlist, send } from '~/lib/resend';
+import { send } from '~/lib/resend';
 
 import emailTemplates from '~/data/emails.json';
 
@@ -10,13 +10,7 @@ export async function POST({ request }: APIEvent) {
   try {
     const data = await request.json();
 
-    // Step 1: Add to waitlist
-    await addToPlayWaitlist({
-      email: data.email,
-      firstName: data.name.split(' ')[0],
-      lastName: data.name.split(' ')[1],
-      unsubscribed: false,
-    });
+    // TODO: Step 1: Add to Kit waitlist
 
     // Update template with user data
     const confirmationHtml = emailTemplates.templates.waitlistConfirmation.html
@@ -25,7 +19,7 @@ export async function POST({ request }: APIEvent) {
 
     // Step 2: Send waitlist confirmation
     await send({
-      from: 'Nurl Play <admin@nurl.app>',
+      from: 'Nurl Play <admin@nurlttrpg.com>',
       to: data.email,
       subject: emailTemplates.templates.waitlistConfirmation.subject,
       html: confirmationHtml,
@@ -57,15 +51,18 @@ export async function POST({ request }: APIEvent) {
       .replace('{{role}}', data.primaryRole);
 
     await send({
-      from: 'Nurl Play<admin@nurl.app>',
-      to: ['admin@nurl.app'],
+      from: 'Nurl Support <support@nurlttrpg.com>',
+      to: ['admin@nurlttrpg.com'],
       subject: subject,
       html: teamTemplate,
     });
 
     return json({ success: true, data });
   } catch (error) {
-    const message = error instanceof Error ? error.message : 'Unknown error';
-    return json({ success: false, error: message }, { status: 500 });
+    console.error(error);
+    return json(
+      { success: false, error: 'Unable to send email to team' },
+      { status: 500 },
+    );
   }
 }

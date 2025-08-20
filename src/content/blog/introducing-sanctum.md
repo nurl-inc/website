@@ -104,6 +104,6 @@ This is powerful because let's say you are working on a system that is years old
 
 We are excited to see what our community will build with Sanctum and are looking forward to seeing the games that will be created.
 
-If you are interested in learning more about Sanctum, contact us at <admin@nurl.app> and let us know what you think.
+If you are interested in learning more about Sanctum, contact us at <admin@nurlttrpg.com> and let us know what you think.
 
 If you would like to get early access to Sanctum, please join our [Beta Program](https://nurlttrpg.com/sanctum/register) and we will notify you when it is ready.
