@@ -41,8 +41,8 @@ importers:
         specifier: ^0.1.5
         version: 0.1.5
       resend:
-        specifier: ^6.0.1
-        version: 6.0.1(@react-email/render@1.2.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1))
+        specifier: ^6.0.3
+        version: 6.0.3(@react-email/render@1.2.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1))
       solid-js:
         specifier: ^1.9.9
         version: 1.9.9
@@ -4585,8 +4585,8 @@ packages:
   requires-port@1.0.0:
     resolution: {integrity: sha512-KigOCHcocU3XODJxsu8i/j8T9tzT4adHiecwORRQ0ZZFcp7ahwXuRU1m+yuO90C5ZUyGeGfocHDI14M3L3yDAQ==}
 
-  resend@6.0.1:
-    resolution: {integrity: sha512-xNZ0gKAOqQcH83lXsqNOwBbpKROnsZpQr9mXRdG6hrHTF9G9Il2pkoTRtq7rJzXMvCZX+I79oahsbSeaYOWRFA==}
+  resend@6.0.3:
+    resolution: {integrity: sha512-Yb7o2n52v91LjkUjq5vIZQbJrGiaPoMo2VPAyS0QTKA73tmvHMUQ7P1M56J1ux/Cw9Lf68PeaKidTl6GuS8DTA==}
     engines: {node: '>=18'}
     peerDependencies:
       '@react-email/render': ^1.1.0
@@ -11408,7 +11408,7 @@ snapshots:
 
   requires-port@1.0.0: {}
 
-  resend@6.0.1(@react-email/render@1.2.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1)):
+  resend@6.0.3(@react-email/render@1.2.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1)):
     optionalDependencies:
       '@react-email/render': 1.2.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
 
