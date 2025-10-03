@@ -34,7 +34,7 @@ Even more, this is where Sanctum will create the magic of providing video-game l
 
 #### Rules
 
-Rules determine the outcome of events and is the last piece of the system mechanics. Here you can reference blocks, dice, and formulas to create a rule which documents the steps to take when an event occurs.
+Rules determine the outcome of events and are the last piece of the system mechanics. Here you can reference blocks, dice, and formulas to create a rule which documents the steps to take when an event occurs.
 
 > Important: This is used to provide video-game level automation to the Play app when you are ready for testing.
 
