@@ -40,7 +40,7 @@ Rules determine the outcome of events and are the last piece of the system mecha
 
 ### Assets
 
-Assets are anything that is used within your system but not directly created by the system. This is where you can find the "Systems Library" which is a collection of 3rd party files that you can import and use within your system.
+Assets are anything that is used within your system but not directly created by the system. This is where you can find the "Systems Library" which is a collection of third-party files that you can import and use within your system.
 
 Likewise, this is where you can publish your own system file for yourself (or others) to use.
 
