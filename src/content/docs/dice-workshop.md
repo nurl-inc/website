@@ -34,7 +34,7 @@ To add a die set, simply click on the die set template you want to add. Once add
 
 ## Analyze
 
-In the analyze tab, you can analyze the dice set you have registered with interactive tools to help you understand the probabilities of each outcome and how your dice set can affect your game system in general.
+In the Analyze tab, you can analyze the dice set you have registered with interactive tools to help you understand the probabilities of each outcome and how your dice set can affect your game system in general.
 
 In this tab you can analyze a single die or a pool of whichever die you have selected in the menu.
 
