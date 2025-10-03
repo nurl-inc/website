@@ -54,7 +54,7 @@ To create a system file, you need to first [create a new repository](https://nur
 
 ### Create a custom license (optional)
 
-Next, you need to [create a license](./creating-a-license.md) to associate with the game system. This allows Sanctum to ensure you are covering your own intellectual property rights to protect your game system and is highly recommended if you plan on publishing your system file for others to use.
+Next, you need to [create a license](./creating-a-license.md) to associate with the system file. This allows Sanctum to ensure you are covering your own intellectual property rights to protect your game system and is highly recommended if you plan on publishing your system file for others to use.
 
 ### Create the system file
 
