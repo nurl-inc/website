@@ -8,7 +8,7 @@ For example, D&D 5e would be it's own repository. Within that repository, you wo
 
 In Nurl Sanctum, we simplify and enhance the process of creating and extending game systems through our file dependency system. This means you can associate an existing game system with your files and gain access to the mechanics and rules of that game system.
 
-To put simply, a "system" file in Sanctum is the acting SRD for that game system. System files are the only files that licenses can be associated with.
+To put it simply, a "system" file in Sanctum is the acting SRD for that game system. System files are the only files that licenses can be associated with.
 
 ## System File Features
 
