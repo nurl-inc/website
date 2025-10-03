@@ -54,5 +54,9 @@
   "game-systems": {
     "title": "Game Systems - Nurl Sanctum Guide",
     "description": "Learn how to create, extend, and manage game systems in Nurl Sanctum. Build and customize your gaming content effectively."
+  },
+  "dice-workshop": {
+    "title": "Dice Workshop - Nurl Sanctum Guide",
+    "description": "Learn how to create, extend, and manage dice in Nurl Sanctum. Build and customize your gaming content effectively."
   }
 }

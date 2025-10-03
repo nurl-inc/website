@@ -1,16 +1,16 @@
-# TTRPG Canvas
+# Canvas File
 
-The TTRPG Canvas is the first tool in the Nurl Sanctum "Ideation" phase of a game system.
+The Canvas File is the first tool in the Nurl Sanctum "Ideation" phase of a game system.
 
 ## Overview
 
-The TTRPG Canvas is a tool for designers to brainstorm and develop game ideas within 20 minutes to have a solid foundation for pre-development validation.
+The Canvas File is a tool for designers to brainstorm and develop game ideas within 20 minutes to have a solid foundation for pre-development validation.
 
 > "The Canvas is your PRODUCT. The game is simply the medium to express it."
 
 ## Recommended Approach
 
-We recommend using the following strategy to get the most value from the TTRPG Canvas:
+We recommend using the following strategy to get the most value from the Canvas:
 
 1. Time-box your session to 20 minutes.
 2. Go in order of the sections. Skip sections you don't have answers for.
@@ -21,7 +21,7 @@ We recommend using the following strategy to get the most value from the TTRPG C
 
 ## Time Boxed Session
 
-The TTRPG Canvas is designed to be completed in 20 minutes. This allows you to start with the quick answers you know and then validate them with your players.
+The Canvas File is designed to be completed in 20 minutes. This allows you to start with the quick answers you know and then validate them with your players.
 
 If you approach this process correctly, you will see your canvas improve and solidify over time. The more you validate your ideas with players, the better your game will be and the faster you can get to publishing.
 
@@ -33,7 +33,7 @@ Remember, this should not be a one-time process. The more you iterate overtime, 
 
 ### Asking the Hard Questions
 
-The TTRPG Canvas is purposefully meant to allow you to figure out "the right answers" to your game but also ground you in the reality of what it will take to make it a success.
+The Canvas is purposefully meant to allow you to figure out "the right answers" to your game but also ground you in the reality of what it will take to make it a success.
 
 Towards the end of the canvas, you will be asked more business related questions. These are meant to help you understand if your idea is actually **viable** to make (i.e., how much will it cost vs. how much time it will take to make).
 
@@ -67,12 +67,12 @@ This is why it is so important to validate your entire canvas with your players.
 
 ### Don't overthink it
 
-The TTRPG Canvas is designed to be high level and quick to complete. This allows you to start with the quick answers you know and then validate them with your players sooner rather than later.
+The Canvas is designed to be high level and quick to complete. This allows you to start with the quick answers you know and then validate them with your players sooner rather than later.
 
 You can accomplish more by starting with the answers you know and then validating them with your players. Then building on those answers over time.
 
 ### See it as the foundation
 
-If you approach the TTRPG Canvas correctly, it will change the way you think about and approach your game. You will unlock new insights and perspectives that will help you create a better game much faster than ever before.
+If you approach the Canvas correctly, it will change the way you think about and approach your game. You will unlock new insights and perspectives that will help you create a better game much faster than ever before.
 
-**The TTRPG Canvas is your secret weapon.**
+**The Canvas is your secret weapon.**
