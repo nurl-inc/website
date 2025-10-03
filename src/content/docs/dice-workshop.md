@@ -19,7 +19,7 @@ To add a single die, click the "Add Die" button. You will be see a sidebar appea
 In the Single Die section, you will need to provide the following information:
 
 - Name
-- Notion
+- Notation
 - Description
 
 Click the "Add Die" button to add the die to your system. Once added, you will see it in the list of the Sets tab.
