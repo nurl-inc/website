@@ -7,7 +7,7 @@ The Dice Workshop is the area in the system file where you can manage your dice 
 
 ## Sets
 
-This is the area where you can register a dice set that your system will use. Additionally, this is where you can create a custom dice set if you plan on using dice that have symbols or anything other than the default number sides.
+This is the area where you can register a dice set that your system will use. Additionally, this is where you can create a custom dice set if you plan on using dice that have symbols or anything other than the default numbered sides.
 
 ### Adding a Single Die
 
