@@ -22,7 +22,7 @@ Blocks are the core components of a game system. They can be anything from an at
 
 #### Dice
 
-This is the area where you can do everything from register a set to analyze and use interactive dice-related tools. We call this section the [Dice Workshop](./dice-workshop.md).
+This is the area where you can do everything from register a set to analyze and use interactive dice-related tools. We call this section the [Dice Workshop](./dice-workshop).
 
 #### Formulas
 
