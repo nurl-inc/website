@@ -60,8 +60,8 @@ importers:
         specifier: ^1.4.1
         version: 1.4.1(jsdom@25.0.1)(typescript@5.9.3)
       '@pandacss/types':
-        specifier: ^1.4.1
-        version: 1.4.1
+        specifier: ^1.4.3
+        version: 1.4.3
       '@react-email/render':
         specifier: ^1.4.0
         version: 1.4.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
@@ -802,6 +802,9 @@ packages:
 
   '@pandacss/types@1.4.1':
     resolution: {integrity: sha512-JsoFZQ0uc8Pq2ZSee9gbS7treyuKOxUQwtgdKq+1Vew3R2ZyCJ0vW61dT2LY4Lh6l46ICKn3uGDWnUjF8ourAA==}
+
+  '@pandacss/types@1.4.3':
+    resolution: {integrity: sha512-8bz5jqQLhHTYlzVUBxpWMf+lzexQqlZJY8Cot2B7wJjg9T+VK3guTxNJV1ioiGexwcDQrn/MJiNszd6C28djqw==}
 
   '@parcel/watcher-android-arm64@2.5.1':
     resolution: {integrity: sha512-KF8+j9nNbUN8vzOFDpRMsaKBHZ/mcjEjMToVMJOhTozkDonQFFrRcfdLWn6yWKCmJKmdVxSgHiYvTCef4/qcBA==}
@@ -6624,6 +6627,8 @@ snapshots:
       ts-pattern: 5.8.0
 
   '@pandacss/types@1.4.1': {}
+
+  '@pandacss/types@1.4.3': {}
 
   '@parcel/watcher-android-arm64@2.5.1':
     optional: true
