@@ -12,7 +12,7 @@
     "lint:es": "eslint ."
   },
   "dependencies": {
-    "@ark-ui/solid": "^5.26.0",
+    "@ark-ui/solid": "^5.26.2",
     "@captchafox/solid": "^1.5.0",
     "@solidjs/meta": "^0.29.4",
     "@solidjs/router": "^0.15.3",
@@ -21,18 +21,18 @@
     "@vercel/functions": "^2.2.7",
     "motion": "^12.23.24",
     "remove": "^0.1.5",
-    "resend": "^6.1.2",
-    "solid-js": "^1.9.9",
+    "resend": "^6.4.0",
+    "solid-js": "^1.9.10",
     "vanta": "^0.5.24"
   },
   "devDependencies": {
     "@ark-ui/anatomy": "^3.5.0",
     "@eslint/js": "^9.38.0",
-    "@pandacss/dev": "^1.4.1",
-    "@pandacss/types": "^1.4.1",
+    "@pandacss/dev": "^1.4.3",
+    "@pandacss/types": "^1.4.3",
     "@react-email/render": "^1.4.0",
     "@types/marked": "^6.0.0",
-    "eslint": "^9.36.0",
+    "eslint": "^9.39.0",
     "eslint-plugin-solid": "^0.14.5",
     "globals": "^16.4.0",
     "husky": "^9.1.7",
@@ -52,7 +52,7 @@
     "remark-rehype": "^11.1.1",
     "tsx": "^4.20.6",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.45.0",
+    "typescript-eslint": "^8.46.2",
     "unified": "^11.0.5",
     "vinxi": "^0.5.8",
     "vite": "^6.2.7",
@@ -62,12 +62,13 @@
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
   },
-  "packageManager": "pnpm@10.18.0",
+  "packageManager": "pnpm@10.20.0",
   "pnpm": {
     "overrides": {
-      "esbuild": "0.25.0",
-      "estree-util-value-to-estree": "3.3.3",
-      "brace-expansion": "1.1.12"
-    }
+      "tar": "7.5.2"
+    },
+    "ignoredBuiltDependencies": [
+      "esbuild"
+    ]
   }
 }
