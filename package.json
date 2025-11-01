@@ -65,8 +65,7 @@
   "packageManager": "pnpm@10.20.0",
   "pnpm": {
     "overrides": {
-      "tar": "7.5.2",
-      "@zag-js/core": "0.82.2"
+      "tar": "7.5.2"
     },
     "ignoredBuiltDependencies": [
       "esbuild"
