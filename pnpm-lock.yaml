@@ -58,8 +58,8 @@ importers:
         specifier: ^1.4.3
         version: 1.4.3(jsdom@25.0.1)(typescript@5.9.3)
       '@pandacss/types':
-        specifier: ^1.4.3
-        version: 1.4.3
+        specifier: ^1.5.0
+        version: 1.5.0
       '@react-email/render':
         specifier: ^1.4.0
         version: 1.4.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
@@ -957,8 +957,8 @@ packages:
     resolution: {integrity: sha512-5XUvZuffe3KetyhbWwd4n2ktd7wraocCYw10tlM+/u/95iAz29GjNiuNxbCD1T6Bn1MyGc4QLVNKOWhzJkVFAw==}
     engines: {node: ^14.16.0 || >=16.0.0}
 
-  '@netlify/open-api@2.42.0':
-    resolution: {integrity: sha512-oHFCCo5FigIZcni/IioNKPwL9jC2++RUnHHfHFOhXKyLDGB8x93cU03N15RuZhG92+VM6dOzhM4WDEDeG6hXcQ==}
+  '@netlify/open-api@2.43.1':
+    resolution: {integrity: sha512-MPhzLfVVTzQCs9iIjxxgIoXv6/tE2FVHTFT2gi4leChj5o4DQ9an/6gc1q7QPRXeIuPIb+P6AaYi3TGHf8vsBA==}
     engines: {node: '>=14.8.0'}
 
   '@netlify/runtime-utils@1.3.1':
@@ -1025,6 +1025,9 @@ packages:
 
   '@pandacss/types@1.4.3':
     resolution: {integrity: sha512-8bz5jqQLhHTYlzVUBxpWMf+lzexQqlZJY8Cot2B7wJjg9T+VK3guTxNJV1ioiGexwcDQrn/MJiNszd6C28djqw==}
+
+  '@pandacss/types@1.5.0':
+    resolution: {integrity: sha512-ShPyMEmqIgDS2WvflN0t/nmZqOGq6pR9l15iKVVGiyiD34qjszyw/+xHNtaASpwlBCAXSkwvsok3RK+2e2lOGg==}
 
   '@parcel/watcher-android-arm64@2.5.1':
     resolution: {integrity: sha512-KF8+j9nNbUN8vzOFDpRMsaKBHZ/mcjEjMToVMJOhTozkDonQFFrRcfdLWn6yWKCmJKmdVxSgHiYvTCef4/qcBA==}
@@ -1637,12 +1640,12 @@ packages:
     resolution: {integrity: sha512-LOtTn+JgJvX8WfBVJtF08TGrdjuFzGJc4mkP8EdDI8ADbvO7kiexYep1o8dwnt0okb0jYclCDXF13xU7Ge4zSw==}
     engines: {node: '>=18.0.0'}
 
-  '@whatwg-node/fetch@0.10.11':
-    resolution: {integrity: sha512-eR8SYtf9Nem1Tnl0IWrY33qJ5wCtIWlt3Fs3c6V4aAaTFLtkEQErXu3SSZg/XCHrj9hXSJ8/8t+CdMk5Qec/ZA==}
+  '@whatwg-node/fetch@0.10.12':
+    resolution: {integrity: sha512-XmsCdDgQxbM8ha7xvIbDQyO/iES2ga0wQcM5sb+mugll1F+IzSshOMPK6n1TuqDDgjTwoU01mMa6oRhHWnpDcw==}
     engines: {node: '>=18.0.0'}
 
-  '@whatwg-node/node-fetch@0.8.1':
-    resolution: {integrity: sha512-cQmQEo7IsI0EPX9VrwygXVzrVlX43Jb7/DBZSmpnC7xH4xkyOnn/HykHpTaQk7TUs7zh59A5uTGqx3p2Ouzffw==}
+  '@whatwg-node/node-fetch@0.8.2':
+    resolution: {integrity: sha512-1PihEl0a8hm/AZD/LVRs1lEWCZCo2Q65Xm1goaHeqR314e+/Z7NI7YE10Yser8+2iZFGtv542IYr685o3aaZ/g==}
     engines: {node: '>=18.0.0'}
 
   '@whatwg-node/promise-helpers@1.3.2':
@@ -6228,7 +6231,7 @@ snapshots:
       write-file-atomic: 6.0.0
     optional: true
 
-  '@netlify/open-api@2.42.0':
+  '@netlify/open-api@2.43.1':
     optional: true
 
   '@netlify/runtime-utils@1.3.1':
@@ -6415,6 +6418,8 @@ snapshots:
       ts-pattern: 5.8.0
 
   '@pandacss/types@1.4.3': {}
+
+  '@pandacss/types@1.5.0': {}
 
   '@parcel/watcher-android-arm64@2.5.1':
     optional: true
@@ -7102,13 +7107,13 @@ snapshots:
       tslib: 2.8.1
     optional: true
 
-  '@whatwg-node/fetch@0.10.11':
+  '@whatwg-node/fetch@0.10.12':
     dependencies:
-      '@whatwg-node/node-fetch': 0.8.1
+      '@whatwg-node/node-fetch': 0.8.2
       urlpattern-polyfill: 10.1.0
     optional: true
 
-  '@whatwg-node/node-fetch@0.8.1':
+  '@whatwg-node/node-fetch@0.8.2':
     dependencies:
       '@fastify/busboy': 3.2.0
       '@whatwg-node/disposablestack': 0.0.6
@@ -7124,7 +7129,7 @@ snapshots:
   '@whatwg-node/server@0.9.71':
     dependencies:
       '@whatwg-node/disposablestack': 0.0.6
-      '@whatwg-node/fetch': 0.10.11
+      '@whatwg-node/fetch': 0.10.12
       '@whatwg-node/promise-helpers': 1.3.2
       tslib: 2.8.1
     optional: true
@@ -10377,7 +10382,7 @@ snapshots:
 
   netlify@13.3.5:
     dependencies:
-      '@netlify/open-api': 2.42.0
+      '@netlify/open-api': 2.43.1
       lodash-es: 4.17.21
       micro-api-client: 3.3.0
       node-fetch: 3.3.2
