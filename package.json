@@ -32,7 +32,7 @@
     "@pandacss/types": "^1.4.3",
     "@react-email/render": "^1.4.0",
     "@types/marked": "^6.0.0",
-    "eslint": "^9.39.0",
+    "eslint": "^9.39.1",
     "eslint-plugin-solid": "^0.14.5",
     "globals": "^16.5.0",
     "husky": "^9.1.7",
