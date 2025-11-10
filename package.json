@@ -62,7 +62,7 @@
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
   },
-  "packageManager": "pnpm@10.20.0",
+  "packageManager": "pnpm@10.21.0",
   "pnpm": {
     "overrides": {
       "tar": "7.5.2"
