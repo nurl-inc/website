@@ -12,10 +12,10 @@
     "lint:es": "eslint ."
   },
   "dependencies": {
-    "@ark-ui/solid": "^5.27.1",
+    "@ark-ui/solid": "^5.29.1",
     "@captchafox/solid": "^1.5.0",
     "@solidjs/meta": "^0.29.4",
-    "@solidjs/router": "^0.15.3",
+    "@solidjs/router": "^0.15.4",
     "@solidjs/start": "^1.2.0",
     "@vercel/analytics": "^1.5.0",
     "@vercel/functions": "^3.3.0",
@@ -27,16 +27,16 @@
   },
   "devDependencies": {
     "@ark-ui/anatomy": "^3.5.0",
-    "@eslint/js": "^9.39.0",
-    "@pandacss/dev": "^1.5.0",
-    "@pandacss/types": "^1.5.0",
+    "@eslint/js": "^9.39.1",
+    "@pandacss/dev": "^1.5.1",
+    "@pandacss/types": "^1.5.1",
     "@react-email/render": "^1.4.0",
     "@types/marked": "^6.0.0",
     "eslint": "^9.39.1",
     "eslint-plugin-solid": "^0.14.5",
     "globals": "^16.5.0",
     "husky": "^9.1.7",
-    "lint-staged": "^16.2.6",
+    "lint-staged": "^16.2.7",
     "postcss": "^8.5.5",
     "prettier": "3.6.2",
     "rehype-autolink-headings": "^7.1.0",
@@ -55,16 +55,17 @@
     "typescript-eslint": "^8.46.2",
     "unified": "^11.0.5",
     "vinxi": "^0.5.8",
-    "vite": "^7.1.12",
+    "vite": "7.2.4",
     "vite-plugin-sitemap": "^0.8.2",
     "vite-tsconfig-paths": "^5.1.4"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
   },
-  "packageManager": "pnpm@10.21.0",
+  "packageManager": "pnpm@10.23.0",
   "pnpm": {
     "overrides": {
+      "glob": "10.5.0",
       "tar": "7.5.2"
     },
     "ignoredBuiltDependencies": [
