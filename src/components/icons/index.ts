@@ -8,6 +8,7 @@ export * from './d20';
 export * from './download';
 export * from './error';
 export * from './home';
+export * from './human-made';
 export * from './mail';
 export * from './menu';
 export * from './network';

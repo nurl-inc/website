@@ -48,7 +48,7 @@ interface RouteData {
 }
 
 export default function LegalPage(props: RouteSectionProps<RouteData>) {
-  const slug = () => props.params.legalSlug;
+  const slug = () => props.params.legalSlug!;
   const metadataSlug = () => makeSlug(props.params.legalSlug);
 
   const data = createAsync(() => legalPageData(slug()));
