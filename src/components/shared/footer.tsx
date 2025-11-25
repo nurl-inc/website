@@ -11,7 +11,7 @@ import {
 } from 'styled-system/jsx';
 import { button } from 'styled-system/recipes';
 import { Text } from '~/components/ui';
-import { MailIcon } from '../icons';
+import { MailIcon, HumanMadeLockup } from '../icons';
 
 import footerLinks from '~/data/footer-links.json';
 import { Index, type ParentProps } from 'solid-js';
@@ -37,7 +37,7 @@ export default function Footer() {
       >
         <GridItem colSpan={{ base: 1, md: 3 }}>
           <HStack
-            gap={10}
+            gap={8}
             justify={{
               base: 'center',
               md: 'flex-start',
@@ -45,6 +45,9 @@ export default function Footer() {
             paddingBlockEnd="10"
             w="full"
           >
+            <Box color="page.text.initial" maxW="4.5rem" w="1/2">
+              <HumanMadeLockup />
+            </Box>
             <Box maxW="5rem" w="1/3">
               <VisuallyHidden>Home of the Anti-TPK Club</VisuallyHidden>
               <img src="/logos/atpk.svg" alt="Anti-TPK Club logo" />
