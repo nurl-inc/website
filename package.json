@@ -62,7 +62,7 @@
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
   },
-  "packageManager": "pnpm@10.24.0",
+  "packageManager": "pnpm@10.27.0",
   "pnpm": {
     "overrides": {
       "glob": "10.5.0",
