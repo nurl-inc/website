@@ -22,9 +22,9 @@ const FinalCTA = lazy(() => import('~/components/routes/play/final-cta'));
  */
 
 const metadata: Metadata = {
-  title: 'Nurl Play - Enhanced Tabletop RPG Experience',
+  title: 'Nurl Play - Playtesting and analytics',
   description:
-    'Transform your tabletop RPG sessions with video game-like automation while preserving the physical experience you love. Automate rules, track states, and enhance storytelling without losing the magic of in-person play.',
+    'Validate your games in realtime with low-level and meaningful analytics so you can design the right content.',
   keywords: `${keywords.base.join(', ')}, ${keywords.play.join(', ')}`,
   image: 'https://nurlttrpg.com/og-meta-play.png',
 };

@@ -103,8 +103,8 @@ export default function SanctumHero() {
               opacity: 0,
             }}
           >
-            The sacred space where your game systems come to life through visual
-            tools and powerful automation.
+            The sacred space where your game content comes to life through
+            streamlined tools and powerful collaboration.
           </Text>
 
           <Stack

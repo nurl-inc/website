@@ -1,34 +1,34 @@
 {
   "sanctum": {
     "choice": "sanctum",
-    "lead": "The tool for designers",
+    "lead": "Design and collaborate on anything.",
     "main1": "Where game",
-    "main2": "worlds are born.",
-    "description": "Nurl Sanctum is a tool for designers to streamline game design with collaboration and play test support.",
+    "main2": "content is born.",
+    "description": "Sanctum let's you design and scale any type of content for any stage of designer.",
     "action": "Request beta access",
     "actionLink": "sanctum/register",
-    "linkText": "Learn more about Nurl Sanctum",
+    "linkText": "Learn more about Sanctum",
     "link": "/sanctum",
     "features": [
-      "TTRPG Canvas for idea development",
-      "Streamlined mechanics tooling",
-      "Play-testing and analytics support"
+      "Brainstorm ideas with the Spark file",
+      "Streamlined mechanics and tooling",
+      "Extend and collaborate on others work"
     ]
   },
   "play": {
     "choice": "play",
-    "lead": "The app for players",
-    "main1": "Automate the complex.",
-    "main2": "Keep the magic.",
-    "description": "Nurl Play is a tool for IRL groups to experience enhanced gameplay.",
+    "lead": "Playtesting and analytics",
+    "main1": "Realtime results",
+    "main2": "with rich data.",
+    "description": "Play is a tool for play-testing content seamlessly integrating with Sanctum.",
     "action": "Join the waitlist",
     "actionLink": "play/signup",
-    "linkText": "Learn more about Nurl Play",
+    "linkText": "Learn more about Play",
     "link": "/play",
     "features": [
-      "Video game-like automation",
-      "Physical play enhancement",
-      "Seamless group tools"
+      "Full segment control and paramters",
+      "Low-level, meaningful analytics",
+      "Ehanced for IRL groups"
     ]
   }
 }

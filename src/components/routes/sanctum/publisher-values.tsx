@@ -57,24 +57,24 @@ export default function PublisherValues() {
       <Suspense>
         <SanctumValueSection
           idx={1}
-          heading="Ignite your imagination"
-          description="Use our ideation tools to organize your ideas into tangible actions."
+          heading="Collaborate seamlessly"
+          description="Create your organization and invite everyone working alongside you."
         />
         <SanctumValueSection
           idx={2}
-          heading="Set a foundation"
-          description="Create or extend a system without the hassle of worrying about balance or refinement."
+          heading="repositories that scale"
+          description="Create workspaces for each unqiue project that people can follow or contribute to."
           image="sanctum"
         />
         <SanctumValueSection
           idx={3}
           heading="Create with Confidence"
-          description="Streamline your development process with our system blocks in a visual way."
+          description="Files for everything. From brainstorming down to low-level game system development. We have you covered."
         />
         <SanctumValueSection
           idx={4}
-          heading="Test without Hassle"
-          description="Get valuable feedback from players and test your game in a safe environment."
+          heading="Advanced Version Control"
+          description="From branching to automated snapshots of every file change. Work without worry."
           image="battle"
         />
       </Suspense>

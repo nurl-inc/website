@@ -82,7 +82,9 @@ export default function FeatureShowcase() {
               w: 'calc(50% - 3rem)',
             }}
           >
-            <FeatureCardHeading>Automate the complex</FeatureCardHeading>
+            <FeatureCardHeading>
+              Simplified Player Experience
+            </FeatureCardHeading>
 
             <Box
               bgColor="inherit"
@@ -129,10 +131,8 @@ export default function FeatureShowcase() {
               }}
             >
               <FeatureCardText>
-                Focus on the story while{' '}
-                <FeatureAccentText>
-                  Nurl handles the math, tracking, and rule-checking.
-                </FeatureAccentText>
+                Play ensures the players benefit as much as the{' '}
+                <FeatureAccentText>designers do.</FeatureAccentText>
               </FeatureCardText>
             </Box>
           </Box>
@@ -156,13 +156,13 @@ export default function FeatureShowcase() {
               }}
             >
               <Box paddingBlockEnd="5" w="2/3" zIndex="dropdown">
-                <FeatureCardHeading>Keep the Social Magic</FeatureCardHeading>
+                <FeatureCardHeading>Faster test cycles</FeatureCardHeading>
               </Box>
               <Box w={{ base: 'full', md: '75%' }} zIndex="dropdown">
                 <FeatureCardText>
-                  Roll real dice, move real miniatures, and share real moments.{' '}
+                  Learn, analyze, and pivot faster than ever before. Then,{' '}
                   <FeatureAccentText>
-                    We enhance the experience, not replace it.
+                    Rinse and repeat until launch.
                   </FeatureAccentText>
                 </FeatureCardText>
               </Box>
@@ -191,16 +191,10 @@ export default function FeatureShowcase() {
               rounded="md"
               w="full"
             >
-              <Box paddingBlockEnd="8" maxW="20rem" w="full">
-                <Image
-                  alt="Dungeons & Dragons logo"
-                  src="/images/dnd-logo.webp"
-                />
-              </Box>
-              <FeatureCardHeading>Play Any System</FeatureCardHeading>
+              <FeatureCardHeading>Test anything</FeatureCardHeading>
               <FeatureCardText>
-                From D&D to indie games, Nurl Play works with every system in
-                our growing library.
+                From supplemental content up to the crunchiest system. Play will
+                handle it all.
               </FeatureCardText>
             </Box>
           </VStack>

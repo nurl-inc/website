@@ -60,7 +60,7 @@ export default function FinalCTA() {
           zIndex="decorator"
         >
           <Text color="white" fontSize="body-xs" textTransform="uppercase">
-            Join the Nurl adventure
+            Join the TTRPG design platform
           </Text>
 
           <Text

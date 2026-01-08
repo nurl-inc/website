@@ -2,22 +2,22 @@
   {
     "id": 1,
     "number": 1,
-    "heading": "Intuitive Game Design",
-    "description": "Transform documents into a clear interactive system.",
+    "heading": "Collaborative Game Design",
+    "description": "Built for one to many, working on the next big game.",
     "icon": "transfer"
   },
   {
     "id": 2,
     "number": 2,
-    "heading": "Automated Testing",
-    "description": "Test rule interactions and balance in real-time.",
+    "heading": "Open Source Focused",
+    "description": "Create public repositories that anyone can contribute to.",
     "icon": "test-tube"
   },
   {
     "id": 3,
     "number": 3,
-    "heading": "Direct Insights",
-    "description": "Get low-level insights into your game's mechanics from real players.",
+    "heading": "Streamlined Development",
+    "description": "Work smarter with tools made for TTRPG designers.",
     "icon": "stats"
   }
 ]

@@ -53,9 +53,9 @@ export default function PlayHero() {
             opacity: 0,
           }}
         >
-          Play Like a Video Game,{' '}
+          Play testing{' '}
           <Text as="span" color="brand1.200">
-            Feel Like Tabletop.
+            The right way.
           </Text>
         </Text>
         <Text
@@ -74,8 +74,8 @@ export default function PlayHero() {
             opacity: 0,
           }}
         >
-          Experience tabletop gaming with video game-like automation while
-          preserving the physical experience you love.
+          Validate your game content in real-time with low-level analytics.
+          Works seamlessly with Sanctum.
         </Text>
 
         <Box
