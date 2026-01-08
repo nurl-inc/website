@@ -16,12 +16,12 @@
     "@captchafox/solid": "^1.5.0",
     "@solidjs/meta": "^0.29.4",
     "@solidjs/router": "^0.15.4",
-    "@solidjs/start": "^1.2.0",
+    "@solidjs/start": "^1.2.1",
     "@vercel/analytics": "^1.5.0",
     "@vercel/functions": "^3.3.4",
     "motion": "^12.23.24",
     "remove": "^0.1.5",
-    "resend": "^6.4.2",
+    "resend": "^6.7.0",
     "solid-js": "^1.9.10",
     "vanta": "^0.5.24"
   },
@@ -55,7 +55,7 @@
     "typescript-eslint": "^8.49.0",
     "unified": "^11.0.5",
     "vinxi": "^0.5.8",
-    "vite": "7.2.4",
+    "vite": "7.3.1",
     "vite-plugin-sitemap": "^0.8.2",
     "vite-tsconfig-paths": "^5.1.4"
   },
