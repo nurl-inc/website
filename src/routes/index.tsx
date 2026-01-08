@@ -24,11 +24,6 @@ const Faq = lazy(() => import('../components/routes/home/faq'));
 const FinalCTA = lazy(() => import('../components/routes/home/final-cta'));
 const Footer = lazy(() => import('../components/shared/footer'));
 
-/**
- * This module is the main entry point for the home page.
- * @module route:home
- */
-
 const metadata: Metadata = {
   title: 'Nurl | Where Tabletop Legends Are Made',
   description:
@@ -55,6 +50,7 @@ export default function Home(props: RouteSectionProps<RouteData>) {
       <Head {...props.data.metadata}>
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
       </Head>
+
       <Nav />
 
       <Main>

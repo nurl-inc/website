@@ -9,7 +9,6 @@ const HeroFeatureItem = lazy(() => import('./hero-feature-item'));
 
 /**
  * The hero image masonry layout on the home page.
- * @module route:home:hero-feature
  */
 export default function HeroFeature() {
   const heroImgs = createAsync(() => getHeroImgsData());

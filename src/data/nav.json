@@ -6,12 +6,12 @@
   },
   {
     "label": "Sanctum",
-    "description": "For publishers to manage their games",
+    "description": "For designers to build and collaborate",
     "href": "/sanctum"
   },
   {
     "label": "Play",
-    "description": "For GMs and Players",
+    "description": "Playtesting and analytics",
     "href": "/play"
   },
   {

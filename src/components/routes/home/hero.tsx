@@ -31,7 +31,9 @@ export default function Hero() {
 
       <Box
         pb="12.5rem"
+        pos="absolute"
         px="8"
+        top="33dvh"
         zIndex="dropdown"
         md={{
           position: 'absolute',
@@ -85,8 +87,9 @@ export default function Hero() {
             },
           })}
         >
-          Enhance your games with automation that feels like magic, create new
-          worlds with tools that feel sacred.
+          Harnessed for productivity. Designed for collaboration.
+          <br />
+          Welcome to the platform TTRPG designers love.
         </p>
 
         <Box

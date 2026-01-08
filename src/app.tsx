@@ -22,7 +22,7 @@ export default function App() {
       fallback={(err, reset) => <PageError error={err} reset={reset} />}
     >
       <MetaProvider>
-        <Banner>Launching Beta in 2025</Banner>
+        <Banner>Launching Beta in 2026</Banner>
 
         <Router root={(props) => <Suspense>{props.children}</Suspense>}>
           <FileRoutes />

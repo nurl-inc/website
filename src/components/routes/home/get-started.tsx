@@ -11,8 +11,8 @@ export default function GetStarted() {
   const [store, { setChoice }] = useLeadChoice();
 
   const tabs = createMemo(() => [
-    { id: 'sanctum', label: 'Nurl Sanctum' },
-    { id: 'play', label: 'Nurl Play' },
+    { id: 'sanctum', label: 'Sanctum' },
+    { id: 'play', label: 'Play' },
   ]);
 
   return (

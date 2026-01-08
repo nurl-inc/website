@@ -57,7 +57,7 @@ export default function FinalCTA() {
           zIndex="decorator"
         >
           <Text color="white" fontSize="body-xs" textTransform="uppercase">
-            Join the Nurl adventure
+            Join the Nurl TTRPG platform
           </Text>
 
           <Text
@@ -73,7 +73,7 @@ export default function FinalCTA() {
               w: '1/2',
             }}
           >
-            Ready to enhance your game?
+            Ready to perfect your game?
           </Text>
 
           <Box mx="auto" maxW="75%">
